@@ -1,0 +1,67 @@
+body {
+    background-color: #f1f1f1;
+}
+
+.info_box {
+    margin: 20px 20px 0;
+    padding: 20px 10px 20px 30px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 9px 14px -5px #c3c3c3;
+}
+
+.info_box .text {
+    width: 70%;
+    float: left;
+}
+
+.info_box .text .discount_title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #353535;
+}
+
+.info_box .text .discount_time {
+    font-size: 14px;
+    color: #c3c3c3;
+}
+
+.info_box .img {
+    width: 30%;
+    float: left;
+}
+
+.info_box img {
+    width: 80px;
+    height: 50px;
+}
+
+.empty_content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+}
+
+.empty_content .img {
+    width: 186px;
+    height: 220px;
+    position: absolute;
+    top: 35%;
+    left: 49%;
+    margin-left: -93px;
+}
+
+.empty_content .img img {
+    display: block;
+    margin: 10px auto;
+}
+
+.empty_content .img p {
+    font-size: 14px;
+    color: rgb(201, 201, 201);
+    text-align: center;
+    margin-bottom: 8px;
+}

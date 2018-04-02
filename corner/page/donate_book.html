@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>捐书</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/donate_book.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="top_title">
+    <div onclick="history.back()"><img class="back" src="../static/img/back_btn.png"/><span>返回</span></div>
+    <div><span>捐书</span>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div><img class="other" src="../static/img/other_btn.png"/></div>
+</div>
+<div class="top_place"></div>
+<div class="donate_info no_book hidden">
+    <div class="title">
+        <img src="../static/img/list_sign.png">
+        <span>如何捐书：</span>
+    </div>
+    <div class="details">
+        我们可以回收您手中的旧书，只需点击“扫码”按钮并扫描图书背面的ISBN条码，系统会自动识别您的图书是否在可回收范围，识别通过的即可下单。下单成功后将图书带到校园内的【熊猫格子图书漂流角】即可。
+    </div>
+    <div class="title">
+        <img src="../static/img/list_sign.png">
+        <span>捐书可以得到：</span>
+    </div>
+    <div class="details">
+        下单成功并把图书带到图书角后，我们进行人工审核，通过之后会根据图书定价1：1发放熊猫格子熊猫币到您的账户中。您可以使用熊猫币在图书漂流角直接兑换其他想看的书或者商品。也可以在熊猫格子线上平台兑换成借书卡，享受无限借书服务。
+    </div>
+    <div class="title">
+        <img src="../static/img/list_sign.png">
+        <span>什么书我们不收：</span>
+    </div>
+    <div class="details">
+        宗教类书籍、教材教辅、考试书籍、杂志；封面污染破损，有影响阅读体验的缺页破损、异味；非卖品和非法出版物。
+    </div>
+</div>
+<div class="book_list have_book hidden">
+    <div id="donate_list"></div>
+</div>
+<div class="bottom_btn">
+    <span class="code_book">扫码捐书</span>
+    <span class="input_book">手动输入</span>
+</div>
+<div class="bottom_order">
+    <span>共</span>
+    <span class="black donate_number" style="margin: 0">0</span>
+    <span style="margin: 0">本，总熊猫币</span>
+    <span class="red donate_integral">0.00</span>
+    <span class="disable_btn"><span>下单</span></span>
+    <span class="order_btn hidden"><span>下单</span></span>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+    var jssdk = new ocean_jssdk().init();
+    var isbn_box = new isbnBox(ShowDonateList, 'recycle-book-list', 'resources/biz/api/recycle/check');
+    var donate_number = 0;
+    var donate_integral = 0;
+    Window.onload = Load();
+
+    function Load() {
+        $(".order_btn").click(function () {
+            window.location.href = "donate_order.html";
+        })
+
+        if (isbn_box.isEmpty()) {
+            $(".no_book").show();
+            $(".have_book").hide();
+            $(".disable_btn").show();
+            $(".order_btn").hide();
+            $(".bottom_btn").css("bottom", "90px");
+        } else {
+            $(".no_book").hide();
+            $(".have_book").show();
+            $(".disable_btn").hide();
+            $(".order_btn").show();
+            $(".bottom_btn").css("bottom", "150px");
+            isbn_box.each(ShowDonateList);
+            $(".donate_number").text(donate_number);
+            $(".donate_integral").text(donate_integral);
+        }
+
+        $(".code_book").click(function () {
+            if (!ocean.getLoginUserId()) {
+                ocean.showLogin();
+            } else {
+                jssdk.scanIsbn(isbn_box.checkBookIsbn);
+            }
+        })
+        $(".input_book").click(function () {
+            if (!ocean.getLoginUserId()) {
+                ocean.showLogin();
+            } else {
+                isbn_box.show();
+            }
+        })
+    }
+
+    function ShowDonateList(key, book) {
+        if (isbn_box.size() == 1) {
+            $(".no_book").hide();
+            $(".have_book").show();
+            $(".disable_btn").hide();
+            $(".order_btn").show();
+            $(".bottom_btn").css("bottom", "150px");
+        }
+        donate_number++;
+        donate_integral += book.price;
+        var strlist = '<div class="book_box">';
+        strlist += '<span class="name">' + book.name + '</span>';
+        strlist += '<span class="integral">' + book.price + '熊猫币</span>';
+        strlist += '<span class="close" onclick="removeBook(this,' + key + ',' + book.price + ')">×</span>';
+        strlist += '</div>';
+        $("#donate_list").append(strlist);
+        $(".donate_number").text(donate_number);
+        $(".donate_integral").text(donate_integral);
+    }
+
+    function removeBook(e, key, price) {
+        isbn_box.remove(key);
+        $(e).parent().remove();
+        donate_number--;
+        donate_integral -= price;
+        $(".donate_number").text(donate_number);
+        $(".donate_integral").text(donate_integral);
+        if (isbn_box.isEmpty()) {
+            window.location.reload();
+        }
+    }
+</script>
+</html>

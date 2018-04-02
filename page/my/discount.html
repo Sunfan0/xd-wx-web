@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/my/discount.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">我的优惠</p>
+</div>
+<div class="empty_content" style="display: none;">
+    <div class="img">
+        <img src="../../static/img/mine/discounts.png" width="60px" height="43px">
+        <p>暂无任何优惠</p>
+    </div>
+</div>
+<div class="content">
+
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    $(function () {
+        ocean.get('resources/biz/api/coupon/self', {userId: ocean.getLoginUserId()}, function (res) {
+            if (res.code == 0) {
+                console.log(res.data);
+                if(res.data.length>0){
+                    var template = _.template($('#temp_item').html());
+                    $('.content').append(template({list: res.data}));
+                    $(".info_box").on("click", function () {
+                        location.href = "conversion.html";
+                    });
+                }else{
+                    $('.empty_content').show();
+                }
+
+            }
+        });
+    });
+</script>
+<script type="text/template" id="temp_item">
+    <@_.each(list, function (item) {@>
+    <div class="info_box">
+        <div class="text">
+            <p class="discount_title">换书劵</p>
+            <p class="discount_time">有效期至：<@=item.endTime.substring(0,10)@></p>
+        </div>
+        <div class="img">
+            <img src="../../static/img/discount/book_exchange.png"/>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <@ }); @>
+</script>
+</html>

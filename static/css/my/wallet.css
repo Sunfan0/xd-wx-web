@@ -1,0 +1,13 @@
+.content{
+    padding-bottom: 40px;
+}
+.money{
+    width:100%;
+    height:150px;
+    padding:10px 15px 0;
+    box-sizing: border-box;
+}
+.money .img{
+    width: 100%;
+    height:100%;
+}

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/other/search.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="area" onclick="history.back()"><img src="../../static/img/back.png" class="back"/></span>
+    <form class="search"><img src="../../static/img/images/search.png" width="19px" height="17px" class="img"/>
+        <input id="searchKey"
+               type="text"
+               data-role="none"
+               class="input"
+               placeholder="书名、作者"/>
+        <img src="../../static/img/search/close2.png" width="15px" height="15px" class="close"
+             onclick="$('#searchKey').val('')"/>
+    </form>
+    <span class="mess">搜索</span>
+</div>
+
+<div class="search_main">
+    <!--正常搜索-->
+    <div class="exist">
+        <div class="fire" id="hot_word_body">
+        </div>
+
+        <p class="del" id="delete"><img src="../../static/img/search/time.png" class="time"/>最近搜索<img
+                src="../../static/img/search/delete.png"
+                class="delete"/></p>
+        <div class="lately" id="local_key_body">
+
+        </div>
+
+    </div>
+
+
+    <!--没有搜索到-->
+    <!--<div class="without">-->
+    <p class="none" style="display: none">抱歉，没有搜索到这本书</p>
+
+    <!--</div>-->
+
+    <!--搜索到了-->
+    <div id="book_list" style="display: none;">
+        <div id="book_list_body"></div>
+        <div class="loadEffect next">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+
+    <script id="tmpl_hot_word" type="text/template">
+        <p class="sea"><img src="../../static/img/search/fire.png"/>热门搜索</p>
+        <@_.each(items, function (item) {@>
+        <span class="key" data-id="<@=item.name@>"><@=item.name@></span>
+        <@ }); @>
+    </script>
+
+    <script id="tmpl_local_key" type="text/template">
+        <@_.each(items, function (item) {@>
+        <span class="key" data-id="<@=item@>"><@=item@></span>
+        <@ }); @>
+    </script>
+
+    <script id="tmpl_books" type="text/template">
+        <@_.each(items, function (item) {@>
+        <div class="book" data-id="<@=item.id@>">
+            <div class="img">
+                <img class="img1 lazy" src="../../static/img/book.png" data-original="<@=item.picture@>"/>
+            </div>
+            <@if(item.stock<=0){@>
+            <div class="no_img"><p>无货</p></div>
+            <@}@>
+            <div class="main">
+                <h1 class="name"><@=item.name@></h1>
+                <p class="author"><@=item.author@></p>
+                <p class="bean">豆瓣评分 <@=item.score@></p>
+                <!--<p class="price">￥<@=item.price@><span class="count">(<c><@=item.discount@></c>折)</span></p>
+                <@ if(item.isExchange) { @>
+                <p class="score"><img src="../../static/img/buttom/star.png"/>熊猫币兑换</p>
+                <@ } @>-->
+                <p class="money">
+                    <span class="used">二手价</span>
+                    <span class="num">￥<@=item.price@></span>
+                    <span class="discount"><@=item.discount@>折</span>
+                </p>
+                <@if(item.stock>0){@>
+                <p class="right_btn add_shopping" data-id="<@=item.id@>">加入购物车</p>
+                <@}else if(item.isHit){@>
+                <p class="right_btn close_remind" data-id="<@=item.isbn@>">取消提醒</p>
+                <p class="right_btn open_remind" style="display: none" data-id="<@=item.isbn@>">到货提醒</p>
+                <@}else{@>
+                <p class="right_btn close_remind" style="display: none" data-id="<@=item.isbn@>">取消提醒</p>
+                <p class="right_btn open_remind" data-id="<@=item.isbn@>">到货提醒</p>
+                <@}@>
+            </div>
+        </div>
+        <@ }); @>
+    </script>
+    <div class="bottombox"></div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    $(function () {
+        //监测键盘
+        $('#searchKey').bind("focus", function () {
+            $(".groom").css({"position": "static", "margin-top": "100px"});
+        }).bind("blur", function () {
+            $(".groom").css("position", "fixed");
+        });
+
+
+        $(window).bind('resize', function (event) {
+            event.stopImmediatePropagation();
+        }).trigger('resize');
+
+
+        var dataLength = "";
+        var params = {
+            page: 1,
+            pageSize: 10,
+            type: "default",
+            userId: ocean.getLoginUserId(),
+            searchKey: ""
+        };
+
+        loadHotWord();
+
+        function loadHotWord() {
+            ocean.get("resources/biz/hotWord/hot_word_list", {}, function (data) {
+                if (data.code == 0) {
+                    var tmpl = _.template($('#tmpl_hot_word').html());
+                    $('#hot_word_body').html(tmpl({
+                        items: data.data
+                    }));
+                }
+                var array = (localStorage.getItem("localSearchKey") === null) ? [] : JSON.parse(localStorage.getItem("localSearchKey"));
+                var tmpl1 = _.template($('#tmpl_local_key').html());
+                $('#local_key_body').html(tmpl1({
+                    items: array
+                }));
+                $(".key").on("click", function () {
+                    params.searchKey = $(this).data("id");
+                    $("#searchKey").val(params.searchKey);
+                    $(".exist").hide();
+                    searchBook();
+                });
+
+                $(".delete").on("click", function () {
+                    $(".lately .key").remove();
+                    localStorage.clear("localSearchKey")
+                });
+            }, function (error) {
+                ocean.tip(error);
+            });
+
+        }
+
+        function searchBook() {
+            var array = JSON.parse(localStorage.getItem("localSearchKey") || "[]");
+            if (array.indexOf(params.searchKey) == -1) {
+                array.push(params.searchKey);
+            }
+            localStorage.setItem("localSearchKey", JSON.stringify(array));
+
+            ocean.post("resources/biz/books/list_by_search_key", params, function (data) {
+                console.log(data);
+                dataLength = data.data.length;
+                if (data.code == 0 && data.data.length == 0) {
+                    $('body').css('background-color', 'white');
+                    showNoBooks();
+                } else if (data.code == 0 && data.data.length > 0) {
+                    $('body').css('background-color', '#f1f1f1');
+                    $("#book_list").show();
+                    $(".none,.groom").hide();
+                    if (params.page == 1) {
+                        $("#book_list_body").html("");
+                    }
+                    var tmpl = _.template($('#tmpl_books').html());
+                    $('#book_list_body').append(tmpl({
+                        items: data.data
+                    }));
+                    afterBooksLoad()
+                }
+            }, function (error) {
+                ocean.tip(error);
+            });
+        }
+
+        function showNoBooks() {
+            $(".none,.groom").show();
+            $("#book_list").hide();
+            setTimeout(function () {
+                window.location.reload();
+            }, 5000);
+        }
+
+
+        function afterBooksLoad() {
+            $('.lazy').lazyload({
+                threshold: 20
+            });
+            //分页
+            total_q = $(".book").length;
+            current_page = 10;
+            current_num = 1;
+            total_page = Math.ceil(total_q / current_page);
+            next = $(".next");
+
+            $(".total").html(total_page);
+            $(".current_page").text(current_num);
+
+            $(".book").on("click", function () {
+                location.href = "../book/book_info.html?from=store&id=" + $(this).data("id");
+                return false;
+            });
+            $(".add_shopping").on("click", function () {
+                var id = $(this).data("id");
+                var book;
+                ocean.get("resources/biz/api/book", {id: id}, function (res) {
+                    if (res.code == 0) {
+                        console.log(res.data);
+                        book = res.data;
+                        buyShoppingCar.push(book, function () {
+                            ocean.toast("添加购物车成功");
+                        });
+                    }
+                }, function (error) {
+                    ocean.tip(error);
+                });
+                return false;
+            });
+            $(".open_remind").on("click", function () {
+                var currentId = $(this);
+                var isbn = $(this).data("id");
+                if (!ocean.getLoginUserId()) {
+                    ocean.showLogin();
+                } else {
+                    ocean.get("resources/biz/api/arrival/reminding", {
+                        userId: ocean.getLoginUserId(),
+                        isbn: isbn
+                    }, function (data) {
+                        console.log(data);
+                        if (data.code == 0) {
+                            ocean.tip("提醒成功");
+                            currentId.hide();
+                            currentId.prev().show();
+                        }
+                    }, function (data) {
+                        ocean.tip(data.message);
+                    });
+                }
+                return false;
+            });
+            $(".close_remind").on("click", function () {
+                var currentId = $(this);
+                var isbn = $(this).data("id");
+                if (!ocean.getLoginUserId()) {
+                    ocean.showLogin();
+                } else {
+                    ocean.get("resources/biz/api/cancel/reminding", {
+                        userId: ocean.getLoginUserId(),
+                        isbn: isbn
+                    }, function (data) {
+                        console.log(data);
+                        if (data.code == 0) {
+                            ocean.tip("取消成功");
+                            currentId.hide();
+                            currentId.next().show();
+                        }
+                    }, function (data) {
+                        ocean.tip(data.message);
+                    });
+                }
+                return false;
+            });
+        }
+
+        $(window).scroll(function () {
+            p = $(this).scrollTop();
+            if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
+                $(".loadEffect").show();
+                if (dataLength == params.pageSize) {
+                    params.page = params.page + 1;
+                    searchBook();
+                } else {
+                    $(".loadEffect").css("width", "100px");
+                    $(".loadEffect").html("没有更多了");
+                }
+            }
+        });
+
+        //点击搜索
+        $(".mess").on("click", function () {
+            params.page = 1;
+            var searchKey = $("#searchKey").val().clearBlank();
+            if (searchKey.isEmpty()) {
+                ocean.tip("请输入搜索关键字！");
+            } else {
+                $(".exist").hide();
+                $(".none,.groom").hide();
+                params.searchKey = searchKey;
+                searchBook();
+            }
+        });
+
+        $(".close").on("click", function () {
+            location.reload();
+        });
+
+        $('form').on('submit', function (e) {
+            params.page = 1;
+            var searchKey = $("#searchKey").val().clearBlank();
+            if (searchKey.isEmpty()) {
+                ocean.tip("请输入搜索关键字！");
+            } else {
+                $(".exist").hide();
+                $(".none,.groom").hide();
+                params.searchKey = searchKey;
+                searchBook();
+            }
+            return false;
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,393 @@
+.header {
+    height: 44px;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    z-index: 5;
+}
+
+.header .area {
+    width: 30px;
+    height: 50%;
+    position: absolute;
+    left: 15px;
+    top: 13px;
+}
+
+.area .back {
+    width: 12px;
+    height: 20px;
+    vertical-align: sub;
+}
+
+.header .book_1 {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+    top: 50px;
+    bottom: 50px;
+    background: #f1f1f1;
+    padding: 15px 30px 55px 15px;
+    box-sizing: border-box;
+    padding-top: 60px;
+    padding-bottom: 110px;
+}
+
+.body .item {
+    width: 100%;
+    display: flex;
+    line-height: 20px;
+}
+
+.item .icon {
+    width: 15px;
+    margin-right: 15px;
+}
+
+.icon img {
+    width: 15px;
+    height: 15px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 3px;
+}
+
+.item .info {
+    flex: 1;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.question {
+    font-size: 14px;
+    color: #3b3b3b;
+}
+
+.answer {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #898989;
+}
+
+.button span {
+    display: inline-block;
+    height: 8%;
+    width: 37%;
+    border-radius: 30px;
+}
+
+.write {
+    background: #3b3b3b;
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 44px;
+    text-align: center;
+    box-shadow: 0 4px 22px #6a6a6a;
+}
+
+.bg {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 50px;
+    buttom: 40px;
+    left: 0;
+    background: #f1f1f1;
+    z-index: -3;
+}
+
+.choice {
+    position: fixed;
+    right: 0;
+    bottom: 50px;
+    width: 100%;
+    height: 64px;
+    box-shadow: 0 4px 30px rgb(251, 251, 251);
+    background: #ffffff;
+}
+
+.choice .left {
+
+    width: 65%;
+
+    height: 100%;
+    float: left;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding-left: 15px;
+}
+
+.choice .left p {
+    height: 18px;
+    font-size: 14px;
+    color: #c3c3c3;
+    line-height: 18px;
+    margin-top: 19px;
+    float: left;
+}
+
+.choice .left p img {
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+.choice .right {
+    width: 35%;
+    height: 100%;
+    float: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-align: center;
+    line-height: 48px;
+}
+
+.choice .number {
+    display: inline-block;
+
+    margin-right: 4px;
+
+    height: 100%;
+}
+
+.choice .tot {
+    font-size: 14px;
+
+    color: #3b3b3b;
+
+}
+
+.choice .price {
+    font-size: 14px;
+    color: #77a9fd;
+}
+
+.choice .buy {
+    display: inline-block;
+    width: 88%;
+    height: 44px;
+    background: #c3c3c3;
+    margin-top: 6px;
+    border-radius: 3px;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 44px;
+}
+
+.choice a {
+    text-decoration: none;
+}
+
+.choice #count {
+    font-size: 14px;
+    color: #3b3b3b;
+}
+
+.choice #total {
+    font-size: 18px;
+    color: #b59768;
+    margin-left: 14px;
+}
+
+.confirm {
+    width: 244px;
+    height: 40px;
+    background: #3b3b3b;
+    border: 0;
+    color: #FFFFFF;
+    font-size: 14px;
+    letter-spacing: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 40px;
+    text-align: center;
+}
+
+.read {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-right: 8px;
+    background-image: url("../../img/buttom/add.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.read1 {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-right: 8px;
+    background-image: url("../../img/images/close4.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.button {
+    margin-top: 30px;
+}
+
+.info {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: #3b3b3b;
+}
+
+.info .icon {
+    width: 20px;
+    height: 20px;
+    background: #3b3b3b;
+    display: inline-block;
+    font-size: 12px;
+    color: #b59768;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    margin-right: 25px;
+    vertical-align: text-bottom;
+}
+
+.info .text {
+    font-size: 18px;
+    color: #3b3b3b;
+}
+
+.info2 {
+    margin: 26px 0;
+}
+
+.code_bg {
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    background-image: url("../../img/buttom/mai1.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+
+.icon_img {
+    width: 26px;
+    height: 24px;
+}
+
+.pop_isbn_box {
+    position: fixed;
+    left: 15px;
+    bottom: 110px;
+}
+
+.question {
+    position: fixed;
+    right: 15px;
+    bottom: 110px;
+}
+
+.isbn_scan {
+    position: fixed;
+    width: 90px;
+    height: 90px;
+    background: #3b3b3b;
+    border-radius: 50%;
+    left: 58%;
+    bottom: 160px;
+    margin-left: -75px;
+    box-shadow: 0 4px 22px #6a6a6a;
+}
+
+.isbn_scan img {
+    width: 34px;
+    height: 33px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.isbn_scan .text1 {
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 7px;
+}
+
+.fail_popup {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.fail_popup .fail_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1100;
+}
+
+.fail_popup .fail_content {
+    width: 260px;
+    height: 290px;
+    margin: 200px auto 55px;
+    position: relative;
+    z-index: 9999;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.fail_popup .fail_content .content_img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 20px;
+    padding-top: 47px;
+}
+
+.fail_popup .fail_content .text {
+    font-size: 14px;
+    color: #3b3b3b;
+    text-align: center;
+    height: 18px;
+}
+
+.fail_popup .fail_content .fail_btn {
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #3b3b3b;
+    color: white;
+    border-radius: 30px;
+    margin: 20px auto;
+    font-size: 14px;
+}
+
+.fail_popup .fail_content .fail_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+}

@@ -1,0 +1,193 @@
+body {
+    background-color: #254dbf;
+}
+
+#login_page, #share_page * {
+    color: white;
+}
+
+.header_img {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+
+.dialog_img {
+    width: 82%;
+    height: 50px;
+    margin: 27px auto 24px;
+}
+.dialog2_img {
+    width: 100%;
+    height: 40px;
+    margin: 40px auto 18px;
+}
+
+.header_img img, .dialog_img img ,.dialog2_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.header_code {
+    display: flex;
+    -webkit-display: flex;
+    justify-content: flex-start;
+    -webkit-justify-content: space-around;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+
+.header_code span {
+    display: inline-block;
+    padding: 0 15px;
+    background-color: #f1f1f1;
+    color: #3d3d3d!important;
+    font-size: 30px;
+}
+
+.input_info {
+    padding: 40px 10px 15px;
+    font-size: 14px;
+}
+
+.input_info input {
+    border: none;
+    outline: none;
+    width: 60%;
+    line-height: 35px;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+.input_info ::-webkit-input-placeholder {
+    color: #d8d8d8 !important;
+}
+
+.input_info .input {
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 8px;
+    margin-bottom: 30px;
+}
+
+.input_info .get_code {
+    display: inline-block;
+    background-color: #3d3d3d;
+    border-radius: 30px;
+    color: white;
+    float: right;
+    font-size: 12px;
+    padding: 0 6px;
+    height: 22px;
+    line-height: 22px;
+    margin-top: 5px;
+}
+
+.bottom_box {
+    padding: 0 18px;
+}
+
+.bottom_box .btn {
+    width: 90%;
+    height: 45px;
+    line-height: 45px;
+    margin: 0 auto 50px;
+    background-color: #b59768;
+    color: white;
+    border-radius: 30px;
+    font-size: 15px;
+    box-shadow: 0 0 10px #b59768;
+    text-align: center;
+}
+
+.bottom_box .share_btn {
+    background-image: url("../../../static/img/mine/sharebtn_bg.png");
+    background-position: center;
+    background-size: 100% 100%;
+    box-shadow: none;
+    width: 55%;
+}
+
+.text_content {
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.text_content .text_img {
+    margin-bottom: 10px;
+}
+
+.text_content .text_img span {
+    height: 50px;
+    line-height: 50px;
+}
+
+.text_content .text_img img {
+    width: 35%;
+    vertical-align: middle;
+}
+
+.text_content .text_info {
+    margin-bottom: 20px;
+}
+
+.text_content .book_box {
+    padding: 10px 0 30px;
+    display: flex;
+    -webkit-display: flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+.text_content .book_box .book_item {
+    width: 100px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+}
+
+.text_content .login_box {
+    background-color: white;
+    border-radius: 10px;
+    margin: 50px 0 25px;
+    padding: 70px 20px 50px;
+}
+
+.text_content .explain_title {
+    position: relative;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.text_content .explain_title:before, .text_content .explain_title:after {
+    content: '';
+    position: absolute;
+    top: 52%;
+    background: white;
+    width: 36%;
+    height: 1px;
+}
+
+.text_content .explain_title:before {
+    left: 0;
+}
+
+.text_content .explain_title:after {
+    right: 0;
+}
+
+@media screen and (max-width: 360px) {
+    .text_content .text_img img {
+        width: 25%;
+    }
+
+    .text_content .book_box .book_item {
+        width: 90px;
+        height: 145px;
+    }
+
+    .text_content .login_box {
+        padding: 40px 20px 10px;
+    }
+}

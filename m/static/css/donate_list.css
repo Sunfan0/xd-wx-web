@@ -1,0 +1,76 @@
+body {
+    background-color: #f8f8f8;
+}
+
+.empty_content {
+    position: absolute;
+    width: 50%;
+    height: 27%;
+    top: 26%;
+    left: 24%;
+}
+
+.empty_content p {
+    font-size: 14px;
+    color: #c3c3c3;
+    text-align: center;
+}
+
+.content .book_box {
+    margin-top: 10px;
+    background-color: white;
+    padding: 0 15px 10px;
+}
+
+.content .book_box .order_info {
+    margin: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.content .book_box .order_info .order_number {
+    float: left;
+    text-align: left;
+    color: #626262;
+}
+
+.content .book_box .order_info .order_state {
+    color: #b59768;
+}
+
+.content .book_box .book_info {
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+.content .book_box .book_info .img {
+    float: left;
+    width: 30%;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+    margin: 10px;
+}
+
+.content .book_box .book_info .text {
+    float: left;
+    position: relative;
+    overflow: hidden;
+    width: 60%;
+    height: 100px;
+    margin: 10px 0;
+}
+
+.content .book_box .book_info .text .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content .book_box .book_info .text .integral {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

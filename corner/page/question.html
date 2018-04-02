@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>更多问题</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/question.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="content">
+    <div class="body">
+        <div class="often">常见问题</div>
+        <div class="item">
+            <p>熊猫格子图书漂流角覆盖哪些区域？<img src="../static/img/ques.png" class="down"/></p>
+            <p class="info">
+                目前我们提供上海师范大学田林校区和奉贤校区的服务，其他高校即将开通，敬请期待。
+            </p>
+        </div>
+        <div class="item">
+            <p>如何捐书？<img src="../static/img/ques.png" class="down"/></p>
+            <p class="info">
+                扫描书背面的ISBN码或手动输入书的ISBN号，系统识别是否在收购范围，识别通过即可下单。下单成功后请将书籍带到指定的熊猫格子图书漂流角，会有工作人员在现场进行审核，通过后捐书成功。
+            </p>
+        </div>
+        <div class="item">
+            <p>什么书是不可以捐的？<img src="../static/img/ques.png" class="down"/></p>
+            <p class="info">
+                宗教类书籍、教材教辅、考试书籍、杂志；封面污染破损，有影响阅读的污渍、缺页破损、异味；非卖品和非法出版物。
+            </p>
+        </div>
+        <div class="item">
+            <p>捐书可以得到什么？<img src="../static/img/ques.png" class="down"/></p>
+            <p class="info">
+                捐书成功后，我们会发放图书定价等值的熊猫币，在熊猫格子漂流角，你可以用熊猫币兑换其他书籍或商品，也可在熊猫格子线上平台使用。
+            </p>
+        </div>
+        <div class="item">
+            <p>如何购买商品？<img src="../static/img/ques.png" class="down"/></p>
+            <p class="info">
+                在熊猫格子图书漂流角，你可以用自己捐书所得熊猫币购买现场所有的图书产品或其他商品。点击“购买”按钮扫描图书背面的条码或桌面上贴的条码即可看到所需的熊猫币。若熊猫币不足，则可以用每个熊猫币0.1元价格补差价即可。
+            </p>
+        </div>
+        <div class="item">
+            <p>书籍保证正版吗？<img src="../static/img/ques.png" class="down"/></p>
+            <p class="info">
+                我们的创始团队均来自出版行业，和图书打交道十余年，有着专业的判断能力，所有图书均保证正版，可放心购买。
+            </p>
+        </div>
+        <div class="item">
+            <p>买走的书可以再捐回来吗？<img src="../static/img/ques.png" class="down"/></p>
+            <p class="info">
+                当然可以；看完书再把书捐回图书角，让一本书再次发挥余热也是我们的初衷。同时也让大家看到更加丰富的图书。
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="../../static/js/recycle.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+    Window.onload = Load();
+
+    function Load() {
+        $(".item").each(function (index) {
+            $(this).on("click", function () {
+                if ($(".down").eq(index).attr("src") == "../static/img/ques.png") {
+                    $(".down").eq(index).attr("src", "../static/img/ques1.png");
+                    $(".info").eq(index).show();
+                } else {
+                    $(".down").eq(index).attr("src", "../static/img/ques.png");
+                    $(".info").eq(index).hide();
+                }
+            })
+        });
+    }
+</script>
+</html>

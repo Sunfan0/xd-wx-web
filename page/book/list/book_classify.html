@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/book/list/book_classify.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">分类</p>
+</div>
+<div class="content">
+    <div class="book_row">
+        <div class="info_box item">
+            <div class="bg"></div>
+            <p class="name"></p>
+            <p class="number"></p>
+        </div>
+        <div class="info_box item">
+            <div class="bg"></div>
+            <p class="name"></p>
+            <p class="number"></p>
+        </div>
+        <div class="info_box item">
+            <div class="bg"></div>
+            <p class="name"></p>
+            <p class="number"></p>
+        </div>
+        <div class="info_box item">
+            <div class="bg"></div>
+            <p class="name"></p>
+            <p class="number"></p>
+        </div>
+        <div class="info_box item">
+            <div class="bg"></div>
+            <p class="name"></p>
+            <p class="number"></p>
+        </div>
+        <div class="info_box item">
+            <div class="bg"></div>
+            <p class="name"></p>
+            <p class="number"></p>
+        </div>
+        <div class="info_box all" style="background-image: url('../../../static/img/book/classify7.png')">
+            <div class="bg"></div>
+            <p class="name">全部</p>
+            <p class="number"></p>
+        </div>
+        <div class="info_box"></div>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script>
+    $(function () {
+        ocean.get("resources/biz/api/book/classify", {pid: "root"}, function (res) {
+            if (res.code == 0) {
+                var elems = $(".info_box");
+                var total = 0;
+                console.log(res.data)
+                $.each(res.data, function (index, item) {
+                    $(elems[index]).data("id", item.type.id);
+                    $(elems[index]).find(".number").html("共" + item.count + "本");
+                    $(elems[index]).find(".name").html(item.type.name);
+                    $(elems[index]).css("background-image", "url(" + item.type.picture + ")");
+                    total += item.count;
+                });
+
+                $(".all .number").html("共" + total + "本");
+
+                $(".info_box.item").on("click", function () {
+                    location.href = "book_type.html?from=library&pid=" + $(this).data("id");
+                });
+            }
+        });
+
+        $(".info_box.all").on("click", function () {
+            location.href = "book_list.html?type=library";
+        });
+    });
+</script>
+</html>

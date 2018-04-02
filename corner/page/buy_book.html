@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>买书</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/buy_book.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="top_title">
+    <div onclick="history.back()"><img class="back" src="../static/img/back_btn.png"/><span>返回</span></div>
+    <div><span>买书</span>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div><img class="other" src="../static/img/other_btn.png"/></div>
+</div>
+<div class="top_place"></div>
+<div class="header no_book hidden">
+    <div class="header_img" style="background-image: url('../static/img/book.png')"></div>
+</div>
+<div class="book_list have_book hidden">
+    <div id="buy_list"></div>
+</div>
+<div class="bottom_btn">
+    <span class="code_book">扫码买书</span>
+    <span class="input_book">手动输入</span>
+</div>
+<div class="bottom_order no_book hidden">
+    <span>共</span>
+    <span class="black sum_number" style="margin: 0">0</span>
+    <span style="margin: 0">本，总熊猫币</span>
+    <span class="red sum_integral">0</span>
+    <span class="disable_btn"><span>下单</span></span>
+</div>
+<div class="bottom_order have_book hidden">
+    <span class="order_text1">需熊猫币</span>
+    <span class="red need_integral">0</span>
+    <span class="order_text2">剩余熊猫币</span>
+    <span class="black residue_integral">0</span>
+    <span class="order_btn"><span>下单</span></span>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="../../static/js/recycle.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+    var jssdk = new ocean_jssdk().init();
+    var isbn_box = new isbnBox(ShowBuyList, 'buy-book-list', 'resources/biz/bc/api/buy_verify');
+    var sum_number = 0;
+    var sum_integral = 0;
+    var need_integral = 0;
+    var residue_integral = 0;
+    Window.onload = Load();
+
+    function Load() {
+        $(".sum_integral").text(sessionStorage.getItem("user_grade"));
+        residue_integral = sessionStorage.getItem("user_grade");
+
+        $(".order_btn").click(function () {
+            window.location.href = "buy_order.html"
+        })
+
+        if (isbn_box.isEmpty()) {
+            $(".no_book").show();
+            $(".have_book").hide();
+        } else {
+            $(".no_book").hide();
+            $(".have_book").show();
+            isbn_box.each(ShowBuyList);
+            $(".need_integral").text(need_integral.toFixed(2));
+            $(".residue_integral").text(residue_integral.toFixed(2));
+        }
+
+        $(".code_book").click(function () {
+            if (!ocean.getLoginUserId()) {
+                ocean.showLogin();
+            } else {
+                jssdk.scanIsbn(isbn_box.checkBookIsbn);
+            }
+        });
+        $(".input_book").click(function () {
+            if (!ocean.getLoginUserId()) {
+                ocean.showLogin();
+            } else {
+                isbn_box.show();
+            }
+        })
+    }
+
+    function ShowBuyList(key, book) {
+        if (isbn_box.size() == 1) {
+            $(".no_book").hide();
+            $(".have_book").show();
+        }
+        need_integral += book.integral;
+        if (residue_integral - book.integral > 0) {
+            residue_integral -= book.integral;
+        } else {
+            residue_integral = 0;
+        }
+        var strlist = '<div class="book_box">';
+        strlist += '<span class="name">' + book.bookName + '</span>';
+        strlist += '<span class="integral">' + book.integral + '熊猫币</span>';
+        strlist += '<span class="close" onclick="removeBook(this,' + key + ',' + book.integral + ')">×</span>';
+        strlist += '</div>';
+        $("#buy_list").append(strlist);
+
+        $(".need_integral").text(need_integral.toFixed(2));
+        $(".residue_integral").text(residue_integral.toFixed(2));
+    }
+
+    function removeBook(e, key, integral) {
+        isbn_box.remove(key);
+        console.log(isbn_box)
+        $(e).parent().remove();
+        need_integral -= integral;
+        residue_integral = sessionStorage.getItem("user_grade");
+        if (residue_integral - need_integral > 0) {
+            residue_integral -= need_integral;
+        } else {
+            residue_integral = 0;
+        }
+        $(".need_integral").text(need_integral.toFixed(2));
+        $(".residue_integral").text(residue_integral.toFixed(2));
+        if (isbn_box.isEmpty()) {
+            window.location.reload();
+        }
+    }
+</script>
+</html>

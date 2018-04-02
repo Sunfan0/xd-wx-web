@@ -1,0 +1,176 @@
+body {
+    background-color: #f1f1f1;
+}
+
+#add_page .header {
+    display: block !important;
+}
+
+.content_1 {
+    /*margin-top: 36px!important;*/
+}
+
+.content_2 {
+    margin-top: 38px !important;
+}
+
+.content #address_list {
+    /*margin-top: -9px;*/
+    padding-bottom: 75px;
+}
+
+#add_page {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.content .address_list {
+    margin: 15px;
+    padding: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+}
+
+.content .address_list .name {
+    width: 50%;
+    float: left;
+    font-size: 17px;
+    color: #3b3b3b;
+}
+
+.content .address_list .default {
+    font-size: 10px;
+    width: 30px;
+    height: 15px;
+    line-height: 15px;
+    border: 1px solid #b59768;
+    text-align: center;
+    color: #b59768;
+    margin-top: 3px;
+}
+
+.content .address_list .info {
+    width: 50%;
+    float: left;
+}
+
+.content .address_list .info .mobile {
+    font-size: 17px;
+    color: #3b3b3b;
+    height: 25px;
+    text-align: right;
+}
+
+.content .address_list .address {
+    font-size: 14px;
+    color: #c3c3c3;
+    height: 25px;
+    clear: both;
+    padding: 5px 0 10px;
+}
+
+.content .address_list .btn_content {
+    border-top: 1px solid #f1f1f1;
+    padding-top: 10px;
+    text-align: right;
+}
+
+.content .address_list .default_text {
+    float: left;
+    font-size: 14px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.content .address_list .default_text img {
+    vertical-align: sub;
+    margin-right: 5px;
+}
+
+.content .address_list .info .address {
+    font-size: 12px;
+    color: #c3c3c3;
+    width: 90%;
+}
+
+.content .address_list .btn {
+    display: inline-block;
+    text-align: center;
+    padding: 4px 20px;
+    border: 0.01em solid #898989;
+    border-radius: 3px;
+    color: #3b3b3b;
+    font-size: 14px;
+}
+
+.content .address_list .modify {
+    margin-right: 10px;
+}
+
+.content .address_list .modify img {
+    width: 20px;
+    height: 24px;
+    position: absolute;
+    top: 10px;
+}
+
+.empty_content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*background: #ffffff;*/
+}
+
+.empty_content .img {
+    width: 186px;
+    height: 220px;
+    position: absolute;
+    top: 30%;
+    left: 49%;
+    margin-left: -93px;
+}
+
+.empty_content .img img {
+    display: block;
+    margin: 10px auto;
+}
+
+.empty_content .img p {
+    font-size: 14px;
+    color: rgb(201, 201, 201);
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.bottom {
+    width: 100%;
+    height: 70px;
+    line-height: 45px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #f1f1f1;
+}
+
+.bottom .submit_btn {
+    background-color: #3b3b3b;
+    z-index: 9999;
+    text-align: center;
+    margin: 0 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+}
+
+.bottom img {
+    width: 9px;
+    height: 9px;
+    line-height: 45px;
+    margin-right: 8px;
+}

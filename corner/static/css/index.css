@@ -1,0 +1,125 @@
+body {
+    background-color: #f8f8f8;
+}
+
+.header {
+    width: 100%;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header .header_bg {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.header .blur{
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px);
+}
+
+.header .header_blank {
+    width: 100%;
+    height: 100%;
+    background-color: #3b3b3b;
+}
+
+.header .more {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+.header .header_img {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+}
+
+.header .header_img .user_img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+}
+
+.header .header_img .name {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.menu {
+    width: 80%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    background-color: white;
+    padding: 25px 20px;
+    border-radius: 5px;
+    position: relative;
+    margin: -60px auto 0;
+}
+
+.menu .item {
+    text-align: center;
+    position: relative;
+    width: 64px;
+    height: 75px;
+}
+
+.menu .item .menu_name {
+    position: absolute;
+    bottom: 0;
+}
+
+.menu .item .integral {
+    font-size: 35px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.menu .item .menu_sign {
+    position: absolute;
+    top: -8px;
+    right: 0px;
+    width: 8px;
+    height: 8px;
+    background-color: #b59768;
+    border-radius: 50px;
+}
+
+.bottom_btn {
+    width: 100%;
+    position: fixed;
+    bottom: 50px;
+    text-align: center;
+}
+
+.bottom_btn span {
+    background-color: #3b3b3b;
+    box-shadow: 0 0 10px #3b3b3b;
+    border-radius: 30px;
+    padding: 13px 42px;
+    color: white;
+}
+
+.bottom_btn span:first-child {
+    margin-right: 30px;
+}

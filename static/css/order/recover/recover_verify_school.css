@@ -1,0 +1,75 @@
+.step > div {
+	position: relative;
+}
+
+.step > div:after {
+  content: ' ';
+  width: 14px;
+  height: 7px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  display: block;
+  position: absolute;
+  top: 11px;
+  left: 8px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.book_list {
+  margin-top: 0px;
+  padding-bottom: 15px;
+}
+.number {
+  border-bottom: 1px solid #c3c3c3 !important;
+}
+
+.verify_school_bottom {
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 40px 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.verify_code_hide_input {
+  position: absolute;
+  top: 40px;
+  z-index: -1;
+  height: 34px;
+  border: none;
+  padding-left: 12px;
+  font-size: 12px;
+}
+
+.verify_school_button {
+  background-color: #AD8C52;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 2px;
+  margin: 0 auto;
+  display: block;
+  color: #fff;
+}
+
+.verify_school_input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 999;
+}
+
+.verify_school_input > div {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #D4C2A3;
+  text-align: center;
+  line-height: 34px;
+  font-size: 12px;
+}

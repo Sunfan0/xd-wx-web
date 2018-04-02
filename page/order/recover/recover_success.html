@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/order/recover/recover_success_0308.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <div class="header">
+        <span class="back" onclick="back()"><div></div></span>
+        <p class="title">下单成功</p>
+    </div>
+</div>
+<div class="state">
+    <div class="state_div">
+        <div class="step">
+            <div class="first">1</div>
+            <p class="p1"></p>
+            <p class="p2"></p>
+            <div class="second">2</div>
+            <p class="p2"></p>
+            <p class="p3"></p>
+            <div class="third">3</div>
+            <p class="p3"></p>
+            <p class="p4"></p>
+            <div class="fourth">4</div>
+        </div>
+        <p class="text">
+            <span>下单成功</span>
+            <span>快递取件</span>
+            <span>人工审核</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;打款</span>
+        </p>
+    </div>
+</div>
+<div class="mess">
+    <div class="number">
+        订单编号：<span class="orderNo"></span>
+    </div>
+    <div class="address">
+        <p class="info">取件地址：</p>
+        <div class="address_span">
+            <p></p>
+        </div>
+    </div>
+    <div class="time" style="display: none">
+        预约时间：<span class="fetch_time"></span>
+    </div>
+</div>
+<div class="book_list" id="book_list"></div>
+<div class="bg1"></div>
+<div class="contact">
+    <div class="button">
+        <div class="del1">请致电 400-116-9966 联系客服</div>
+        <div class="cancel">
+            <span class="can1"><button class="quxiao">取消</button></span>
+            <span class="can2"><a href="tel:4001169966"><button class="shanchu go">拨打</button></a></span>
+        </div>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script>
+    $(function () {
+        var id = ocean.getRequestParameter("id");
+        console.log(id);
+        ocean.get("resources/biz/recycleOrder/select_order_details", {id: id}, function (data) {
+            if (data.code == 0) {
+                console.log(data.data);
+                var item = data.data;
+                $(".orderNo").html(item.orderNo);
+                $(".address_span p").html(item.fetchAddress);
+                var fetchTime = item.fetchTime;
+                if(item.fetchTime != "送货"){
+                    $(".time").show();
+                    $(".fetch_time").html(fetchTime.slice(5, 10).replace("-", "月") + "日" + fetchTime.slice(10, 16) + " -" + fetchTime.slice(30, 36));
+                }else{
+                    $('.mess .address .info').text('送货地址：')
+                    $('.state_div .text span:nth-child(2)').html('&nbsp;&nbsp;&nbsp;&nbsp;送货')
+                }
+                var recycle = _.template($('#recycle_item').html());
+                $("#book_list").append(recycle({item: item}));
+
+                if (item.state == "CREATED") {
+                    $(".first").addClass("bgp");
+                    $(".first").siblings("div").removeClass("bgp");
+                    $(".p1").addClass("bgp");
+                }
+                if (item.state == "SENDED") {
+                    $(".second").addClass("bgp");
+                    $(".first").addClass("bgp");
+                    $(".p1").addClass("bgp");
+                    $(".p2").addClass("bgp");
+                }
+                if (item.state == "RECEIVED") {
+                    $(".third").addClass("bgp");
+                    $(".second").addClass("bgp");
+                    $(".first").addClass("bgp");
+                    $(".p1").addClass("bgp");
+                    $(".p2").addClass("bgp");
+                    $(".p3").addClass("bgp");
+                }
+                if (item.state == "FINISHED") {
+                    $(".fourth").addClass("bgp");
+                    $(".third").addClass("bgp");
+                    $(".second").addClass("bgp");
+                    $(".first").addClass("bgp");
+                    $(".p1").addClass("bgp");
+                    $(".p2").addClass("bgp");
+                    $(".p3").addClass("bgp");
+                    $(".p4").addClass("bgp");
+                }
+                $(".contact_us").on("click", function () {
+                    $(".contact").show();
+                    $(".quxiao").on("click", function () {
+                        $(".contact").hide();
+                    });
+                });
+            }
+            var add = $(".address_span").html();
+            var num = add.replace(/[^0-9]/ig, "").length;
+            var reg = add.match(/[\u4e00-\u9fa5]/g).length;
+            if ((parseInt(num) + parseInt(reg)) > 60) {
+                $(".address_span").css("line-height", "50px");
+            } else {
+                $(".address_span").css("line-height", "25px");
+            }
+        }, function (error) {
+            ocean.tip(error);
+        });
+    });
+
+    function back() {
+        location.href = "../../my/order/sell.html";
+    }
+</script>
+<script id="recycle_item" type="text/template">
+    <@_.each(item.bookName.split('@'), function (book, index) {@>
+    <div class="book">
+        <div class="book_img">
+            <div style="background-image: url(<@=item.picture.split('@')[index]@>)" class="img1"></div>
+        </div>
+        <div class="info">
+            <p class="name"><@=item.bookName.split('@')[index]@></p>
+            <p class="author"><@=item.author.split('@')[index]@></p>
+            <p class="score">￥<span><@=item.integral.split('@')[index].slice(0,4)@></span></p>
+        </div>
+    </div>
+    <@ }); @>
+    <div class="tot">共<span><@=item.totalNum@></span>本 总金额 <span class="grade"><@=item.grade@></span></div>
+    <span class="button contact_us">联系我们</span>
+</script>
+</html>

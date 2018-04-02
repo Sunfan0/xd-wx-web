@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/book/book_info_0319.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<!--<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">图书详情</p>
+    <div class="left">
+        <div class="car_number">
+            <img src="../../static/img/buttom/car_num.png"/>
+            <span class="book_number" id="shopping"></span>
+        </div>
+    </div>
+</div>-->
+<div class="content" style="margin-top: 0;">
+    <div class="bookheader">
+        <div class="bg_div" style="top: 0;">
+            <div class="bookimg_bg" style="background-image: url('../../static/img/book.jpg')"></div>
+        </div>
+        <div class="bg_black" style="top: 0;"></div>
+        <div class="bookimg" style="background-image: url('../../static/img/book.jpg')">
+            <div class="no_img" style="display: none;"><p>无货</p></div>
+        </div>
+        <div class="book_right">
+            <p class="bookname"></p>
+            <p class="author"></p>
+            <p class="time"></p>
+            <p class="press"></p>
+            <div class="bookgrad">
+                <span class="label">豆瓣评分</span>
+                <div class="star">
+                    <img src="../../static/img/bookinfo/star0.png"/>
+                    <img src="../../static/img/bookinfo/star0.png"/>
+                    <img src="../../static/img/bookinfo/star0.png"/>
+                    <img src="../../static/img/bookinfo/star0.png"/>
+                    <img src="../../static/img/bookinfo/star0.png"/>
+                </div>
+                <span class="number"></span>
+            </div>
+        </div>
+    </div>
+    <div class="usedprice" style="display: none;">
+        <span class="label">二手价￥&nbsp;</span>
+        <span class="num"></span>
+        <span class="label">元</span>
+        <span class="discount"></span>
+        <span class="beforelable">定价</span>
+        <span class="beforenum"></span>
+        <!--<span class="integral"></span>-->
+    </div>
+    <div class="promise" onclick="window.location.href='promise.html'">
+        <span class="label">熊猫格子承诺</span>
+        <span class="sign">.</span>
+        <span class="text">自营</span>
+        <span class="sign">.</span>
+        <span class="text">消毒</span>
+        <span class="sign">.</span>
+        <span class="text">正版保证</span>
+        <img src="../../static/img/bookinfo/tobtn.png" width="12px" height="20px"/>
+    </div>
+    <div class="promise operflow" onclick="window.location.href='procedure.html'"
+         style="padding-top: 10px;display: none;">
+        <span class="label">租借流程</span>
+        <img src="../../static/img/bookinfo/tobtn.png" width="12px" height="20px"/>
+    </div>
+    <div class="introduce">
+        <span class="label">简介</span>
+        <div class="info">
+        </div>
+        <div class="showallbtn" style="display: none">
+            <img src="../../static/img/bookinfo/showallbtn.png" width="28px" height="26px"/>
+        </div>
+    </div>
+    <div class="bookshar">
+        <span class="label">相关推荐</span>
+        <div class="sharbar">
+
+        </div>
+    </div>
+    <div class="bottombox">
+        <hr>
+        &nbsp;Panda Box&nbsp;
+        <hr>
+    </div>
+</div>
+<div class="popup pop_bg" onclick="$('.popup').hide()"></div>
+<div class="popup pop_content">
+    <p class="popContentText"></p>
+    <div class="pop_btn">
+        <p class="btn no_btn" onclick="$('.popup').hide()">再看看</p>
+        <p class="btn yes_btn">去开通</p>
+    </div>
+</div>
+<div class="bottom_btn_lease" style="display: none;">借阅</div>
+<div class="bottom_btn_buy" style="display: none;">
+    <div class="backstore">
+        <img src="../../static/img/buttom/home_2.png"/>
+        <span class="btntext">回到首页</span>
+    </div>
+    <div class="shopping">
+        <img src="../../static/img/buttom/car_2.png"/>
+        <span class="book_number" id="shopping"></span>
+        <span class="btntext">购物车</span>
+    </div>
+    <div class="gobuy">立即购买</div>
+    <div class="addshopping">加入购物车</div>
+</div>
+<div class="bottom_open_remind" style="display: none;">好想买，到货了一定要通知我哟～</div>
+<div class="bottom_close_remind" style="display: none;">取消到货提醒</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    var introdoce = "";
+
+    $(".showallbtn").on("click", function () {
+        var strsrc = $(this).find('img').attr("src");
+        var cuurent = strsrc.substring(strsrc.length - 4, strsrc.length - 5);
+        if (cuurent == 0) {
+            // $(".info").html(introdoce.substr(0, 100) + "......");
+            textStyle(introdoce.substr(0, 100) + "......");
+            $(this).find('img').attr("src", "../../static/img/bookinfo/showallbtn.png");
+        } else {
+            // $(".info").html(introdoce);
+            textStyle(introdoce);
+            $(this).find('img').attr("src", "../../static/img/bookinfo/showallbtn0.png");
+        }
+    });
+
+    var from = ocean.getRequestParameter("from");
+    var id = ocean.getRequestParameter("id");
+    var book;
+    var isbn;
+    var arrival;
+    var bookId;
+    $(function () {
+        ocean.get("resources/biz/api/book", {id: id}, function (res) {
+            if (res.code == 0) {
+                console.log(res.data);
+                book = res.data;
+                isbn = res.data.isbn;
+                bookId = res.data.id;
+                if (from === "library") {
+                    $(".bottom_btn_lease").show();
+                    $(".operflow").show();
+                } else {
+                    $(".usedprice").show();
+                    if (book.stock > 0) {
+                        $(".bottom_btn_buy").show()
+                    } else {
+                        if (!ocean.getLoginUserId()) {
+                            ocean.showLogin();
+                        } else {
+                            ocean.get("resources/biz/api/select/arrival", {
+                                userId: ocean.getLoginUserId(),
+                                isbn: isbn
+                            }, function (data) {
+                                console.log(data);
+                                if (data.code == 0) {
+                                    arrival = data.data;
+                                    console.log(arrival);
+                                    if (undefined != arrival && arrival.lable == 0) {
+                                        $(".bottom_close_remind").show();
+                                    } else {
+                                        $(".bottom_open_remind").show();
+                                    }
+                                }
+                            }, function (data) {
+                                ocean.tip(data.message);
+                            });
+                        }
+
+                    }
+                }
+
+                if (book.stock <= 0) {
+                    $(".no_img").show();
+                }
+
+                $(".bookname").html(book.name);
+                $(".bookimg").css("background-image", "url(" + book.picture + ")");
+                $(".bookimg_bg").css("background-image", "url(" + book.picture + ")");
+                $(".author").html(book.author);
+                $(".time").html(book.publishingTime);
+                $(".press").html(book.publishing);
+                $(".number").html(book.score.toFixed(1));
+                $(".number").on("click", function () {
+                    location.href = "https://book.douban.com/isbn/" + book.isbn;
+                });
+                score_star(book.score);
+                $(".num").html(book.price);
+                $(".discount").html(book.discount + "折");
+                $(".beforenum").html("￥" + book.tagPrice);
+                $(".integral").html(book.grade + "熊猫币");
+                introdoce = book.content;
+                if (introdoce.length > 100) {
+                    // $(".info").html(book.content.substr(0, 100) + "......");
+                    textStyle(book.content.substr(0, 100) + "......");
+                    $(".showallbtn").css("display", "block");
+                } else {
+                    // $(".info").html(book.content);
+                    textStyle(book.content);
+                }
+
+                fetchTjList(book.typeId);
+            }
+        }, function (error) {
+            ocean.tip(error);
+        });
+
+        setCarCount();
+    });
+
+    function textStyle(str) {
+        $(".info").html("");
+        var textdata = str.split("\n");
+        for (var i = 0; i < textdata.length; i++) {
+            $(".info").append("<p>" + textdata[i] + "</p>");
+        }
+    }
+
+    function fetchTjList(type) {
+        ocean.get("resources/biz/api/book/tj", {type: type}, function (res) {
+            if (res.code == 0) {
+                var list = res.data;
+                var tmpl = _.template($('#tmpl_book_item').html());
+                $('.sharbar').html(tmpl({
+                    list: list
+                }));
+
+                afterLoad();
+            }
+        });
+    }
+
+    function afterLoad() {
+        $(".lazy").lazyload({
+            effect: "fadeIn",
+            threshold: 0,
+            failurelimit: 10
+        });
+
+        $(".book_item").on("click", function () {
+            location.href = "book_info.html?from=" + from + "&id=" + $(this).data("id");
+        });
+    }
+
+    function setCarCount() {
+        if (ocean.getLoginUserId()) {
+            ocean.get("resources/biz/api/count", {
+                userId: ocean.getLoginUserId(),
+                type: "car"
+            }, function (res) {
+                if (res.code == 0) {
+                    if (res.data > 0) {
+                        $("#shopping").show();
+                        $("#shopping").html(res.data);
+                    } else {
+                        $("#shopping").hide();
+                    }
+                }
+            }, function () {
+                exceptionBox();
+            });
+        } else {
+            var size = leaseShoppingCar.count() + buyShoppingCar.count();
+            if (size > 0) {
+                $("#shopping").show();
+                $("#shopping").html(size);
+            } else {
+                $("#shopping").hide();
+            }
+        }
+    }
+
+    $(".bottom_btn_lease").on("click", function () {
+        leaseCardJudge(function () {
+            leaseShoppingCar.push(book, function () {
+                ocean.toast("添加购物车成功");
+                setCarCount();
+            });
+        }, function (msg) {
+            $(".popup").show();
+            $(".popContentText").html(msg);
+        });
+    });
+    $(".shopping").on("click", function () {
+        location.href = "../index/shopping_car.html";
+    });
+    $(".backstore").on("click", function () {
+        location.href = "../../index.html";
+    });
+
+    $(".gobuy").on("click", function () {
+        if (ocean.getLoginUserId()) {
+            loading = weui.loading('loading');
+            ocean.get("resources/biz/api/buy/judge", {
+                userId: ocean.getLoginUserId(),
+                bookIds: bookId
+            }, function (data) {
+                loading.hide();
+                if (data.code == 0) {
+                    location.href = "../order/buy/buy_confirm.html?from=buyNow&" + "bookId=" + bookId;
+                }
+            }, function (err) {
+                loading.hide();
+                if (err.code == "120004") {
+                    ocean.tip(err.message, function () {
+                        location.href = "../my/address/user_address.html";
+                    });
+                } else {
+                    ocean.tip(err.message);
+                }
+            });
+        } else {
+            ocean.showLogin();
+        }
+    });
+
+    $(".bottom_open_remind").on("click", function () {
+        if (!ocean.getLoginUserId()) {
+            ocean.showLogin();
+        } else {
+            ocean.get("resources/biz/api/arrival/reminding", {
+                userId: ocean.getLoginUserId(),
+                isbn: isbn
+            }, function (data) {
+                console.log(data);
+                if (data.code == 0) {
+                    ocean.tip("提醒成功");
+                    $(".bottom_close_remind").show();
+                    $(".bottom_close_remind").show();
+                }
+            }, function (data) {
+                ocean.tip(data.message);
+            });
+        }
+    });
+    $(".bottom_close_remind").on("click", function () {
+        if (!ocean.getLoginUserId()) {
+            ocean.showLogin();
+        } else {
+            ocean.get("resources/biz/api/cancel/reminding", {
+                userId: ocean.getLoginUserId(),
+                isbn: isbn
+            }, function (data) {
+                console.log(data);
+                if (data.code == 0) {
+                    ocean.tip("取消成功");
+                    $(".bottom_close_remind").hide();
+                    $(".bottom_open_remind").show();
+                }
+            }, function (data) {
+                ocean.tip(data.message);
+            });
+        }
+    });
+    $(".addshopping").on("click", function () {
+        buyShoppingCar.push(book, function () {
+            ocean.toast("添加购物车成功");
+            setCarCount();
+        });
+    });
+
+    $(".yes_btn").on("click", function () {
+        location.href = "vip.html";
+    });
+
+    $(".car_number").on("click", function () {
+        location.href = "../index/shopping_car.html";
+    });
+
+</script>
+
+<script type="text/template" id="tmpl_book_item">
+    <@_.each(list, function (item) {@>
+    <div class="sharbox book_item" data-id="<@=item.id@>">
+        <div class="img lazy" data-original="<@=item.picture@>"
+             style="background-image: url('../../static/img/book.jpg')">
+            <@if(item.stock<=0){@>
+            <div class="no_img"><p>无货</p></div>
+            <@}@>
+        </div>
+        <span><@=item.name@></span>
+        <div class="grade"><@=item.score.toFixed(1)@></div>
+        <div class="price">￥<@=item.price@></div>
+    </div>
+    <@ }); @>
+</script>
+</html>

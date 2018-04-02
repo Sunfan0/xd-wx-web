@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/other/choose_city.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/common_0320.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<body>
+<div class="top">
+    <span class="back"><div></div></span>
+    <p class="title">选择省份</p>
+</div>
+<div class="content">
+    <p class="word">如果不在列表中，表示该地区尚未开放</p>
+
+    <div class="pro province" id="pro_list"></div>
+
+    <div class="city" id="city_list" style="display: none;"></div>
+
+    <script id="pro_item" type="text/template">
+        <@_.each(items, function (item) {@>
+        <button class="cityParent" data-id="<@=item.id@>"><@=item.name@></button>
+        <@ }); @>
+    </script>
+    <script id="city_item" type="text/template">
+        <@_.each(cityItems, function (item) {@>
+        <button class="citys" data-id="<@=item.id@>"><@=item.name@></button>
+        <@ }); @>
+    </script>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    $(function () {
+        ocean.get("resources/biz/city/list_city", {}, function (data) {
+                if (data.code == 0) {
+                    var tmpl = _.template($('#pro_item').html());
+                    $('#pro_list').html(tmpl({items: data.data}));
+                    $(".cityParent").on("click", function () {
+                        var parentId = $(this).data("id");
+                        $(this).css("background", "#3b3b3b");
+                        $(this).css("color", "#ffffff");
+                        $(this).siblings('button').css("background", "#f1f1f1");
+                        $(this).siblings('button').css("color", "#898989");
+                        ocean.get("resources/biz/city/list_city", {parentId: parentId},
+                            function (data) {
+                                if (data.code == 0) {
+                                    var citys = _.template($('#city_item').html());
+                                    $('#city_list').html(citys({cityItems: data.data}));
+                                    $('#city_list').show();
+                                    $('#pro_list').hide();
+                                    $(".citys").on("click", function () {
+                                        $(this).css("background", "#3b3b3b");
+                                        $(this).css("color", "#ffffff");
+                                        $(this).siblings('button').css("background", "#f1f1f1");
+                                        $(this).siblings('button').css("color", "#898989");
+                                        var city = {
+                                            id: $(this).data("id"),
+                                            name: $(this).html()
+                                        };
+                                        cookie.setCookie(current_city_cookie_key, JSON.stringify(city));
+                                        location.href = "../../index.html";
+                                    });
+                                }
+                            })
+                    })
+                }
+            }
+        );
+
+        $(".back").on("click", function () {
+            if ($(".province").is(":hidden")) {
+                $(".province").show();
+                $(".city").hide();
+                return false;
+            } else {
+                location.href = "../../index.html";
+            }
+        });
+    });
+</script>
+</html>

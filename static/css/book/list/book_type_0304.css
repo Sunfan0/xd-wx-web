@@ -1,0 +1,42 @@
+.classify {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-around;
+    padding: 0 15px;
+    position: fixed;
+    background: #ffffff;
+    top: 0px;
+    left: 0;
+    z-index: 54;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.classify .sub_title {
+    position: relative;
+    color: #3b3b3b;
+}
+
+.classify .sub_title .line {
+    width: 100%;
+    height: 1px;
+    background: #b59768;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.classify .active {
+    color: #b59768 !important;
+}
+
+.classify .active .line {
+    display: block !important;
+}
+
+.content {
+    padding: 45px 0px 50px;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/pay.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="content">
+  <!--  <p class="order_hint" style="display: none;">
+        订单已提交，请在<span class="time_min">0</span>分<span class="time_sec">0</span>秒内完成支付
+    </p>-->
+    <div style="background-color: white">
+        <div class="forminfo">
+            <div class="formbar">
+                <span class="label">合计</span>
+                <div class="label_val">￥<span id="pay_money"></span></div>
+            </div>
+        </div>
+    </div>
+    <p class="buy_way">选择支付方式</p>
+    <div style="background-color: white">
+        <div class="forminfo">
+            <div class="formbar">
+                <span class="label">
+                    <img src="../static/img/wxbuy.png" width="17px" height="15px">
+                    微信支付
+                </span>
+                <!--<div class="label_val">
+                    <img class="buy_select1" src="../static/img/select1.png" width="25px" height="25px">
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom">
+    <div class="submit_btn">确认支付</div>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="../../static/js/recycle.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+    var orderId = ocean.getRequestParameter("orderId");
+    var type = ocean.getRequestParameter("type");
+    var loading = weui.loading('loading');
+
+//    var min = 30;
+//    var sec = 0;
+    $(function () {
+        ocean.get("resources/biz/api/order/item", {id: orderId, type: type}, function (res) {
+            loading.hide();
+            if (res.code == 0) {
+                $("#pay_money").html(parseFloat(res.data.money).toFixed(2));
+                /*var temp = res.data.createdDate.split(" ");
+                var tempD = temp[0].split('-');
+                var tempT = temp[1].split(":");
+                var date = new Date(tempD[0], tempD[1] - 1, tempD[2], tempT[0], tempT[1], tempT[2]);
+                var endTime = new Date();
+                endTime = endTime.setTime(date.getTime() + (30 * 60 * 1000));
+                var s = parseInt((endTime - new Date().getTime()) / 1000);
+                if (s < 0) {
+                    ocean.tip("订单已失效", function () {
+                        history.back();
+                    });
+                } else {
+                    min = parseInt(s / 60);
+                    sec = s - min * 60;
+                    countDown(min, sec);
+                }*/
+            } else {
+                ocean.tip("无法找到此订单", function () {
+                    history.back();
+                });
+            }
+        });
+
+        $(".submit_btn").on("click", function () {
+            ocean.post("resources/biz/wx/pay", {
+                order: orderId,
+                type: type,
+                tradeType: 'JSAPI',
+                openId: ocean.getOpenId()
+            }, function (res) {
+                ocean.pay(res.data, orderId, type);
+            });
+        });
+    });
+
+    /*function countDown() {
+        $(".time_min").html(min);
+        $(".time_sec").html(sec);
+        $(".order_hint").show();
+        var timer = setInterval(function () {
+            if (sec > 0) {
+                sec--;
+            }
+            if (min > 0 && sec == 0) {
+                sec = 59;
+                min--;
+            }
+            $(".time_min").html(min);
+            $(".time_sec").html(sec);
+
+            if (min == 0 && sec == 0) {
+                clearInterval(timer);
+                ocean.tip("订单已失效", function () {
+                    history.back();
+                });
+            }
+        }, 1000);
+    }*/
+</script>
+</html>

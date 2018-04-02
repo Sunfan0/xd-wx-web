@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/order/lease/lease_confirm.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div id="page" style="background-color: white;">
+    <div class="header">
+        <span class="back" onclick="history.back()"><div></div></span>
+        <p class="title">确认订单</p>
+    </div>
+    <div class="content">
+        <div class="default-address no-default" style="display: none">
+            <p class="state">
+                <img src="../../../static/img/mine/add2.png" height="21px" width="17px" class="add2">
+                <span class="text">请选择送货地址</span>
+                <img src="../../../static/img/mine/go.jpg" class="go" width="8px" height="13px">
+            </p>
+        </div>
+        <div class="default-address have-default">
+            <div class="info">
+                <p class="name" id="a-name"></p>
+                <p class="mobile" id="a-mobile"></p>
+                <p class="address" id="a-address"></p>
+            </div>
+            <div class="sign">
+                <img src="../../../static/img/mine/go.jpg" class="go" width="8px" height="13px">
+            </div>
+        </div>
+        <hr class="hr">
+        <div id="content" style="background-color: white">
+
+        </div>
+        <hr class="hr">
+        <div style="background-color: white">
+            <div class="forminfo">
+                <div class="formbar">
+                    <span class="label">留言:</span>
+                    <div class="remark" contenteditable=""></div>
+                </div>
+                <div class="formbar">
+                    <span class="label">租期:</span>
+                    <div class="returntime">
+                        <p class="time1"><span id="day_count">&nbsp;</span></p>
+                        <p class="time2"><span id="date"></span></p>
+                    </div>
+                    <div class="sign">
+                        <img src="../../../static/img/mine/go.jpg" class="go" width="8px" height="13px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="time_div time_bg" style="display: none;"></div>
+    <div class="time_div time_content" style="display: none;">
+        <span class="on" data-days="7">一周</span>
+        <span data-days="14">两周</span>
+        <p class="btn">确认</p>
+    </div>
+    <div class="bottom">
+        <div class="submit_btn">提交订单</div>
+    </div>
+</div>
+<div id="address_page" style="display: none;"></div>
+
+<div class="success_box" style="display: none">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+        <div class="weui-dialog__hd">
+            <p style="font-size: 20px;margin-bottom: 20px;">
+                <i class="weui-icon-success" style="margin-right: 10px;"></i>下单成功
+            </p>
+            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_plain-default ">查看订单</a>
+        </div>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="../../../static/js/layer.js"></script>
+<script>
+    var loading = weui.loading('loading');
+    var addressId;
+    var days;
+    $(function () {
+        loadLeaseCarBooks();
+        fetchDefaultAddress();
+
+        $(".returntime").on("click", function () {
+            $(".time_div").show();
+        });
+        $(".time_content .btn").on("click", function () {
+            var item = $(".time_content .on")[0];
+            setLeaseTerm($(item).data("days"), $(item).html());
+            $(".time_div").hide();
+        });
+        $(".time_content span").on("click", function () {
+            $(this).siblings().removeClass("on");
+            $(this).addClass("on");
+        });
+    });
+
+    function loadLeaseCarBooks() {
+        leaseShoppingCar.list(function (list) {
+            loading.hide();
+            var template = _.template($('#temp_book_item').html());
+            $("#content").html(template({
+                list: list,
+                time: new Date().format("yyyy-MM-dd")
+            }));
+            //afterLoad();
+        });
+    }
+
+    function fetchDefaultAddress() {
+        ocean.get("resources/biz/api/address/default", {userId: ocean.getLoginUserId()}, function (res) {
+            if (res.code == 0) {
+                setSelectedAddress(res.data);
+            } else {
+                $(".no-default").show();
+                $(".have-default").hide();
+            }
+        });
+    }
+
+    function setLeaseTerm(value, text) {
+        $("#day_count").html(text);
+        days = value;
+        var date = new Date();
+        console.log(date.format("yyyy年MM月dd日"));
+        date.setDate(new Date().getDate() + parseInt(value) + 3);
+        $("#date").html("(归还日期:" + date.format("yyyy年MM月dd日") + "前)");
+    }
+
+    $(".submit_btn").on("click", function () {
+        if (addressId == "" || addressId == undefined) {
+            ocean.toast("您无默认地址，请先去设置！");
+            return;
+        }
+        submitOrder();
+    });
+
+    function submitOrder() {
+        if (null == days || days == 0) {
+            layer.open({
+                content: '您还未填写租期'
+                , skin: 'msg'
+                , time: 2
+            });
+            return;
+        }
+        loading = weui.loading('loading');
+        ocean.post("resources/biz/api/lease/submit", {
+            userId: ocean.getLoginUserId(),
+            cityId: ocean.currentCityId(),
+            days: parseInt(days),
+            addressId: addressId,
+            userWord: $(".remark").html()
+        }, function (res) {
+            if (res.code == 0) {
+                location.href = "../../my/order/lease.html";
+            }
+            loading.hide();
+        });
+        loading.hide();
+        return false;
+    }
+
+    function onAddressSelected(address) {
+        if (null != address) {
+            setSelectedAddress(address);
+        }
+        $("#page").show();
+        $("#address_page").hide();
+    }
+
+    function setSelectedAddress(item) {
+        addressId = item.id;
+        $("#a-name").html(item.name);
+        $("#a-mobile").html(item.phone);
+        $("#a-address").html(item.provinceName + item.cityName + item.districtName + item.otherAddr);
+
+        $(".no-default").hide();
+        $(".have-default").show();
+    }
+
+    $(".default-address").on("click", function () {
+        $("#page").hide();
+        $("#address_page").show();
+    });
+
+    $("#address_page").load(ctxPath + "page/my/address/user_address.html?from=lease");
+</script>
+<script type="text/template" id="temp_book_item">
+    <@_.each(list, function (item) {@>
+    <div class="bookinfo" data-id="<@=item.id@>">
+        <div class="imginfo">
+            <div class="img" style="background-image: url('<@=item.picture@>')"></div>
+        </div>
+        <div class="textinfo">
+            <p class="title"><@=item.name@></p>
+            <p class="author"><@=item.author@></p>
+            <div>
+                <span class="money">￥<@=item.price@>元</span>
+                <span class="time"><@=time@></span>
+            </div>
+        </div>
+    </div>
+    <@ }); @>
+</script>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/my/activity.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">小哆活动</p>
+</div>
+<div class="content">
+    <div class="new">
+        <p class="time"></p>
+        <div class="mess">
+            <p class="name" id="name">七夕浪漫回礼 · 0元免费领</p>
+            <div class="pic">
+                <img id="pic" src="../../static/img/mess/banner_07.png"/>
+            </div>
+            <div class="detail" id="profiles"><span>＞＞</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="list" id="messg_list">
+        <script type="text/template" id="messg_item">
+            <@_.each(items, function (item) {@>
+            <div class="list">
+                <p class="time"><@=item.createdDate.split('-').join('.').substring(0,16)@></p>
+                <div class="mess">
+                    <p class="name"><@=item.title@></p>
+                    <div class="pic">
+                        <img src="<@=item.picture@>"/>
+                    </div>
+                    <div class="detail"><@=item.profiles@>＞＞</div>
+                </div>
+            </div>
+            <@ }); @>
+        </script>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    /*
+    $(function(){
+        ocean.template();
+        ocean.get("resources/biz/activity/select_all_activity", {userId: ocean.getUser()}, function (data) {
+            if (data.code == 0) {
+                var content = data.data;
+                console.log(content);
+                var messg = _.template($('#messg_item').html());
+                $("#messg_list").html(messg({
+                    items: content,
+                    root: ocean.apiUri
+                }));
+            }
+        }, function (error) {
+            ocean.tip(error);
+        });
+
+
+        ocean.get("resources/biz/activity/select_new_activity", {userId: ocean.getUser()}, function (data) {
+            console.log(data.data);
+            if (data.code == 0) {
+                var title = data.data.title;
+                var pic = data.data.picture;
+                var profiles = data.data.profiles;
+                $("#name").html(title);
+                $("#pic").html(pic);
+                $("#profiles").html(profiles);
+            }
+        }, function (error) {
+            ocean.tip(error);
+        });
+
+
+        $("#back").on("click", function () {
+            location.href = "message.html";
+        });
+//      时间
+        var time = new Date();
+        var year = time.getFullYear();
+        var month = time.getMonth() + 1;
+        var day = time.getDate();
+        var hour = time.getHours();
+        var min = time.getMinutes();
+
+        year = year < 10 ? "0" + year : year;
+        month = month < 10 ? "0" + month : month;
+        day = day < 10 ? "0" + day : day;
+        hour = hour < 10 ? "0" + hour : hour;
+        min = min < 10 ? "0" + min : min;
+        $(".time").html(year + "." + month + "." + day + " " + hour + ":" + min);
+
+
+    })*/
+</script>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/book/lease/lease_book.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <!--<span class="back" onclick="history.back()"><div></div></span>-->
+    <!--<p class="title">租过的书</p>-->
+    <div class="left">
+        <div class="car_number" style="display: none">
+            <img src="../../../static/img/book/headset.png"/>
+        </div>
+    </div>
+</div>
+<div class="popup pop_bg" onclick="$('.popup').hide()"></div>
+<div class="popup pop_content">
+    <p class="popContentText">可为您续租一周时间，确定续租吗？</p>
+    <div class="pop_btn">
+        <p class="btn no_btn" onclick="$('.popup').hide()">取消</p>
+        <p class="btn yes_btn">确定</p>
+    </div>
+</div>
+<!--<p class="lease_hint">如果您已读完，请将此书寄回：上海市徐汇区虹桥路333号505A， 收件人：熊猫格子 021-54015223</p>-->
+<div class="empty_content" style="display: none">
+    <div class="img">
+        <img src="../../../static/img/book/lease_null.png" width="81" height="36">
+        <p class="text">您还没有借过书哦，去图书馆逛逛吧！</p>
+        <p class="btn" onclick="window.location.href='../../..//page/index/book_store.html'">去图书馆</p>
+    </div>
+</div>
+<div class="content" style="display: none">
+    <img class="call_sign" src="../../../static/img/mine/call_sign.png">
+    <div id="book_list"></div>
+</div>
+</div>
+<div class="contact">
+    <div class="button">
+        <div class="del1">请致电 400-116-9966 联系客服</div>
+        <div class="cancel">
+            <span class="can1"><button class="quxiao">取消</button></span>
+            <span class="can2"><a href="tel:4001169966"><button class="shanchu go">拨打</button></a></span>
+        </div>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script>
+    var orderId;
+
+    $(".car_number,.call_sign").on("click", function () {
+        $(".contact").show();
+        $(".quxiao").on("click", function () {
+            $(".contact").hide();
+        });
+    });
+
+    $(function () {
+        var params = {
+            page: 1,
+            limit: 10,
+            type: 'lease',
+            userId: ocean.getLoginUserId()
+        };
+        ocean.get("resources/biz/api/order/list", params, function (data) {
+            if (data.code == 0) {
+                var content = data.data.list;
+                console.log(content);
+                if (content.length === 0) {
+                    $('.car_number').css('display','block');
+                    $('body').css('background-color', 'white');
+                    $(".empty_content").show();
+                    $(".content").hide();
+                } else {
+                    $('.car_number').css('display', 'none');
+                    $('body').css('background-color', '#f8f8f8');
+                    $(".empty_content").hide();
+                    $(".content").show();
+                    var lease = _.template($('#lease_item').html());
+                    $("#book_list").append(lease({items: content}));
+                }
+            }
+            lode();
+        }, function (error) {
+            ocean.tip(error);
+        });
+    });
+
+    function lode() {
+        $(".return_btn").click(function () {
+            id = $(".book_info").data("id");
+            location.href = "../../order/return.html?id=" + id;
+        });
+        $("#buy_now").on("click", function () {
+            id = $(".book_info").data("id");
+            location.href = "../../order/buy/buy_now.html?id=" + id;
+        });
+        $(".book_info").on("click", function () {
+            id = $(this).data("id");
+            location.href = "../../order/lease/lease_details.html?id=" + id;
+        });
+        $(".active_btn").on("click", function () {
+            orderId = $(this).data("id");
+            $(".popup").show();
+        });
+        $(".yes_btn").on("click", function () {
+            $(".popup").hide();
+            var loading = weui.loading('loading');
+            ocean.post("resources/biz/api/lease/relet", {id: orderId}, function (res) {
+                console.log(res.data);
+                //console.log(new Date(res.data).format("yyyy-MM-dd"));
+                loading.hide();
+                location.href = "../../book/success.html?type=relet&time=" + res.data;
+            });
+        });
+    }
+
+</script>
+<script id="lease_item" type="text/template">
+    <@_.each(items, function (item) {@>
+    <div class="info_box">
+        <div class="order_info">
+            <span class="order_info">订单号:<span><@=item.orderNumber@></span></span>
+            <@if (item.status === "PAID") {@>
+            <span class="order_state">待发货</span>
+            <@}else if (item.status === "SELLER_SENDED") {@>
+            <span class="order_state">商家已发货</span>
+            <@} else if (item.status === "USER_SENDED") {@>
+            <span class="order_state">用户已发货</span>
+            <@} else if (item.status === "STARTED") {@>
+            <span class="order_state">已开始</span>
+            <@} else if (item.status === "FINISHED") {@>
+            <span class="order_state">已完成</span>
+            <@} else if (item.status === "BREAK") {@>
+            <span class="order_state">已违约</span>
+            <@}@>
+        </div>
+        <div class="book_info" data-id="<@=item.id@>">
+            <div class="left">
+                <div class="img" style="background-image: url(<@=item.picture.split('@')[0]@>)"></div>
+            </div>
+            <div class="right">
+                <p class="name"><@=item.bookName.split('@')[0]@></p>
+                <p class="time"><@=item.createdDate.substring(0,10)@></p>
+            </div>
+        </div>
+        <div class="price_info">
+            共<span class="number"><@=item.totalNum@></span>本图书&nbsp;&nbsp;借阅天数<span
+                class="day"><@=item.leaseDays@></span>天
+            <@if(item.returnDate){@>
+            <span class="back_time">请在<span><@=item.returnDate.substring(5,10).replace("-","月")@></span>日之前还书</span>
+            <@}@>
+        </div>
+        <@if (item.status === "STARTED" || item.status === "BREAK") {@>
+        <div class="bottom_box">
+            <@if(item.reletCount>0){@>
+            <span class="dark_btn continue_now">续租</span>
+            <@}else{@>
+            <span class="active_btn continue_now" data-id="<@=item.id@>">续租</span>
+            <@}@>
+            <span class="payment_btn" id="buy_now">一键购买</span>
+            <span class="return_btn">立即还书</span>
+        </div>
+        <@}@>
+        <@if (item.status === "CREATED") {@>
+        <p class="button">
+            <span class="payment_btn" id="buy" data-id="<@=item.id@>" data-rent="<@=item.rent@>">去付款</span>
+        </p>
+        <@}@>
+    </div>
+    <@ }); @>
+</script>
+</html>

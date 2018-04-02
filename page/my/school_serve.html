@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/my/school_serve.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">校园服务</p>
+</div>
+<div class="content">
+    <p class="server_title">选择你的校园服务站</p>
+    <div class="station_choice">
+        <div class="station_item">
+            <div class="radio">
+                <div></div>
+            </div>
+            <p class="name">上海交通大学（闵行校区）</p>
+            <p class="detail">上海交通大学(闵行校区)-爱心屋</p>
+        </div>
+    </div>
+    <div class="footer_content">
+        <p class="submit_btn submit" style="display: none" onclick="submit()">提交</p>
+        <p class="submit_btn on reset" style="display: none">重置</p>
+        <p class="footer_other">更多校区<img src="../../static/img/buttom/mine/server_question.png" width="16" height="16"/>
+        </p>
+    </div>
+</div>
+<div class="coming_page">
+    <div class="black_bg"></div>
+    <div class="coming_content">
+        <img class="panda" src="../../static/img/buttom/mine/server_panda.png"/>
+        <p class="title">
+            目前已开通上海交通大学服务站，<br>
+            其它校园服务站，敬请期待～
+        </p>
+        <p class="btn">好滴，我知道了～</p>
+    </div>
+</div>
+<div class="pop_box" style="display: none">
+    <div class="border_box" >
+        <p class="title">是否确认重置？</p>
+        <div class="btn_box">
+            <span class="no_btn">取消</span>
+            <span class="go_btn" onclick="reset()">确认</span>
+        </div>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+
+    $(function () {
+        $('.station_item').click(function () {
+            if ($(this).hasClass('on')) {
+                $(this).removeClass('on');
+                $('.submit_btn').removeClass('on');
+                $(this).find('.detail').css('display', 'none');
+            } else {
+                $(this).addClass('on');
+                $('.submit_btn').addClass('on');
+                $(this).find('.detail').css('display', 'block');
+            }
+        });
+        $('.footer_other').click(function () {
+            $(".coming_page").css('display', 'block');
+        });
+        $('.coming_page .black_bg,.btn').click(function () {
+            $(".coming_page").css('display', 'none');
+        });
+        $(".reset").click(function () {
+            $(".pop_box").show();
+        });
+        $(".no_btn").click(function () {
+            $(".pop_box").hide();
+        })
+
+    });
+    ocean.get("resources/biz/api/mine", {id: ocean.getLoginUserId()}, function (res) {
+        if (res.code == 0) {
+            var member = res.data.user;
+            if (member.schoolIdentity == '' || member.schoolIdentity == null) {
+                $(".submit").show();
+            } else {
+                $(".station_item").addClass('on');
+                $(".station_item").find('.detail').css('display', 'block');
+                $(".reset").show();
+            }
+        }
+    }, function (error) {
+        ocean.tip(error);
+    });
+
+    function submit() {
+        if (!$('.submit_btn').hasClass('on')) {
+            return;
+        }
+        ocean.get('resources/biz/api/commit/school', {
+            userId: ocean.getLoginUserId(),
+            schoolIdentity: "JIAODA"
+        }, function (res) {
+            if (res.code == 0) {
+                $(".reset").show();
+                $(".submit").hide();
+                window.location.href = "../../page/index/mine.html";
+
+            }
+        });
+    }
+
+    function reset() {
+        $(".pop_box").hide();
+        if (!$('.submit_btn').hasClass('on')) {
+            return;
+        }
+        ocean.get('resources/biz/api/reset/school', {
+            userId: ocean.getLoginUserId()
+        }, function (res) {
+            if (res.code == 0) {
+                $(".submit").show();
+                $(".reset").hide();
+                $(".station_item").removeClass('on');
+                ocean.tip("重置成功");
+            }
+        });
+    }
+
+</script>
+</html>

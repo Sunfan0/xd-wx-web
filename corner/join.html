@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="static/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="top_title">
+    <div onclick="history.back()"><img class="back" src="static/img/back_btn.png"/><span>返回</span></div>
+    <div><span>首页</span>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div><img class="other" src="static/img/other_btn.png"/></div>
+</div>
+<div class="top_place"></div>
+<div class="header">
+    <div class="header_bg hidden" style="background-image: url('static/img/bg.png')"></div>
+    <div class="header_bg blur hidden" style="background-image: url('static/img/bg.png')"></div>
+    <div class="header_blank"></div>
+    <span class="more">更多问题</span>
+    <div class="header_img">
+        <div class="user_img" style="background-image: url('static/img/no_img.png')"></div>
+        <p class="name is_login hidden">昵称</p>
+        <p class="name no_login">点击登录</p>
+    </div>
+</div>
+<div class="menu">
+    <div class="item buy_list">
+        <img src="static/img/buy_book.png" width="50" height="45"/>
+        <p class="menu_name">买过的书</p>
+        <span class="menu_sign buy_sign hidden"></span>
+    </div>
+    <div class="item donate_list">
+        <img src="static/img/donate_book.png" width="43" height="45"/>
+        <p class="menu_name">捐过的书</p>
+        <span class="menu_sign donate_sign hidden"></span>
+    </div>
+    <div class="item">
+        <p class="integral">0</p>
+        <p class="menu_name">我的熊猫币</p>
+    </div>
+</div>
+<div class="bottom_btn">
+    <span class="buy_book">买书</span>
+    <span class="donate_book">捐书</span>
+</div>
+</body>
+<script type="text/javascript" src="../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../static/js/core/util.js"></script>
+<script type="text/javascript" src="../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+    Window.onload = Load();
+
+    function Load() {
+        UserLoginState();
+
+        //页面跳转链接
+        $(".more").click(function () {
+            window.location.href = "page/question.html";
+        });
+        $(".buy_list").click(function () {
+            if (!ocean.getLoginUserId()) {
+                LoginReload();
+            } else {
+                window.location.href = "page/buy_list.html";
+            }
+        });
+        $(".donate_list").click(function () {
+            if (!ocean.getLoginUserId()) {
+                LoginReload();
+            } else {
+                window.location.href = "page/donate_list.html";
+            }
+        });
+        $(".buy_book").click(function () {
+            if (!ocean.getLoginUserId()) {
+                LoginReload();
+            } else {
+                window.location.href = "page/buy_book.html";
+            }
+        });
+        $(".donate_book").click(function () {
+            if (!ocean.getLoginUserId()) {
+                LoginReload();
+            } else {
+                window.location.href = "page/donate_book.html";
+            }
+        });
+
+        //点击登录
+        $(".no_login").click(function () {
+            LoginReload();
+        });
+    }
+
+    //判断用户登录状态
+    function UserLoginState() {
+        var no_login = sessionStorage.getItem("no-login");
+        if (ocean.getLoginUserId()) {
+            getPageData();
+        }
+        if (!ocean.getLoginUserId() && null == no_login) {
+            LoginReload();
+        }
+    }
+
+    //获取用户信息
+    function getPageData() {
+        ocean.get("resources/biz/api/mine", {id: ocean.getLoginUserId()}, function (res) {
+            if (res.code == 0) {
+                if (res.data.cornerBuy > 0) {
+                    $(".buy_sign").show();
+                }
+                if (res.data.donate > 0) {
+                    $(".donate_sign").show();
+                }
+                var member = res.data.user;
+                $(".no_login").hide();
+                $(".is_login").show();
+                $(".header_blank").hide();
+                $(".header_bg").show();
+                $(".header_bg").css("background-image", "url(" + member.head + ")");
+                $(".user_img").css("background-image", "url(" + member.head + ")");
+                $(".is_login").html(member.nickname);
+                $(".integral").html(member.grade);
+                sessionStorage.setItem("user_grade", member.grade);
+            }
+        }, function (error) {
+            ocean.tip(error);
+        });
+    }
+
+    function LoginReload() {
+        ocean.showLogin(function () {
+            window.location.reload();
+        });
+    }
+</script>
+</html>

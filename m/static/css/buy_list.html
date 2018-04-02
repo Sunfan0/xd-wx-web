@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>买过的书</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/buy_list.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="top_title">
+    <div onclick="history.back()"><img class="back" src="../static/img/back_btn.png"/><span>返回</span></div>
+    <div><span>买过的书</span>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div><img class="other" src="../static/img/other_btn.png"/></div>
+</div>
+<div class="top_place"></div>
+<div class="empty_content" style="display: none">
+    <div class="img">
+        <img src="../static/img/none.png" width="186px" height="158px">
+        <p>您还没有下单哦！</p>
+    </div>
+</div>
+<div class="content">
+    <div id="buy_list"></div>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    Window.onload = Load();
+
+    function Load() {
+        ShowBuyList();
+    }
+
+    function ShowBuyList() {
+        var params = {
+            page: 1,
+            limit: 10,
+            type: 'corner_buy',
+            userId: ocean.getLoginUserId()
+        };
+        ocean.get("resources/biz/bc/api/order/list", params, function (data) {
+            if (data.code === 0) {
+                var content = data.data.list;
+                console.log(content);
+                if (content.length === 0) {
+                    $(".empty_content").show();
+                    $(".content").hide();
+                } else {
+                    $(".empty_content").hide();
+                    $(".content").show();
+                    var buy = _.template($('#buy_item').html());
+                    $("#buy_list").append(buy({items: content}));
+                }
+            }
+        }, function (error) {
+            ocean.tip(error);
+        });
+    }
+</script>
+<script id="buy_item" type="text/template">
+    <@_.each(items, function (item) {@>
+    <div class="info_box">
+        <div class="order_info">
+            <span class="order_number">订单号：<@=item.orderNumber@></span>
+            <@if (item.status === "CREATED" || item.status === "FromLease") {@>
+            <span class="order_state">待付款</span>
+            <@} else if (item.status === "FINISHED") {@>
+            <span class="order_state">已完成</span>
+            <@} else if (item.status === "EXPIRED") {@>
+            <span class="order_state">已失效</span>
+            <@} else if (item.status === "CANCELED") {@>
+            <span class="order_state">已取消</span>
+            <@} @>
+        </div>
+        <@_.each(item.bookName.split('@'), function (bookName,index) {@>
+        <div class="book_info">
+            <span class="name"><@=bookName@></span>
+            <span class="integral"><@=item.price.split('@')[index]@></span>
+        </div>
+        <@});@>
+        <div class="sum_info">
+            共<span><@=item.totalNum@></span>本图书&nbsp;&nbsp;总熊猫币
+            <span>&nbsp;<@=item.score@></span>
+        </div>
+    </div>
+    <@});@>
+</script>
+
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0,viewport-fit=cover">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/index/bookstore.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/common_0320.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<!--<div class="top">
+    <span class="title">图书馆</span>
+    <span class="classbtn">分类</span>
+</div>-->
+<div class="active_popup pop_bg"></div>
+<div class="active_popup pop_content">
+    <div class="img_content">
+        <img src="../../static/img/active/index_active.png" style="width: 100%;height: 100%"/>
+        <p class="go_btn activeGo_btn">立即参与</p>
+        <img class="close_btn activeClose_btn" src="../../static/img/active/close.png" width="35" height="35"/>
+    </div>
+</div>
+<!--<div class="welcome_popup pop_bg"></div>
+<div class="welcome_popup pop_content">
+    <div class="img_content">
+        <img src="../../static/img/active/index_welcome.png" style="width: 100%;height: 100%"/>
+        <p class="go_btn welcomeGo_btn">新手指南</p>
+        <img class="close_btn welcomeClose_btn" src="../../static/img/active/close.png" width="35" height="35"/>
+    </div>
+</div>-->
+<div class="share_popup pop_bg"></div>
+<div class="share_popup share_content">
+    <div class="img_content">
+        <img src="../../static/img/active/share_bg.png" style="width: 100%;height: 100%"/>
+    </div>
+    <div class="info_box">
+        <div class="text">
+            <p class="discount_title">换书劵</p>
+            <p class="discount_time">有效期至：xxxx年xx月xx日</p>
+        </div>
+        <div class="img">
+            <img src="../../static/img/discount/book_exchange.png"/>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <div class="info_box month_free" style="display: none">
+        <div class="text">
+            <p class="discount_title">借阅月卡</p>
+            <p class="discount_time">海量图书免费借阅</p>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <img class="close_btn shareClose_btn" src="../../static/img/active/close.png" width="35" height="35"/>
+</div>
+<div class="content">
+    <div class="header_share">
+        <div style="padding: 10px">
+            <img class="headimg" src="../../static/img/default.jpg"/>
+        </div>
+    </div>
+    <hr class="hrbox">
+    <div class="allclassbox">
+        <img class="allclassify" src="../../static/img/index/allclassify.png">
+        <div class="textinfo">
+            <p class="toptext">全部分类</p>
+            <p class="subtext">文艺/社科/生活/少儿/经管/科技</p>
+        </div>
+        <img class="arrow" src="../../static/img/bookinfo/tobtn.png">
+    </div>
+    <div id="store_gallery">
+        <div class="bookclass">
+            <span class="labelname"></span>
+            <span class="aboutall"></span>
+            <div class="sharbar">
+                <div class="sharbox">
+                    <div class="img" style="background-image: url('../../static/img/book.jpg')"></div>
+                    <span></span>
+                    <div class="grade"></div>
+                    <div class="price"></div>
+                </div>
+                <div class="sharbox">
+                    <div class="img" style="background-image: url('../../static/img/book.jpg')"></div>
+                    <span></span>
+                    <div class="grade"></div>
+                    <div class="price"></div>
+                </div>
+                <div class="sharbox">
+                    <div class="img" style="background-image: url('../../static/img/book.jpg')"></div>
+                    <span></span>
+                    <div class="grade"></div>
+                    <div class="price"></div>
+                </div>
+                <div class="sharbox">
+                    <div class="img" style="background-image: url('../../static/img/book.jpg')"></div>
+                    <span></span>
+                    <div class="grade"></div>
+                    <div class="price"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottombox">
+        <hr>
+        &nbsp;Panda Box&nbsp;
+        <hr>
+    </div>
+</div>
+<div class="bottom">
+    <div class="home">
+        <img src="../../static/img/buttom/home_2.png"/>
+        <span class="btnname">首页</span>
+    </div>
+    <div class="buybook">
+        <img src="../../static/img/buttom/sell_1.png"/>
+        <span class="btnname on">卖书</span>
+    </div>
+    <!--<div class="buybook">
+        <div class="circlebg">
+            <img src="../../static/img/buttom/buybook.png"/>
+        </div>
+        &lt;!&ndash;<span class="btnname">卖书</span>&ndash;&gt;
+    </div>-->
+    <div class="car">
+        <img src="../../static/img/buttom/car_2.png"/>
+        <span class="num" id="shopping" style="display: none"></span>
+        <span class="btnname">购物车</span>
+
+    </div>
+    <div class="mine">
+        <img src="../../static/img/buttom/mine_2.png"/>
+        <span class="btnname">我的</span>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    $(".home").on("click", function () {
+        location.href = "../../index.html";
+    });
+    $(".find").on("click", function () {
+        location.href = "book_store.html";
+    });
+    $(".car").on("click", function () {
+        location.href = "shopping_car.html";
+    });
+    $(".mine").on("click", function () {
+        location.href = "mine.html";
+    });
+    $(".buybook").on("click", function () {
+        location.href = "book_recycle.html";
+    });
+
+    $(".allclassbox").on("click", function () {
+        location.href = "../book/list/book_classify.html";
+    });
+
+    /*$(".headimg").on("click", function () {
+     location.href = "../book/list/book_conver.html";
+     });*/
+
+    var loading = weui.loading('loading');
+    $(function () {
+        fetchStoreGallery();
+    });
+
+    function fetchStoreGallery() {
+        ocean.get("resources/biz/api/library", {}, function (res) {
+            if (res.code == 0) {
+                console.log(res.data.library);
+                var tmpl = _.template($('#tmpl_gallery').html());
+                $('#store_gallery').html(tmpl({
+                    list: res.data.library
+                }));
+                if (res.data.banner != null) {
+                    banner_url = res.data.banner.url;
+                    $(".headimg").attr("src", res.data.banner.picture);
+                    if (banner_url != "") {
+                        $(".headimg").on("click", function () {
+                            location.href = banner_url;
+                        });
+                    }
+                }
+                afterLoad();
+                loading.hide();
+            }
+        }, function (error) {
+            ocean.tip(error);
+        });
+    }
+
+    function afterLoad() {
+        $(".book_item").on("click", function () {
+            location.href = "../book/book_info.html?from=library&id=" + $(this).data("id");
+        });
+
+        $(".aboutall").on("click", function () {
+            location.href = "../book/list/book_type.html?from=library&pid=" + $(this).data("id");
+        });
+        score_star();
+    }
+</script>
+<script type="text/template" id="tmpl_gallery">
+    <@_.each(list, function (map) {@>
+    <div class="bookclass">
+        <span class="labelname"><@=map.type.name@></span>
+        <span class="aboutall" data-id="<@=map.type.id@>">查看所有</span>
+        <div class="sharbar">
+            <@_.each(map.array, function (item) {@>
+            <div class="sharbox book_item" data-id="<@=item.id@>">
+                <div class="img lazy" style="background-image: url('<@=item.picture@>')"></div>
+                <p class="name"><@=item.name@></p>
+                <div class="grade"><@=item.score.toFixed(1)@></div>
+                <!--<div class="price">￥<@=item.price@></div>-->
+                <!--<div class="author"><@=item.author@></div>
+                <div class="star" data-score="<@=item.score@>">
+                    <img src="../../static/img/bookinfo/star0.png"/>
+                    <img src="../../static/img/bookinfo/star0.png"/>
+                    <img src="../../static/img/bookinfo/star0.png"/>
+                    <img src="../../static/img/bookinfo/star0.png"/>
+                    <img src="../../static/img/bookinfo/star0.png"/>
+                </div>-->
+            </div>
+            <@ }); @>
+        </div>
+    </div>
+    <@ }); @>
+</script>
+</html>

@@ -1,0 +1,105 @@
+body {
+    background: #efeff4;
+}
+
+.content {
+    width: 100%;
+    padding: 50px 15px 0;
+    box-sizing: border-box;
+}
+
+.new {
+    width: 100%;
+    height: 289px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    padding-top: 15px;
+}
+
+#messg_list {
+    width: 100%;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    padding-top: 15px;
+}
+
+.time {
+    width: 102px;
+    height: 22px;
+    background: #d9d9df;
+    margin: 0 auto;
+    border-radius: 30px;
+    font-size: 11px;
+    color: #ffffff;
+    line-height: 22px;
+    text-align: center;
+}
+
+.mess {
+    width: 100%;
+    height: 233px;
+    background: #ffffff;
+    margin-top: 19px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.new .name {
+    height: 44px;
+    width: 100%;
+    line-height: 44px;
+    font-size: 15px;
+    color: #3b3b3b;
+}
+
+.new .pic {
+    width: 100%;
+    height: 125px;
+    overflow: hidden;
+}
+
+.new .pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.new .detail {
+    width: 100%;
+    height: 64px;
+    color: #3b3b3b;
+    font-size: 13px;
+    line-height: 27px;
+    margin-top: 5px;
+}
+
+.list {
+    padding-bottom: 15px;
+}
+
+.list .name {
+    height: 44px;
+    width: 100%;
+    line-height: 44px;
+    font-size: 15px;
+    color: #c3c3c3;
+}
+
+.list .pic {
+    width: 100%;
+    height: 125px;
+    overflow: hidden;
+}
+
+.list .pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.list .detail {
+    width: 100%;
+    height: 64px;
+    color: #c3c3c3;
+    font-size: 13px;
+    line-height: 27px;
+    margin-top: 5px;
+}

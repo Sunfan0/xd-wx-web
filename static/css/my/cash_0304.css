@@ -1,0 +1,49 @@
+.content {
+    padding-bottom: 100px;
+}
+
+.content .cash_img {
+    height: 215px;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    margin: 20px 10px;
+    border-radius: 10px;
+}
+
+.content .cash_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.content .cash_img .money {
+    width: 100%;
+    position: absolute;
+    top: 73px;
+    left: 20px;
+    font-size: 55px;
+    color: #b59768;
+    font-weight: 600;
+}
+
+.content .cash_img .yuan {
+    width: 100%;
+    position: absolute;
+    top: 148px;
+    left: 25px;
+    font-size: 14px;
+}
+
+.content .cash_img .extract_btn {
+    position: absolute;
+    top: 142px;
+    right: 25px;
+    font-size: 14px;
+    width: 64px;
+    height: 27px;
+    line-height: 27px;
+    color: #b59768;
+    border: 1px solid #b59768;
+    border-radius: 30px;
+    text-align: center;
+}

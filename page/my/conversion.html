@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/my/conversion.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">换书劵</p>
+</div>
+<div class="content">
+    <div class="header_img">
+        <img src="../../static/img/discount/exchange_bg.png"/>
+    </div>
+    <div id="book_list"></div>
+
+    <div class="bottom_btn">
+        <p>确定</p>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="../../static/js/layer.js"></script>
+<script>
+    var isbnArr = [];
+    $(function () {
+        ocean.get('resources/biz/api/exchange/list', {userId: ocean.getLoginUserId()}, function (res) {
+            if (res.code == 0) {
+                console.log(res.data);
+                var template = _.template($('#temp_item').html());
+                $('#book_list').append(template({list: res.data.list}));
+                $(".btn").on("click", function () {
+                    if ($(this).hasClass("white_btn")) {
+                        if (isbnArr.length == res.data.count) {
+                            layer.open({
+                                content: '兑换券不足'
+                                , skin: 'msg'
+                                , time: 2
+                            });
+                            return false;
+                        }
+                        $(this).removeClass("white_btn");
+                        $(this).addClass("active_btn");
+                        isbnArr.push($(this).data("isbn"));
+                    } else if ($(this).hasClass("active_btn")) {
+                        $(this).removeClass("active_btn");
+                        $(this).addClass("white_btn");
+                        isbnArr.remove($(this).data("isbn"));
+                    }
+                });
+                score_star();
+            }
+        });
+
+        $(".bottom_btn p").on("click", function () {
+            if (isbnArr.length > 0) {
+                location.href = "../order/buy/exchange_confirm.html?isbns=" + isbnArr.join(",")
+            } else {
+                layer.open({
+                    content: '先选择需要兑换的图书'
+                    , skin: 'msg'
+                    , time: 2
+                });
+            }
+        });
+    });
+</script>
+<script type="text/template" id="temp_item">
+    <@_.each(list, function (item) {@>
+    <div class="item_box">
+        <div class="img" style="background-image: url('<@=item.picture@>')"></div>
+        <div class="item_info">
+            <p class="title"><@=item.name@></p>
+            <p class="text"><@=item.author@></p>
+            <p class="text"><@=item.publishing@></p>
+            <div class="bookgrad">
+                <span class="label">豆瓣评分</span>
+                <div class="star" data-score="<@=item.score@>">
+                    <img src="../../static/img/bookinfo/star0.png"/>
+                    <img src="../../static/img/bookinfo/star0.png"/>
+                    <img src="../../static/img/bookinfo/star0.png"/>
+                    <img src="../../static/img/bookinfo/star0.png"/>
+                    <img src="../../static/img/bookinfo/star0.png"/>
+                </div>
+                <span class="number">(<@=item.score.toFixed(1)@>)</span>
+            </div>
+            <@if(item.exchanged){@>
+            <p class="btn have_btn">已兑换</p>
+            <@} else {@>
+            <p class="btn white_btn" data-isbn="<@=item.isbn@>">兑换</p>
+            <@}@>
+        </div>
+    </div>
+    <@ }); @>
+</script>
+</html>

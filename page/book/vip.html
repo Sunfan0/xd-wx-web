@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/book/vip.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/swiper-3.4.2.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">借书卡</p>
+</div>
+<div class="content">
+    <div class="vip_header swiper-container">
+        <div class="swiper-wrapper">
+            <div class="card month_card swiper-slide" data-type="month">
+                <p class="type">借书月卡</p>
+                <p class="money">￥19元（190熊猫币）</p>
+                <img class="vip_month" src="../../static/img/book/vip_sign.png" style="display: none"/>
+            </div>
+            <div class="card year_card swiper-slide" data-type="year">
+                <p class="type">借书年卡</p>
+                <p class="money">￥199元（1990熊猫币）</p>
+                <img class="vip_year" src="../../static/img/book/vip_sign.png" style="display: none"/>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="vip_body">
+        <p class="title">权益</p>
+        <p class="details">用户可在租书卡有效期内不限次数借阅平台图书。</p>
+        <p class="title">如何开通</p>
+        <p class="details">现金购买or熊猫币兑换；若熊猫币不足可以按照每个熊猫币0.1元补齐差价。</p>
+        <p class="title">如何租书</p>
+        <p class="details">
+            1. 先交纳39元押金；</br>
+            2. 将想租的书加入购物车，选择借阅天数和收件地址并确认下单，无需缴费；</br>
+            3. 我们将书打包快递，您只需在租期到期前读完并寄还给我们即可。</br>
+            4. 收到快递当天和寄出当天不算租期。</p>
+        <!--<p class="other_about">更多问题？</p>-->
+    </div>
+</div>
+<div class="bottom">
+    <div class="btn open_btn">开通</div>
+    <div class="btn have_btn" style="display: none">已开通</div>
+</div>
+<div class="pay_page" style="display: none">
+    <div class="pay_bg"></div>
+    <div class="pay_body">
+        <div class="title">
+            <img class="close_pay" src="../../static/img/book/close.png"/>开通借书卡
+        </div>
+        <div class="details">
+            <p class="to_name">向小哆支付</p>
+            <p class="to_money"></p>
+            <div class="pay_info">
+                <img class="sign" src="../../static/img/book/vip_diamond.png"/>
+                <span>使用熊猫币：<span id="score">0.00</span></span>
+                <span class="pay_deduction" style="display: none">(抵扣0元)</span>
+                <img class="pay_radio" data-val="0" src="../../static/img/book/vip_radio0.png"/>
+            </div>
+            <div class="pay_info">
+                <span class="need">还需支付：￥<spqn id="money"></spqn>元</span>
+            </div>
+            <div class="pay_btn">立即支付</div>
+        </div>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/swiper-3.4.2.jquery.min.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    var user, score;
+    new Swiper('.swiper-container', {
+//        loop: true,
+        pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true
+        }
+    });
+
+    $(function () {
+        fetchPageData();
+        function fetchPageData() {
+            ocean.get("resources/biz/api/mine", {id: ocean.getLoginUserId()}, function (res) {
+                if (res.code == 0) {
+                    console.log(res.data.user);
+                    user = res.data.user;
+                    score = res.data.user.grade;
+                    if ("MONTH" == user.vipType) {
+                        $(".have_btn").show();
+                        $(".vip_month").show();
+                        $(".convert_btn").hide();
+                    } else if ("YEAR" == user.vipType) {
+                        $(".have_btn").show();
+                        $(".vip_year").show();
+                        $(".convert_btn").hide();
+                    } else {
+                        $(".open_btn").show();
+                    }
+                }
+            }, function (error) {
+                ocean.tip(error);
+            });
+        }
+    });
+    //关闭支付窗口
+    $(".close_pay,.pay_bg").click(function () {
+        $(".pay_body").animate({"bottom": "-100%"}, 300);
+        setTimeout(function () {
+            $(".pay_page").css("display", "none");
+        }, 300)
+    });
+    //显示支付窗口
+    $(".open_btn").click(function () {
+        var cur = $(".swiper-slide-active");
+        if ($(cur[0]).data("type") == "month") {
+            $(".to_money").html("￥19.00(190熊猫币)");
+            $("#money").html("19.00");
+            if (score > 190) {
+                $("#score").html("190.00");
+            } else {
+                $("#score").html(score.toFixed(2));
+            }
+        }
+        if ($(cur[0]).data("type") == "year") {
+            $(".to_money").html("￥199.00(1990熊猫币)");
+            $("#money").html("199.00");
+            if (score > 1990) {
+                $("#score").html("1990.00");
+            } else {
+                $("#score").html(score.toFixed(2));
+            }
+        }
+        $(".pay_page").css("display", "");
+        $(".pay_body").animate({"bottom": "0"}, 300);
+    });
+    //使用熊猫币
+    $(".pay_radio").click(function () {
+        if ($(".pay_radio").data("val") == "0") {
+            $(".pay_radio").attr("src", "../../static/img/book/vip_radio1.png");
+            $(".pay_radio").data("val", "1");
+            $(".pay_deduction").css("display", "");
+
+            var cur = $(".swiper-slide-active");
+            if ($(cur[0]).data("type") == "month") {
+                if (score > 190) {
+                    $(".pay_deduction").html("(抵扣19.00元)");
+                    $("#money").html(0.00)
+                } else {
+                    $(".pay_deduction").html("(抵扣" + (score * 0.1).toFixed(2) + "元)");
+                    $("#money").html((19 - score * 0.1).toFixed(2))
+                }
+            }
+            if ($(cur[0]).data("type") == "year") {
+                if (score > 1990) {
+                    $(".pay_deduction").html("(抵扣199.00元)");
+                    $("#money").html(0.00)
+                } else {
+                    $(".pay_deduction").html("(抵扣" + (score * 0.1).toFixed(2) + "元)");
+                    $("#money").html((199 - score * 0.1).toFixed(2))
+                }
+            }
+
+        } else {
+            $(".pay_radio").attr("src", "../../static/img/book/vip_radio0.png");
+            $(".pay_radio").data("val", "0");
+            $(".pay_deduction").css("display", "none");
+            var cur = $(".swiper-slide-active");
+            if ($(cur[0]).data("type") == "month") {
+                $("#money").html("19.00")
+            }
+            if ($(cur[0]).data("type") == "year") {
+                $("#money").html("199.00")
+            }
+        }
+    });
+    //立即支付
+    $(".pay_btn").click(function () {
+        var cur = $(".swiper-slide-active");
+        var money = $("#money").val();
+        if ($(".pay_radio").data("val") == "0") {
+            var score = 0.00;
+            console.log(score);
+        } else {
+            var score = $("#score").text();
+            console.log(score);
+        }
+        if ($(cur[0]).data("type") == "month") {
+            ocean.get("resources/biz/monthOrder/exchange", {
+                userId: ocean.getLoginUserId(),
+                score: score
+            }, function (res) {
+                if (res.code == 0) {
+                    console.log(res);
+                    console.log(res.data.id);
+                    if (res.data.money == 0) {
+                        location.href = "success.html?type=vip";
+                    } else {
+                        id = res.data.id;
+                        location.href = "../order/pay.html?id=" + id + "&type=month";
+                    }
+                }
+            })
+        }
+        if ($(cur[0]).data("type") == "year") {
+            ocean.get("resources/biz/yearOrder/exchange", {
+                userId: ocean.getLoginUserId(),
+                score: score
+            }, function (res) {
+                if (res.code == 0) {
+                    console.log(res);
+                    console.log(res.data.id);
+                    if (res.data.money == 0) {
+                        location.reload();
+                    } else {
+                        id = res.data.id;
+                        location.href = "../order/pay.html?id=" + id + "&type=year";
+                    }
+                }
+            })
+        }
+    });
+
+
+    $(".other_about").click(function () {
+        location.href = "../my/question.html";
+    });
+</script>
+</html>

@@ -1,0 +1,257 @@
+body {
+    background-color: #f1f1f1;
+}
+
+.content {
+    margin-bottom: 80px;
+}
+
+.content .hr {
+    width: 100%;
+    height: 10px;
+    background-color: rgb(240, 240, 241);
+    border: 0;
+}
+
+.content .order_detail {
+    padding: 10px 15px;
+    background-color: white;
+}
+
+.content .order_detail .state {
+    color: #b59768;
+}
+
+.content .order_detail .number, .time {
+    padding-top: 2px;
+    font-size: 14px;
+    color: #c3c3c3;
+}
+
+.content .express_detail {
+    width: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: white;
+}
+
+.content .express_detail .car {
+    width: 15%;
+    float: left;
+    line-height: 59px;
+}
+
+.content .express_detail .info {
+    width: 75%;
+    float: left;
+}
+
+.content .express_detail .state {
+    font-size: 15px;
+    line-height: 19px;
+    color: #41d67d;
+    clear: both;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content .express_detail .time {
+    font-size: 10px;
+    color: #c3c3c3;
+}
+
+.content .express_detail .sign {
+    width: 10%;
+    float: left;
+    text-align: right;
+    line-height: 60px;
+}
+
+.noaddress {
+    width: 100%;
+    padding: 20px 15px 15px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.noaddress .state1 {
+    width: 100%;
+    height: 21px;
+    font-size: 14px;
+    color: #c3c3c3;
+    margin-top: 16px;
+}
+
+.noaddress .state1 img {
+    vertical-align: top;
+}
+
+.noaddress .state1 .tijiao {
+    margin-left: 11px;
+    vertical-align: top;
+}
+
+.noaddress .go {
+    float: right;
+    vertical-align: middle;
+}
+
+.haveaddress {
+    width: 100%;
+    padding: 20px 15px 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: white;
+}
+
+.haveaddress .toname {
+    float: left;
+}
+
+.haveaddress .mobile {
+    float: right;
+}
+
+.haveaddress .address {
+    clear: both;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    color: #c3c3c3;
+    padding-top: 5px;
+}
+
+.haveaddress .info {
+    width: 100%;
+    float: left;
+}
+
+.haveaddress .sign {
+    width: 10%;
+    float: left;
+    text-align: right;
+    line-height: 60px;
+}
+
+.content .bookinfo {
+    margin: 0 10px 0px;
+    padding: 10px 0;
+    background: white;
+    display: flex;
+    -webkit-display: flex;
+    border-bottom: 1px solid rgba(236, 236, 236, 0.52);
+}
+
+.content .bookinfo .imginfo {
+    width: 25%;
+    height: 110px;
+}
+
+.content .bookinfo .img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.content .textinfo {
+    position: relative;
+    width: 85%;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.content .textinfo .title {
+    font-size: 14px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content .textinfo .author {
+    font-size: 12px;
+    color: #898989;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content .textinfo .money {
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.content .textinfo .time {
+    font-size: 13px;
+    color: #c3c3c3;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.content .forminfo {
+    margin: 0 10px 0px;
+    background: white;
+}
+
+.content .formbar {
+    width: 100%;
+    height: 49px;
+    background: #ffffff;
+    font-size: 0.9rem;
+    color: #3b3b3b;
+    border-bottom: 1px solid rgba(236, 236, 236, 0.52);
+    line-height: 49px;
+}
+
+.content .formbar .label {
+    display: inline-block;
+    width: 20%;
+    height: 49px;
+    line-height: 49px;
+    float: left;
+}
+
+.content .formbar .label_val {
+    width: 80%;
+    float: left;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.buttom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 44px;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.buttom button {
+    width: 50%;
+    height: 100%;
+    border: 0;
+    float: left;
+    font-size: 15px;
+}
+
+.buttom .can {
+    background: #c3c3c3;
+    color: #898989;
+}
+
+.buttom .sure {
+    background: #3b3b3b;
+    color: #FFFFFF;
+}

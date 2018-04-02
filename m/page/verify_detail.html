@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>审核详情</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/buy_list.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="top_title">
+    <div onclick="history.back()"><img class="back" src="../static/img/back_btn.png"/><span>返回</span></div>
+    <div><span>审核详情</span>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div><img class="other" src="../static/img/other_btn.png"/></div>
+</div>
+<div class="top_place"></div>
+<div class="empty_content" style="display: none">
+    <div class="img">
+        <img src="../static/img/none.png" width="186px" height="158px">
+        <p>您还没有下单哦！</p>
+    </div>
+</div>
+<div class="content">
+    <div id="buy_list">
+    </div>
+    <div class="sum_info">
+        共审核<span id="totalNum">0</span>本图书&nbsp;&nbsp;总熊猫币
+        <span id="grade">&nbsp;0</span>
+    </div>
+    <div class="bottom_btn" style="bottom: 90px;">
+        <span class="yes_btn">确  定</span>
+        <!--<span class="no_btn">不通过</span>-->
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    Window.onload = Load();
+
+    function Load() {
+        ShowBuyList();
+    }
+
+    function ShowBuyList() {
+        var id = ocean.getRequestParameter("id");
+        ocean.get("resources/biz/bc/api/order/item", {
+                id: id,
+                type: "donate"
+            }, function (data) {
+                if (data.code === 0) {
+                    var content = data.data;
+                    console.log(content);
+                    var buy = _.template($('#buy_item').html());
+                    $("#buy_list").append(buy({items: content}));
+                }
+                var grade = 0;
+                var num = 0;
+                $(".ye_btn").click(function () {
+                    $(this).hide();
+                    $(this).next().hide();
+                    grade += parseFloat($(this).data("id"));
+                    num++;
+                    console.log(num);
+                    $("#totalNum").html(num);
+                    $("#grade").html(grade.toFixed(2));
+                });
+
+                $(".n_btn").click(function () {
+                    $(this).hide();
+                    $(this).prev().hide();
+                });
+
+            }, function (error) {
+                ocean.tip(error);
+            }
+        );
+        $(".yes_btn").click(function () {
+            var num = $("#totalNum").text();
+            var grade = $("#grade").text();
+            if ($(".ye_btn").is(":visible")) {
+                ocean.tip("请确认或者拒绝!");
+                return false;
+            }
+            if (num == 0) {
+                ocean.get("resources/biz/bc/api/no_pass", {
+                        orderId: id
+                    }, function (data) {
+                        if (data.code == 0) {
+                            ocean.tip("审核成功");
+                            location.href = "verify_list.html";
+                        }
+                    }, function (error) {
+                        ocean.tip(error);
+                    }
+                );
+            } else {
+                ocean.get("resources/biz/bc/api/check/order", {
+                        orderId: id,
+                        num: num,
+                        grade: grade
+                    }, function (data) {
+                        if (data.code == 0) {
+                            ocean.tip("审核成功");
+                            setTimeout(3000, location.href = "verify_list.html");
+                        }
+                    }, function (error) {
+                        ocean.tip(error);
+                    }
+                );
+            }
+        });
+    }
+</script>
+<script id="buy_item" type="text/template">
+    <div class="info_box">
+        <@_.each(items.bookName.split('@'), function (book,index) {@>
+        <div class="book_info">
+            <span class="name"><@=book@></span>
+            <span class="integral"><@=items.price.split('@')[index]@></span>
+            <button class="ye_btn" data-id="<@=items.price.split('@')[index]@>">确 认</button>
+            <button class="n_btn">拒 绝</button>
+        </div>
+        <@});@>
+    </div>
+</script>
+
+</html>

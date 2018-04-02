@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/my/user_address.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/my/add_address.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div id="list_page">
+    <div class="header">
+        <span class="back" onclick="goBack()"><div></div></span>
+        <p class="title">地址管理</p>
+    </div>
+    <div class="empty_content" style="display: none;">
+        <div class="img">
+            <img src="../../../static/img/mine/add.png" width="78px" height="75px">
+            <p>您还没有添加收货地址哟～</p>
+        </div>
+    </div>
+    <div class="content content_1">
+        <!--<img src="../../../static/img/mine/address_hr.png" style="width: 100%;height: 10px"/>-->
+        <div id="address_list"></div>
+    </div>
+    <div class="bottom">
+        <div class="submit_btn">
+            <img src="../../../static/img/mine/add1.png">添加地址
+        </div>
+    </div>
+</div>
+<div id="add_page" style="display: none;">
+    <div class="header">
+        <!--<span class="back" onclick="backToList()"><div></div></span>-->
+        <!--<p class="title">新建地址</p>-->
+        <div class="save_btn" onclick="submit()">保存</div>
+    </div>
+    <div class="content content_2">
+        <div class="user_info"><input id="name_" placeholder="姓名"/></div>
+        <div class="user_info"><input id="mobile_" placeholder="手机号码"/></div>
+        <div class="user_info"><p class="input" id="city_" onclick="showPicker()">省、市、区县、</p></div>
+        <div class="user_info"><input id="address_" placeholder="详细地址"/></div>
+        <div class="default_select">
+            <span class="default_btn"><span class="click"></span></span>
+            <span class="text">设为默认地址</span>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="../../../static/js/city.js"></script>
+<script>
+    var province, city, district, id;
+    $(function () {
+        $(".submit_btn").click(function () {
+            $('body').css('background-color','white');
+            $("#list_page").hide();
+            $("#add_page").show();
+            id = null;
+        });
+        $(".default_btn").click(function () {
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active");
+            } else {
+                $(this).addClass("active");
+            }
+        });
+        loadPageData();
+    });
+
+    function loadPageData() {
+        ocean.get("resources/biz/api/address/list", {userId: ocean.getLoginUserId()}, function (res) {
+            console.log(res);
+            if (res.code == 0) {
+                if (res.data.length > 0) {
+                    $('body').css('background-color','#f1f1f1');
+                    $(".empty_content").hide();
+                    $("#address_list").show();
+                    var template = _.template($('#temp_address_item').html());
+                    $("#address_list").html(template({
+                        list: res.data
+                    }));
+
+                    $(".modify").on("click", function () {
+                        id = $(this).data("id");
+                        initEditData($(this).parent().parent().data("obj"));
+                        $('body').css('background-color','white');
+                        $("#list_page").hide();
+                        $("#add_page").show();
+                        return false;
+                    });
+
+                    $(".delete").on("click", function () {
+                        id = $(this).data("id");
+                        var loading = weui.loading('loading');
+                        ocean.get('resources/biz/api/address/drop', {id: id}, function () {
+                            loadPageData();
+                            loading.hide();
+                        });
+                        return false;
+                    });
+
+                    $(".default_text").on("click", function () {
+                        id = $(this).data("id");
+                        var loading = weui.loading('loading');
+                        ocean.get('resources/biz/api/address/setDefault', {
+                            userId: ocean.getLoginUserId(),
+                            id: id
+                        }, function () {
+                            loadPageData();
+                            loading.hide();
+                        });
+                        return false;
+                    });
+
+                    $(".address_list").on("click", function () {
+                        try {
+                            onAddressSelected($(this).data("obj"));
+                        } catch (e) {
+                        }
+                        return false;
+                    });
+                } else {
+                    $('body').css('background-color','white');
+                    $(".empty_content").show();
+                    $("#address_list").hide();
+                    $(".bottom").css("background-color","transparent");
+                }
+            }
+        }, function () {
+            exceptionBox();
+        });
+    }
+
+    function backToList() {
+        $("#name_").val("");
+        $("#mobile_").val("");
+        $("#address_").val("");
+        $("#city_").text("省、市、区县、");
+        $("#city_").css("color","#c3c3c3")
+        $(".default_btn").removeClass("active");
+        $('body').css('background-color','#f1f1f1');
+        $("#list_page").show();
+        $("#add_page").hide();
+    }
+
+    function showPicker() {
+        weui.picker(ocean_city_arr, {
+            depth: 3,
+            defaultValue: [province || 310000, city || 310100, district || 310101],
+            onChange: function (result) {
+                console.log(result);
+            },
+            onConfirm: function (result) {
+                console.log(result);
+                $("#city_").text(result[0].label + result[1].label + result[2].label);
+                if($("#city_").text!="省、市、区县、"){
+                    $("#city_").css("color","black")
+                }
+                province = result[0].value;
+                city = result[1].value;
+                district = result[2].value;
+            },
+            id: 'cascadePicker'
+        });
+    }
+
+    function initEditData(item) {
+        province = item.province;
+        city = item.city;
+        district = item.district;
+        $("#name_").val(item.name);
+        $("#mobile_").val(item.phone);
+        $("#address_").val(item.otherAddr);
+        $("#city_").text(item.provinceName + item.cityName + item.districtName);
+        if (item.isDefault) {
+            $(".default_btn").addClass("active");
+        }
+    }
+
+    var isSubmit = false;
+
+    function submit() {
+        if (isSubmit) {
+            return;
+        }
+        var name = $("#name_").val();
+        var phone = $("#mobile_").val();
+        var address = $("#address_").val();
+        var isDefault = $(".default_btn").hasClass("active");
+        if (name.isEmpty()) {
+            ocean.tip("请填写姓名！");
+            return false;
+        }
+        if (phone.isEmpty()) {
+            ocean.tip("手机号没有输入！");
+            return false;
+        }
+        var pattern = /^1[34578]\d{9}$/;
+        if (!pattern.test(phone)) {
+            ocean.tip("手机号码不正确！");
+            return false;
+        }
+        if ($('#city_').text() == '省、市、区县、') {
+            ocean.tip("请选择省市区！");
+            return false;
+        }
+        if (address.isEmpty()) {
+            ocean.tip("请填写详细地址！");
+            return false;
+        }
+        isSubmit = true;
+        var loading = weui.loading('loading');
+        ocean.post("resources/biz/api/address/save", {
+            id: id,
+            userId: ocean.getLoginUserId(),
+            name: name,
+            phone: phone,
+            province: province,
+            city: city,
+            district: district,
+            otherAddr: address,
+            isDefault: isDefault
+        }, function (data) {
+            loading.hide();
+            if (data.code == 0) {
+                backToList();
+                loadPageData();
+                $('body').css('background-color','#f1f1f1');
+                $(".user_header").show();
+                $(".add_header").hide();
+            }
+        }, function () {
+            loading.hide();
+            exceptionBox();
+        });
+        return false;
+    }
+
+    function goBack() {
+        try {
+            onAddressSelected();
+        } catch (e) {
+            history.back();
+        }
+    }
+</script>
+<script type="text/template" id="temp_address_item">
+    <@_.each(list, function (item) {@>
+    <div class="address_list" data-obj='<@=JSON.stringify(item)@>'>
+        <div class="name">
+            <p><@=item.name@></p>
+        </div>
+        <div class="info">
+            <p class="mobile"><@=item.phone@></p>
+        </div>
+        <p class="address"><@=item.provinceName+item.cityName+item.districtName+item.otherAddr@></p>
+        <div class="btn_content">
+            <div class="default_text" data-id="<@=item.id@>">
+                <@if(item.isDefault){@>
+                <img class="activeDefault" src="../../../static/img/mine/address_select1.png" width="18px"
+                     height="18px">
+                <@}else{@>
+                <img class="noDefault" src="../../../static/img/mine/address_select0.png" width="18px" height="18px">
+                <@}@>
+                设为默认地址
+            </div>
+            <p class="modify btn" data-id="<@=item.id@>">编辑</p>
+            <p class="delete btn" data-id="<@=item.id@>">删除</p>
+        </div>
+    </div>
+    <@ }); @>
+</script>
+</html>

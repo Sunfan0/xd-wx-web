@@ -1,0 +1,74 @@
+body {
+    background-color: #f1f1f1;
+}
+
+.order_hint {
+    padding: 2px 10px;
+    background-color: #ffe7e7;
+    font-size: 10px;
+    color: #3b3b3b;
+    text-align: center;
+}
+
+.order_hint span {
+    color: #fea0a0;
+}
+
+.content .forminfo {
+    margin: 0 10px 0px;
+    background: white;
+}
+
+.content .formbar {
+    width: 100%;
+    height: 49px;
+    background: #ffffff;
+    font-size: 0.9rem;
+    color: #3b3b3b;
+    border-bottom: 1px solid rgba(236, 236, 236, 0.52);
+    line-height: 49px;
+}
+
+.content .formbar .label {
+    display: inline-block;
+    width: 70%;
+    height: 49px;
+    line-height: 49px;
+    float: left;
+}
+
+.content .formbar img {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.content .formbar .label_val {
+    width: 30%;
+    float: left;
+    text-align: right;
+}
+
+.content .buy_way {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.bottom {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    position: fixed;
+    left: 0;
+    bottom: 15px;
+}
+
+.bottom .submit_btn {
+    background-color: #3b3b3b;
+    z-index: 9999;
+    text-align: center;
+    margin: 0 15px;
+    border-radius: 3px;
+    color: white;
+}

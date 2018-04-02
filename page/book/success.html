@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/book/success.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title"></p>
+</div>
+<div class="content">
+    <div class="header_img">
+        <img src="../../static/img/book/success.png"/>
+        <p class="text con_title"></p>
+        <p class="message con_message"></p>
+    </div>
+    <div class="go_btn go_pledge" style="display: none">
+        <p>去交押金</p>
+    </div>
+    <div class="go_btn go_borrow" style="display: none">
+        <p>快去借阅海量图书吧</p>
+    </div>
+    <div class="go_btn renew_borrow" style="display: none">
+        <p>确定</p>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    $(function () {
+        //去交押金
+        $(".go_pledge").click(function () {
+            location.href = "../my/cash.html";
+        });
+
+        //去借书
+        $(".go_borrow").click(function () {
+            location.href = "../../index.html";
+        });
+
+        //确定
+        $(".renew_borrow").click(function () {
+            history.back();
+        });
+
+
+        var type = ocean.getRequestParameter("type")
+        switch (type) {
+            case "relet":
+                //我的租过的书（续租成功）
+                var time = ocean.getRequestParameter("time");
+                var year = time.substring(0, 4), month = time.substring(5, 7), day = time.substring(8, 10);
+                $(".con_title").text("续租成功");
+                $(".con_message").text("已为您成功续租，请在" + year + "年" + month + "月" + day + "日" + "前将图书寄还");
+                $(".renew_borrow").show();
+                break;
+            case "vip":
+                //借书卡开通成功
+                $(".con_title").text("借书卡开通成功");
+                $(".con_message").text("离借书只差一步了");
+                $(".go_pledge").css("display", "block");
+                break;
+            case "money":
+                //我的钱包（押金充值成功）
+                $(".con_title").text("充值成功");
+                $(".con_message").text("");
+                ocean.get("resources/biz/api/mine/cash", {id: ocean.getLoginUserId()}, function (res) {
+                    if (res.code == 0) {
+                        console.log(res.data);
+                        var money = res.data;
+                        if (money >= 39) {
+                            $(".message").css("visibility", "hidden");
+                            $(".go_pledge").css("display", "none");
+                            $(".go_borrow").css("display", "block");
+                            $(".go_btn .go_borrow").show();
+                        } else {
+                            $(".message").css("visibility", "visible");
+                            $(".go_pledge").css("display", "block");
+                            $(".go_borrow").css("display", "none");
+                            $(".go_btn .go_pledge").show();
+                        }
+                    }
+                }, function (error) {
+                    ocean.tip(error);
+                });
+                break;
+        }
+    });
+</script>
+</html>

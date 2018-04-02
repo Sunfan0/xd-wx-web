@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0,viewport-fit=cover">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="static/css/index_0322.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/swiper-3.4.2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/common_0320.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="top">
+    <div class="area"><span id="choose_city">地区</span><img src="static/img/buttom/up.png" class="img"/></div>
+    <img class="logo_img" src="static/img/logo.png"/>
+    <span class="search"><img src="static/img/buttom/zoom.png" style="width: 19px;height: 19px"/> </span>
+</div>
+<div class="content">
+    <div class="banner">
+        <span class="search"><img src="static/img/index/search.png" width="220" height="30"/> </span>
+        <section class="pc-banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="banner_content">
+                    <div class="swiper-slide swiper-slide-center none-effect swiper-slide-duplicate swiper-slide-duplicate-next">
+                        <img class="lazy" src="static/img/default.jpg">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </div>
+    <div id="tmpl_book_type1">
+        <div class="classify" style="margin-top: 8%;">
+            <div class="classinfo" data-id="8a21459c58b8d9ac0158b9d899330011"><img src="static/img/index/classno1.png"/><span>文学</span>
+            </div>
+            <div class="classinfo" data-id="2285e2518f8f11e78385b888e3382386"><img src="static/img/index/classno2.png"/><span>少儿</span>
+            </div>
+            <div class="classinfo" data-id="676ec9808f8f11e78385b888e3382386"><img src="static/img/index/classno3.png"/><span>社科</span>
+            </div>
+        </div>
+    </div>
+    <div id="tmpl_book_type2">
+        <div class="classify">
+            <div class="classinfo" data-id="799d38308d6d11e78385b888e3382386"><img src="static/img/index/classno4.png"/><span>经管</span>
+            </div>
+            <div class="classinfo" data-id="3da7879c8f8f11e78385b888e3382386"><img src="static/img/index/classno5.png"/><span>生活</span>
+            </div>
+            <div class="classinfo" data-id="125612a4bd1b11e7be4700163e0f4856"><img src="static/img/index/classno6.png"/><span>科学</span>
+            </div>
+        </div>
+    </div>
+    <hr class="hr">
+    <div class="add_label">
+        <span class="title">书单推荐</span>
+        <span class="about about_all">全部书单</span>
+    </div>
+    <div style="height: 103px;overflow: hidden">
+        <div class="add_booklist" id="book_list" style="padding-bottom: 20px;">
+            <div class="book_item">
+                <div class="img" style="background-image: url('static/img/book.jpg')"></div>
+                <div class="bg"></div>
+                <p class="title"></p>
+            </div>
+            <div class="book_item">
+                <div class="img" style="background-image: url('static/img/book.jpg')"></div>
+                <div class="bg"></div>
+                <p class="title"></p>
+            </div>
+            <div class="book_item">
+                <div class="img" style="background-image: url('static/img/book.jpg')"></div>
+                <div class="bg"></div>
+                <p class="title"></p>
+            </div>
+            <div class="book_item">
+                <div class="img" style="background-image: url('static/img/book.jpg')"></div>
+                <div class="bg"></div>
+                <p class="title"></p>
+            </div>
+            <div class="book_item">
+                <div class="img" style="background-image: url('static/img/book.jpg')"></div>
+                <div class="bg"></div>
+                <p class="title"></p>
+            </div>
+            <div class="book_all">
+                <p class="title"></p>
+                <p class="num"></p>
+            </div>
+        </div>
+    </div>
+    <div class="bookshar">
+        <div class="add_label">
+            <span class="title">最新上架</span>
+            <!--<span class="about" onclick="window.location.href='page/book/list/book_list.html?from=store'">显示全部</span>-->
+        </div>
+        <div id="new_gallery">
+        </div>
+    </div>
+    <!--<div class="footer_btn">
+        <p class="all_book" onclick="window.location.href='page/book/list/book_list.html?from=store'">全部图书</p>
+    </div>-->
+    <!--<div class="bottombox"></div>-->
+</div>
+<!--<div class="welcome_popup pop_bg"></div>
+<div class="welcome_popup pop_content">
+    <div class="img_content">
+        <img src="static/img/active/index_welcome.png" style="width: 100%;height: 100%"/>
+        <p class="go_btn welcomeGo_btn">新手指南</p>
+        <img class="close_btn welcomeClose_btn" src="static/img/active/close.png" width="35" height="35"/>
+    </div>
+</div>-->
+<div class="share_popup pop_bg"></div>
+<div class="share_popup share_content">
+    <div class="img_content">
+        <img src="static/img/active/share_bg.png" style="width: 100%;height: 100%"/>
+    </div>
+    <div class="info_box">
+        <div class="text">
+            <p class="discount_title">换书劵</p>
+            <p class="discount_time">有效期至：xxxx年xx月xx日</p>
+        </div>
+        <div class="img">
+            <img src="static/img/discount/book_exchange.png"/>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <div class="info_box month_free" style="display: none">
+        <div class="text">
+            <p class="discount_title">借阅月卡</p>
+            <p class="discount_time">海量图书免费借阅</p>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <img class="close_btn shareClose_btn" src="static/img/active/close.png" width="35" height="35"/>
+</div>
+<div class="bottom">
+    <div class="home">
+        <img src="static/img/buttom/home_1.png"/>
+        <span class="btnname on">首页</span>
+    </div>
+    <div class="buybook">
+        <img src="static/img/buttom/sell_2.png"/>
+        <span class="btnname">卖书</span>
+    </div>
+    <!--<div class="buybook">
+        <div class="circlebg">
+            <img src="static/img/buttom/buybook.png"/>
+        </div>
+        &lt;!&ndash;<span class="btnname">卖书</span>&ndash;&gt;
+    </div>-->
+    <div class="car">
+        <img src="static/img/buttom/car_2.png"/>
+        <span class="num" id="shopping" style="display: none"></span>
+        <span class="btnname">购物车</span>
+
+    </div>
+    <div class="mine">
+        <img src="static/img/buttom/mine_2.png"/>
+        <span class="btnname">我的</span>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="static/js/swiper-3.4.2.jquery.min.js"></script>
+<script type="text/javascript" src="static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="static/js/weui.min.js"></script>
+<script type="text/javascript" src="static/js/core/underscore.js"></script>
+<script type="text/javascript" src="static/js/core/util.js"></script>
+<script type="text/javascript" src="static/js/core/ocean.js"></script>
+<script type="text/javascript" src="static/js/dropload.min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=zasXaL84CPtNCTKEtX6OfPBglNvbelBk"></script>
+<script>
+    var cityId;
+    var loading = weui.loading('loading');
+    var book_params = {
+        page: 0,
+        limit: 12,
+        from: 'store',
+        classify: null,
+        order: 'new'
+    };
+    var loader;
+
+    $(function () {
+        /*var currentCity = ocean.currentCity();
+        console.log(currentCity);
+        cityId = currentCity.id;
+        var unLocation = sessionStorage.getItem("no-location");
+        if (cityId) {
+            $("#choose_city").html(currentCity.name);
+        } else {
+            fetchCity("上海市");
+        }
+
+        if (null == unLocation) {
+            baiduLocation(function (res) {
+                var cityName = res.city;
+                if (cityName != "" || typeof(cityName) == "undefined") {
+                    console.log("=========>" + cityName)
+                    fetchCity(cityName);
+                    sessionStorage.setItem("no-location", true);
+                }
+            }, function (error) {
+                ocean.tip(error);
+            });
+        }
+*/
+        book_params.page += 1;
+        loadPageData();
+        loader = $('.bookshar').dropload({
+            scrollArea: window,
+            domDown: {
+                domClass: 'weui-loadmore ',
+                domRefresh: '<div class="dropload-refresh">↑上拉加载更多</div>',
+                domLoad: '<i class="weui-loading"></i><span class="weui-loadmore__tips">正在加载</span>',
+                domNoData: '<span class="weui-loadmore__bottom">没有更多数据了</span>'
+            },
+            loadDownFn: function () {
+                book_params.page += 1;
+                loadPageData();
+            }
+        });
+
+        fetchPageData();
+    });
+
+    function fetchCity(name) {
+        ocean.post("resources/biz/city/select_city", {name: name}, function (data) {
+            var city = {};
+            city.id = data.data.id;
+            city.name = data.data.name;
+            cookie.setCookie(current_city_cookie_key, JSON.stringify(city));
+            $("#choose_city").html(city.name);
+            cityId = city.id;
+        });
+    }
+
+    function fetchPageData() {
+        if (sessionStorage.getItem("index-page-data")) {
+            var data = JSON.parse(sessionStorage.getItem("index-page-data"));
+            initPage(data);
+        } else {
+            ocean.get("resources/biz/api/store", {}, function (res) {
+                console.log("---------")
+                if (res.code == 0) {
+                    sessionStorage.setItem("index-page-data", JSON.stringify(res.data));
+                    initPage(res.data);
+                }
+            }, function (error) {
+                ocean.tip(error);
+            });
+        }
+    }
+
+    function initPage(data) {
+        var bannerData = data.banner;
+        $("#banner_content").html("");
+        $.each(bannerData, function (index, item) {
+            addBannerItem(item);
+        });
+        new ocean_banner('.swiper-container');
+
+        //书单
+        var bookListData = data.book_list;
+        var template = _.template($('#temp_book_list_item').html());
+        $('#book_list').html(template({
+            list: bookListData.list,
+            total: bookListData.total
+        }));
+
+        //新书推荐
+        /*var newBookData = data.new_book;
+        var template = _.template($('#temp_book_item').html());
+        $('#new_gallery').html(template({
+            list: newBookData
+        }));*/
+
+        //精选绘本
+        /* var picBookData = data.pic_book;
+         $('#pic_gallery').html(template({
+             list: picBookData
+         }));*/
+        afterLoad();
+    }
+
+    function loadPageData(callback) {
+        ocean.get("resources/biz/api/book/list", book_params, function (res) {
+            if (res.code == 0) {
+                console.log(res.data);
+                var template = _.template($('#all_book_item').html());
+                if (res.data.isFirstPage || res.data.pageNum == 0) {
+                    $('#new_gallery').html("");
+                }
+                $('#new_gallery').append(template({list: res.data.list}));
+
+                if (callback) {
+                    callback();
+                }
+                if (res.data.isLastPage) {
+                    loader.lock();
+                    loader.noData(true);
+                } else {
+                    loader.unlock();
+                    loader.noData(false);
+                }
+                loader.resetload();
+                bookImgLoad();
+            }
+        });
+    }
+
+    function bookImgLoad() {
+        $(".lazy").lazyload({
+            effect: "fadeIn",
+            threshold: 0,
+            failurelimit: 10
+        });
+
+        $(".book_info").on("click", function () {
+            location.href = "page/book/book_info.html?from=store&id=" + $(this).data("id");
+        });
+        score_star();
+        loading.hide();
+    }
+
+    function addBannerItem(banner) {
+        var clazz = "type_" + banner.type.toLowerCase() + " swiper-slide swiper-slide-center none-effect";
+        var data = "";
+        if (banner.type == "URL") {
+            data = banner.url;
+        } else if (banner.type == "MESSAGE") {
+            data = banner.messageId;
+        } else if (banner.type == "BOOK") {
+            data = banner.bookId;
+        }
+        var html = "<div class=\"" + clazz + "\" data-id=\"" + data + "\">\n" +
+            "    <img src=\"" + banner.picture + "\">\n" +
+            "</div>";
+        $("#banner_content").append(html);
+    }
+
+    function afterLoad() {
+        $(".book_item").on("click", function () {
+            location.href = "page/book/book_info.html?from=store&id=" + $(this).data("id");
+        });
+
+        $(".book_list_item").on("click", function () {
+            location.href = "page/book/list/book_list_detail.html?id=" + $(this).data("id");
+        });
+
+        $(".classinfo, .classporhead").on("click", function () {
+            location.href = "page/book/list/book_type.html?from=store&pid=" + $(this).data("id");
+        });
+
+        $(".book_all").on("click", function () {
+            location.href = "page/book/list/book_list_all.html";
+        });
+    }
+
+    $(".search").on("click", function () {
+        location.href = "page/other/search.html";
+    });
+
+    $("#choose_city").on("click", function () {
+        location.href = "page/other/choose_city.html";
+    });
+
+    $(".find").on("click", function () {
+        location.href = "page/index/book_store.html";
+    });
+    $(".car").on("click", function () {
+        location.href = "page/index/shopping_car.html";
+    });
+    $(".bookcard").on("click", function () {
+        location.href = "page/book/vip.html";
+    });
+    $(".mine").on("click", function () {
+        location.href = "page/index/mine.html";
+    });
+    $(".buybook").on("click", function () {
+        location.href = "page/index/book_recycle.html";
+    });
+    $(".about_all").on("click", function () {
+        location.href = "page/book/list/book_list_all.html";
+    });
+
+    //新手指南
+/*    $(".welcomeClose_btn").on("click", function () {
+        $(".welcome_popup").hide()
+    });
+    $(".welcomeGo_btn").on("click", function () {
+        location.href = "http://m.tanpin.com/pandabox/huanshu";
+    });*/
+</script>
+<script type="text/template" id="temp_book_item">
+    <@_.each(list, function (item) {@>
+    <div class="sharbox book_item" data-id="<@=item.id@>">
+        <div class="img lazy" style="background-image: url('<@=item.picture@>')"
+             data-original="<@=item.picture@>"></div>
+        <span><@=item.name@></span>
+        <div class="grade"><@=item.score.toFixed(1)@></div>
+    </div>
+    <@ }); @>
+</script>
+<script type="text/template" id="temp_book_list_item">
+    <@_.each(list, function (item) {@>
+    <div class="book_list_item" data-id="<@=item.id@>">
+        <div class="img" style="background-image: url('<@=item.cover@>')"></div>
+        <div class="bg"></div>
+        <div class="title_div">
+            <div class="title"><@=item.name@></div>
+        </div>
+    </div>
+    <@ }); @>
+    <div class="book_all">
+        <p class="title">全部书单</p>
+        <p class="num"><@=total@>个</p>
+    </div>
+</script>
+<script type="text/template" id="all_book_item">
+    <@_.each(list, function (item) {@>
+    <div class="book_info" data-id="<@=item.id@>">
+        <div class="img lazy" data-original="<@=item.picture@>"
+             style="background-image: url('static/img/book.jpg')">
+            <@if(item.stock<=0){@>
+            <div class="no_img"><p>无货</p></div>
+            <@}@>
+        </div>
+        <div class="text">
+            <p class="name"><@=item.name@></p>
+            <p class="author"><@=item.author@></p>
+            <div class="grade">
+                <span class="label">豆瓣评分</span>
+                <div class="star" data-score="<@=item.score@>">
+                    <img src="static/img/bookinfo/star0.png">
+                    <img src="static/img/bookinfo/star0.png">
+                    <img src="static/img/bookinfo/star0.png">
+                    <img src="static/img/bookinfo/star0.png">
+                    <img src="static/img/bookinfo/star0.png">
+                </div>
+                <span class="number">(<@=item.score.toFixed(1)@>)</span>
+            </div>
+            <!--<p class="from"><@=item.publishing@></p>-->
+            <p class="money">
+                <span class="used">二手价</span>
+                <!--<span class="num">￥<@=item.price@></span>-->
+                <span class="num">￥<span class="int"><@=item.price.toFixed(2).split('.')[0]@></span>.<@=item.price.toFixed(2).split('.')[1]@></span>
+                <span class="discount"><@=item.discount@>折</span></p>
+        </div>
+    </div>
+    <@ }); @>
+</script>
+</html>

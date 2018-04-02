@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/order/lease/lease_details.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">订单详情</p>
+</div>
+<div class="content">
+    <div class="order_detail">
+        <p>订单状态：<span class="state" id="state">已发货</span></p>
+        <p class="number">订单号：<span id="orderNum"></span></p>
+        <p class="time">下单时间：<span id="createdDate"></span></p>
+    </div>
+    <hr class="hr">
+    <div class="express_detail" style="display: none">
+        <div class="car">
+            <img src="../../../static/img/order/car.png" width="34px" height="21px">
+        </div>
+        <div class="info">
+            <p class="state" id="express_state"></p>
+            <p class="time" id="express_time"></p>
+        </div>
+        <div class="sign">
+            <img src="../../../static/img/mine/go.jpg" width="8px" height="13px">
+        </div>
+    </div>
+    <hr class="hr">
+    <div class="noaddress" style="display: none">
+        <p class="state1">
+            <img src="../../../static/img/mine/add2.png" height="21px" width="17px" class="add2">
+            <span class="tijiao">请选择送货地址</span>
+            <img src="../../../static/img/mine/go.jpg" width="8px" height="13px">
+        </p>
+    </div>
+    <div class="haveaddress">
+        <div class="info">
+            <p class="toname">收货人:<span id="name"></span></p>
+            <p class="mobile"></p>
+            <p class="address"></p>
+        </div>
+    </div>
+    <hr class="hr">
+    <div style="background-color: white">
+        <div id="book_list"></div>
+    </div>
+    <hr class="hr">
+    <div style="background-color: white">
+        <div class="forminfo">
+            <div class="formbar">
+                <span class="label">留言</span>
+                <div class="label_val" id="user_word"></div>
+            </div>
+            <div class="formbar">
+                <span class="label">借阅天数</span>
+                <div class="label_val" id="lease_days"></div>
+            </div>
+            <div class="formbar return">
+                <span class="label">归还日期</span>
+                <div class="label_val" id="return_date"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script>
+    $(function () {
+        var id = ocean.getRequestParameter("id");
+        var sendBackCode;
+        var sendOffCode;
+        var state;
+        var expressCompany;
+        ocean.get("resources/biz/leaseOrder/select_order_details", {
+            userId: ocean.getLoginUserId(),
+            id: id
+        }, function (data) {
+            console.log(data);
+            if (data.code == 0) {
+                var content = data.data;
+                var orderNumber = content.orderNumber;
+                var createdDate = content.createdDate;
+                var totalPrice = content.totalPrice;
+                var money = content.money;
+                var total = money + totalPrice;
+                var name = content.userName;
+                var phone = content.phone;
+                var address = content.address;
+                sendBackCode = content.sendBackCode;
+                sendOffCode = content.sendOffCode;
+                expressCompany = content.expressCompany;
+                state = content.state;
+
+
+                $("#name").html(name);
+                $(".mobile").html(phone);
+                $(".address").html(address);
+                $("#orderNum").html(orderNumber);
+                $("#createdDate").html(createdDate.slice(0, 16));
+                $("#totalPrice").html(totalPrice);
+                $("#money").html(money);
+                $(".price_3").html(total);
+                $("#lease_days").html(content.leaseDays + "天");
+                $("#user_word").html(content.userWord);
+                if (content.returnDate) {
+                    $("#return_date").html(content.returnDate.substring(0, 5).replace("-", "年") + content.returnDate.substring(5, 10).replace("-", "月") + "日前");
+                }
+
+                var buy = _.template($('#book_item').html());
+                $("#book_list").html(buy({
+                    item: content
+                }));
+                if (content.status === "PAID") {
+                    $("#state").html("待发货");
+                    $(".formbar.return").hide();
+                } else if (content.status === "SELLER_SENDED") {
+                    $("#state").html("已发货");
+                    fetchTraceData(content.expressCompany, content.sendOffCode);
+                } else if (content.status === "STARTED") {
+                    $("#state").html("已开始");
+                    fetchTraceData(content.expressCompany, content.sendOffCode);
+                } else if (content.status === "USER_SENDED") {
+                    $("#state").html("用户已发货");
+                    fetchTraceData(content.expressCompany, content.sendBackCode);
+                } else if (content.status === "FINISHED") {
+                    $("#state").html("已完成");
+                    fetchTraceData(content.expressCompany, content.sendBackCode);
+                } else if (content.status === "BREAK") {
+                    $("#state").html("已违约")
+                }
+
+                $('.lazy').lazyload({
+                    threshold: 20
+                });
+            }
+        }, function () {
+            exceptionBox();
+        });
+
+        $(".area").on("click", function () {
+            location.href = "../goods/rent_book.html";
+        });
+        $(".express_detail").on("click", function () {
+            var id = ocean.getRequestParameter("id");
+            location.href = "../express.html?orderId=" + id;
+        });
+        function fetchTraceData(shipperCode, logisticCode) {
+            ocean.get("resources/biz/order/select_traces", {
+                orderType: "lease",
+                orderId: id,
+                logisticCode: logisticCode,
+                shipperCode: shipperCode
+            }, function (data) {
+                console.log(data.data);
+                sessionStorage.setItem("WL-" + id, JSON.stringify(data.data.traces));
+                sessionStorage.setItem("orderDetail-" + id, JSON.stringify(data.data.orderDetail));
+                $(".express_detail").show();
+                var traces = data.data.traces.Traces;
+                if (traces.length > 0) {
+                    $("#express_state").html(traces[traces.length - 1].AcceptStation);
+                    $("#express_time").html(traces[traces.length - 1].AcceptTime);
+                }
+            }, function (error) {
+                ocean.tip(error);
+            });
+        }
+    })
+</script>
+<script id="book_item" type="text/template">
+    <@_.each(item.bookName.split('@'), function (book, index) {@>
+    <div class="bookinfo">
+        <div class="imginfo">
+            <div class="img" style="background-image: url(<@=item.picture.split('@')[index]@>)"></div>
+        </div>
+        <div class="textinfo">
+            <p class="title"><@=book@></p>
+            <p class="author"><@=item.author.split('@')[index]@></p>
+            <div>
+                <span class="money">￥<@=item.price.split('@')[index]@>元</span>
+                <span class="time"><@=item.createdDate.split(" ")[0]@></span>
+            </div>
+        </div>
+    </div>
+    <@ }); @>
+</script>
+</html>

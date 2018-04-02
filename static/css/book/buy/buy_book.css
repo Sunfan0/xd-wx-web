@@ -1,0 +1,279 @@
+body {
+    background-color: white;
+}
+
+.header {
+    background: transparent !important;
+    display: block !important;
+}
+
+.content {
+    margin-top: 0 !important;
+}
+
+.header .left {
+    width: 20px;
+    height: 19px;
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
+
+.header .car_number {
+    width: 21px;
+    height: 22px;
+    margin: 30% auto 0;
+    position: relative;
+}
+
+.header .left img {
+    width: 20px;
+    height: 19px;
+}
+
+.empty_content {
+    margin: 55% auto 0;
+    width: 70%;
+}
+
+.empty_content img {
+    margin: 0 auto;
+    display: block;
+}
+
+.empty_content .text {
+    font-size: 14px;
+    color: #c3c3c3;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.empty_content .btn {
+    margin: 30px auto 0;
+    width: 40%;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 30px;
+    border: 1px solid #828282;
+    color: #3b3b3b;
+    text-align: center;
+}
+
+.content {
+    margin-bottom: 60px;
+}
+
+.content .call_sign {
+    position: fixed;
+    right: 8px;
+    bottom: 90px;
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    box-shadow: -1px 3px 8px rgba(208, 197, 180, 0.59);
+}
+
+.content .info_box {
+    margin: 10px;
+    background-color: white;
+    padding: 0 10px;
+    box-shadow: -1px 3px 8px rgba(208, 197, 180, 0.19);
+    border-radius: 3px;
+}
+
+.info_box .order_info {
+    line-height: 30px;
+    text-align: left;
+    border-bottom: 1px solid #ededed;
+}
+
+.info_box .order_info .order_num {
+    color: #3b3b3b;
+    font-size: 13px;
+}
+
+.info_box .order_info .order_state {
+    float: right;
+    color: #b59768;
+    font-size: 12px;
+}
+
+.book_info {
+    color: #3b3b3b;
+    font-size: 15px;
+    overflow: hidden;
+    display: flex;
+    -webkit-display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid #ededed;
+}
+
+.book_info .left {
+    float: left;
+    width: 70px;
+    height: 100px;
+    padding: 5px;
+}
+
+.book_info .left .img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.book_info .right {
+    float: left;
+    width: 70%;
+    padding-left: 4%;
+    position: relative;
+}
+
+.book_info .author {
+    font-size: 12px;
+    color: #898989;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 5px;
+}
+
+.book_info .grade {
+    color: #b59768;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.book_info .bottom_info {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.book_info .used {
+    font-size: 12px;
+    color: #d5d5d5;
+}
+
+.book_info .discount {
+    color: #b59768;
+    border: 1px solid #b59768;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 0px 3px;
+    margin-left: 10px;
+}
+
+.price_info {
+    text-align: right;
+    line-height: 35px;
+    font-size: 13px;
+}
+
+.price_info .number {
+    color: #b59768;;
+}
+
+.price_info .money {
+    font-size: 14px;
+    color: #b59768;;
+}
+
+.bottom_box {
+    text-align: right;
+    padding: 10px 0 15px;
+    font-size: 14px;
+}
+
+.bottom_box .payment_btn {
+    background-color: #3b3b3b;
+    color: white;
+    padding: 7px 18px;
+    border-radius: 3px;
+}
+
+.bottom_box .express_btn {
+    background-color: white;
+    color: #3b3b3b;
+    border: 1px solid #3b3b3b;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+
+.contact {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 555;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.contact .button {
+    width: 295px;
+    height: 105px;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    margin-top: -55px;
+    margin-left: -146px;
+}
+
+.contact .button .del1 {
+    color: #3b3b3b;
+    border-bottom: 1px solid #dddddd;
+    line-height: 40px;
+    padding: 7px 14px 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.contact .button .cancel span {
+    height: 51px;
+    width: 146px;
+    display: inline-block;
+    background: #ffffff;
+    font-size: 18px;
+}
+
+.contact .button .cancel .can1 {
+    width: 146px;
+    border-right: 1px solid #dddddd;
+    float: left;
+}
+
+.contact .button .cancel button {
+    width: 146px;
+}
+
+.contact .button .cancel button:focus {
+    outline: none;
+}
+
+.quxiao {
+    float: left;
+    height: 100%;
+    border-bottom-left-radius: 3px;
+    color: #c3c3c3;
+    border-right: 1px solid #dddddd;
+    border: 0;
+    background: #ffffff;
+    font-size: 17px;
+}
+
+.shanchu {
+    float: right;
+    height: 100%;
+    border-bottom-right-radius: 3px;
+    color: #b59768;
+    border: 0;
+    background: #ffffff;
+    font-size: 17px;
+}

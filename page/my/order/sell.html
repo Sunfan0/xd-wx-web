@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/book/sell/sell_book.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <!--<span class="back" onclick="location.href='../../index/mine.html'"><div></div></span>-->
+    <!--<p class="title">卖过的书</p>-->
+    <div class="left">
+        <div class="car_number" style="display: none">
+            <img src="../../../static/img/book/headset.png"/>
+        </div>
+    </div>
+</div>
+<div class="none" style="display: none">
+    <div class="img">
+        <img src="../../../static/img/book/sell_null.png" width="68" height="58">
+        <p class="text">您还没有卖过书哦，去扫码卖书吧！</p>
+        <p class="btn" onclick="window.location.href='../../index/book_recycle.html'">去扫码</p>
+    </div>
+</div>
+
+<div class="collect_main" style="display: none">
+    <img class="call_sign" src="../../../static/img/mine/call_sign.png">
+    <div class="book_list" id="book_list"></div>
+</div>
+<script id="recycle_item" type="text/template">
+    <@_.each(items, function (item) {@>
+    <div class="book_item" data-id="<@=item.id@>" data-code="<@=item.channelCode@>">
+        <div class="left">
+            <div class="img" style="background-image: url(<@=item.picture.split('@')[0]@>)"></div>
+        </div>
+        <div class="right">
+            <p class="order_info">订单号：<span><@=item.orderNo@></span></p>
+            <p class="sum_num">共<@=item.totalNum@>本</p>
+            <@if (item.state === "CREATED") {@>
+            <span class="order_state">待揽件</span>
+            <@} else if (item.state === "SENDED") {@>
+            <span class="order_state">已发出</span>
+            <@} else if (item.state === "RECEIVED") {@>
+            <span class="order_state">已接收</span>
+            <@} else if (item.state === "FINISHED") {@>
+            <span class="order_state">已完成</span>
+            <@}@>
+        </div>
+    </div>
+    <@ }); @>
+</script>
+
+<!--剩余填满-->
+<!--<div class="bg1"></div>-->
+<div class="contact">
+    <div class="button">
+        <div class="del1">请致电 400-116-9966 联系客服</div>
+        <div class="cancel">
+            <span class="can1"><button class="quxiao">取消</button></span>
+            <span class="can2"><a href="tel:4001169966"><button class="shanchu go">拨打</button></a></span>
+        </div>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script>
+    $(".car_number,.call_sign").on("click", function () {
+        $(".contact").show();
+        $(".quxiao").on("click", function () {
+            $(".contact").hide();
+        });
+    });
+
+    $(function () {
+        var params = {
+            page: 1,
+            limit: 10,
+            type: 'recycle',
+            userId: ocean.getLoginUserId()
+        };
+        ocean.get("resources/biz/api/order/list", params, function (data) {
+            console.log(data);
+            if (data.code == 0) {
+                var content = data.data.list;
+                console.log(content);
+                var recycle = _.template($('#recycle_item').html());
+                $("#book_list").append(recycle({items: content}));
+                if ($(".book_item").length == 0) {
+                    $('.car_number').css('display', 'block');
+                    $('body').css('background-color', 'white');
+                    $(".none").show();
+                    $(".collect_main").hide();
+                } else {
+                    $('.car_number').css('display', 'none');
+                    $('body').css('background-color', '#f8f8f8');
+                    $(".none").hide();
+                    $(".collect_main").show();
+                }
+            }
+            $(".book_item").on("click", function () {
+                var id = $(this).data("id");
+                var code = $(this).data("code") || '';
+                if (code.startsWith('sa')) {
+                    location.href = "../../order/recover/recover_verify_school.html?id=" + id + "&sac=" + code;
+                } else {
+                    location.href = "../../order/recover/recover_success.html?id=" + id;
+                }
+            });
+        }, function (data) {
+            ocean.tip(data.message);
+        });
+
+    });
+</script>
+</html>

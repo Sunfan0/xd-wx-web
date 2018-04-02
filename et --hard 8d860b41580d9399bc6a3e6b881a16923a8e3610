@@ -1,0 +1,6436 @@
+[33mcommit d76bdc6388fbb9a634ca846b579aa29d48649306[m[33m ([m[1;36mHEAD -> [m[1;32mv1.2[m[33m)[m
+Author: sunfan <2286851>
+Date:   Wed Jan 10 09:30:17 2018 +0800
+
+    分享码文字修改
+
+[33mcommit 8d860b41580d9399bc6a3e6b881a16923a8e3610[m
+Author: sunfan <2286851>
+Date:   Tue Jan 9 17:46:30 2018 +0800
+
+    修改
+
+[33mcommit 792d674c85fe12ed47cf4b5f77a01827c621e885[m
+Author: sunfan <2286851>
+Date:   Tue Jan 9 16:46:45 2018 +0800
+
+    修改
+
+[33mcommit 26f53aeca0df056200a3eb24fccde70f47d4685c[m
+Author: sunfan <2286851>
+Date:   Tue Jan 9 12:30:15 2018 +0800
+
+    地址修改
+
+[33mcommit 33947ddb49c935b28ca9e2b4502d8a5c7b6ec22a[m
+Author: sunfan <2286851>
+Date:   Tue Jan 9 11:29:09 2018 +0800
+
+    分享页面样式修改、新增图书角页面
+
+[33mcommit 14ed466aed59026530fc74a3fded19873f532496[m
+Author: sunfan <2286851>
+Date:   Mon Jan 8 17:25:53 2018 +0800
+
+    修改
+
+[33mcommit b1658d64be6c043f90ecdf1e95cd22e0e9c3768e[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Jan 8 15:48:10 2018 +0800
+
+    ===Mr.Guo===
+
+[33mcommit a27d9efe761ea6d24562911bfdf32a56dc248d85[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Jan 8 11:23:49 2018 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 70d9688e462dcdee54d02f675a4f3560973abe4c[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sun Jan 7 12:42:48 2018 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 4668d3224b9fd9caa38f9bf7a83246b67031ade3[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Jan 6 19:15:31 2018 +0800
+
+    ===Mr.Guo===
+
+[33mcommit aa4d7b863615a8348292c4378fee3cbfd05d822c[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Jan 6 17:55:36 2018 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 625afb5953438c7cb9023348bff0f22baad6bd55[m
+Merge: fb0d32a 607f33d
+Author: sunfan <2286851>
+Date:   Sat Jan 6 17:35:58 2018 +0800
+
+    Merge remote-tracking branch 'origin/v1.2' into v1.2
+
+[33mcommit fb0d32af3003f00a004ccc556536d03a127973d5[m
+Author: sunfan <2286851>
+Date:   Sat Jan 6 17:35:43 2018 +0800
+
+    样式
+
+[33mcommit 607f33d0bbc5c989ed592a92ba811ed308aba0ce[m
+Author: ““553203705” <your email>
+Date:   Sat Jan 6 17:19:19 2018 +0800
+
+    图书角买书提示
+
+[33mcommit 2195c33c3539b2106d70a061ab9cd5c719962653[m
+Merge: 70735d7 685664a
+Author: ““553203705” <your email>
+Date:   Sat Jan 6 17:18:04 2018 +0800
+
+    Merge remote-tracking branch 'origin/v1.2' into v1.2
+
+[33mcommit 70735d7243aa4f5cd22fea89fe1a195ffdb881d0[m
+Author: ““553203705” <your email>
+Date:   Sat Jan 6 17:17:57 2018 +0800
+
+    图书角买书提示
+
+[33mcommit 96747bc2e5ae3b36f5a553662a9c762925c5a762[m
+Author: ““553203705” <your email>
+Date:   Sat Jan 6 17:05:18 2018 +0800
+
+    扫码卖书提示
+
+[33mcommit 685664a520646989a80bf1832f2dea56b6c40b3b[m
+Merge: f8f78a5 96747bc
+Author: sunfan <2286851>
+Date:   Sat Jan 6 17:04:57 2018 +0800
+
+    Merge remote-tracking branch 'origin/v1.2' into v1.2
+
+[33mcommit f8f78a52fc066178a92ab52c60d13263730312e5[m
+Author: sunfan <2286851>
+Date:   Sat Jan 6 17:04:45 2018 +0800
+
+    样式修改
+
+[33mcommit 31768d4f77e49ec5f7ba324a0545f41f6f68b8eb[m
+Author: sunfan <2286851>
+Date:   Fri Jan 5 19:06:01 2018 +0800
+
+    样式修改
+
+[33mcommit d1ace9711ffbf4d2ecaf1ac121cdd41d3ef51231[m
+Author: sunfan <2286851>
+Date:   Fri Jan 5 19:02:26 2018 +0800
+
+    样式修改
+
+[33mcommit 9a66aa8288536d4c03741effe9f100b7845df521[m
+Author: sunfan <2286851>
+Date:   Fri Jan 5 16:10:13 2018 +0800
+
+    样式修改
+
+[33mcommit f05ebced1a7c4350361ba3b64104efdd99236a81[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Jan 3 17:58:38 2018 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 3208943363d8a567d49a30ffc67710ef7ad6308d[m
+Merge: 9634f60 87bbb78
+Author: ““553203705” <your email>
+Date:   Tue Jan 2 19:47:42 2018 +0800
+
+    Merge remote-tracking branch 'origin/v1.2' into v1.2
+
+[33mcommit 9634f601b6d36cd3d4b5b89e20820cd081eb4863[m
+Author: ““553203705” <your email>
+Date:   Tue Jan 2 19:47:33 2018 +0800
+
+    =====修改
+
+[33mcommit 87bbb785d7ad662930d852d6d9a91093b14da999[m
+Author: sunfan <2286851>
+Date:   Tue Jan 2 18:35:45 2018 +0800
+
+    样式修改
+
+[33mcommit b5b02919cc8289fb88c0bcbc8e2b85d049c5314a[m
+Author: sunfan <2286851>
+Date:   Tue Jan 2 18:33:16 2018 +0800
+
+    样式修改
+
+[33mcommit 2b7733941a56579c3cea2840e9e88d92585cb6ea[m
+Merge: 256d442 04db9ba
+Author: sunfan <2286851>
+Date:   Tue Jan 2 18:20:30 2018 +0800
+
+    Merge remote-tracking branch 'origin/v1.2' into v1.2
+
+[33mcommit 256d442df0a467375c50d6c3d2be1da763acbc4a[m
+Author: sunfan <2286851>
+Date:   Tue Jan 2 18:20:22 2018 +0800
+
+    地址选择修改
+
+[33mcommit 04db9bacbd27a8b512ec9f974155de6b5ebbb696[m
+Author: ““553203705” <your email>
+Date:   Tue Jan 2 18:14:07 2018 +0800
+
+    修改
+
+[33mcommit 848a45cb8aa1b4acb4f8014cfc4c837a4fbabcd6[m
+Merge: 52f4577 0c8de80
+Author: sunfan <2286851>
+Date:   Tue Jan 2 18:00:47 2018 +0800
+
+    Merge remote-tracking branch 'origin/v1.2' into v1.2
+    
+    # Conflicts:
+    #       page/index/book_store.html
+
+[33mcommit 52f4577a3eb442fe2ae19f454019fd73201d0009[m
+Author: sunfan <2286851>
+Date:   Tue Jan 2 18:00:13 2018 +0800
+
+    分享有礼
+
+[33mcommit 0c8de80b5d855346f3a84840a2ebe20284c1f81d[m
+Author: ““553203705” <your email>
+Date:   Tue Jan 2 17:35:59 2018 +0800
+
+    图书馆banner
+
+[33mcommit 953e7a7079aa8a8a932f6aca9444acd714431035[m
+Merge: fc58246 b1212df
+Author: sunfan <2286851>
+Date:   Tue Jan 2 15:52:30 2018 +0800
+
+    Merge remote-tracking branch 'origin/v1.2' into v1.2
+
+[33mcommit fc58246aa820ea39b2730d9c6436e7113937915f[m
+Author: sunfan <2286851>
+Date:   Tue Jan 2 15:52:20 2018 +0800
+
+    样式修改
+
+[33mcommit b1212dfc4415ac517e806cb711f393b145c6c7b4[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Jan 2 13:32:55 2018 +0800
+
+    押金
+    ===Mr.Guo===
+
+[33mcommit 7744bbcd57c1f308475e229df3923b1114f7eacc[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sun Dec 31 16:10:16 2017 +0800
+
+    细节修改
+    ===Mr.Guo===
+
+[33mcommit 9b6d57a5ffc8082518fbe260a31c101674d737ab[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sun Dec 31 14:47:50 2017 +0800
+
+    分享成功提示
+    ===Mr.Guo===
+
+[33mcommit 67de776d5aee20dd8494fda61f2abca7b9b96cdd[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sun Dec 31 14:45:19 2017 +0800
+
+    地址管理
+    ===Mr.Guo===
+
+[33mcommit 95272111cc90f28a6ab9e555ef5c36e82af0d6b6[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sun Dec 31 14:17:09 2017 +0800
+
+    续租， 租期选择
+    ===Mr.Guo===
+
+[33mcommit 20fac2af14dbfeb5045b8a630cda4a8bf0286c0f[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sun Dec 31 12:36:51 2017 +0800
+
+    买书订单
+    ===Mr.Guo===
+
+[33mcommit 8079a722d86c7e354734d0abccf7c3cdf9a62124[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Dec 30 21:40:59 2017 +0800
+
+    图书兑换
+    ===Mr.Guo===
+
+[33mcommit 3c7182045668ad9988ee444751afdc55d482772e[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Dec 30 16:25:46 2017 +0800
+
+    修复各种弹窗
+    ===Mr.Guo===
+
+[33mcommit 1cfb105a5c4d6ba708cbec61a9707d767a9b125a[m
+Author: sunfan <962686954@qq.com>
+Date:   Sat Dec 30 12:23:10 2017 +0800
+
+    修改样式---------完
+
+[33mcommit 5ae92ea9d487ab1fe14c892a06eb19322a134d2e[m
+Author: sunfan <962686954@qq.com>
+Date:   Sat Dec 30 05:01:52 2017 +0800
+
+    分享修改
+
+[33mcommit 5a72f2c2fabd289eba8ebf7fd40e8158a3ec754e[m
+Merge: 68a19fb 3808da3
+Author: sunfan <962686954@qq.com>
+Date:   Sat Dec 30 05:00:42 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.2' into v1.2
+    
+    # Conflicts:
+    #       page/my/share_code.html
+
+[33mcommit 68a19fb3e9b184b560a39be1d76e55bbc3a48de4[m
+Author: sunfan <962686954@qq.com>
+Date:   Sat Dec 30 04:51:11 2017 +0800
+
+    修改样式
+
+[33mcommit e9049fac3405515d9dd85bf163f164e13609e3ea[m
+Author: sunfan <962686954@qq.com>
+Date:   Sat Dec 30 04:33:26 2017 +0800
+
+    修改样式
+
+[33mcommit 3808da35b8eb1ba906f64cde2d17737ea7c63ed9[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Dec 29 20:37:38 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 31d2256439b738408d96ec871c4257efbeaaab35[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Dec 29 16:38:33 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 2a62df0069ed82c83d120b8f7c9bb684cf5f1e8e[m
+Author: sunfan <962686954@qq.com>
+Date:   Fri Dec 29 16:29:51 2017 +0800
+
+    修改样式
+
+[33mcommit 09209366b5447d338f80c106fa3dc93bace8ed31[m
+Author: sunfan <962686954@qq.com>
+Date:   Fri Dec 29 02:12:01 2017 +0800
+
+    新加-我的优惠页面、换书劵
+
+[33mcommit 8bbe9782fa6ac7e17d5a84c7032a6d29703b31eb[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Dec 28 20:31:42 2017 +0800
+
+    图书详情
+    ===Mr.Guo===
+
+[33mcommit 73e964bad00e4f4f96f23f0b30e357c6f6bee36c[m
+Author: sunfan <962686954@qq.com>
+Date:   Thu Dec 28 16:50:14 2017 +0800
+
+    图书详情样式修改
+
+[33mcommit 0cbc1dd5c93011d4b39b951c15049909b6c6f6d0[m
+Merge: 4bb1a88 5ca8364
+Author: sunfan <962686954@qq.com>
+Date:   Thu Dec 28 14:35:52 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.2' into v1.2
+
+[33mcommit 4bb1a8842b8641716ba0985a68ab8e5c472334bf[m
+Author: sunfan <962686954@qq.com>
+Date:   Thu Dec 28 14:35:11 2017 +0800
+
+    修改我的页面、新加分享码页面
+
+[33mcommit 5ca83647cae32d99ec39d72521bb21abc2edb15b[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Dec 28 10:23:00 2017 +0800
+
+    完成书单
+    ===Mr.Guo===
+
+[33mcommit 2611d19aee4c2239000bc09a76b4a0a09751a801[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Dec 28 08:27:52 2017 +0800
+
+    首页
+    ===Mr.Guo===
+
+[33mcommit b0c015fe4fcddb46304f6b90ef224a1621342177[m
+Author: sunfan <962686954@qq.com>
+Date:   Wed Dec 27 18:59:39 2017 +0800
+
+    书单
+
+[33mcommit 3d387800a79c072cf1c46d219ea72b758f82470c[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Dec 27 16:04:02 2017 +0800
+
+    首页
+    ===Mr.Guo===
+
+[33mcommit 6794bd88e0f32cf4de4a8b2b83ebc92cceac4020[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Dec 27 16:02:18 2017 +0800
+
+    首页
+    ===Mr.Guo===
+
+[33mcommit 89506ddf20437dd1d4ae033e61a62a50d1069c7a[m
+Author: sunfan <962686954@qq.com>
+Date:   Wed Dec 27 15:54:06 2017 +0800
+
+    图片替换
+
+[33mcommit e77cf87035652fb0b8ab64863185db1a5f67fd64[m
+Author: sunfan <962686954@qq.com>
+Date:   Wed Dec 27 10:56:12 2017 +0800
+
+    图片替换
+
+[33mcommit ec697fe96bca760cc628d7f243aeef0906058973[m
+Author: sunfan <962686954@qq.com>
+Date:   Wed Dec 27 10:34:41 2017 +0800
+
+    样式修改
+
+[33mcommit 6db05b1bd586ea3034686ebab87a73066f2810f4[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Dec 25 13:47:20 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit ec1c7b232a41b5275d97b00bc1a3a19f3e588d6e[m[33m ([m[1;31morigin/v1.1[m[33m, [m[1;32mv1.1[m[33m)[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Dec 15 17:26:17 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 767435de16931a632f33a9c769d9ce9a97b6224d[m
+Author: ““553203705” <your email>
+Date:   Thu Dec 14 11:03:19 2017 +0800
+
+    图书角修改
+
+[33mcommit 246a2531367a521d22ae50bb14cf8c22991bcc00[m
+Author: ““553203705” <your email>
+Date:   Tue Dec 12 22:25:45 2017 +0800
+
+    捐书审核
+
+[33mcommit 7ddaa2c8662f703fdfaa814d470498ce2b21abac[m
+Author: sunfan <2286851>
+Date:   Mon Dec 11 21:27:26 2017 +0800
+
+    熊猫币修改
+
+[33mcommit 30541c9d6b0b845cd7b6de4e256f3119590f56c9[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Dec 11 19:57:33 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 3a5d2ecb094991835d4f3b4ee45f0527963c24a4[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Dec 11 18:50:06 2017 +0800
+
+    js
+    ===Mr.Guo===
+
+[33mcommit de671674e8485fb8b8079cd6a6280b505fb7cd70[m
+Author: ““553203705” <your email>
+Date:   Mon Dec 11 18:48:48 2017 +0800
+
+    corner
+
+[33mcommit 176188a5e881ab5fa756a1213e6b4a6fd4343090[m
+Author: ““553203705” <your email>
+Date:   Mon Dec 11 18:44:50 2017 +0800
+
+    corner
+
+[33mcommit 0afad954b064c09ccc9757e2baac231e596dcff2[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Dec 11 18:39:26 2017 +0800
+
+    js
+    ===Mr.Guo===
+
+[33mcommit 631bd691face69bf7c26404211eb969f2e4aa78f[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Dec 9 14:33:25 2017 +0800
+
+    js
+    ===Mr.Guo===
+
+[33mcommit 685011796e864081b11c7fb479087ee71353d0e9[m
+Author: sunfan <2286851>
+Date:   Fri Dec 8 20:42:23 2017 +0800
+
+    图书角页面
+
+[33mcommit 7e0fbe57a1a16c14590ec3e16012f75ab2523d5f[m
+Author: ““553203705” <your email>
+Date:   Tue Dec 5 17:22:23 2017 +0800
+
+    开通借书卡修改
+
+[33mcommit b19b030ed9fd2649e8a9d462ad9089aafdc0b106[m
+Merge: 65fed11 f33200d
+Author: sunfan <2286851>
+Date:   Tue Dec 5 14:53:55 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 65fed112ca5ce7ed64e27d72c5e80715a6f95ad3[m
+Author: sunfan <2286851>
+Date:   Tue Dec 5 14:53:46 2017 +0800
+
+    借书卡修改
+
+[33mcommit f33200dbc23939677772bdf6c1d6eb44e2a55bc6[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Dec 5 14:43:22 2017 +0800
+
+    book
+    ===Mr.Guo===
+
+[33mcommit f8bc90cb43d715fa10c79821ba5a739149b932e7[m
+Author: sunfan <2286851>
+Date:   Mon Dec 4 17:10:38 2017 +0800
+
+    Merge branch 'v1.1' of C:\Project\webProject\xd-wx-web with conflicts.
+
+[33mcommit 32b6f80dd49412ed39fb219c5da2ec775cfc6d8d[m
+Merge: 3737266 4c67f3c
+Author: sunfan <2286851>
+Date:   Tue Nov 28 10:38:09 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 37372664bb1ae4b8f233839e5b095607f18e09dc[m
+Author: sunfan <2286851>
+Date:   Tue Nov 28 10:37:49 2017 +0800
+
+    去白条
+
+[33mcommit 4c67f3cf6b37bc3aaf9226b876df66f3ab4d8942[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Nov 27 11:52:53 2017 +0800
+
+    book
+    ===Mr.Guo===
+
+[33mcommit 3054a09411ffd3d0d68d96bd95e0a7f710aed9db[m
+Author: ““553203705” <your email>
+Date:   Mon Nov 27 10:55:59 2017 +0800
+
+    index
+
+[33mcommit 3942fc4e087a297b7e329392063bac376d6ff56e[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 23 16:07:04 2017 +0800
+
+    book
+    ===Mr.Guo===
+
+[33mcommit a42e33a34bf0aee7975cc5c50b12f76baac82566[m
+Author: ““553203705” <your email>
+Date:   Thu Nov 23 16:04:29 2017 +0800
+
+    ==
+
+[33mcommit 89f97e241c29f361856d3c05c6fbf7eba9eff1f0[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 23 15:52:22 2017 +0800
+
+    book
+    ===Mr.Guo===
+
+[33mcommit 595bbc85e0c383706ad83be0ccf6f5e243bec6b9[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 23 12:45:17 2017 +0800
+
+    book
+    ===Mr.Guo===
+
+[33mcommit 1af09dd76a280c63e9d2f04e324c1422f19f3f31[m
+Author: ““553203705” <your email>
+Date:   Thu Nov 23 11:06:07 2017 +0800
+
+    更多问题跳转
+
+[33mcommit 9bbb7053456f71f13a4b70a9d15d671f2df80e84[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 23 09:30:30 2017 +0800
+
+    book
+    ===Mr.Guo===
+
+[33mcommit ddf953925db2aefb26919d5c0740efd2d7539bf3[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Nov 22 20:58:48 2017 +0800
+
+    book
+    ===Mr.Guo===
+
+[33mcommit 0da139c0f757c4aa7f1d66d3950ebcd1a99347a4[m
+Author: ““553203705” <your email>
+Date:   Wed Nov 22 19:24:12 2017 +0800
+
+    熊猫币验证
+
+[33mcommit c75aedaa4be542497c27f20d8fe1d67b1d475532[m
+Author: ““553203705” <your email>
+Date:   Wed Nov 22 18:36:29 2017 +0800
+
+    跳转
+
+[33mcommit f0e119e9d232dd5eb97b5095fa1594b0f02b265e[m
+Author: ““553203705” <your email>
+Date:   Wed Nov 22 17:34:57 2017 +0800
+
+    支付完成跳转
+
+[33mcommit cc7f26c4799b093e20849c356c43515cce77edd1[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Nov 22 17:21:16 2017 +0800
+
+    book
+    ===Mr.Guo===
+
+[33mcommit 74399ac65278a1bfff258585e534fcb4f5a4d574[m
+Merge: 2394ec9 e0b3916
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Nov 22 17:19:49 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 2394ec95b4dcafcbd3aebf16e92b19194eed3907[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Nov 22 17:19:37 2017 +0800
+
+    book
+    ===Mr.Guo===
+
+[33mcommit e0b3916666eae68cbdfc2df647c4a97a79e84e38[m
+Author: sunfan <2286851>
+Date:   Wed Nov 22 17:16:17 2017 +0800
+
+    去掉按钮点击样式
+
+[33mcommit f947f1ff74bcb77599d82819b0644f59d196d5f3[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Nov 22 14:07:41 2017 +0800
+
+    book
+    ===Mr.Guo===
+
+[33mcommit 4478d54667088998b5666984e6f00963137a893d[m
+Author: ““553203705” <your email>
+Date:   Wed Nov 22 11:46:11 2017 +0800
+
+    订单修改
+
+[33mcommit 5e98a06f1b6a6ba6ecf609cee8b2846aaa880259[m
+Author: ““553203705” <your email>
+Date:   Tue Nov 21 18:04:19 2017 +0800
+
+    物流详情
+
+[33mcommit 6f84b9b2a4fe6e476ceddac6b59e31c76a1f13e5[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 21 17:07:56 2017 +0800
+
+    trace
+    ===Mr.Guo===
+
+[33mcommit 1deccf4227a63e7dab750554cc6a4d891546be7d[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 21 15:55:27 2017 +0800
+
+    book
+    ===Mr.Guo===
+
+[33mcommit 281c599e63f5a3095e4189f816a3f0606cb3a4db[m
+Author: ““553203705” <your email>
+Date:   Tue Nov 21 15:49:22 2017 +0800
+
+    会员开通兑换修改
+
+[33mcommit 5ead83b9a9dd5913119d7c8ea4c74b29b4038d02[m
+Author: ““553203705” <your email>
+Date:   Tue Nov 21 15:44:12 2017 +0800
+
+    会员开通兑换修改
+
+[33mcommit 6805b3acce1b1bffe0cb0f59b97fece8735187f5[m
+Merge: a1f1b93 dff1fad
+Author: ““553203705” <your email>
+Date:   Tue Nov 21 15:43:13 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit dff1fad6b0088bf8d59314068e0a417d696cbb03[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 21 15:40:07 2017 +0800
+
+    book
+    ===Mr.Guo===
+
+[33mcommit bc4e01c4cdd01b170d68eaa5d1d2421d9e4143d5[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 21 15:34:37 2017 +0800
+
+    book
+    ===Mr.Guo===
+
+[33mcommit a1f1b93e1375ead8a206f3f5e640c097b93eda0a[m
+Merge: 7ad11e0 1b3f255
+Author: ““553203705” <your email>
+Date:   Tue Nov 21 15:25:00 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+    
+    # Conflicts:
+    #       page/book/vip.html
+
+[33mcommit 1b3f25512f13d02cc319967bda81928b137a8cb7[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 21 15:18:49 2017 +0800
+
+    book
+    ===Mr.Guo===
+
+[33mcommit c9ae36ac5b1b3d20db0b5fef7a5a2d717245bc0d[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 21 14:55:40 2017 +0800
+
+    book
+    ===Mr.Guo===
+
+[33mcommit 7ad11e0f7d059ea9462d954151b6f3f353806f80[m
+Merge: 521ba3c 57c9f77
+Author: ““553203705” <your email>
+Date:   Tue Nov 21 14:12:50 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 57c9f77388914b262ff29642b461387e40a80c15[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 21 11:51:11 2017 +0800
+
+    cnzz
+    ===Mr.Guo===
+
+[33mcommit 097d51792b66875860c1ffa3e7df00a37dc5b7f0[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 21 11:44:57 2017 +0800
+
+    cnzz
+    ===Mr.Guo===
+
+[33mcommit 521ba3ccf4dc3b01479c839363898e7fc819a5b5[m
+Merge: 17e659f 55c897a
+Author: ““553203705” <your email>
+Date:   Tue Nov 21 09:55:19 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 55c897a032d8766acc0670b2f2d641943db9cbab[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 21 09:14:17 2017 +0800
+
+    drop useless file
+    ===Mr.Guo===
+
+[33mcommit 5893ae3fad9f4200891beb867811ad9e462cd916[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 21 09:12:51 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit fdf16562e6edba4fa6d46f18163065241a7c24dd[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 21 08:15:28 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit b3fff16fb1918e7215b0700d7f9786f8042f8693[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 21 08:12:59 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 17e659fb823e51628d3d6bd5c1107c4b026e3034[m
+Merge: 75251ed 085ab21
+Author: ““553203705” <your email>
+Date:   Mon Nov 20 19:34:21 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 085ab21a6fb842828d9c487347133808f2cf4d5b[m
+Author: sunfan <2286851>
+Date:   Mon Nov 20 18:54:32 2017 +0800
+
+    书店图
+
+[33mcommit 587506cce324e23a2636ba7ecd0e2973fc73ff2a[m
+Merge: bbd3f2c 847a776
+Author: sunfan <2286851>
+Date:   Mon Nov 20 18:14:33 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit bbd3f2cdd009276ce7490cabe08292910024584d[m
+Author: sunfan <2286851>
+Date:   Mon Nov 20 18:14:18 2017 +0800
+
+    全部图书
+
+[33mcommit 75251edfc875e5a432f1f0d523bf64105fce0da4[m
+Merge: 23b7981 287c91c
+Author: ““553203705” <your email>
+Date:   Mon Nov 20 17:59:04 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 847a776d2f09ca230210fd26d45ecc4373b69931[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Nov 20 17:58:13 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 287c91cfe7004e7978fb98c22cc8397e84c63285[m
+Author: sunfan <2286851>
+Date:   Mon Nov 20 17:29:03 2017 +0800
+
+    首页按钮、熊猫币兑换图书页
+
+[33mcommit 07f9a33514d4c07d70b1a0d77703bff7c0550473[m
+Author: sunfan <2286851>
+Date:   Mon Nov 20 14:52:41 2017 +0800
+
+    所有html修改
+
+[33mcommit 0db84b92cb198b7a7488d60684d6491275a25579[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Nov 20 14:20:18 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 757817674791fc5de9c67013b1450b8dc111a5e6[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Nov 20 14:19:18 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit e7d9ae33dfb0ca55e7ca488e6f1ded8d5bd0729a[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Nov 20 14:17:49 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 23b79816992fd134ffdb4c6195654959f7ff5729[m
+Merge: 3f98612 e027954
+Author: ““553203705” <your email>
+Date:   Mon Nov 20 14:11:22 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+    
+    # Conflicts:
+    #       page/book/list/book_type.html
+
+[33mcommit 3f98612085b48268afb8e0bb04ad900a1bea6563[m
+Author: ““553203705” <your email>
+Date:   Mon Nov 20 14:10:24 2017 +0800
+
+    bug修改
+
+[33mcommit 47e0870728427e61503b5279928aa2738d9bc7d3[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Nov 20 14:09:19 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit e0279544cb766ae6a9b8589d155b1ae34f921044[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Nov 20 14:07:16 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 8ed62ea5433451b3ac04a9231c2bc1799c73cf4a[m
+Merge: 9802dfb 63bef32
+Author: sunfan <2286851>
+Date:   Mon Nov 20 11:32:19 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 9802dfb27c2b9f0918588b9dd29673dcaacbfc22[m
+Author: sunfan <2286851>
+Date:   Mon Nov 20 11:32:10 2017 +0800
+
+    样式修改
+
+[33mcommit 63bef32fb725ef3555b1aedd99484e8f6c1249c6[m
+Author: ““553203705” <your email>
+Date:   Mon Nov 20 10:27:40 2017 +0800
+
+    买书确认订单金额判断
+
+[33mcommit 71c2e4dc7c6f96be7a26dfd0ca8fea81c186867e[m
+Author: sunfan <2286851>
+Date:   Sat Nov 18 20:45:33 2017 +0800
+
+    ..
+
+[33mcommit 346dcff73a418dda5daa30bca5bea50d4e9389aa[m
+Author: sunfan <2286851>
+Date:   Sat Nov 18 20:19:58 2017 +0800
+
+    样式修改
+
+[33mcommit ea152fc452f41f1e270a864b359dbc5272f58252[m
+Author: sunfan <2286851>
+Date:   Sat Nov 18 19:49:16 2017 +0800
+
+    搜索页面
+
+[33mcommit 58b84396c6ef5480dbd49da99da28646bfffb8bc[m
+Author: ““553203705” <your email>
+Date:   Sat Nov 18 19:38:42 2017 +0800
+
+    物流信息
+
+[33mcommit 6d22f5bcddd10ef9728a4d0e9499ea471f4fd12d[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 19:00:39 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit b120c3a97341200d6df6e3a0b72f29f5fa3f1c12[m
+Merge: c46566b cf0f107
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 18:59:46 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit c46566beafe7f5a8d08b8b915638c8b7df924ff8[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 18:59:36 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit cf0f10745e12abef85d03ffcf8456af456c1fcea[m
+Author: sunfan <2286851>
+Date:   Sat Nov 18 18:53:41 2017 +0800
+
+    物流详情
+
+[33mcommit 20d3f84a66f82433908688f2a6ced6e43b52470a[m
+Author: ““553203705” <your email>
+Date:   Sat Nov 18 18:43:38 2017 +0800
+
+    快递
+
+[33mcommit 8c7d223201647279e2ffa198c2a803b2c121e6f1[m
+Merge: 99b5f12 28354ca
+Author: ““553203705” <your email>
+Date:   Sat Nov 18 18:38:59 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 28354ca3677069c1acea22cb3713dae8b366cf7d[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 18:29:21 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 2f3a1d23ae29ee006bf5f01e9f4b819c12a9f97c[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 18:12:45 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 260c66d2259a0bd98ca70d1871d35777648c4f81[m
+Author: sunfan <2286851>
+Date:   Sat Nov 18 18:07:41 2017 +0800
+
+    ..
+
+[33mcommit 7652a9b0780dcde6cc457668c0ac5724d12a4af9[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 17:58:59 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 55688037db1409efda8b737c612b17fc5574dd85[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 17:58:00 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit a46971163629b040b0947231311e0004169d0578[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 17:44:57 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 99b5f129909367f961f76da3cdabfb96d8fa6b27[m
+Merge: 11f1710 f19374c
+Author: ““553203705” <your email>
+Date:   Sat Nov 18 17:43:12 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+    
+    # Conflicts:
+    #       static/js/core/ocean.js
+
+[33mcommit 11f171098eff24176f0b8dc77a154d7bbdb8b5dc[m
+Author: ““553203705” <your email>
+Date:   Sat Nov 18 17:42:26 2017 +0800
+
+    订单查看快递
+
+[33mcommit f19374cef2ddce6981d092180fc452e20d312ef0[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 17:40:27 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit a9b5a8fc10856c5187ab41031a45522f55903e27[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 17:02:30 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 997c52bf7acbfa326b09e421c3c040552a49c9e9[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 17:01:30 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit d54b4c41d97231bf9cbc1bb28b74d7049b2e8750[m
+Merge: d5aff23 03a509f
+Author: sunfan <2286851>
+Date:   Sat Nov 18 16:56:03 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit d5aff23aa0fb0d7a819045d5ddd049b91009275f[m
+Author: sunfan <2286851>
+Date:   Sat Nov 18 16:55:53 2017 +0800
+
+    样式修改
+
+[33mcommit 03a509f0654d48e96143e6c3a76e04efa8b2eb8b[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 16:50:53 2017 +0800
+
+    收书订单提交~
+    ===Mr.Guo===
+
+[33mcommit 47de5873f065394b9e77eb59c06d613b4cd248df[m
+Merge: a7f61e6 82ea285
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 16:30:02 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit a7f61e6adc2963147e428ea29db449fef188c1af[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 16:29:31 2017 +0800
+
+    收书订单提交~
+    ===Mr.Guo===
+
+[33mcommit 82ea285a836a66f8501bb86daaf17beb13870d96[m
+Merge: d22cb5d 10569c8
+Author: sunfan <2286851>
+Date:   Sat Nov 18 16:20:30 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit d22cb5d912c7d59ba0b57eba65863382b228f373[m
+Author: sunfan <2286851>
+Date:   Sat Nov 18 16:20:22 2017 +0800
+
+    样式修改
+
+[33mcommit 10569c863da5686ee6408914d10e03916f115c04[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 16:11:05 2017 +0800
+
+    收书订单提交~
+    ===Mr.Guo===
+
+[33mcommit ad65fb4c4b1b8e3c0475f0d83277a4690b4d550c[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 14:49:30 2017 +0800
+
+    收书订单提交~
+    ===Mr.Guo===
+
+[33mcommit 3a6fe2998eb27c9321d4cfd0b7dd5bb4b3a1e7cd[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 13:39:27 2017 +0800
+
+    收书订单提交~
+    ===Mr.Guo===
+
+[33mcommit 05a1788f3c39e0d740c80e6b10676d1c4e2baed4[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 18 13:27:55 2017 +0800
+
+    收书订单提交~
+    ===Mr.Guo===
+
+[33mcommit bbb361c20a3a0c5525d79c453ffa324333aa7075[m
+Merge: 423291e 7a8f24f
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 22:41:40 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 423291ed167bf28c439eb8c9d284f23e3f742374[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 22:41:29 2017 +0800
+
+    fix bug
+    ===Mr.Guo===
+
+[33mcommit 7a8f24f159837e09b36b9f50f36a5458dd39d92d[m
+Merge: aa48542 c011741
+Author: ““553203705” <your email>
+Date:   Fri Nov 17 22:40:02 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit aa485426c36ae8f7e007d580724b704cbd7dc818[m
+Author: ““553203705” <your email>
+Date:   Fri Nov 17 22:39:51 2017 +0800
+
+    订单
+
+[33mcommit c0117410d0ea84af005d20cfa3a11301d168c680[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 22:16:08 2017 +0800
+
+    fix bug
+    ===Mr.Guo===
+
+[33mcommit 20703fb1b2f577c14ee1ca9e1d59d30271989866[m
+Author: sunfan <2286851>
+Date:   Fri Nov 17 22:14:10 2017 +0800
+
+    登录页修改
+
+[33mcommit 96927395d79baec9aad53889eba900c8ef022691[m
+Merge: 6062737 25466f5
+Author: sunfan <2286851>
+Date:   Fri Nov 17 22:12:31 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+    
+    # Conflicts:
+    #       static/js/core/ocean.js
+
+[33mcommit 60627376b1a5b6d19052c6beb635acf9eb4b0788[m
+Author: sunfan <2286851>
+Date:   Fri Nov 17 22:11:28 2017 +0800
+
+    登录页样式修改
+
+[33mcommit 25466f52c31a946a87319c9796fbd18f2121b69c[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 21:49:48 2017 +0800
+
+    fix bug
+    ===Mr.Guo===
+
+[33mcommit 6a8beb31c9958c85bb115a6dfe2ef9968f1de858[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 21:29:05 2017 +0800
+
+    fix bug
+    ===Mr.Guo===
+
+[33mcommit 794c251abc1ecc03ccd2181eca34362db7b615cf[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 21:25:21 2017 +0800
+
+    fix bug
+    ===Mr.Guo===
+
+[33mcommit 2c6893881894d3053a876d4c48046165d9de455c[m
+Merge: ea2aba5 c24ec93
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 21:17:10 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+    
+    # Conflicts:
+    #       page/order/recover/recover_success.html
+
+[33mcommit ea2aba57e37aecf7ee6cdfc403363648e334a8c8[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 21:16:21 2017 +0800
+
+    fix bug
+    ===Mr.Guo===
+
+[33mcommit c24ec9307f1a8ec5ed2924a6eb000f2d41572f78[m
+Merge: 3174b89 8d88068
+Author: sunfan <2286851>
+Date:   Fri Nov 17 21:13:44 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 3174b89cdef8ea453165ba6e25a3c951830395f1[m
+Author: sunfan <2286851>
+Date:   Fri Nov 17 21:13:35 2017 +0800
+
+    样式修改
+
+[33mcommit 8d88068ae63a1459cec1d90a382583399a303489[m
+Merge: aec3d29 a5bfb59
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 20:00:29 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit aec3d29400448f86a705c7eb5b76698589c81943[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 20:00:13 2017 +0800
+
+    fix bug
+    ===Mr.Guo===
+
+[33mcommit a5bfb59e76c519a8a9ee5f1f0272afbf96e88f5a[m
+Merge: a45161b b87791a
+Author: sunfan <2286851>
+Date:   Fri Nov 17 19:33:24 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit a45161ba4c42810ba3c9aae42fe048224bcb8112[m
+Author: sunfan <2286851>
+Date:   Fri Nov 17 19:33:13 2017 +0800
+
+    登录页样式修改
+
+[33mcommit b87791a90080f2906a2734f97a5488bf02f1a9b0[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 18:47:04 2017 +0800
+
+    fix bug
+    ===Mr.Guo===
+
+[33mcommit a4b19a22e15f7efa33d2aa0c495649a7fd887002[m
+Merge: 81cb6a9 87e9bc1
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 18:42:06 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 81cb6a93280c995241d3ddd54e1a87c61a88e7dc[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 18:41:55 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit 87e9bc1d60426a4a346f9c23f9a1aa82120b826b[m
+Merge: 9919196 a3ada3b
+Author: sunfan <2286851>
+Date:   Fri Nov 17 18:23:19 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 99191964a569558918a6e74bfe173addc7c98904[m
+Author: sunfan <2286851>
+Date:   Fri Nov 17 18:23:12 2017 +0800
+
+    下单成功弹框
+
+[33mcommit a3ada3be2b9a99a553cc84dcbaca7cb9913714eb[m
+Author: ““553203705” <your email>
+Date:   Fri Nov 17 18:11:04 2017 +0800
+
+    用户还书快递公司选择改为下拉列表
+
+[33mcommit e3a9ad207d4a940a126fab20ef7ac96bf6d0d853[m
+Merge: 6d757ce 3824c48
+Author: ““553203705” <your email>
+Date:   Fri Nov 17 18:08:56 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 6d757ceabeafe4a6bb1dce607c774a72b93e6563[m
+Author: ““553203705” <your email>
+Date:   Fri Nov 17 18:08:48 2017 +0800
+
+    用户还书快递公司选择改为下拉列表
+
+[33mcommit 3824c4850e1590fa5660c6909ac214ddc6e7be86[m
+Author: sunfan <2286851>
+Date:   Fri Nov 17 17:37:30 2017 +0800
+
+    样式修改
+
+[33mcommit 10d11e95bbaf3b78e1c9a0836195e8374f36660b[m
+Author: sunfan <2286851>
+Date:   Fri Nov 17 17:16:27 2017 +0800
+
+    立即还书样式修改
+
+[33mcommit 4c5ffe69fd078a965db51a79aae04564c6669d01[m
+Author: ““553203705” <your email>
+Date:   Fri Nov 17 17:07:18 2017 +0800
+
+    买书详情，卖书列表，详情，一键购买
+
+[33mcommit 2b5c1da3d6d753f616b53846688c19dd0a3bf952[m
+Author: sunfan <2286851>
+Date:   Fri Nov 17 17:02:18 2017 +0800
+
+    买、卖、租过的书--跳转链接
+
+[33mcommit 5151ca8d548d2d110e7669cde917073f10102e05[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 16:35:56 2017 +0800
+
+    search
+    ===Mr.Guo===
+
+[33mcommit c72190c0c1fb9e3e22a38c3b38f0367c8ca57374[m
+Merge: 90e86c3 5dc29d1
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 16:29:19 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 90e86c3e73f8cc54f2772b3636546a0f4899dd23[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 16:29:09 2017 +0800
+
+    分类列表
+    ===Mr.Guo===
+
+[33mcommit 5dc29d17f622ae34af17790a11ee8e1c49af7cae[m
+Merge: 6524f99 a540642
+Author: sunfan <2286851>
+Date:   Fri Nov 17 16:16:54 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 6524f9951678fc140d0edb88969af9ed56cf59c0[m
+Author: sunfan <2286851>
+Date:   Fri Nov 17 16:16:45 2017 +0800
+
+    卖书code部分
+
+[33mcommit a540642fd914199f05ef6a04fc24bc7b1795f957[m
+Author: ““553203705” <your email>
+Date:   Fri Nov 17 15:22:50 2017 +0800
+
+    买书列表，详情
+
+[33mcommit 7184035ddefc56291670204a6f3d5639b5748e15[m
+Merge: 5176904 39fa5b3
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 15:20:00 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 5176904503ae5e50a5a58aec1c819e09928db1bc[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 15:19:51 2017 +0800
+
+    分类列表
+    ===Mr.Guo===
+
+[33mcommit 39fa5b364d49805fb8431bf1f79a79c3dd8dafbc[m
+Merge: 5883d01 6cb6ba4
+Author: sunfan <2286851>
+Date:   Fri Nov 17 15:13:51 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 5883d0190468810274dbdbec1eb3d1500f7dca37[m
+Author: sunfan <2286851>
+Date:   Fri Nov 17 15:13:44 2017 +0800
+
+    全部图书筛选部分
+
+[33mcommit 6cb6ba4cdbdd347eaec38c17793067466b832dd0[m
+Merge: feb1f82 a13eb65
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 14:58:47 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit feb1f823e74ab00aa28ad1395f99050f31e2d33a[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 14:58:21 2017 +0800
+
+    分类列表
+    ===Mr.Guo===
+
+[33mcommit a13eb650e08d58572b72994d802fe13c86842279[m
+Author: sunfan <2286851>
+Date:   Fri Nov 17 14:35:47 2017 +0800
+
+    订单详情修改
+
+[33mcommit a6099d86b6982e561c8e76a48855755c22611544[m
+Author: sunfan <2286851>
+Date:   Fri Nov 17 14:09:15 2017 +0800
+
+    卖过的书
+
+[33mcommit 3ae1f8bbecfb9e45321859000c535de63cc1cd27[m
+Merge: 6f9b933 868317a
+Author: sunfan <2286851>
+Date:   Fri Nov 17 13:46:42 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 6f9b9334abd490f3ec50d18e7bc940f44b98038c[m
+Author: sunfan <2286851>
+Date:   Fri Nov 17 13:46:35 2017 +0800
+
+    页面
+
+[33mcommit 868317a4d4c0fc8de9368c6e22a32b833e3e90c7[m
+Merge: ad7ae49 7d20e39
+Author: ““553203705” <your email>
+Date:   Fri Nov 17 13:46:29 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit ad7ae4927b60d5e773290ce601e13f6dce4a79a4[m
+Author: ““553203705” <your email>
+Date:   Fri Nov 17 13:46:16 2017 +0800
+
+    借书列表，立即还书
+
+[33mcommit 7d20e398af3e4955276d2b7d89dddcc3066d36ad[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 11:26:24 2017 +0800
+
+    buy
+    ===Mr.Guo===
+
+[33mcommit 31f729ed7ab027a12826ab0a08233e9a2dc64766[m
+Author: sunfan <2286851>
+Date:   Fri Nov 17 09:44:30 2017 +0800
+
+    全部图书样式修改、图书类型页面
+
+[33mcommit 1ad44265cf143c9a84018404ca55c317e1a339eb[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 08:55:38 2017 +0800
+
+    drop
+    ===Mr.Guo===
+
+[33mcommit 3bb8484562558226306d74fe7f1b0bd40fedd6e0[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 08:54:32 2017 +0800
+
+    路径修改
+    ===Mr.Guo===
+
+[33mcommit 65975ca565c8d464e8b1176cb51ab7d3ab0a196a[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Nov 17 08:37:16 2017 +0800
+
+    book_classify
+    ===Mr.Guo===
+
+[33mcommit 4e88d1e1169a88ffe3af015af8f3930e8fe7f3ff[m
+Author: Mr.Guo <guoshuai@ocean-xa.cn>
+Date:   Thu Nov 16 22:53:41 2017 +0800
+
+    Mr.Guo
+
+[33mcommit e19376cd967238c05790f18f2db12cbc094bfee8[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 16 21:04:10 2017 +0800
+
+    返回
+    ===Mr.Guo===
+
+[33mcommit f4804e4a567d86b432d312deb80df5a812fcb026[m
+Author: ““553203705” <your email>
+Date:   Thu Nov 16 20:02:36 2017 +0800
+
+    我的，vip页面
+
+[33mcommit 43fdd8fd6f7ee9018ad33689a55056edc2ac0d55[m
+Merge: 6e85401 df08b90
+Author: sunfan <2286851>
+Date:   Thu Nov 16 20:00:07 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 6e854014dfead23ae149876a61bdd6eda709c4cb[m
+Author: sunfan <2286851>
+Date:   Thu Nov 16 19:59:50 2017 +0800
+
+    图书分类、全部图书
+
+[33mcommit df08b908f54b59702a65a0bdd0f9596d6e6d8719[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 16 19:02:05 2017 +0800
+
+    lease
+    
+    ===Mr.Guo===
+
+[33mcommit b63f899e8611c3bb1b788352ac84bee6354f5d59[m
+Author: sunfan <2286851>
+Date:   Thu Nov 16 18:42:21 2017 +0800
+
+    样式修改
+
+[33mcommit 5598b691940724fbd2901b03443b1840e2b62e24[m
+Merge: 502a3b5 429898d
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 16 18:34:48 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 502a3b5810205292a959bc1e98094f4f06a12c73[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 16 18:34:39 2017 +0800
+
+    lease
+    
+    ===Mr.Guo===
+
+[33mcommit 429898dfa300bde451caf1550f4da9362a847000[m
+Merge: 8098e8c a2e6abe
+Author: sunfan <2286851>
+Date:   Thu Nov 16 17:57:05 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 8098e8c7c36f9b8453c2f1f888dd092b50b6dedb[m
+Author: sunfan <2286851>
+Date:   Thu Nov 16 17:56:56 2017 +0800
+
+    立即还书
+
+[33mcommit a2e6abed7e57fb6059d7b851d04ae52f8a5ad2ef[m
+Merge: b9d42a5 cd4f936
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 16 17:34:42 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit b9d42a5f5cc734f37a65ea2af2a44efc82795d9c[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 16 17:34:33 2017 +0800
+
+    index
+    
+    ===Mr.Guo===
+
+[33mcommit cd4f936ce335864b862077a7172e7467be00e4ff[m
+Merge: 9373a91 8539140
+Author: sunfan <2286851>
+Date:   Thu Nov 16 17:26:33 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 9373a91c0502748a0dfea7dab03ea33291aaafb6[m
+Author: sunfan <2286851>
+Date:   Thu Nov 16 17:26:25 2017 +0800
+
+    买过的书、租过的书
+
+[33mcommit 85391401bc117fcf6ef16ed941f253118bef5857[m
+Merge: 1bd48c7 e91d2b6
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 16 17:12:33 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 1bd48c77a4ddd402e27cfe3cc5a56aa4c8d4c256[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 16 17:12:23 2017 +0800
+
+    address
+    ===Mr.Guo===
+
+[33mcommit e91d2b6fff1797018a40181b02b6f21c4104c8e4[m
+Merge: 8d82f75 fb6d438
+Author: ““553203705” <your email>
+Date:   Thu Nov 16 17:09:53 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 8d82f7557bdb4ffcaacd13ff44a8ebc49aea639e[m
+Author: ““553203705” <your email>
+Date:   Thu Nov 16 17:09:45 2017 +0800
+
+    首页图书分类列表
+
+[33mcommit fb6d438864809b490da93488c7ed427c9b6a242b[m
+Merge: b31603b dafdf62
+Author: sunfan <2286851>
+Date:   Thu Nov 16 16:41:07 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit b31603b4115fe8ef71f1e494e764950f51e2411d[m
+Author: sunfan <2286851>
+Date:   Thu Nov 16 16:40:59 2017 +0800
+
+    地址管理修改
+
+[33mcommit dafdf622ea007490287916b2097ea008aed854fe[m
+Author: ““553203705” <your email>
+Date:   Thu Nov 16 16:36:06 2017 +0800
+
+    首页新书推荐
+
+[33mcommit 27a56523e36886fa55739b0b1bf685249243232b[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 16 16:12:07 2017 +0800
+
+    address
+    ===Mr.Guo===
+
+[33mcommit 2484382a878cfa70a217d2714cdd517520ff3608[m
+Merge: 47c927a 1f2bc02
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 16 14:19:39 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 47c927aca142277b49c6c7f898ba20e3c10a4141[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 16 14:19:27 2017 +0800
+
+    lease
+    ===Mr.Guo===
+
+[33mcommit 1f2bc0297a1031a4c22f93d499a7375b30161b61[m
+Merge: 4e7d1dc 15c7040
+Author: sunfan <2286851>
+Date:   Thu Nov 16 14:18:19 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 4e7d1dc6f58eeba55e5dbbe16158841c95e39e6e[m
+Author: sunfan <2286851>
+Date:   Thu Nov 16 14:18:08 2017 +0800
+
+    地址管理
+
+[33mcommit 15c7040e4f29fd3206392053ca6adcb2cca7d117[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 16 13:37:41 2017 +0800
+
+    lease
+    ===Mr.Guo===
+
+[33mcommit 67f8cb291fede81067105f68765817beef6f8a1c[m
+Merge: dd3fc38 f726cd2
+Author: sunfan <2286851>
+Date:   Thu Nov 16 11:41:11 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit dd3fc383aec458e352ef7fa223a7b1dc0fac9cd2[m
+Author: sunfan <2286851>
+Date:   Thu Nov 16 11:41:01 2017 +0800
+
+    借书卡
+
+[33mcommit f726cd2c5143d1d841b78cbd345af1e67fdc158e[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 16 08:51:44 2017 +0800
+
+    lease
+    ===Mr.Guo===
+
+[33mcommit 6b17725e2a1adb2312071cc5038ece313f5be22b[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Nov 16 08:01:37 2017 +0800
+
+    add loading
+    ===Mr.Guo===
+
+[33mcommit 8f716fd7bd69db4822d1ce894aedf789ef34a747[m
+Author: sunfan <2286851>
+Date:   Wed Nov 15 18:38:04 2017 +0800
+
+    弹窗修改
+
+[33mcommit 60a630fca829ac7c9501a86f776728bd41b8393b[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Nov 15 18:32:13 2017 +0800
+
+    add loading
+    ===Mr.Guo===
+
+[33mcommit 5a2ab4bba328c4af6b7bdd78786a50b64a100e8a[m
+Merge: 70a1cb3 92ef9de
+Author: sunfan <2286851>
+Date:   Wed Nov 15 17:39:22 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit 70a1cb3cc7ce5fa17eb3130e0d9a5f67d422adcc[m
+Author: sunfan <2286851>
+Date:   Wed Nov 15 17:39:05 2017 +0800
+
+    物流详情、底部btn、购物车弹出框
+
+[33mcommit 92ef9de939c03086ef2ad1bb18eee6f4c55eb224[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Nov 15 17:26:22 2017 +0800
+
+    add loading
+    ===Mr.Guo===
+
+[33mcommit 7709a213f6499bec68245ab5dbf72a029e244e0c[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Nov 15 16:54:07 2017 +0800
+
+    我的--> 常见问题
+    ===Mr.Guo===
+
+[33mcommit 8b2dc6f906d0b186ef98cd4c7a0fc1ed6389fea9[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Nov 15 16:27:03 2017 +0800
+
+    接入购物车数据
+    ===Mr.Guo===
+
+[33mcommit c75db33f3325f615a595a56ec0fd9d3b25a958ab[m
+Merge: df3f42b 6bd4d6f
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Nov 15 14:45:06 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+
+[33mcommit df3f42b5cf0568076c9292cd90d8876c9aa8d61e[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Nov 15 14:44:50 2017 +0800
+
+    接入购物车数据
+    ===Mr.Guo===
+
+[33mcommit 6bd4d6f137ab46379f536b09d3089f5679bd87d2[m
+Author: sunfan <2286851>
+Date:   Wed Nov 15 14:44:01 2017 +0800
+
+    支付页面目录
+
+[33mcommit 6be8c3c8fadc75e81295d8f3d01e8c1abaa0f869[m
+Author: sunfan <2286851>
+Date:   Wed Nov 15 14:35:08 2017 +0800
+
+    支付、订单详情
+
+[33mcommit 8f30e0c9e9d4e144a1503c073a08e17e8041c5cd[m
+Author: sunfan <2286851>
+Date:   Wed Nov 15 11:29:19 2017 +0800
+
+    购物车 空
+
+[33mcommit d194014c6b4a6880fc1299ce27d40231e0678d07[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Nov 15 11:06:16 2017 +0800
+
+    接入购物车数据(未完成)
+    ===Mr.Guo===
+
+[33mcommit 5da0efc23732a56987a548a876d6fc897b9c5618[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Nov 15 10:18:26 2017 +0800
+
+    修改文件名称及路径
+    ===Mr.Guo===
+
+[33mcommit dc2eab4501ede92172ca7f959f2c7533093e32ea[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Nov 15 08:17:11 2017 +0800
+
+    修改文件名称及路径
+    ===Mr.Guo===
+
+[33mcommit 9ca411b72b23fbd5d7782db9f7b4fe6833ae3df8[m
+Author: sunfan <2286851>
+Date:   Tue Nov 14 18:25:15 2017 +0800
+
+    租书订单确认
+
+[33mcommit 0e06394e148dc65dacc1183f945a360059813d60[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 14 17:09:26 2017 +0800
+
+    接入图书详情数据
+    ===Mr.Guo===
+
+[33mcommit 88a9489b58da9d5c0d6b7bcf91bf1abea0b06836[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 14 17:07:15 2017 +0800
+
+    接入图书详情数据
+    ===Mr.Guo===
+
+[33mcommit 2910e4e8af94b48dedb0c1168c1025c2fc4138d4[m
+Author: sunfan <2286851>
+Date:   Tue Nov 14 14:53:50 2017 +0800
+
+    图书详情
+
+[33mcommit 27545f88144eee3df88fa1298a97425e585d8153[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 14 14:33:03 2017 +0800
+
+    接入我的页面数据
+    ===Mr.Guo===
+
+[33mcommit a92076e35d6f598d6cd8dedf844337b9606bb19d[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 14 14:19:11 2017 +0800
+
+    更换api地址
+    ===Mr.Guo===
+
+[33mcommit fc2b1cea6f866c910a788f7ee1cc9b53ad0c2560[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 14 14:03:06 2017 +0800
+
+    加入城市选择页面
+    ===Mr.Guo===
+
+[33mcommit 7a37e9f18140e4e7fa1176f9106dc516bea2de03[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 14 11:53:28 2017 +0800
+
+    调整css  接入橱窗推荐
+    ===Mr.Guo===
+
+[33mcommit 440af289716bcf40762790512dd3f4a44ea48b34[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 14 11:23:32 2017 +0800
+
+    调整css  接入橱窗推荐
+    ===Mr.Guo===
+
+[33mcommit 6d6b66004bc57fb81d91208b2e5e8eb8a9469b3f[m
+Author: sunfan <2286851>
+Date:   Tue Nov 14 10:39:06 2017 +0800
+
+    首页图片
+
+[33mcommit 64aea382c3f9dd3861a3350150ad8465c137158c[m
+Author: sunfan <2286851>
+Date:   Tue Nov 14 10:38:10 2017 +0800
+
+    首页图片
+
+[33mcommit 27c2f5425f5336ecbd554caa27b7e8c87105bbda[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 14 10:19:31 2017 +0800
+
+    调整css  接入橱窗推荐
+    ===Mr.Guo===
+
+[33mcommit 05732b583d0b900c9e110f35d7cfd18f885c87eb[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 14 09:14:48 2017 +0800
+
+    调整css  接入橱窗推荐
+    ===Mr.Guo===
+
+[33mcommit cdeeca0ded103ba438648ffe0f50b25826e12064[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Nov 14 08:40:57 2017 +0800
+
+    调整css  接入橱窗推荐
+    ===Mr.Guo===
+
+[33mcommit c6cecdfc736f4cba429e892edf0cf39a6744640f[m
+Author: sunfan <2286851>
+Date:   Mon Nov 13 19:25:19 2017 +0800
+
+    页面样式
+
+[33mcommit 5133143dc68e6ec8579a61a01f4a7edee236f42d[m
+Author: sunfan <2286851>
+Date:   Mon Nov 13 18:18:59 2017 +0800
+
+    页面样式
+
+[33mcommit a87e635455357b559c4df17c602476f82f884587[m
+Author: sunfan <2286851>
+Date:   Mon Nov 13 15:02:43 2017 +0800
+
+    图片、页面自适应
+
+[33mcommit d4bb997fd6d7a14b3b310e209f616d322b5f612a[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sun Nov 12 18:07:32 2017 +0800
+
+    调整css
+    ===Mr.Guo===
+
+[33mcommit 935bbc56a1b660f4cfcf04ad95e8af5479ad2760[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sun Nov 12 17:28:48 2017 +0800
+
+    login box
+    ===Mr.Guo===
+
+[33mcommit b5af6c13c683ff2a94c0afba8fed4f6f3a2bff65[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sun Nov 12 16:13:42 2017 +0800
+
+    ===Mr.Guo===
+
+[33mcommit db80c2f8561e87a03c93ceef3d5d43be3a509f57[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sun Nov 12 15:04:22 2017 +0800
+
+    加入 weui
+    ===Mr.Guo===
+
+[33mcommit 4e6c0df3c3acb084c9c2910f253951645637dfc6[m
+Author: sunfan <2286851>
+Date:   Sun Nov 12 14:19:30 2017 +0800
+
+    图书馆、书店页面
+
+[33mcommit 978011710747e39ab0df6eaf1be9a64b120e154f[m
+Author: sunfan <2286851>
+Date:   Sat Nov 11 18:15:58 2017 +0800
+
+    图书馆、书店页面
+
+[33mcommit 6a55670df08fd59871fed713d6116970af231e46[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 11 15:50:38 2017 +0800
+
+    加入 weui
+    ===Mr.Guo===
+
+[33mcommit a4224fb6cefeb1891d9ac3dbf6f3f3192dbc8f6e[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 11 15:08:53 2017 +0800
+
+    加入 weui
+    ===Mr.Guo===
+
+[33mcommit 2134c94cd30505ab10d10446429fd4aa16b5a8a9[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 11 14:57:53 2017 +0800
+
+    调整ocean.js
+    ===Mr.Guo===
+
+[33mcommit 9846dffcfd7d97c2673e5cc4fe286d19743c640d[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 11 14:47:25 2017 +0800
+
+    调整ocean.js
+    ===Mr.Guo===
+
+[33mcommit 7831ad51de1ee5b2a960669d43b6b6a9937ab230[m
+Author: sunfan <2286851>
+Date:   Sat Nov 11 14:35:24 2017 +0800
+
+    首页样式更新
+
+[33mcommit 5b94ac67b298a69f294d0c161f1abfb449dc0116[m
+Merge: c75cadf a82e24f
+Author: sunfan <2286851>
+Date:   Sat Nov 11 14:30:35 2017 +0800
+
+    Merge remote-tracking branch 'origin/v1.1' into v1.1
+    
+    # Conflicts:
+    #       static/js/core/ocean.js
+
+[33mcommit c75cadf77fe884b148e8206fcff3f9b2fcf8a017[m
+Author: sunfan <2286851>
+Date:   Sat Nov 11 14:28:01 2017 +0800
+
+    首页样式更新
+
+[33mcommit a82e24f956c753511316cbd4707aeff26c47f50f[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 11 12:41:11 2017 +0800
+
+    调整ocean.js
+    ===Mr.Guo===
+
+[33mcommit 45d74fb949237e3ee0d8d9a566cc2f3a2e707821[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 11 11:41:55 2017 +0800
+
+    调整ocean.js
+    ===Mr.Guo===
+
+[33mcommit 74c4cd6f37004c9fe13a514ff16777892a9ac1fa[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 11 10:04:35 2017 +0800
+
+    调整代码结构
+    ===Mr.Guo===
+
+[33mcommit 61e040f0641b19ed00f219aa62cc34256538b4bf[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Nov 11 09:31:18 2017 +0800
+
+    调整代码结构
+    ===Mr.Guo===
+
+[33mcommit 909d056935f4af6898514dfb37a49353569c9063[m[33m ([m[1;32mmaster[m[33m)[m
+Merge: f62d53c d3e6587
+Author: sunfan <2286851>
+Date:   Fri Nov 10 18:23:23 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       book_type_list.html
+    #       js/core/ocean.js
+
+[33mcommit f62d53c9c1ceb59706f68d01f73f6b15e43d6fba[m
+Author: guoshuai <2286851>
+Date:   Fri Nov 10 18:04:37 2017 +0800
+
+    1.ocean.js(阻止滚动及取消)
+    2.footer.css
+    3.jQ代替zepto
+
+[33mcommit 9339979f11487a3c179b148f849b09c5b42fa7eb[m
+Author: guoshuai <2286851>
+Date:   Fri Nov 10 17:59:46 2017 +0800
+
+    1.ocean.js(阻止滚动及取消)
+    2.footer.css
+    3.jQ代替zepto
+
+[33mcommit d3e6587400d4afc85ddabb90aa7e9d8b8292caff[m
+Author: ““553203705” <your email>
+Date:   Mon Nov 6 16:10:37 2017 +0800
+
+    收书提交修改
+
+[33mcommit 4edd901ad1bea8e0c66636a2f33d886cc8e392ab[m
+Author: ““553203705” <your email>
+Date:   Mon Nov 6 14:51:32 2017 +0800
+
+    首页轮播图时间调整为3秒
+
+[33mcommit 9f1602e00ba1387648f301aa1cb71e54c0493488[m
+Merge: 0a73d00 cf61dcc
+Author: ““553203705” <your email>
+Date:   Mon Nov 6 14:42:46 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 0a73d003a49fefcbe79eacd6184cf6a5ad0fa7f6[m
+Author: ““553203705” <your email>
+Date:   Mon Nov 6 14:42:35 2017 +0800
+
+    租书列表跳转，统一更改title为熊猫格子
+
+[33mcommit cf61dcc167294f4df87626f5db5c70f3509cf0a1[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Nov 6 09:39:19 2017 +0800
+
+    timestamp
+
+[33mcommit 650762004f263a3db0c1c1ac91818dfedcf6fa20[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Nov 6 09:22:29 2017 +0800
+
+    timestamp
+
+[33mcommit 39b8e862888b92fdc0db2da2932cf7c35b6504f4[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Nov 6 09:19:13 2017 +0800
+
+    timestamp
+
+[33mcommit 221b3884a86fbecfbd3aae2f3389467bc611ac28[m
+Merge: 45c553f d3fb362
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Nov 6 09:18:18 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       js/core/ocean.js
+
+[33mcommit 45c553fbc8cd6c8b6dd37417ebb2555f26ae2407[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Nov 6 09:17:31 2017 +0800
+
+    timestamp
+
+[33mcommit d3fb3628096a885debd3bbbca2a914be0a30ce8f[m
+Merge: 1408422 18303ce
+Author: ““553203705” <your email>
+Date:   Fri Nov 3 11:15:19 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 140842271fe759f862e86e1eda5b7cea07251555[m
+Author: ““553203705” <your email>
+Date:   Fri Nov 3 11:14:45 2017 +0800
+
+    收书显示姓名
+
+[33mcommit 18303ce7defcbecbb0fa97ea9cc78118093f602f[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Fri Nov 3 11:06:10 2017 +0800
+
+    租书订单详情点击返回，跳转到我的租书
+
+[33mcommit e3db3350927801c1d1e6f2c6c70edf5d2b02755e[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Fri Nov 3 10:47:48 2017 +0800
+
+    未搜索到图书时，提示修改
+
+[33mcommit 67bce891c64f663eb8ac08b763f4119db2f03d69[m
+Merge: 05d02cf 62255c5
+Author: ““553203705” <your email>
+Date:   Wed Nov 1 18:10:19 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 05d02cfa703439ad87cd6fcce7487485eca6c40a[m
+Author: ““553203705” <your email>
+Date:   Wed Nov 1 18:09:44 2017 +0800
+
+    返回顶部无效修改
+
+[33mcommit 62255c5700755b190b6c8058d6199a329c0c8d97[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Nov 1 17:57:17 2017 +0800
+
+    首页banner跳转不了的bug修改
+
+[33mcommit c11b6fe13cc8e9df50f4f502a9d1ed5b2a45e3bf[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Nov 1 17:37:12 2017 +0800
+
+    卖书，重复提交的bug修复
+
+[33mcommit 8adc09c52c60d993d1ebb08e50d24c4d3ff9cae3[m
+Merge: 0323f15 010f72c
+Author: ““553203705” <your email>
+Date:   Wed Nov 1 16:47:43 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 0323f15cb03fa2892c036195a01a51b9f16b2de3[m
+Author: ““553203705” <your email>
+Date:   Wed Nov 1 16:47:31 2017 +0800
+
+    修改搜索页面熊猫币错误问题
+
+[33mcommit 010f72c5470446ced204dfd6b554b1bfe1350188[m
+Author: Mr.Guo <guoshuai@ocean-xa.cn>
+Date:   Tue Oct 31 20:48:28 2017 +0800
+
+    Mr.Guo
+
+[33mcommit 3107f3edb79321cb9226ef21cd363eacc0391beb[m
+Merge: 6c0e529 fb25a14
+Author: ““553203705” <your email>
+Date:   Mon Oct 30 16:14:52 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit fb25a14d1e162e921067668ae9305b12bb24977a[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Mon Oct 30 16:13:10 2017 +0800
+
+    买书重新提交、扫码卖书无效的bug修复
+
+[33mcommit 6c0e52953d6d173c0dde712b2b25c99032408324[m
+Merge: 5980085 001153a
+Author: ““553203705” <your email>
+Date:   Mon Oct 30 15:02:16 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 59800851559d48566bf876dfacf788505a1c5ee4[m
+Author: ““553203705” <your email>
+Date:   Mon Oct 30 15:02:02 2017 +0800
+
+    取消订单跳转问题修改
+
+[33mcommit 001153a6842a7e2fcc5aa5c897c5a7ff674953a0[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Oct 26 22:25:53 2017 +0800
+
+    timestamp
+
+[33mcommit 310253dd9b8eee78c242c142c2447933ac63da9b[m
+Author: ““553203705” <your email>
+Date:   Thu Oct 26 10:55:32 2017 +0800
+
+    会员页面修改
+
+[33mcommit fb8910b7c8614f552dcef1e2a73ea8ba2514f98d[m
+Author: ““553203705” <your email>
+Date:   Tue Oct 24 10:09:27 2017 +0800
+
+    订单明细状态显示修改
+
+[33mcommit 5667ffe01e813300e47745107336b08ff95d5df2[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Mon Oct 23 18:51:04 2017 +0800
+
+    收书时手动输入isbn 错误提示修改
+
+[33mcommit d9fbde590b6164ac6d36b3bfbe5068b2bdc45c84[m
+Merge: 3eb963a 69f9cfe
+Author: li_yun <li_yun@xazz.vip>
+Date:   Mon Oct 23 18:20:40 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 3eb963a5928a4db38c21e1bdccda5a3e245e055f[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Mon Oct 23 18:20:34 2017 +0800
+
+    一件购买完毕，支付成功的转跳
+
+[33mcommit 69f9cfe9b5b9abaf134a9c87108923a64f3a0d83[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Oct 23 18:11:59 2017 +0800
+
+    timestamp
+
+[33mcommit 97346887385f7b9379a4224b1828a7e4d343cd04[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Mon Oct 23 18:09:18 2017 +0800
+
+    卖书提交订单加等待条，一件购买完毕，支付成功的转跳
+
+[33mcommit c031ecb1622c899c21228b2dea10374d466d94ac[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Mon Oct 23 15:12:44 2017 +0800
+
+    添加用户地址，详细地址 输入太多会换行的bug修复
+
+[33mcommit 4ac0d3e2306d1a8ecc999c6b12a32bc0971ec55c[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Mon Oct 23 14:41:24 2017 +0800
+
+    租过的书
+
+[33mcommit c40bf4eca39f212f9dd92a3906a3e74b12a0d840[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Mon Oct 23 14:33:15 2017 +0800
+
+     扫码卖书 删除整个顶端导航栏， 不能删除的bug修复
+
+[33mcommit c3472e3b59333dcde7c640a7b7adc232df371e0c[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Mon Oct 23 11:25:23 2017 +0800
+
+    卖书页面，订单提交时传isbn码
+
+[33mcommit bd860f76235cefc3ccf55d24baf6526fa77d96c4[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Oct 23 09:17:29 2017 +0800
+
+    timestamp
+
+[33mcommit 11912703666d43a2c2a17882d711b3c6d2030513[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Oct 23 09:16:41 2017 +0800
+
+    timestamp
+
+[33mcommit c0854d879b14511797d05e48ef77d15b771552c7[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Oct 21 11:21:34 2017 +0800
+
+    timestamp
+
+[33mcommit 714947e2624920086195cc28d51ea800c9f99386[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Oct 21 09:07:36 2017 +0800
+
+    timestamp
+
+[33mcommit 9d76b251e799eefa6529da497e13d171a96a71c8[m
+Author: ““553203705” <your email>
+Date:   Fri Oct 20 18:30:28 2017 +0800
+
+    买书实际价格
+
+[33mcommit d46d665e6801388442d1f6ea86629ffe91ff1eaa[m
+Author: ““553203705” <your email>
+Date:   Fri Oct 20 18:19:51 2017 +0800
+
+    买书还需支付修改
+
+[33mcommit 9263db6e150dabccb80200ec4cada813703a0ac6[m
+Merge: 538ce8d e614c1d
+Author: ““553203705” <your email>
+Date:   Fri Oct 20 18:09:37 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 538ce8d1ac2a6a4496a1e439115ab00bbd3b17a2[m
+Author: ““553203705” <your email>
+Date:   Fri Oct 20 18:09:29 2017 +0800
+
+    买书留言样式修改
+
+[33mcommit e614c1ddfa0891b99a3a3bcd51ca719d496c3408[m
+Merge: 91ac9bf 477d445
+Author: li_yun <li_yun@xazz.vip>
+Date:   Fri Oct 20 17:20:42 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 91ac9bf4d177ec82d44e9ead561bd673f1960643[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Fri Oct 20 17:20:36 2017 +0800
+
+    金额只保留到小数点后两位
+
+[33mcommit 477d4456b6752361fe9212c41b722b8b23fff3ae[m
+Author: ““553203705” <your email>
+Date:   Fri Oct 20 17:18:18 2017 +0800
+
+    扫码卖书返回bug修复
+
+[33mcommit 675d9417b959214351814bcab2786fdb30eaaa88[m
+Author: ““553203705” <your email>
+Date:   Fri Oct 20 16:49:03 2017 +0800
+
+    用户留言样式修改
+
+[33mcommit d44d95037f3a1c88e1d19263ae77e72b32d8d1f0[m
+Merge: 8b6f338 0a7b54d
+Author: ““553203705” <your email>
+Date:   Fri Oct 20 16:13:11 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 8b6f338047d00281434171cb517493d440b687f7[m
+Author: ““553203705” <your email>
+Date:   Fri Oct 20 16:13:03 2017 +0800
+
+    收书订单时间重叠
+
+[33mcommit 0a7b54d3d6499c82b36a24507f9b34c7285ea14e[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Fri Oct 20 15:40:58 2017 +0800
+
+    我的页面去掉红点和数字
+
+[33mcommit f4f547e2964bf0cda40507832eff3ab7398e3398[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Fri Oct 20 15:32:25 2017 +0800
+
+    购物车删除图书点两次才有用的bug修复
+
+[33mcommit 0ce769d33fe072f8113abbff0dda4f0c3a49b27c[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Fri Oct 20 15:18:56 2017 +0800
+
+    租书订单提交后，点返回，跳转到购物车
+
+[33mcommit bb8f063d520970c8b32bc27b9afb2b4f00d22a33[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Fri Oct 20 14:56:19 2017 +0800
+
+    金额只保留到小数点后两位
+
+[33mcommit cf8c8e41f04e2fabbfeada03d8d5ec58780b1e93[m
+Author: ““553203705” <your email>
+Date:   Wed Oct 18 16:57:45 2017 +0800
+
+    一键购买订单修改
+
+[33mcommit 35b569e67f12c121f49b421f1b19a2c34c92b557[m
+Author: ““553203705” <your email>
+Date:   Wed Oct 18 14:29:50 2017 +0800
+
+    一键购买订单修改
+
+[33mcommit 57eb039913e582d6cf2024496396b4a153bebe7f[m
+Merge: c5e2497 afcc00a
+Author: ““553203705” <your email>
+Date:   Wed Oct 18 11:11:20 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit c5e2497c82e57f6756783468e44b1d94634249fe[m
+Author: ““553203705” <your email>
+Date:   Wed Oct 18 11:11:11 2017 +0800
+
+    卖书订单修改
+
+[33mcommit afcc00ab5e3719758ce72d6fb53ae01c1387a293[m
+Merge: 13f2ea0 33739dc
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Oct 18 10:05:56 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 13f2ea08e740170836550ad5cda7cfb7597a39ff[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Oct 18 10:05:41 2017 +0800
+
+    订单提交时留言BUG
+
+[33mcommit 33739dcab91fb60998a34858cf59055e1a3c9027[m
+Author: guoshuai <2286851>
+Date:   Mon Oct 16 12:14:19 2017 +0800
+
+    同一订单不可重复提交
+
+[33mcommit 298dfe2f0a406f24a523cd52924a1bdaf30e0481[m
+Author: guoshuai <2286851>
+Date:   Mon Oct 16 12:08:06 2017 +0800
+
+    同一订单不可重复提交
+
+[33mcommit 35c511178becd67714dfecd85a5e46f07f25ee4b[m
+Author: ““553203705” <your email>
+Date:   Mon Oct 16 11:42:15 2017 +0800
+
+    收书订单修改
+
+[33mcommit c395066d6a3d902d776903c672712b45aaa02b5b[m
+Author: guoshuai <2286851>
+Date:   Mon Oct 16 10:28:55 2017 +0800
+
+    收书列表  增加拨打电话
+
+[33mcommit a13d9527b7a11c0b980b15a270d661714fc27c79[m
+Author: guoshuai <2286851>
+Date:   Thu Oct 12 15:08:56 2017 +0800
+
+    recover_success页面，联系我们和订单状态流程
+
+[33mcommit 07b3b47905e10f24eec49b675b11d88ee6e920cc[m
+Merge: 3faec92 e5a3344
+Author: ““553203705” <your email>
+Date:   Mon Oct 9 18:38:12 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 3faec92aecf5000d917b3b65c9599c5f8e6c92db[m
+Author: ““553203705” <your email>
+Date:   Mon Oct 9 18:37:57 2017 +0800
+
+    卖书
+
+[33mcommit e5a334433201e41b03b0c02d1dca89f68cb3d9bf[m
+Author: guoshuai <2286851>
+Date:   Mon Oct 9 18:29:58 2017 +0800
+
+    图书详情页按钮
+
+[33mcommit 089a147027ffb7dff07216fcb1e8445673113320[m
+Author: guoshuai <2286851>
+Date:   Mon Oct 9 17:46:57 2017 +0800
+
+    一些bug修改
+
+[33mcommit b790103af229a1308655f7cc968337143965f35f[m
+Merge: e2cc2f3 5402fd0
+Author: li_yun <li_yun@xazz.vip>
+Date:   Mon Oct 9 17:40:59 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit e2cc2f35958036819beee6ea740102eaee17a7ae[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Mon Oct 9 17:40:53 2017 +0800
+
+    图书详情页修改
+
+[33mcommit 5402fd07fa5e165fb09814ea592fbc1b7ceb82cc[m
+Author: ““553203705” <your email>
+Date:   Mon Oct 9 17:33:22 2017 +0800
+
+    订单留言
+
+[33mcommit 4e915ba96e64fda46fcf691146aa21bab4abedf6[m
+Author: guoshuai <2286851>
+Date:   Mon Oct 9 17:31:39 2017 +0800
+
+    卖书详情页
+
+[33mcommit b9999e2fab5843697b97d2abcb8330d23040b4cb[m
+Author: guoshuai <2286851>
+Date:   Mon Oct 9 17:06:49 2017 +0800
+
+    订单详情页修改
+
+[33mcommit 1bb89487fcca18a062005f991c78611f75cf387a[m
+Merge: 7c70f8d 7ee08af
+Author: ““553203705” <your email>
+Date:   Mon Oct 9 16:33:53 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 7c70f8d2549cdba10bd135d1f9f58d07e89aa200[m
+Author: ““553203705” <your email>
+Date:   Mon Oct 9 16:33:46 2017 +0800
+
+    租书订单修改，不进行支付
+
+[33mcommit 7ee08af6c9cc58d69f85522e0e9214dc735048af[m
+Merge: f1f1274 496bf7e
+Author: li_yun <li_yun@xazz.vip>
+Date:   Mon Oct 9 16:19:53 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit f1f1274428ea0d8548c5e7dffc3ce6ac09c6b0b3[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Mon Oct 9 16:19:47 2017 +0800
+
+    图书详情页： 若为不可售图书，则不加入购物车，提示 "此书尚不可售卖，请选择租书"
+
+[33mcommit 496bf7efe727e5a545d518c93e1ddc460c7f87bc[m
+Author: guoshuai <2286851>
+Date:   Mon Oct 9 16:15:08 2017 +0800
+
+    买书详情
+
+[33mcommit 2d66f8241fe60fae2078cbd0e83f76bbad2ee073[m
+Author: ““553203705” <your email>
+Date:   Mon Oct 9 15:46:38 2017 +0800
+
+    卖书详情
+
+[33mcommit 36a9c8029bbeb34d1d78a92939ccc51346b98f32[m
+Author: guoshuai <2286851>
+Date:   Mon Oct 9 15:19:33 2017 +0800
+
+    卖书详情页修改
+
+[33mcommit 6519c2d872ec01e9b494195c786ea2b623e876c7[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Mon Oct 9 15:07:46 2017 +0800
+
+    扫码卖书失效解决
+
+[33mcommit 0488217d97539711a7f66c427199d8795f373ccc[m
+Author: guoshuai <2286851>
+Date:   Mon Oct 9 14:44:12 2017 +0800
+
+    租书天数显示不全修改
+
+[33mcommit be0cfa95ed41e1a7dac816ae5226ace8253ba220[m
+Author: guoshuai <2286851>
+Date:   Mon Oct 9 14:28:03 2017 +0800
+
+    卖书详情页修改
+
+[33mcommit b64ef16eb9248f852f8d02721c817769130a79ac[m
+Author: guoshuai <2286851>
+Date:   Mon Oct 9 11:54:45 2017 +0800
+
+    详情页
+
+[33mcommit c7db8e682fa1ad171fce5c4e9252e45f917ce3e2[m
+Author: guoshuai <2286851>
+Date:   Mon Oct 9 11:30:24 2017 +0800
+
+    recover_success.html 收书
+
+[33mcommit e0605e61e61abbc475689d4c4f605ef33628d140[m
+Author: ““553203705” <your email>
+Date:   Mon Oct 9 10:42:33 2017 +0800
+
+    留言不编辑
+
+[33mcommit 42e842c1a932b85a9dd4eb896f812d89baa95122[m
+Author: ““553203705” <your email>
+Date:   Mon Oct 9 10:32:20 2017 +0800
+
+    首次租书提醒
+
+[33mcommit 2996223e2cd91813880c1420885be8f403a513bc[m
+Author: guoshuai <2286851>
+Date:   Mon Oct 9 09:35:37 2017 +0800
+
+    首次租书
+
+[33mcommit e916475ff8b3b378454035034d42a601f4b73575[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Oct 3 02:07:24 2017 +0800
+
+    fix issue #重复添加图书
+
+[33mcommit fe5ca8516d697db6715693df41a4805713a99206[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Oct 3 00:20:16 2017 +0800
+
+    ocean
+
+[33mcommit 9888b1ad2717a7aa6e48453e5880e94df0669dcc[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Tue Oct 3 00:00:48 2017 +0800
+
+    押金提现
+
+[33mcommit 4655318299d3f79ccb6c0a5f7c48631e1cbf5d2f[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Oct 2 17:23:29 2017 +0800
+
+    ocean code
+
+[33mcommit e9ce3e3965dc8aa72bc3f13dd58bfe8c43f22f0e[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Mon Oct 2 17:22:39 2017 +0800
+
+    ocean code
+
+[33mcommit 0bc995aef53a5a3140b44e6336058d6d77485ec3[m
+Author: guoshuai <2286851>
+Date:   Sat Sep 30 23:00:30 2017 +0800
+
+    一些bug修改
+
+[33mcommit 4115916d003565043e8a035818c5bac1532ac84e[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Sep 30 22:47:10 2017 +0800
+
+    recover_order
+
+[33mcommit d0f3c01da87f098844400cf707ebe6b92181b8c0[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Sep 30 22:38:39 2017 +0800
+
+    code
+
+[33mcommit 04f73bfee6339ae746ee3343a6298a5aba03df91[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Sep 30 22:36:27 2017 +0800
+
+    code
+
+[33mcommit 7f971df257a56467e1d04203d051a7d0817e49fa[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Sep 30 22:34:54 2017 +0800
+
+    code
+
+[33mcommit 7f9bc4b51200ec9aaf6f207b3bc0570283c5fc97[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Sat Sep 30 21:24:29 2017 +0800
+
+    code
+
+[33mcommit aebe3154f8e440d9288ff4dbbc32ff3d503f1702[m
+Author: guoshuai <2286851>
+Date:   Sat Sep 30 19:33:02 2017 +0800
+
+    一些bug修改
+
+[33mcommit 8c04fffd2f5c2a846b12168290f7cdfa867d74ae[m
+Merge: cdf172f c87493b
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 23:39:32 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit cdf172fd353a3e1fa8dc0913080a4d0f44c98241[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 23:39:23 2017 +0800
+
+    一些样式修复
+
+[33mcommit c87493bf86d7808ee6bd623d75888ff9be18775d[m
+Merge: fd8a445 e377b1a
+Author: ““553203705” <your email>
+Date:   Fri Sep 29 23:10:46 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit fd8a44530dd6923c33d26adc9fa0ba4ccb298c64[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 29 23:10:30 2017 +0800
+
+    订单样式修改，搜索修改
+
+[33mcommit e377b1a180730b5f0c70a55d87d70250c9a2e0ca[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 23:04:15 2017 +0800
+
+    地址页输入框
+
+[33mcommit ec070823d300df0237e672c0b8640bad87ccede7[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Sep 29 22:40:59 2017 +0800
+
+    success
+
+[33mcommit e10bfd34b92f8d4b5afdbac08f1011046557122f[m
+Merge: 730ddac 324d3fd
+Author: ““553203705” <your email>
+Date:   Fri Sep 29 22:31:35 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 730ddac1cdfd0dd9ab43185a66872f78fbfe0c82[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 29 22:31:26 2017 +0800
+
+    订单详情
+
+[33mcommit 324d3fd293e2460d45ee24554ac6145b07e1d5cc[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Sep 29 22:30:25 2017 +0800
+
+    success
+
+[33mcommit 0f7f85663975787fd92aba6e7a4387b76418b390[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 22:26:48 2017 +0800
+
+    详情页
+
+[33mcommit 7735ae419cf52dd149b800edb88e51d52036a45c[m
+Merge: dd653fe dcdab85
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 22:23:52 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit dd653feb5adb9bfe523f2a19d0e82d7c2ee686ee[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 22:23:39 2017 +0800
+
+    详情页
+
+[33mcommit dcdab858c8a2eca105b3d8d20a9a4ea44722e843[m
+Merge: bfe0fcb 64066d0
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Sep 29 22:21:46 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit bfe0fcb429147ab945bace4ca1c8fabfe8ecbd47[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Sep 29 22:21:37 2017 +0800
+
+    car
+
+[33mcommit 64066d02a2e05b0fe01010b64bffdc31ae4d8d2c[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 22:08:39 2017 +0800
+
+    卖书修改 登录框延时
+
+[33mcommit 9e7d6aa1d89cf2ff712c4b5b47c8b90590af4675[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 29 22:05:23 2017 +0800
+
+    buy
+
+[33mcommit ff395008c3518d9561efad734abd436d16649d1c[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 21:39:36 2017 +0800
+
+    立即还书和登录框bug修复
+
+[33mcommit 05b3ce965d2e8124ff5e6c5989b01f0b5bae427e[m
+Merge: 53d1685 5563c2b
+Author: ““553203705” <your email>
+Date:   Fri Sep 29 21:38:45 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 53d1685502e241bd039928e9a2d10749d54b8734[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 29 21:38:37 2017 +0800
+
+    buy
+
+[33mcommit 73805f0abca0348ad0497a80406b6ca0f6fb9f16[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 29 21:04:16 2017 +0800
+
+    提现
+
+[33mcommit 5563c2bc889a53426cdb23b6e73e6df5bd869913[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 21:04:12 2017 +0800
+
+    购物车按钮数量修复
+
+[33mcommit e877c8232866977cdb489b1846f0b99ef10bee39[m
+Merge: 8cde2c6 73805f0
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 21:04:01 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit db91cd2eeb8e3e4188b627675ca908d89fe0198a[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 29 20:54:53 2017 +0800
+
+    运费完成
+
+[33mcommit 8cde2c6f4e130e42161633f07dc22892f978d7da[m
+Merge: 85f2b20 db91cd2
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 20:54:40 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 85f2b20299cf175bb5f3da67e54dbab5730dd1e8[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 20:54:12 2017 +0800
+
+    购物车按钮数量修复
+
+[33mcommit ee239780df9e2c4dc1adcf58362bedf745bb4585[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Sep 29 19:14:44 2017 +0800
+
+    ocean
+
+[33mcommit 75cf96a888f4fded939955f82ecacec06957da9c[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 19:08:27 2017 +0800
+
+    弹出框
+
+[33mcommit c2ca5cfc552899601a006486052d06a4e9267a1d[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Sep 29 17:57:56 2017 +0800
+
+    ocean
+
+[33mcommit 18a92807b4bfbf5faeb89e184ae9a5cb08585270[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Sep 29 17:56:41 2017 +0800
+
+    ocean
+
+[33mcommit dcdb4a91399f43978fdefb37b35379c11a6a4533[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Sep 29 17:50:52 2017 +0800
+
+    ocean
+
+[33mcommit dd2e0a72808c2189f9ba3b6e7eefc87920f6cb3c[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 17:28:11 2017 +0800
+
+    搜索页删除按钮修复，弹出框
+
+[33mcommit eb05c9b2c3addc4bcec21daafd93b7869920b85f[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 16:50:27 2017 +0800
+
+    押金充值和新建地址bug修改
+
+[33mcommit c1f5527b792af69c5a7b2c2a171442d05b05e7e2[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 15:59:03 2017 +0800
+
+    一些样式bug修复
+
+[33mcommit bc91f4b93c24dc36b637abb1a907bf4b5dabe343[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 13:30:20 2017 +0800
+
+    一些样式修改，详情页豆瓣跳转
+
+[33mcommit c6c1348cbbac500ff2df7479c412212b53bd2976[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 12:00:24 2017 +0800
+
+    弹出框
+
+[33mcommit 499822980be7c343e0a3e90bf45b345800bad962[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 11:43:40 2017 +0800
+
+    弹出框
+
+[33mcommit d97bcd62f6e07a1d7cb3d17c456f8f84875c9cf6[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 11:37:44 2017 +0800
+
+    弹出框
+
+[33mcommit 7c850e4966127c71c9084add043840a30ac93f21[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 11:30:03 2017 +0800
+
+    弹出框
+
+[33mcommit e918d9b7057d63db2bc2449acd5d0971f4a1f0f0[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 29 11:27:00 2017 +0800
+
+    订单样式修改
+
+[33mcommit 5cc81dd313f5dabf244456801a6270061c0426ee[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 29 11:17:04 2017 +0800
+
+    我的
+
+[33mcommit c0015d6b6cbd96bd81ea0df07afee8719a74cc02[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 11:00:38 2017 +0800
+
+    弹出框
+
+[33mcommit cfa7f09a015496a745abc7edb77b469179ce9105[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Sep 29 10:09:47 2017 +0800
+
+    index
+
+[33mcommit f882e7b66c90ecd53757c7d20cc5e627b6633a76[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Sep 29 10:02:10 2017 +0800
+
+    cookie timestamp
+
+[33mcommit 76e08dcedb4f907a2150eb32fd9fcc3d7fd62bf9[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 29 09:58:24 2017 +0800
+
+    首页弹出框
+
+[33mcommit e8db4e8955e5336f0bd53ac5c009eea87e637fb2[m
+Merge: 8f09ace 87f48e2
+Author: ““553203705” <your email>
+Date:   Fri Sep 29 09:51:36 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 8f09acea8223944e72bcc412eb60b6fbe89e242f[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 29 09:51:22 2017 +0800
+
+    图书详情-相关推荐  修改显示个数 ， 我的页面修改
+
+[33mcommit 87f48e283d7365bab4a2f3de1ed6649bf0b9321f[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Fri Sep 29 09:03:33 2017 +0800
+
+    cookie timestamp
+
+[33mcommit 4a6bcebb9f3afea924f48ae219f5cc83ac1d28d7[m
+Merge: 201fe59 2cc0103
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Sep 28 21:32:21 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 201fe593d0dfacc39a62e18b7789973e72d3da21[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Sep 28 21:32:11 2017 +0800
+
+    cookie
+
+[33mcommit 2cc0103ed79d57bf249d1e902fcd046c821c20fa[m
+Merge: dc1960a 73cf66b
+Author: guoshuai <2286851>
+Date:   Thu Sep 28 19:15:16 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit dc1960ab87399446d2f46d3bcf50e12acb6d94d9[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 28 19:13:48 2017 +0800
+
+    卖书判断登录
+
+[33mcommit 73cf66b76ca74e951078d7c8ff7f021f3fc7cd47[m
+Merge: acd75b0 3ac0a62
+Author: ““553203705” <your email>
+Date:   Thu Sep 28 18:34:55 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit acd75b0748af1182a051addcd0a3a7e7a638eba9[m
+Author: ““553203705” <your email>
+Date:   Thu Sep 28 18:34:48 2017 +0800
+
+    购物车本地删除
+
+[33mcommit 3ac0a62dd41b2b1c290887bb023af1d1f1a6ac25[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 28 18:34:18 2017 +0800
+
+    增加地址按钮
+
+[33mcommit 1c627e150ad2ce586c2286651707455f9425f28f[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 28 18:15:47 2017 +0800
+
+    地址修改
+
+[33mcommit eeee9eb3d043f2e246d22e16b0cb3c07a0a361ec[m
+Merge: 523e787 ed054a6
+Author: guoshuai <2286851>
+Date:   Thu Sep 28 18:12:05 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit ed054a677fef86114a80e73e87cba640fa18cf86[m
+Author: ““553203705” <your email>
+Date:   Thu Sep 28 18:09:56 2017 +0800
+
+    未登录购物车图片显示
+
+[33mcommit a1787854f9ff1b3f93fb3687d22f82f951a58be8[m
+Author: ““553203705” <your email>
+Date:   Thu Sep 28 17:58:07 2017 +0800
+
+    购物车验证跳转   一键购买修改
+
+[33mcommit 523e787be053d3969dbae463b9568991fa712103[m
+Merge: 72f66d6 4ed9b14
+Author: guoshuai <2286851>
+Date:   Thu Sep 28 16:57:43 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 769086b018d0f6fa4e76fe752c21c6d90767291f[m
+Merge: 9995276 4ed9b14
+Author: ““553203705” <your email>
+Date:   Thu Sep 28 16:43:15 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       js/core/ocean.js
+
+[33mcommit 999527642d2e54e44d9d4543a1910f6c68030317[m
+Author: ““553203705” <your email>
+Date:   Thu Sep 28 16:41:41 2017 +0800
+
+    购物车同步
+
+[33mcommit 4ed9b1470fa8d600cae6dfa7704f8f1bf1a3e1ef[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Thu Sep 28 16:12:02 2017 +0800
+
+    我的页面 vip到期时间显示BUG修复
+
+[33mcommit 2c907dad597926d1aaaeb70e79c95894b3ac8434[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Thu Sep 28 15:58:06 2017 +0800
+
+    ocean
+
+[33mcommit 72f66d6d729d4949e8d1f9081f7208f0657be9fc[m
+Merge: bb132b2 0d70879
+Author: guoshuai <2286851>
+Date:   Thu Sep 28 15:57:43 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 0d70879d4357bccbc921e22ee04e446ecbbbf80f[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Thu Sep 28 15:56:37 2017 +0800
+
+    支付未支付的买书订单时 判断当前熊猫币是否足够
+
+[33mcommit e8281548a8de73157a57aa608059bfab6dcc9025[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Thu Sep 28 15:55:42 2017 +0800
+
+    支付未支付的买书订单时 判断当前熊猫币是否足够
+
+[33mcommit bb132b22596d99d814e07c66851f384059079177[m
+Merge: 77e6bac c5d0f66
+Author: guoshuai <2286851>
+Date:   Thu Sep 28 15:46:01 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 77e6bac3a9ea68abfd259af67a63f17cdcf600d4[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 28 15:45:45 2017 +0800
+
+    增加地址页键盘弹出问题修改
+
+[33mcommit c5d0f664aaf5ca5b5b26e5ff161150638bf27c2b[m
+Author: ““553203705” <your email>
+Date:   Thu Sep 28 15:26:42 2017 +0800
+
+    右上角数量修改
+
+[33mcommit e3bbe2a3fafc597ce9feab1bb92e763b14da106d[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 28 15:24:08 2017 +0800
+
+    购物车删除按钮修改
+
+[33mcommit 011910ca7e026aa839c16928357a3b8c8a31f6ed[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Thu Sep 28 14:53:32 2017 +0800
+
+    搜索图书 未搜索到时， 显示默认接口
+
+[33mcommit ba46c954b65afdaf835662a7f2872612bbc5eea7[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 28 14:52:38 2017 +0800
+
+    字体修改 删除没用的文件
+
+[33mcommit 0ccf181ab54a4dd9ffdc936352f1c00cf3c29e1c[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Sep 28 14:43:42 2017 +0800
+
+    openid
+
+[33mcommit 6e6dca169775bea636ff5889659d4a25bdf12a26[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Sep 28 14:23:15 2017 +0800
+
+    ocean
+
+[33mcommit 1455e5521157ca2b2422d6dc87beeeab7a14cb18[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Sep 28 14:22:39 2017 +0800
+
+    ocean
+
+[33mcommit dd31bf780873986c632861f4653f55f2320f4074[m
+Author: ““553203705” <your email>
+Date:   Thu Sep 28 11:42:42 2017 +0800
+
+    本地添加购物车
+
+[33mcommit 446982fb955e4f287081beaf1432f11228be5b20[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Sep 28 11:12:02 2017 +0800
+
+    ocean
+
+[33mcommit 9932c5dc68a9399b04eda21731f1a965a70e0f16[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Thu Sep 28 11:07:45 2017 +0800
+
+    ocean
+
+[33mcommit ac2138a31337a1fa77136f8cc2e312eaef38876e[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 28 10:45:34 2017 +0800
+
+    地址更改按钮冒泡处理
+
+[33mcommit 4b26e1c76b0a4d3bb57a57558297d5f403e05200[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 28 09:57:49 2017 +0800
+
+    一些样式修改
+
+[33mcommit a3e24a190f463cc0c723432f2d026d2b089727d5[m
+Merge: 5ada7ea a4130f4
+Author: ““553203705” <your email>
+Date:   Thu Sep 28 09:49:04 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 5ada7eae5a8eb9e5951c463f0b774ce8ff4dc330[m
+Author: ““553203705” <your email>
+Date:   Thu Sep 28 09:48:55 2017 +0800
+
+    回收修改
+
+[33mcommit a4130f4af4dc0c53fecd1501b6dee9270adfc722[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Thu Sep 28 09:43:56 2017 +0800
+
+    首页折扣显示
+
+[33mcommit e24d5ffa6747b90b2786125be55b9c9a8ddf5e83[m
+Author: ““553203705” <your email>
+Date:   Wed Sep 27 21:36:52 2017 +0800
+
+    ocean
+
+[33mcommit 6ca3fa0b70813bee8eb56fcb491401b67fcb2ad4[m
+Merge: 4464591 c41cdf3
+Author: ““553203705” <your email>
+Date:   Wed Sep 27 21:35:33 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       js/core/ocean.js
+
+[33mcommit 4464591b739ec25605cbf9265e1fb8d6f2d55b7c[m
+Author: ““553203705” <your email>
+Date:   Wed Sep 27 21:34:47 2017 +0800
+
+    登录获取微信头像，昵称
+
+[33mcommit c41cdf3e2449c26763b336d5eaffabf247c8a8a8[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 27 21:14:50 2017 +0800
+
+    一些样式修改
+
+[33mcommit f3c9161087457b48072cd55b6eae9873c6cb4013[m
+Author: ““553203705” <your email>
+Date:   Wed Sep 27 21:12:06 2017 +0800
+
+    添加购物车数量显示   修改订单详情
+
+[33mcommit 3a160f132476d86db87be07ff8026f066e3139c4[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 27 21:01:57 2017 +0800
+
+    租书页面修改
+
+[33mcommit 9d579c5dd2ae80c39ebba6cae6d8adf2b45b33ce[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 27 20:52:06 2017 +0800
+
+    支付页面样式修改
+
+[33mcommit 3f2a553353f6e6842ebe2894f88bafe79dbda464[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 27 20:51:11 2017 +0800
+
+    买书订单 支付时判断用户当前熊猫币是否足够
+
+[33mcommit b544e3753bd1ab7b519b5dc4cbf2e59aa236982a[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 27 20:39:10 2017 +0800
+
+    我的修改
+
+[33mcommit 9cca77a4a84b44ff447e73ba86baab0a91438087[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 27 20:33:43 2017 +0800
+
+    卖书修改
+
+[33mcommit d18d16fadcca46a0a9a42a0565dabf5bc2700571[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 27 20:31:24 2017 +0800
+
+    卖书修改
+
+[33mcommit 2914b76f923734cb24d46fc33f54c9ba8e3728ca[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 27 19:17:55 2017 +0800
+
+    一些样式修改
+
+[33mcommit 502f0d427e2ccf50079cd18c8545bfd6d6079dc0[m
+Merge: 7f2bd1e 7ba2b3f
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 27 19:03:51 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 7f2bd1e493f69ba8c6b7ea7d1eced6f3a7654e10[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 27 19:03:41 2017 +0800
+
+    确认购买订单 完成, 支付数字显示 调整
+
+[33mcommit 7ba2b3feb4ddbcdb4bcfbd4bbf6a23f6890f9cc8[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 27 19:02:07 2017 +0800
+
+    租书
+
+[33mcommit 5fee5c7a50422d2b323f0730863243da7e74a595[m
+Author: ““553203705” <your email>
+Date:   Wed Sep 27 18:54:23 2017 +0800
+
+    租书订单完成
+
+[33mcommit 9bcc3b63484716e3df18019703189df7e5aa1ef5[m
+Merge: 5e422e2 b66e29a
+Author: ““553203705” <your email>
+Date:   Wed Sep 27 18:12:38 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 5e422e2e02402b0a9c7eb54705e5b5cfe9476b37[m
+Author: ““553203705” <your email>
+Date:   Wed Sep 27 18:12:28 2017 +0800
+
+    一键购买完成
+
+[33mcommit b66e29a800a1ac5620e1b6cabf908957534a8d94[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 27 18:07:40 2017 +0800
+
+    全部图书分类和搜索页 豆瓣评分
+
+[33mcommit dbbd94dff8836d087e6e9e5f3894e56fce34f685[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 27 18:01:55 2017 +0800
+
+    首页 熊猫币兑换的显示  完成
+
+[33mcommit 79b42f4b1ef00c9fb2832b2dedac1632a05d6fec[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 27 17:54:50 2017 +0800
+
+    一些页面修改
+
+[33mcommit b84be53532fb931be6b5f227978433cf3fd66c3a[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 27 15:56:20 2017 +0800
+
+    图书详情页修改
+
+[33mcommit 916b1291ab6837dd62877e91767eb64afdb20034[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 27 15:04:18 2017 +0800
+
+    购物车修改
+
+[33mcommit 93702010dd860738889dfcfed789267aa0c1928b[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 27 14:51:08 2017 +0800
+
+    购物车 买书逻辑完成
+
+[33mcommit 501eb202941ebc555193abf31800ccc71139ad38[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 27 14:32:32 2017 +0800
+
+    购物车列表显示调整
+
+[33mcommit 9f5f3c5aeb3364daf3c3d4b2783fdfd5765a1a97[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 27 14:14:01 2017 +0800
+
+    购物车修改
+
+[33mcommit f6dfdfb2338a73ef8bc62c93f4dab6085bde828c[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 27 12:04:10 2017 +0800
+
+    购物车列表显示好了（功能还没完成）
+
+[33mcommit 58fd16589929f6e710db5836dc08a92021f0b2ad[m
+Merge: 57f2d18 6435237
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 27 11:33:05 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 57f2d180843b7e08fe93f8a009099acf55ab0320[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 27 11:32:55 2017 +0800
+
+    图书详情页 熊猫币同步
+
+[33mcommit 643523787c08a4b4370100f8854af891cbe7cab1[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 27 11:28:34 2017 +0800
+
+    一些样式修改
+
+[33mcommit 2b18a4287ee108b73cc6086be7d14d772bc574ec[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 27 10:43:18 2017 +0800
+
+    图书详情页 修改
+
+[33mcommit f9b629b0bc7a45702a77b40903444bad3585836d[m
+Merge: 493e537 febe62e
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 27 09:57:52 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 493e537acc50638679fb36c6b6cc01186576223b[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 27 09:57:42 2017 +0800
+
+    首页豆瓣评分同步
+
+[33mcommit febe62e1b1eb31191e7991cb4ef821bae6ccd5c3[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 27 09:56:33 2017 +0800
+
+    卖书修改
+
+[33mcommit 0f89a135c389fbf924a8e636d2a414dc9f66a372[m
+Author: Mr.Guo <guoshuai@ocean.cn>
+Date:   Wed Sep 27 08:52:07 2017 +0800
+
+    ocean
+
+[33mcommit e98d2aa184529d0c3062d5bd938b303b43d17f67[m
+Author: ““553203705” <your email>
+Date:   Tue Sep 26 19:31:54 2017 +0800
+
+    订单列表
+
+[33mcommit 01e046a496bd3bb997240d3195722d45f7a82668[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 19:27:26 2017 +0800
+
+    我的 卖书页面修改
+
+[33mcommit ea0e24bc905a6b09518fb611d4449f4493b9bb9a[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 17:31:58 2017 +0800
+
+    首页定位选择省份 样式修改
+
+[33mcommit 7718b4d494ac7004142a4b05934416a9e73ecb85[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 17:25:48 2017 +0800
+
+    首页全部图书分类 book_classify.html
+
+[33mcommit e6e3c286088f18cc8f142d36943cf8df215bc85b[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 17:12:45 2017 +0800
+
+    买过的书 buy_book.html
+
+[33mcommit 390947be6e1a18768b134b668d4b5882a4391e96[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 17:03:59 2017 +0800
+
+    购买确认订单 buy_confirm.html
+
+[33mcommit e1af897bfee4168002518fe606623f7a905b634a[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 16:21:52 2017 +0800
+
+    租书确认订单 lease_confirm.html
+
+[33mcommit 1ddf21b80ca88d93aa729102216ebe60c9ccb7e6[m
+Author: ““553203705” <your email>
+Date:   Tue Sep 26 15:19:29 2017 +0800
+
+    首页 分类修改，图书详情相关添加推荐
+
+[33mcommit 6064243e531c3f04402ff946b1b1440dca8cc3ed[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 15:06:14 2017 +0800
+
+    一键购买 buy_now.html
+
+[33mcommit a6379d267139e88585ce3d0940d2b91d195c2313[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 14:31:04 2017 +0800
+
+    租过的书（待发货，签收前） rent_book.html
+
+[33mcommit 0f9449574d6df58c68bbb79483114aee84cdfa3a[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 11:50:33 2017 +0800
+
+    我的 订单数量
+
+[33mcommit 006b218a5501c254c31df13db00850564f19b98a[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 11:44:56 2017 +0800
+
+    登录框修改
+
+[33mcommit 569ce922ee7e71807da6bb2421532a79578615f8[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 11:18:01 2017 +0800
+
+    搜索页修改
+
+[33mcommit ef2842b864bb88c68e0b920fd6b65ae59a7c06da[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 10:55:53 2017 +0800
+
+    底部栏购物车数量
+
+[33mcommit a3f5e57a749b5f8557daf890fc635d08100f5897[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 10:41:08 2017 +0800
+
+    地址页修改
+
+[33mcommit 7c0b7104bcb0796116e076313b24b0735f9c7fba[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 09:57:21 2017 +0800
+
+    全部分类筛选
+
+[33mcommit a35ae694ecbd7a8a8cba7fbf1972be8e083f23d3[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 09:56:19 2017 +0800
+
+    全部分类筛选
+
+[33mcommit 5e19d69ff6f8e4a8837af847b0fca6e20a3af0fe[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 09:34:42 2017 +0800
+
+    购物车租书续期
+
+[33mcommit d7628498c2f93a6a307779049eab99ac1631e45c[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 09:16:36 2017 +0800
+
+    购物车页面修改，租书结算按钮
+
+[33mcommit 1a1b4011fe7682b636502215f4834c90eea338ec[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 26 09:05:22 2017 +0800
+
+    全部分类页 book_classify.html
+
+[33mcommit 477e284cf8419696b935e82246ed66f3ad6d8b95[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 25 19:04:13 2017 +0800
+
+    首页样式修改
+
+[33mcommit 66b87fdb31efcf153cc7849863127e40184c8b45[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 25 18:36:19 2017 +0800
+
+    详情页（短屏 长屏 长屏展开）
+
+[33mcommit 3a93e120142a79d9c0f844e0038dbb86dd7b490b[m
+Author: ““553203705” <your email>
+Date:   Mon Sep 25 18:32:24 2017 +0800
+
+    登陆修改
+
+[33mcommit 0c2247ef5fbe96e493b303e708d9d42166aa1032[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 25 15:18:12 2017 +0800
+
+    首页 我的 卖书 购物车 修改
+
+[33mcommit ef00c146b3e5d60bda61a71dc697788ec7ae63ce[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 22 18:45:49 2017 +0800
+
+    全国地址bug修改
+
+[33mcommit b40524f97ff8016c2a931dcbb52e2f0f6f578c28[m
+Merge: 578c3b1 02d176a
+Author: ““553203705” <your email>
+Date:   Fri Sep 22 18:43:50 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 02d176a42f0a720a6080cf67fd34dac57f825bac[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 22 18:42:59 2017 +0800
+
+    全国地址选择bug修改
+
+[33mcommit 578c3b15e85709f1d71689ac1f7544967f551e93[m
+Merge: 2b8a49d d509270
+Author: ““553203705” <your email>
+Date:   Fri Sep 22 17:46:59 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 2b8a49d45ae66d831be856f97790493bda7fc189[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 22 16:37:32 2017 +0800
+
+    用户地址修改
+
+[33mcommit d5092709899eacf53f51f1cba1e4406e175836ad[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 22 16:37:11 2017 +0800
+
+    全国省市选择样式修改
+
+[33mcommit fcf1b13d40e6d955e91abb27512fb1427c29028c[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 22 16:08:32 2017 +0800
+
+    用户地址修改
+
+[33mcommit 768bba483ff6604f13505adb48d80f31f9fd5e1b[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 22 14:19:55 2017 +0800
+
+    购物车bug修改
+
+[33mcommit f2c863f17635c5ea78ebbaa4d4dd08b7e737a923[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 22 14:00:40 2017 +0800
+
+    订单部分修改
+
+[33mcommit 76ab23448f25ef39303154bf0956612e0aa35436[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 22 11:48:19 2017 +0800
+
+    租期时间bug修改
+
+[33mcommit 910f4ba0c4f68ea0d4f45f958fe3bd983571b422[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 22 10:54:56 2017 +0800
+
+    一些样式修改
+
+[33mcommit bf15d627f8b1e441924ac6f7412dc7d07d956413[m
+Merge: 13fb876 a10c376
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 22 10:13:39 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 13fb876d9e64b872c3718175087af8a55fed4b99[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 22 10:13:27 2017 +0800
+
+    ocean
+
+[33mcommit a10c37679a1c5c40542b48599e3f8508e243826f[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 21 19:44:58 2017 +0800
+
+    一些样式修改
+
+[33mcommit 40fbf2641a907e688397ef981e24d41a59bdc133[m
+Author: ““553203705” <your email>
+Date:   Thu Sep 21 19:38:19 2017 +0800
+
+    购物车、订单 bug修改
+
+[33mcommit dbb06582e0fcf8b3de88fc11bb3edf3b0a13c6e8[m
+Author: ““553203705” <your email>
+Date:   Thu Sep 21 14:17:34 2017 +0800
+
+    购物车bug修改
+
+[33mcommit fdb4287b308dbf777b27aaf164b4457c1cd8e31a[m
+Author: ““553203705” <your email>
+Date:   Thu Sep 21 14:16:20 2017 +0800
+
+    购物车bug修改
+
+[33mcommit 6b87f472df42fe007a4cf65a42250e4565b60ac3[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 21 11:55:37 2017 +0800
+
+    一些样式修改
+
+[33mcommit 89b5cc473657d84bbe8c94e410470012c68ada06[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 20 00:20:59 2017 +0800
+
+    购物车
+
+[33mcommit e4333241805d3b5488df021011ee30aa4e963127[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 20 00:14:27 2017 +0800
+
+    ocean
+
+[33mcommit 33b89546ca9ec138feed6c5cdb6092187c5e14ea[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 20 00:13:29 2017 +0800
+
+    all 去除按钮
+
+[33mcommit ce487c498bc3a2aca182491fe85ab126dba71140[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 20 00:01:14 2017 +0800
+
+    一些样式修改
+
+[33mcommit a40d33fcb0f2038c4973e7c91de5a5e85ced2e26[m
+Merge: 9f3ec8e 91d0f8b
+Author: li_yun <li_yun@xazz.vip>
+Date:   Tue Sep 19 23:35:34 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 9f3ec8e945b03314241b7ff131799a365d742aae[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Tue Sep 19 23:35:27 2017 +0800
+
+    cash
+
+[33mcommit 91d0f8bba6bb32ab8d8d2c6e0b270736320c8ec6[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 23:34:36 2017 +0800
+
+    绘本页图片修改
+
+[33mcommit 2081f15527e2e9257ce9abb186de9529e7c7f5d8[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 23:28:15 2017 +0800
+
+    vip修改
+
+[33mcommit bab3613d9c6109578ee2bc7ad87899c94d5b2695[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 23:10:48 2017 +0800
+
+    图书详情修改
+
+[33mcommit 795f5e3f43a807640bb678da5a65ffad32523926[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 23:07:10 2017 +0800
+
+    图书详情修改
+
+[33mcommit 131286934b5793748f151867a4ac2ca3e6ebfdbd[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 23:06:10 2017 +0800
+
+    图书详情修改
+
+[33mcommit 91015b6ead15eeef1f7637c0fd812475e44789a7[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 22:50:33 2017 +0800
+
+    购物车图片修改
+
+[33mcommit 5ac20635ea184aac12c40ddb7566d3df06b3160c[m
+Merge: b13a148 da8fe7b
+Author: ““553203705” <your email>
+Date:   Tue Sep 19 22:33:58 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit b13a148055bfbe43a9d7b2f0722d169b5c395e99[m
+Author: ““553203705” <your email>
+Date:   Tue Sep 19 22:33:51 2017 +0800
+
+    我的界面bug修改
+
+[33mcommit da8fe7b1e48f10b9a392154080c35d680af8045c[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 22:24:28 2017 +0800
+
+    vip 修改
+
+[33mcommit c6d0dc29344ea73b73c3979b4c123952ccc8fc6f[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 22:06:22 2017 +0800
+
+    order_list
+
+[33mcommit 402475913630e2556e012720f08d2d80f69a31fa[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 21:58:32 2017 +0800
+
+    order_list修改
+
+[33mcommit d84bcc0578ca5de53601b4ef2f3c0459342f822c[m
+Merge: 591a5ba 2460cd7
+Author: ““553203705” <your email>
+Date:   Tue Sep 19 21:55:29 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 591a5ba40f49b678ef14135f4eb6f20e6227af06[m
+Author: ““553203705” <your email>
+Date:   Tue Sep 19 21:55:20 2017 +0800
+
+    购物车删除bug修改
+
+[33mcommit 2460cd799f0a83592b85939e82384b807080b7c1[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Tue Sep 19 21:47:13 2017 +0800
+
+    查看物流完成
+
+[33mcommit 1d6daad397a7626f62efc290ee10252cd5258c9b[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 21:40:17 2017 +0800
+
+    order_list
+
+[33mcommit ce18c0cc1f5e140a1c45f4f1ca2c4e44c7a3d330[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 21:38:39 2017 +0800
+
+    order_list
+
+[33mcommit a4cc62b0c1bf07b445972fd4161b6d774999e052[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 21:23:21 2017 +0800
+
+    order_list
+
+[33mcommit b46158cec744735106720d10c38c228488497f5f[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 20:30:41 2017 +0800
+
+    all.html
+
+[33mcommit 9902e7789ff0eb59bb663992cc3b73c7b92af8a6[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 20:19:47 2017 +0800
+
+    all.html
+
+[33mcommit bf7c1b2267e30dcc597a5763ac3240ae9eb746b3[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 20:11:54 2017 +0800
+
+    付款
+
+[33mcommit 14a62423e289ae8633f8ef592b00d4068d343bd7[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 19:59:32 2017 +0800
+
+    购物车
+
+[33mcommit 1d0e78c29bc829626ff71d91118caf8e836dc67c[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 19:43:37 2017 +0800
+
+    返回bug修改
+
+[33mcommit 091eeb0d375980f818de4d2ed8607f9d8bfa7ead[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 18:41:50 2017 +0800
+
+    购物车
+
+[33mcommit 8d373a7cae25eefd5ff4bd40627b17c0d45551d4[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 18:33:37 2017 +0800
+
+    购物车
+
+[33mcommit 0512e852117e5e6a32066a081c1a7d24fdeb65cc[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 18:31:18 2017 +0800
+
+    购物车
+
+[33mcommit c0eacc93e0b2173e4063b9af47bb9ce2ea3d7c06[m
+Merge: d39bb54 3143e3f
+Author: ““553203705” <your email>
+Date:   Tue Sep 19 18:28:29 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       goods/all.html
+    #       order_form/buy.html
+
+[33mcommit d39bb546af341d1df6794dc80830547b18654eae[m
+Author: ““553203705” <your email>
+Date:   Tue Sep 19 18:26:20 2017 +0800
+
+    购物车删除bug修改
+
+[33mcommit 3143e3f1392ffe83ddbefbee4db1c69879cc6c9c[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 18:10:42 2017 +0800
+
+    去除禁止滑动
+
+[33mcommit 18036293ac2af41a8230d5205035bba373202697[m
+Merge: 2618766 0d87b1f
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 18:09:16 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 26187661c25dfdf9fc4c4546ec4ccb266a82c8d5[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 18:09:03 2017 +0800
+
+    去除禁止滑动
+
+[33mcommit 0d87b1fd86dc75f3347a44374f20df4281df10ee[m
+Merge: 690a383 95b8332
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 17:59:44 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 690a383a252f4148dc086f5450bcfca5209bda12[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 17:59:35 2017 +0800
+
+    vip
+
+[33mcommit 95b8332bf958262b21d208d0785f437b3cac1c07[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 17:57:58 2017 +0800
+
+    租书时间
+
+[33mcommit 04b25762b98a2d714dd9fa561ed323dc2a8835a8[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 17:57:04 2017 +0800
+
+    vip
+
+[33mcommit 0cfea7083cd5f24f884cb22ec4286c884d7ff625[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 16:45:36 2017 +0800
+
+    vip
+
+[33mcommit e7d73ab4c93dec54f9c84f67ac468210fa07041d[m
+Merge: 3e431fc 3500556
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 16:30:28 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 3e431fc836af59a9883839795a191cc55aac1659[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 16:30:20 2017 +0800
+
+    打开微信授权
+
+[33mcommit 3500556ab22d0bebc4d09231ce0646ffbb35d8b1[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 16:15:03 2017 +0800
+
+    一些样式修改
+
+[33mcommit 30384e1615e259f20ce6d04a541e2be6f0dd3dc7[m
+Merge: 286ab2d c867a03
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 15:53:41 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 286ab2d8117609e7ee0d82e2d22155f40dfb95a6[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 15:53:32 2017 +0800
+
+    订单列表分页
+
+[33mcommit c867a03b508aee9247273d8b2929de2604c731f8[m
+Author: ““553203705” <your email>
+Date:   Tue Sep 19 15:34:23 2017 +0800
+
+    购物车删除bug修改
+
+[33mcommit 3100c8901a4618ffa63917fda27e1fa0f8419277[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 15:21:11 2017 +0800
+
+    收书订单列表分页
+
+[33mcommit 8c762a921e850a71f46deccafeee32572d735e14[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 15:12:10 2017 +0800
+
+    借书订单列表分页
+
+[33mcommit 0668ed6b33981a287dc4bdada117093959210d23[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 15:08:34 2017 +0800
+
+    借书订单列表分页
+
+[33mcommit b48f447acc099b42f9ca4d56a687c2a815a29cd9[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 15:04:45 2017 +0800
+
+    购买订单列表分页
+
+[33mcommit e43e1d709fd2945617169f361e2082b5619f681c[m
+Merge: 0478161 5de0fad
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 14:53:43 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 0478161eec88335863b8a73cf2dc3f4c5275b6a3[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 14:53:35 2017 +0800
+
+    购买订单列表分页
+
+[33mcommit 5de0fad409fa2aeac751e881ea8c9f9b93865023[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 14:49:11 2017 +0800
+
+    我的收书 没有下单时
+
+[33mcommit d295408132522312a3bbf0f78f876460af348b9d[m
+Merge: 1b25ecf 47b8ca4
+Author: li_yun <li_yun@xazz.vip>
+Date:   Tue Sep 19 14:37:35 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 1b25ecf94bf1e1ed2d32b6edefcc8e7c0dcb2700[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Tue Sep 19 14:37:28 2017 +0800
+
+    图书详情添加编辑推荐和 公众评价内容
+
+[33mcommit 47b8ca4ce430b43939096591f3da57e535702ff0[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 14:28:49 2017 +0800
+
+    支付判断
+
+[33mcommit 0fb4c0d9014b96c832c0d57ee798b51e32b4cd25[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 14:27:05 2017 +0800
+
+    支付判断
+
+[33mcommit a7fd9506791e409e01e9b0cd19c37e5c6013fdbe[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 14:25:29 2017 +0800
+
+    支付判断
+
+[33mcommit 461eb25017974a904160c0d77ec83f7b5d591dea[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 14:21:24 2017 +0800
+
+    支付判断
+
+[33mcommit 89052949dc54ebb3b50cb34c1a11fbf11b8158b7[m
+Merge: 7e53160 1aecf48
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 14:15:39 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 7e531605fe7cd7c4390c906f4f8e324e0508bd43[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 14:15:31 2017 +0800
+
+    取消微信授权
+
+[33mcommit 1aecf48229436d736b46a1245334105029075eba[m
+Author: nanyixuan <121066669@qq.com>
+Date:   Tue Sep 19 13:57:30 2017 +0800
+
+    同步购物车。
+
+[33mcommit b387999a3b713cf7d87f6584019231264ac0c1b0[m
+Merge: e19564e e14a885
+Author: nanyixuan <121066669@qq.com>
+Date:   Tue Sep 19 13:57:19 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit e14a8858f822b471e80051a8a468d4e903108db1[m
+Author: ““553203705” <your email>
+Date:   Tue Sep 19 13:52:57 2017 +0800
+
+    购买订单_取消订单修改
+
+[33mcommit f00cb3adf70ca6d605d9e379f7604115823894a4[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 12:26:13 2017 +0800
+
+    完成支付
+
+[33mcommit ee56c64e3ecea427f467a0938718aa5c7e582c00[m
+Merge: e0f3ee5 552d6c2
+Author: ““553203705” <your email>
+Date:   Tue Sep 19 12:04:09 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit e0f3ee5782fddbde9020989802de50a54d605b65[m
+Author: ““553203705” <your email>
+Date:   Tue Sep 19 12:03:58 2017 +0800
+
+    代发货、已发货、代付款，最新上架排序修改
+
+[33mcommit 552d6c2bc2d1a8b8158adc14fcb7f9e88c1c8401[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 12:03:41 2017 +0800
+
+    发现页自定义修改
+
+[33mcommit df19d2e1f3f3c013c5eeb4405b6428dfb553d1ff[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 11:58:19 2017 +0800
+
+    支付成功页 succses.html
+
+[33mcommit e19564e1397f2ace328458f68e57f11a4cabfd75[m
+Merge: 14913bd 8306767
+Author: nanyixuan <121066669@qq.com>
+Date:   Tue Sep 19 11:07:22 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       car_jie_mai.html
+
+[33mcommit 83067677eefe83f9bee0c1e648ce44f456656faa[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 10:56:39 2017 +0800
+
+    取消微信认证
+
+[33mcommit 86a8baec0dcd29ad15ce5a522ce73b1ca8ddcb88[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 19 10:43:14 2017 +0800
+
+    css 修改
+
+[33mcommit 62b4ad98826a14970f64745b829b9997c6c33fbe[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 10:39:27 2017 +0800
+
+    lease pay
+
+[33mcommit 96125eb215693bccf08ec5785de072a8b596b396[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 02:12:08 2017 +0800
+
+    address
+
+[33mcommit 99a330d865ee6a6255033adda70138bf81dc4546[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 02:11:36 2017 +0800
+
+    address
+
+[33mcommit 157dc5917dc65481e976ccc609f0d4329fd1fc09[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 02:09:45 2017 +0800
+
+    123
+
+[33mcommit 4b5beae94cc1b2b8b08fd7b1871fd0d43ac99586[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 02:05:58 2017 +0800
+
+    select city
+
+[33mcommit 3c04e5e2ba58271a4605879c4802c0a56e097ae9[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 02:03:36 2017 +0800
+
+    select city
+
+[33mcommit 1aac75b7498fc9315a911a82444b0b0c2736fc0c[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 01:57:19 2017 +0800
+
+    select city
+
+[33mcommit 729beafbae80dcf4cf7d94aaaf73b5b83a89ec5b[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 01:56:20 2017 +0800
+
+    select city
+
+[33mcommit 07aac74db90f9a6bcfeebc367c19a26a5d72b531[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 01:10:24 2017 +0800
+
+    ocean
+
+[33mcommit e167debc26df5dc722878685493cd091dc053cc6[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 00:56:39 2017 +0800
+
+    ocean
+
+[33mcommit 09e17b700e329b6877cd75be596d34907a3a0cc4[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 00:53:50 2017 +0800
+
+    ocean
+
+[33mcommit cd01ffc19e297989c2953c7c7472995dc53c4275[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 00:52:39 2017 +0800
+
+    ocean
+
+[33mcommit 9e0763b3113aaed1ca94c271f0fb2e4809c7643b[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 00:51:09 2017 +0800
+
+    ocean
+
+[33mcommit f46b985731632a7d7364d3d81181fa3db5cdd872[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 00:50:23 2017 +0800
+
+    ocean
+
+[33mcommit 1b897bf3abc64e3039fa20194086838e8d1182a5[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 00:50:00 2017 +0800
+
+    ocean
+
+[33mcommit 639e8988734a6dd56c4682046c9666748300e63a[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 19 00:08:43 2017 +0800
+
+    微信支付回调测试
+
+[33mcommit f8b939dc8e4b36bebd6cbb60108bcf90dc31ed40[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 23:59:44 2017 +0800
+
+    微信支付回调测试
+
+[33mcommit d5f62621183d8b1d8bafa33a813c2e037d0bb8d1[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 23:43:16 2017 +0800
+
+    微信支付回调测试
+
+[33mcommit ba6b5d572c060322efcdba3569654f10252f0e68[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 23:32:29 2017 +0800
+
+    微信支付回调测试
+
+[33mcommit 44d243b5d4235d398529f0ebc68e9ebca5fc4f4c[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 22:46:12 2017 +0800
+
+    微信支付测试
+
+[33mcommit 658d2804b02f72a453ed300ff840565bf2b3d26f[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 22:32:55 2017 +0800
+
+    微信支付测试
+
+[33mcommit 11e04cc9348c2375b04af7165a8baa764795ac19[m
+Merge: 450ea07 a8f9425
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 22:22:35 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 450ea077662add1853e774f63edc2046780cf0a8[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 22:22:26 2017 +0800
+
+    微信支付测试
+
+[33mcommit a8f94258cfc6a4a5d7802f6e5309fc910a223508[m
+Author: ““553203705” <your email>
+Date:   Mon Sep 18 21:59:43 2017 +0800
+
+    全部订单
+
+[33mcommit 88ea41103c3a16489b38bf36b4cd7614d0b16b89[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 21:51:45 2017 +0800
+
+    购物车同步
+
+[33mcommit 36b8322af440e7ff3ee29737975643d5e08d4854[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 18 21:05:53 2017 +0800
+
+    绘本页加购物车
+
+[33mcommit 14913bdf0768255b1209fb0abbcb6215e238bf9f[m
+Merge: b02cd60 a3d4694
+Author: nanyixuan <121066669@qq.com>
+Date:   Mon Sep 18 20:57:38 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit b02cd60ee075bd76edacb2cc718d37364b0a67ff[m
+Author: nanyixuan <121066669@qq.com>
+Date:   Mon Sep 18 20:57:23 2017 +0800
+
+    同步购物车。
+
+[33mcommit a3d46947eb4bb09b3d9afe79961bd6412aa6baaa[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 20:49:22 2017 +0800
+
+    支付测试
+
+[33mcommit 01ba8cc3e2020e501d9b725374efe87af539e432[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 20:41:36 2017 +0800
+
+    支付测试
+
+[33mcommit e859866207128cf497beca41b876af1a9353a5e8[m
+Merge: 21ae683 e8a902e
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 20:39:18 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 21ae683527b78138d0a44ea075b4a20d0389519a[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 20:39:03 2017 +0800
+
+    支付测试
+
+[33mcommit e8a902e56e1212fa7120c23b47b6ac98101f8096[m
+Author: nanyixuan <121066669@qq.com>
+Date:   Mon Sep 18 20:25:07 2017 +0800
+
+    添加本地购物车列表排序。
+
+[33mcommit d133cc890d2c8245769dd10709b16bda9a69bd25[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 20:21:55 2017 +0800
+
+    context path
+
+[33mcommit 0a91bdbd44e23a6b18917eeb3cb2db9d2a4a913b[m
+Merge: 2988cf3 ed6f15f
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 20:10:44 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 2988cf318bca2f2267865879e058736413fd687d[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 20:10:22 2017 +0800
+
+    支付测试
+
+[33mcommit ed6f15f64c27d504fb22046dff3e391d9232e319[m
+Merge: 21e9c6a b3b06dc
+Author: guoshuai <2286851>
+Date:   Mon Sep 18 20:00:45 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 21e9c6a31c0a1a56b339c6c5a7a3c3999c5e2acd[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 18 20:00:34 2017 +0800
+
+    发现页加购物车
+
+[33mcommit b3b06dc4e998ca3ddfdb085ba9113efb051ea4a1[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 19:53:44 2017 +0800
+
+    支付测试
+
+[33mcommit 5053aaea044d8d43b210658b3c55c1c88f4ecf57[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 19:52:52 2017 +0800
+
+    支付测试
+
+[33mcommit a8ef7f2de33e669ad026aa28a017f4e5b7d4c41f[m
+Merge: ad29822 e050ead
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 19:51:37 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit e050ead9c73efc85a53bdd5bf33449b269460252[m
+Author: ““553203705” <your email>
+Date:   Mon Sep 18 19:50:33 2017 +0800
+
+    订单
+
+[33mcommit ad29822ee269367ede25499712a024bb50753b48[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 19:50:24 2017 +0800
+
+    支付测试
+
+[33mcommit 0003f922ae93ef33279fee8199c0d921802b4611[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 19:43:23 2017 +0800
+
+    支付测试
+
+[33mcommit d2dc5131972690e1ced502f6395b6a20c5fa29ac[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 19:39:25 2017 +0800
+
+    支付测试
+
+[33mcommit a9bd6d3efb13e0df858102a7d5bb80ea8dd84053[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 19:37:42 2017 +0800
+
+    支付测试
+
+[33mcommit fae63a8c3c75606acc9ccc227e15fa1618c0cfd3[m
+Merge: 1d98847 3e64dc0
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 18:17:47 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 1d988476ad67517dc2596d3c7118514b48306bd4[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 18 18:17:38 2017 +0800
+
+    支付测试
+
+[33mcommit 3e64dc0d4e02b0de3abf672ef03f63e627041db9[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 18 17:48:13 2017 +0800
+
+    下拉详情修改
+
+[33mcommit 573b7dd8475c78e95f03007862105dc13ca4ebe2[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 18 17:43:27 2017 +0800
+
+    下拉详情
+
+[33mcommit 2379504019aee88194373e808b6d4aac6dc5ddd4[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 18 14:36:40 2017 +0800
+
+    下拉详情
+
+[33mcommit edc0f81b3e143cf69962c5f35c1bab2bff075f87[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 18 14:25:23 2017 +0800
+
+    下拉详情
+
+[33mcommit d583947652a5801bf2e0e077ec144232096f02fe[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 18 10:38:30 2017 +0800
+
+    豆瓣修改
+
+[33mcommit 7ecd8a5ce44e96ba53346e1af2220e76e2c1c436[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 18 09:42:28 2017 +0800
+
+    绘本首页样式修改
+
+[33mcommit 53f1b7a95adead9416f2bcba67729a57a4f5615a[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 18 08:54:25 2017 +0800
+
+    订单页样式修改
+
+[33mcommit 0e839d5069a3ea01c366a57ac2e5632647f6da2f[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Sun Sep 17 22:16:00 2017 +0800
+
+    跳转
+
+[33mcommit 809b5fb0921eb276847afc3cee9c9982106c79a1[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Sun Sep 17 22:09:25 2017 +0800
+
+    css
+
+[33mcommit acc350060fb94b0ae2d25917b0aaf8f8c8806d20[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Sun Sep 17 21:53:12 2017 +0800
+
+    ocean
+
+[33mcommit 54f5ebb871cbd6b78177d9c5f68eea39bce22f96[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Sun Sep 17 21:52:43 2017 +0800
+
+    订单列表样式
+
+[33mcommit 72ef162f09a6e50f1beef41c93734eb86984747e[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Sun Sep 17 20:36:26 2017 +0800
+
+    订单状态调整
+
+[33mcommit 0f6c65423611c114958df009f36df415722e779c[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Sun Sep 17 15:26:48 2017 +0800
+
+    订单状态调整
+
+[33mcommit 496140879ad71d6a7bb05c512451302037f38692[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Sun Sep 17 14:52:43 2017 +0800
+
+    订单列表调整
+
+[33mcommit 094ca0f7b9923980aaaf3a64998cbb39f5705650[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Sat Sep 16 21:44:09 2017 +0800
+
+    订单列表调整
+
+[33mcommit abb804156f76dc43ef8b5aba3f155c1ef83222aa[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Sat Sep 16 18:00:27 2017 +0800
+
+    订单详情图片显示
+
+[33mcommit 8503ac46a86086745eb2b88569be8341083b4a98[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Sat Sep 16 17:36:58 2017 +0800
+
+    一些样式的修改
+
+[33mcommit 3d91441fb1f289c68b79a3fc281ef763ba52a6b4[m
+Author: guoshuai <2286851>
+Date:   Sat Sep 16 16:59:28 2017 +0800
+
+    订单页样式修改
+
+[33mcommit a958927c40301c844a1e22dcca4ce7fc33545cf6[m
+Merge: d494215 1e6eb9f
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 23:55:43 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit d4942154b0995f7c7e52e4f635bfc3c93617c9ca[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 23:53:40 2017 +0800
+
+    订单页样式修改
+
+[33mcommit 1e6eb9f3ce3c791949c6eda8ce865c58a40adcc0[m
+Merge: 37184d1 d6a84ca
+Author: ““553203705” <your email>
+Date:   Fri Sep 15 23:46:32 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 37184d16182e3aa9ef6bfd5f236923aedb6f70b5[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 15 23:46:09 2017 +0800
+
+    订单bug修改
+
+[33mcommit d6a84cace69e02d04cd11d51bf681b39e040ffda[m
+Merge: ceb167e 55ae9d7
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 23:45:44 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit ceb167e774ae0d48b3d0648a5e12073361a2120a[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 23:45:33 2017 +0800
+
+    绘本
+
+[33mcommit 55ae9d731f9753df2050bffb79d1ee7286ab0d1a[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 23:29:00 2017 +0800
+
+    物流 express.html
+
+[33mcommit c92ef988d74e5b4956e2a1e67ac974e0f503c10c[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 22:32:02 2017 +0800
+
+    绘本页样式
+
+[33mcommit 3426c50f0abe9a1428b00d0395235a67f172b1b0[m
+Merge: 84e4ea5 367d756
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 22:29:33 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 84e4ea5a44ce3c0da0dc08ae5daad504559f834e[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 22:29:15 2017 +0800
+
+    订单页 底部栏样式
+
+[33mcommit 367d756641b0ac05624a5c58181a4178d1af2a91[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 22:24:53 2017 +0800
+
+    绘本
+
+[33mcommit 39504bb8b472936067e1cf9bf7a924a869cd8867[m
+Merge: 7bf4aef c24e3b3
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 22:20:05 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 7bf4aefcf7705d6cf78c8a86e6c6086a656294d8[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 22:19:53 2017 +0800
+
+    多次提示登录， 提示定位
+
+[33mcommit c24e3b3106b8f72fa2fcf166905ea69d70763d3f[m
+Merge: 5227ca7 0c2ae8c
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 22:08:09 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 5227ca74de16497b045907945217f22ace11a3e5[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 22:07:34 2017 +0800
+
+    购买页样式修改
+
+[33mcommit 0c2ae8c9c723016130930c4fcfc25d799c723d9a[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 22:04:39 2017 +0800
+
+    order
+
+[33mcommit 29dce484cc8cf92687572ef181f638ae83734e2a[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 21:57:49 2017 +0800
+
+    待付款 已发货 待收货 goods
+
+[33mcommit 6588d9f7e702352103cee36f6991b13588c20d95[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 19:51:20 2017 +0800
+
+    title
+
+[33mcommit 0419db9a2898a396bf426bf14253a5ff71c16efa[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 19:29:22 2017 +0800
+
+    collect
+
+[33mcommit 299135c5376d332513661def4366e7bf5e3325a1[m
+Merge: dd2c0e7 0258aac
+Author: ““553203705” <your email>
+Date:   Fri Sep 15 19:22:56 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit dd2c0e735f70b608b4186aa0455161eefacdec41[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 15 19:22:40 2017 +0800
+
+    添加最新上架排序
+
+[33mcommit 0258aac9fde05f2b554cf7c8c188dae09784a938[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 19:13:34 2017 +0800
+
+    图书列表完成
+
+[33mcommit f9afca65897a91cb02d5a0d50470c941affb5a24[m
+Merge: c8a7bbf 61df818
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 18:53:10 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit c8a7bbfbf877c6d4ac75c8fdb2ed01ee9f3b90ec[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 18:53:00 2017 +0800
+
+    图书列表完成
+
+[33mcommit 61df81894d8b2528eff0a64b1027acb86e0024a0[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 18:40:59 2017 +0800
+
+    index
+
+[33mcommit e706d8dcbf5a2b223bb7f4a02390187ad9ad8dab[m
+Merge: a109bf1 cc76505
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 18:40:29 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit a109bf1b7c651ab0fe8e2833088b73f5966fd89b[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 18:39:48 2017 +0800
+
+    index
+
+[33mcommit cc76505da8c1f9fd3af5fa2d7eca5ea799dd4fe3[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 17:58:56 2017 +0800
+
+    drop
+
+[33mcommit 401ffd6a091d75442bf8b86df6cce7adfe46b830[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 15 17:57:46 2017 +0800
+
+    全部订单-回收订单
+
+[33mcommit 72d389cb3713522ad2b2b2465047bab899f8aff1[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 17:55:18 2017 +0800
+
+    买书地址
+
+[33mcommit ac8470fef251b27cf57ec96fa1b186cd92c7bda2[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 17:51:08 2017 +0800
+
+    buy confirm
+
+[33mcommit bd05c249d236748e8967bb3c76e1ccc55a972c72[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 17:50:23 2017 +0800
+
+    buy confirm
+
+[33mcommit da5069a82dbdcf5c9074a90045ce010a783edec4[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 17:48:25 2017 +0800
+
+    buy confirm
+
+[33mcommit a7ff27249ebd6b7948c46b87994380c45c3592ba[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 17:40:29 2017 +0800
+
+    buy confirm
+
+[33mcommit 7178f0d36c545266fb63c5fc2fa377dab09745ad[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 17:27:51 2017 +0800
+
+    文件名称修改
+
+[33mcommit 96df0c51073e74629b1556517b87561f4fba29f2[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 17:20:41 2017 +0800
+
+    ocean
+
+[33mcommit 5cc487f8276ac7ab29013f6eeba8954a7bde04cb[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 17:11:00 2017 +0800
+
+    全部订单
+
+[33mcommit b103c7df9e6c7ebe6986ddfd6eefc6153ff31e3f[m
+Merge: 9fed0ae 3580c54
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 17:02:16 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 9fed0aec4cc6ba38b17137be04acd036dd169c97[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 17:02:04 2017 +0800
+
+    租书订单提交
+
+[33mcommit 3580c54bd01d501e7e63621d33d066ae42440b85[m
+Merge: 359fa6e a5acc4b
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 16:47:29 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 359fa6e796cefede029a82fc63f5c1b6fce245a0[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 16:47:20 2017 +0800
+
+    code
+
+[33mcommit a5acc4bce78d2b8242cad4565ca5355ce0655c27[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 15 16:40:58 2017 +0800
+
+    借书bug修改
+
+[33mcommit cdab4d0434f4964f820929f3ad9fa9e755cdbbe8[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 16:39:34 2017 +0800
+
+    code.html
+
+[33mcommit a1efdddee174831b5f3e18f3224233da1dc6d04d[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 16:37:52 2017 +0800
+
+    code
+
+[33mcommit 6e0d1788ad02b356763b39c937d059e9ec989a50[m
+Merge: 2c1bb9e ce5cdb5
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 16:16:02 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 2c1bb9e23acacabb772c51cda140e303fcf4ea47[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 16:15:53 2017 +0800
+
+    borrow_day
+
+[33mcommit ce5cdb5d3770e77a0d618fb98a25db389a690557[m
+Merge: 0e2d108 d391f8e
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 16:09:18 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 0e2d10857f49bac1488f258bfa96be4c8634cbf1[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 16:09:09 2017 +0800
+
+    加载更多~
+
+[33mcommit d391f8e9468db234585fb3042f0fd51b5456cf1a[m
+Merge: 73ccf5b 6212845
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 15:48:58 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 73ccf5b15b4a3be89f01379034a9639700254c1e[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 15:48:47 2017 +0800
+
+    search 样式修改
+
+[33mcommit 621284542122c437138b7bf99a6410f655400383[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 15:23:39 2017 +0800
+
+    ocean
+
+[33mcommit cdb7c361d48046c7d7c2d72cfebbc27b6429ffe7[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 15:17:56 2017 +0800
+
+    回收
+
+[33mcommit 5849c931b96b057d5d43ed376549d2921642e2df[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 15:09:10 2017 +0800
+
+    buy 添加地址
+
+[33mcommit d7d970f9ea8b8691d18a97d0d70afa752f344d17[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 14:52:56 2017 +0800
+
+    borrow_day
+
+[33mcommit 1678fde8346669494b94bf23c5c4d2d0f1707565[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 14:48:12 2017 +0800
+
+    回收
+
+[33mcommit 2ea664c97538dd88a85595fded2614989b5cc022[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 14:27:53 2017 +0800
+
+    ocean
+
+[33mcommit 025001bc21326772da214a96847a675ef00a4c4f[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 14:10:09 2017 +0800
+
+    ocean
+
+[33mcommit a198035f64aa78235e24fc1236d730981edd4ef0[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 14:01:01 2017 +0800
+
+    购物车-借书
+
+[33mcommit 83e80f947e36c24d0c746c16d4f3bf330e0379ce[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 13:40:40 2017 +0800
+
+    购物车-借书
+
+[33mcommit cd01fe3997dbd938dfad606d540479284d2787ae[m
+Merge: 6ddd79c 4caa203
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 12:25:54 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 6ddd79c3f246f3e9c4709607720e0dfc2ad77ce1[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 12:02:53 2017 +0800
+
+    recover_order
+
+[33mcommit 4caa203da43d43aa528bc06e5ab89cded90d70a6[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 15 11:44:43 2017 +0800
+
+    还书修改
+
+[33mcommit 88550d80b7470356ee565b025b5f6841670147db[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 10:14:25 2017 +0800
+
+    收书 完
+
+[33mcommit a4524498d19477eba31abef35da11ebefd407b62[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 10:00:09 2017 +0800
+
+    取件地址 tips
+
+[33mcommit 50a78f529e90f7bf72ead7853bd9fb537847a278[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 09:49:20 2017 +0800
+
+    地址选择
+
+[33mcommit 92f77fff42a680c96583dd505bdedd68e924d20e[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 09:22:49 2017 +0800
+
+    recover_order
+
+[33mcommit 2a17a8c1cd9ea2835a0bd31e17b02280dbe84303[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 15 09:05:20 2017 +0800
+
+    豆瓣评分 暂无
+
+[33mcommit 46ac07b109a388b21e806d7cce5d1e0b6a45e67f[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Fri Sep 15 08:53:00 2017 +0800
+
+    生成收书订单
+
+[33mcommit de99afa68dadf349f9b1651f65f9608fd43c1cc1[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Thu Sep 14 21:45:03 2017 +0800
+
+    完成地址管理
+
+[33mcommit 0e9508b70373912684df99c66efbc1cf66e00ba8[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Thu Sep 14 19:35:45 2017 +0800
+
+    收书下单
+
+[33mcommit 65e688ca45bcea2cf39ff738dd0800a066c5970b[m
+Merge: b8ff0c4 bc410cb
+Author: guoshuai <2286851>
+Date:   Thu Sep 14 19:11:20 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit b8ff0c45c28a1bccf3732e3d0e401354743827d8[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 14 19:10:08 2017 +0800
+
+    豆瓣
+
+[33mcommit bc410cb40dd787aaa17ea8f81671876332a425b9[m
+Merge: def9b71 bbf6549
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Thu Sep 14 18:45:33 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit def9b717af46554b94d2420b1a565399d9ed8d1a[m
+Merge: 197e25f 4d30e48
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Thu Sep 14 18:45:27 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit bbf6549ea4c9a110b00c78b42a3e5d5130214a36[m
+Author: ““553203705” <your email>
+Date:   Thu Sep 14 18:45:27 2017 +0800
+
+    用户地址bug修改
+
+[33mcommit 197e25f8e0e22e50eee3e5451cc99c4238164096[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Thu Sep 14 18:45:18 2017 +0800
+
+    回收图书 添加 删除
+
+[33mcommit 75e5b8a3eed11bde84c6d135bde2df6b45e038f6[m
+Merge: c9b8c45 4d30e48
+Author: ““553203705” <your email>
+Date:   Thu Sep 14 18:44:58 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       car/car_jie_mai.html
+
+[33mcommit 4d30e48457bf42244bb22448f7e5d31f655a0cd8[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 14 18:18:59 2017 +0800
+
+    book detail 评分
+
+[33mcommit c9b8c459f97852e12052bd1d078482140152bb73[m
+Merge: bd85d44 342b955
+Author: ““553203705” <your email>
+Date:   Thu Sep 14 17:58:42 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       user_address.html
+
+[33mcommit bd85d44572bed2f61fa4721a70f077788236af81[m
+Author: ““553203705” <your email>
+Date:   Thu Sep 14 17:58:13 2017 +0800
+
+    订单明细完成
+
+[33mcommit 342b9554f9de205af6e4d6b2f666ba16ab701d84[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Thu Sep 14 17:12:09 2017 +0800
+
+    返回键
+
+[33mcommit 5dedd3e69198146364dd9c2fc9c8c118875dcab1[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Thu Sep 14 16:58:53 2017 +0800
+
+    购物车内跳转
+
+[33mcommit 41d396d09a654d7a3cbbd1c31f213cc8d7c728dc[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Thu Sep 14 16:55:49 2017 +0800
+
+    图书详情， 添加购物车后跳转
+
+[33mcommit ca0526c8c07eccf08733d5932dadd45a2afa4f85[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 14 15:42:14 2017 +0800
+
+    book detail 跳转豆瓣
+
+[33mcommit 9c90db26e132d97844b7441951443862c2af8a3c[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 14 15:01:06 2017 +0800
+
+    book_detail
+
+[33mcommit a93c45f0351f1250e3afaf2a0f5807509fc246af[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 14 14:17:31 2017 +0800
+
+    title
+
+[33mcommit ad01a2de7d94b99c1afa8ec36b2cdd84a8dffac4[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 14 14:04:30 2017 +0800
+
+    banner
+
+[33mcommit a8eb309f1905708dc6eea026127bc8950c14aceb[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 14 12:51:31 2017 +0800
+
+    banner
+
+[33mcommit a9f92f4a185bfa01eab4ce1711b616ba31b9d0c0[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 14 11:58:51 2017 +0800
+
+    banner修改
+
+[33mcommit 9729adf501dc05c6ebf0579088e5519793c60482[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 14 09:36:44 2017 +0800
+
+    回收页 时间修改
+
+[33mcommit 5520fbcd8183d3c2bb0bf20f1cc1bd9a88970fb8[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 14 09:12:20 2017 +0800
+
+    address修改
+
+[33mcommit 39add01b27217cf13de93573d5cb9664ca547c84[m
+Merge: f117343 777e0c2
+Author: guoshuai <2286851>
+Date:   Thu Sep 14 08:58:37 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit f1173432c29f8b578bb73c00ca8b2ae0b46fc7ac[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 14 08:58:22 2017 +0800
+
+    活动页修改
+
+[33mcommit 777e0c21374d496cc975a1c7908affd4ce8a5d95[m
+Merge: 430470f 90b40c3
+Author: ““553203705” <your email>
+Date:   Wed Sep 13 21:08:07 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 430470ff217b48448bf3e879841c017bff653725[m
+Author: ““553203705” <your email>
+Date:   Wed Sep 13 21:07:47 2017 +0800
+
+    订单查询修改
+
+[33mcommit 90b40c35cd4f18fa127ab11da77875a0ddf2e1b5[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 13 19:32:14 2017 +0800
+
+    index推荐
+
+[33mcommit e0b43830585f9b39f329ca24a08ed0480f7ed0ac[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 13 19:00:35 2017 +0800
+
+    index推荐
+
+[33mcommit 0e68b2b67d39b8d33f83dd1f8eb5958e4d4fc016[m
+Author: ““553203705” <your email>
+Date:   Wed Sep 13 18:38:25 2017 +0800
+
+    消息列表完成
+
+[33mcommit 13dbf364fab92792237e3894b8eaa42db7fb2ac7[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 18:34:40 2017 +0800
+
+    图书回收
+
+[33mcommit 0a627ff1ce5f39f5affa07c6090b6672a82a42a6[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 18:30:19 2017 +0800
+
+    调整登录弹出，图书回收
+
+[33mcommit 20e05b2f926de77dea5734c476cb92f291310706[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 18:10:43 2017 +0800
+
+    recycle book
+
+[33mcommit 1eada05a11e80c913e9a1ea58c0c890b660b83c7[m
+Merge: 75fb3b4 15ca21f
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 18:09:30 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 75fb3b4ecada59d4748c6805eb6af4c06b2678ed[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 18:09:19 2017 +0800
+
+    recycle book
+
+[33mcommit 15ca21f481848c97a185463abdc41d8958ae6034[m
+Merge: 8c5e2f4 69c13b5
+Author: guoshuai <2286851>
+Date:   Wed Sep 13 17:53:12 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 8c5e2f47f3a449fa7ee1ba36ff49249bb68e2f09[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 13 17:52:53 2017 +0800
+
+    扫码修改
+
+[33mcommit 69c13b55855836a6597ef770172219dcceb13e16[m
+Merge: 47f3989 960a0da
+Author: ““553203705” <your email>
+Date:   Wed Sep 13 17:29:18 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       js/core/ocean.js
+
+[33mcommit 47f3989311305dcf310ecf0ba80ed8ded25ba32e[m
+Merge: 5bd1206 a222b0f
+Author: ““553203705” <your email>
+Date:   Wed Sep 13 17:28:26 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       js/core/ocean.js
+
+[33mcommit 960a0dac9daecbfa08c421a3a4d785dfb013aabb[m
+Merge: 3f87541 a222b0f
+Author: guoshuai <2286851>
+Date:   Wed Sep 13 17:25:45 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 3f875412bf9bfe994416ed02a81481b771137aa5[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 13 17:25:34 2017 +0800
+
+    扫码修改
+
+[33mcommit a222b0f4db9e46946a387b3b23cf35cf8c00ce0d[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 17:24:52 2017 +0800
+
+    ocean
+
+[33mcommit 9b63f8a42f1e2f4d35cd80c3c93ade4e5522735c[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 17:13:35 2017 +0800
+
+    address
+
+[33mcommit 5bd120614d098c6a8b636a7d41b14fda447bd99c[m
+Merge: e4fb869 35d4dd6
+Author: ““553203705” <your email>
+Date:   Wed Sep 13 16:58:16 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       js/core/ocean.js
+
+[33mcommit 35d4dd666436f3fa56ade0aa4b5b76f25f037b8b[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 16:31:38 2017 +0800
+
+    ISBN
+
+[33mcommit 169839b46aaf48badd93cd162b68f57fb9e1cae5[m
+Merge: 405e832 47c02de
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 15:20:04 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 405e832a98f3083fcc2636104bffcf406d8a4b34[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 15:19:54 2017 +0800
+
+    自定义查询
+
+[33mcommit 47c02def983fba0fb817260abd815d63a4b920f5[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 13 15:09:37 2017 +0800
+
+    消息页 message activity
+
+[33mcommit 46becf43fea829fed3ff69cadaa13cd6b3e7c496[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 14:13:56 2017 +0800
+
+    lazy load
+
+[33mcommit 2c924a54e375eca8cb82b30d17b5c1028d661cc2[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 14:09:58 2017 +0800
+
+    lazy load
+
+[33mcommit e4fb869723dd70fa3e4d93a042bba32bc32ddb03[m
+Merge: 32884da 1c59c3e
+Author: ““553203705” <your email>
+Date:   Wed Sep 13 11:52:43 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       js/core/ocean.js
+
+[33mcommit 32884da67ba7044a524486d128221ecc9b026f7d[m
+Author: ““553203705” <your email>
+Date:   Wed Sep 13 11:51:48 2017 +0800
+
+    还书
+
+[33mcommit 1c59c3eda7beb1ad43db1c8dcdcd21d3f5096053[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 11:11:29 2017 +0800
+
+    完成微信扫码
+
+[33mcommit 103c8312a4fc193d1b465a9dba82e8ee18ba50d6[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 11:08:56 2017 +0800
+
+    测试微信扫码
+
+[33mcommit 5c4634bdaaebf30c3dc63c56956c753e07d36355[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 10:52:20 2017 +0800
+
+    测试微信扫码
+
+[33mcommit dde997678168684cf008b42ec2624dbda8743acf[m
+Merge: 949e22d ac8a9d2
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 10:51:48 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 949e22dd96b73f3f53173d159cb1c2b2850d70d4[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 10:51:22 2017 +0800
+
+    测试微信扫码
+
+[33mcommit ac8a9d2cd5884c50045b5456bf6d7bedfeb1cad1[m
+Merge: 684d009 ade2cf3
+Author: guoshuai <2286851>
+Date:   Wed Sep 13 10:42:31 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 684d0092e05bbbcc21147e5ca1717a6809481dee[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 13 10:42:16 2017 +0800
+
+    回收订单页获取时间
+
+[33mcommit ade2cf367c667964eba3bc96e054dd6f79499533[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 10:41:55 2017 +0800
+
+    测试微信扫码
+
+[33mcommit 20abde791a923b116a89ebb2c63fc591b7c40e8f[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 10:39:31 2017 +0800
+
+    测试微信扫码
+
+[33mcommit 933f3e3b80d0bb14827c06aa9e5a63c0ac5b3207[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 13 10:31:34 2017 +0800
+
+    测试微信扫码
+
+[33mcommit f6e8d7977b269e274a364c8d94c53a740bb391f1[m
+Merge: f02c252 1c5d526
+Author: ““553203705” <your email>
+Date:   Tue Sep 12 19:50:04 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit f02c252ea7a73370e0ca42ddf9685b5c9d4da9c4[m
+Author: ““553203705” <your email>
+Date:   Tue Sep 12 19:49:49 2017 +0800
+
+    还书
+
+[33mcommit 1c5d52661263d20cf098a9ae9f2d11d2ca233bf3[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 12 18:46:46 2017 +0800
+
+    回收页更新 扫码+手动输入 修改
+
+[33mcommit c5f526eb358c80a0a195413b738f4ee907f773ca[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 12 18:40:50 2017 +0800
+
+    回收页更新 扫码+手动输入
+
+[33mcommit 70f0f63c00be99a7b89acdbe19cebf7bd8483f79[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 12 11:24:21 2017 +0800
+
+    zepto
+
+[33mcommit 139622daa91591e8dd5e3ab6a9a25ffc6ba69ff2[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 12 11:02:05 2017 +0800
+
+    订单
+
+[33mcommit 1c925b949f7f4d022cca0fb3826ddecc745079b1[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 12 10:25:09 2017 +0800
+
+    zepto
+
+[33mcommit 0ce87690e7fdf7671435a3b90a7388edfe705d33[m
+Author: ““553203705” <your email>
+Date:   Tue Sep 12 10:18:15 2017 +0800
+
+    购买订单列表
+
+[33mcommit 2766338963906d0be605313c24276312062a2791[m
+Merge: ea1b292 8e367e0
+Author: ““553203705” <your email>
+Date:   Mon Sep 11 20:06:52 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit ea1b292aa8b9f68c9bdc23238acd49c0fb915094[m
+Author: ““553203705” <your email>
+Date:   Mon Sep 11 20:06:27 2017 +0800
+
+    借阅订单列表显示
+
+[33mcommit 8e367e0244e04e2c8acdfcd340ff5fb9bd0784ac[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 11 18:29:08 2017 +0800
+
+    find 修改
+
+[33mcommit 5761db1bb2f1b4d664c9d1dbd563d54a2bc45521[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 11 17:18:42 2017 +0800
+
+    常见问题修改
+
+[33mcommit 0f4b40592029bb174f465638b9e4e6ce948614cb[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 11 16:35:14 2017 +0800
+
+    新增还书页面 return.html
+
+[33mcommit e4cf837a53160dfe47dc0b7f2369f428a6ccda60[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 11 15:43:27 2017 +0800
+
+    借书页面 更新
+
+[33mcommit c5467dd6c55cfff7d806c08e8cba80234126469a[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 11 14:53:34 2017 +0800
+
+    首页推荐 修改
+
+[33mcommit 03fba824b86c6e89915683c7012f5d16e1048cea[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 11 14:45:26 2017 +0800
+
+    订单修改
+
+[33mcommit 6089a12d364d45c422bde19af76144ff5cef6ec3[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 11 12:58:18 2017 +0800
+
+    搜索页完成
+
+[33mcommit dfe86548c9f01ab501baa8821cdaf5e67982e419[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 11 11:18:05 2017 +0800
+
+    search
+
+[33mcommit d780f02a94334b4226c029ee777ca4fc1b1c2616[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 11 10:44:56 2017 +0800
+
+    购物车合并
+
+[33mcommit 590cc44cf61583e5499cfc57b423487924aee9ed[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 11 09:00:57 2017 +0800
+
+    购物车页面逻辑修改
+
+[33mcommit ab23582dc6ac09690d1876aea8f9bc7680a0f50c[m
+Author: ““553203705” <your email>
+Date:   Sun Sep 10 19:20:10 2017 +0800
+
+    购物车修改
+
+[33mcommit 99b054da67fae99275d3cb44f1fa3f682479360f[m
+Author: ““553203705” <your email>
+Date:   Sun Sep 10 17:35:12 2017 +0800
+
+    购物车修改
+
+[33mcommit 52b416267f1e6e643051d371b4a1ef4683555111[m
+Author: ““553203705” <your email>
+Date:   Sun Sep 10 17:31:42 2017 +0800
+
+    购物车修改
+
+[33mcommit 3550d4b3b1054226d7a5bdee6078330e32ecf840[m
+Author: nanyixuan <121066669@qq.com>
+Date:   Sun Sep 10 17:05:57 2017 +0800
+
+    添加removeLocalShoppingCarListItemById函数，用于通过绘本id删除本地购物车列表中的绘本。
+
+[33mcommit 51cc4447056d5959cd1860a327667caf82020c19[m
+Author: ““553203705” <your email>
+Date:   Sun Sep 10 17:00:30 2017 +0800
+
+    购物车修改
+
+[33mcommit d1fe853ac991f45b7388a207f3b689893dc8da75[m
+Author: nanyixuan <121066669@qq.com>
+Date:   Sun Sep 10 16:48:08 2017 +0800
+
+    添加removeLocalShoppingCarListItemById函数，用于通过绘本id删除本地购物车列表中的绘本。
+
+[33mcommit db53c5886992b2e49646634e2b7cdb816e70f672[m
+Author: nanyixuan <121066669@qq.com>
+Date:   Sun Sep 10 16:30:52 2017 +0800
+
+    添加removeLocalShoppingCarListItemById函数，用于通过绘本id删除本地购物车列表中的绘本。
+
+[33mcommit 7bdb2cf59617e834c9f2ea79852aa37914ccd77d[m
+Author: nanyixuan <121066669@qq.com>
+Date:   Sun Sep 10 16:28:31 2017 +0800
+
+    添加removeLocalShoppingCarListItemById函数，用于通过绘本id删除本地购物车列表中的绘本。
+
+[33mcommit af3aa43038d8adc7fa41ea6c5eaa6f3e5fb476bd[m
+Author: ““553203705” <your email>
+Date:   Sun Sep 10 15:42:07 2017 +0800
+
+    借阅订单添加完成
+
+[33mcommit 0a8ef7827771b7b48411c7b180d52081c640d730[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Sun Sep 10 12:17:27 2017 +0800
+
+    city cityId 存储
+
+[33mcommit 60c9a6d14d7dd9adb5a8a9437d0d2db06a3ae0ac[m
+Merge: f678dea e74a76c
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Sun Sep 10 12:15:53 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit f678deab6246e7f376b76c11386044cf479c95ef[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Sun Sep 10 12:15:41 2017 +0800
+
+    city cityId 存储
+
+[33mcommit e74a76c1df350dba94d64508deb2026802bf1a62[m
+Author: ““553203705” <your email>
+Date:   Sun Sep 10 11:56:02 2017 +0800
+
+    用户地址添加手机号验证
+
+[33mcommit 2cb5a35eb436c9835f56b7579a5fc81a16006832[m
+Author: ““553203705” <your email>
+Date:   Sat Sep 9 19:39:48 2017 +0800
+
+    借阅订单提交
+
+[33mcommit 368dede1c45f492735a89a63f40fb6c294647a06[m
+Merge: 72b2321 87ae72d
+Author: ““553203705” <your email>
+Date:   Sat Sep 9 19:38:44 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       car/car_jie_mai.html
+
+[33mcommit 72b2321e530c1b47ae6026ba4f8003b46836a9a7[m
+Author: ““553203705” <your email>
+Date:   Sat Sep 9 19:38:05 2017 +0800
+
+    借阅订单提交
+
+[33mcommit 87ae72deccb02ef151cf4b8e45c6ba55fcbdca59[m
+Author: guoshuai <2286851>
+Date:   Sat Sep 9 17:55:27 2017 +0800
+
+    购物车修改
+
+[33mcommit 97452e50f2bc83ffe1e5e787495d7e552161f6b0[m
+Merge: b635463 015091f
+Author: ““553203705” <your email>
+Date:   Sat Sep 9 17:49:43 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       js/core/ocean.js
+
+[33mcommit e4f6ed65154c2f1c09944e3628078e826178c91f[m
+Author: guoshuai <2286851>
+Date:   Sat Sep 9 17:49:13 2017 +0800
+
+    search 修改
+
+[33mcommit b635463444297fc3505e14d083357cefd7c29381[m
+Author: ““553203705” <your email>
+Date:   Sat Sep 9 17:48:57 2017 +0800
+
+    首页地区选择
+
+[33mcommit 015091f8f8691a97b5c37b35f4eb56fecf65270a[m
+Author: guoshuai <2286851>
+Date:   Sat Sep 9 17:37:40 2017 +0800
+
+    详情页大图
+
+[33mcommit cdf2aad6d594aff5d81331b386b63450af2045a3[m
+Merge: 5d5924d bc5a520
+Author: guoshuai <2286851>
+Date:   Sat Sep 9 17:36:42 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 5d5924de7557ac2b62de186814898da957937f88[m
+Author: guoshuai <2286851>
+Date:   Sat Sep 9 17:36:34 2017 +0800
+
+    详情页大图
+
+[33mcommit bc5a52088b9a5b6a24bdceae9742d64f827f5329[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Sat Sep 9 16:18:31 2017 +0800
+
+    ..
+
+[33mcommit c222f63e7e6ee5adc56264e208797bd54c7e058f[m
+Merge: a537588 19a1178
+Author: li_yun <li_yun@xazz.vip>
+Date:   Sat Sep 9 16:17:56 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit a537588741a5998074e964dd625c854642d00d76[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Sat Sep 9 16:17:42 2017 +0800
+
+    按关键字搜索图书列表完成
+
+[33mcommit 19a117822b23b08e91280a4213f501ff3c385c45[m
+Author: guoshuai <2286851>
+Date:   Sat Sep 9 15:51:39 2017 +0800
+
+    address修改
+
+[33mcommit ccd538b9f0a47122ad00ddc0902a7c20e20ab695[m
+Author: guoshuai <2286851>
+Date:   Sat Sep 9 15:37:55 2017 +0800
+
+    address修改
+
+[33mcommit 0b610e4d8db0cd87c133a008339901195e68ab44[m
+Author: nanyixuan <121066669@qq.com>
+Date:   Sat Sep 9 14:07:06 2017 +0800
+
+    nanyixuan 同步本地购物车bug修复。
+
+[33mcommit e5b453dea5dd68cddb6cc908d38094192fcdddd2[m
+Author: nanyixuan <121066669@qq.com>
+Date:   Sat Sep 9 13:55:55 2017 +0800
+
+    nanyixuan 同步本地购物车bug修复。
+
+[33mcommit 8252877e0137120116f31f5cf8439e739e1051a0[m
+Author: nanyixuan <121066669@qq.com>
+Date:   Sat Sep 9 13:33:36 2017 +0800
+
+    添加upDateLocalShoppingCarList函数，同步本地购物车列表至服务器。
+
+[33mcommit 04c813bd1be7b3d7f465ea4e82d1d4c3bacb849d[m
+Author: nanyixuan <121066669@qq.com>
+Date:   Sat Sep 9 13:19:38 2017 +0800
+
+    添加注释。
+
+[33mcommit c701ac399266c07c019ff7615533497b2468218e[m
+Author: nanyixuan <121066669@qq.com>
+Date:   Sat Sep 9 13:13:29 2017 +0800
+
+    增加localAddShoppingCar、getLocalShoppingCarList、clearLocalShoppingCarList函数。
+
+[33mcommit 48d4635bffa7277a4583134d5e7bbd92239196be[m
+Author: nanyixuan <121066669@qq.com>
+Date:   Sat Sep 9 13:06:01 2017 +0800
+
+    nanyixuan test.
+
+[33mcommit f75174e761bd6e2d18ae2833ad0dbad37ca41e3e[m
+Author: guoshuai <2286851>
+Date:   Sat Sep 9 12:59:53 2017 +0800
+
+    localAddShoppingCar
+
+[33mcommit 783ca1198e5933dcebf430d5572e360cabbf7226[m
+Author: guoshuai <2286851>
+Date:   Sat Sep 9 11:44:47 2017 +0800
+
+    search 页面合并
+
+[33mcommit e4a26a4c7ecb8684b42632c85179d2a6a32874ff[m
+Author: guoshuai <2286851>
+Date:   Sat Sep 9 11:43:08 2017 +0800
+
+    search 页面合并
+
+[33mcommit 01c94af7f32b9efb119b9d24c05ec1ddbbb931c1[m
+Merge: e287000 a7b8626
+Author: guoshuai <2286851>
+Date:   Sat Sep 9 11:39:33 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit e2870005359cb216eb613af310b1ba6c593aac6d[m
+Author: guoshuai <2286851>
+Date:   Sat Sep 9 11:39:03 2017 +0800
+
+    search 页面合并
+
+[33mcommit a7b862630b16494095a58b6e4c854b5d11aff7cf[m
+Author: ““553203705” <your email>
+Date:   Sat Sep 9 11:01:38 2017 +0800
+
+    月会员兑换完成
+
+[33mcommit aecd636574255de572bd0c93ff87dccf944ac296[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 8 20:48:00 2017 +0800
+
+    借阅订单列表
+
+[33mcommit b3dccf36ddfb99a83351c2c886ff11d9a804c4e2[m
+Merge: fbe78a7 2e2433f
+Author: li_yun <li_yun@xazz.vip>
+Date:   Fri Sep 8 20:46:00 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit fbe78a7566b80b6102a75ab775657037c063d72f[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Fri Sep 8 20:45:53 2017 +0800
+
+    生成购书订单完成
+
+[33mcommit 2e2433fc2da4697051376320695cfb6ca727e894[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 8 20:14:34 2017 +0800
+
+    banner 修改
+
+[33mcommit a69b31478bb4ddac703115cd409c36d949e8beee[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 8 18:30:55 2017 +0800
+
+    购物车bug修复
+
+[33mcommit 39d9089fd78f6063efa6e62459306d71f9ca4e1d[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 8 18:20:59 2017 +0800
+
+    index  find修改
+
+[33mcommit bebd5c3dc51f8f550cdc1afaa765b543056e70ef[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Fri Sep 8 17:55:50 2017 +0800
+
+    购物车点击购买调用购书权限验证接口
+
+[33mcommit 774c578fec46c62d0e50597a37fb1d3fafdb3218[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Fri Sep 8 16:57:26 2017 +0800
+
+    购物车价格列表获得
+
+[33mcommit fc289b9a849281552ef53f40c0f461028da44690[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 8 16:52:49 2017 +0800
+
+    购物车bug修复
+
+[33mcommit 63aef49fe7d0b636c8ee3d274a20f71014845acd[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 8 16:44:12 2017 +0800
+
+    购物车
+
+[33mcommit da676140ff729c1e74f8e88c259932be339683f6[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 8 16:13:43 2017 +0800
+
+    index banner
+
+[33mcommit 8948ed04f4e6489eeb69126eec88a4e2a4592c37[m
+Merge: e59e77f 1cec3d8
+Author: guoshuai <2286851>
+Date:   Fri Sep 8 16:13:04 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       js/core/ocean.js
+
+[33mcommit e59e77f4b5e2fb7b4914bc5b29c3272a83ef659a[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 8 16:12:35 2017 +0800
+
+    index banner
+
+[33mcommit 1cec3d8844cb00a4f0bd4341cda35bb76dc3a508[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 8 14:13:50 2017 +0800
+
+     /
+
+[33mcommit 2da9f616f2d85efdcac0e65e992f025ca4bfc7a2[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 8 14:13:15 2017 +0800
+
+     /
+
+[33mcommit ae89f3b9119366ce1d7bafc74977da922ecce479[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 8 13:45:59 2017 +0800
+
+    用户地址完成
+
+[33mcommit 082c772e61d792311632efa1341c5fdd8eeaa50b[m
+Merge: 8bacb7e c366cf1
+Author: ““553203705” <your email>
+Date:   Fri Sep 8 13:44:03 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       car/car_jie_mai.html
+
+[33mcommit 8bacb7e517fed06abcc2dc1bf2ec8bde199fa7cc[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 8 13:43:01 2017 +0800
+
+    用户地址完成
+
+[33mcommit c366cf153be283ac62b2aeb3ddedd92c06e064e4[m
+Merge: a4d0171 4bcd73f
+Author: guoshuai <2286851>
+Date:   Fri Sep 8 12:19:05 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit a4d0171c3c063215d56898cab15c28c94643c36b[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 8 12:18:17 2017 +0800
+
+    订单页修改
+
+[33mcommit 4bcd73fc7f537cbe40f35e4562147a9810de642b[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Fri Sep 8 11:46:49 2017 +0800
+
+    获得城市方法
+
+[33mcommit 8377787bbd688fdd680a31f2155d311d00665984[m
+Author: ““553203705” <your email>
+Date:   Fri Sep 8 09:17:19 2017 +0800
+
+    购物车修改
+
+[33mcommit 0d13b4b8d3ff3a195edf0763bde56dc72d0930c4[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 8 08:59:01 2017 +0800
+
+    find img自适应
+
+[33mcommit a487cd5e6d78d91e6974578d422f632419738089[m
+Merge: 78d2867 22efa9e
+Author: ““553203705” <your email>
+Date:   Thu Sep 7 21:34:40 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 78d2867afe7eed101d708b0dcd56d5398da1aaaf[m
+Author: ““553203705” <your email>
+Date:   Thu Sep 7 21:34:29 2017 +0800
+
+    地址修改
+
+[33mcommit 22efa9e5a2191d185a7934a1b793db07dbf3678b[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Thu Sep 7 21:28:28 2017 +0800
+
+    返回
+
+[33mcommit bfff5fdc55e9f48ce1b31e797fe077d169a8a159[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Thu Sep 7 21:21:47 2017 +0800
+
+    修改文件名称
+    修改页面间传值方式
+
+[33mcommit 06b02c226b28b87d1d5b1753e8e82dd21e45d98f[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Thu Sep 7 21:10:58 2017 +0800
+
+    address
+
+[33mcommit bd94ba2b36d0aba9c236fe486e89725717b74ec2[m
+Author: ““553203705” <your email>
+Date:   Thu Sep 7 21:01:45 2017 +0800
+
+    地址修改
+
+[33mcommit ebf36a1b88c5d5495811885106ec303d7009d2bb[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 7 18:42:01 2017 +0800
+
+    index header置顶
+
+[33mcommit 7a21ad9b3f46cbede676140ac5e2219675966781[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Thu Sep 7 18:24:37 2017 +0800
+
+    mine
+
+[33mcommit c651b8d0736feef969c88a1c7eebda1c028aecaf[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 7 18:12:13 2017 +0800
+
+    绘本详情页下拉事件
+
+[33mcommit 2a18cde2389a6decd750f197604b335156017a60[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 7 18:04:33 2017 +0800
+
+    绘本详情页下拉事件
+
+[33mcommit bbe7e70b48db438f42c16a2b4433c8acd3663af9[m
+Merge: 24531a1 f391b4c
+Author: li_yun <li_yun@xazz.vip>
+Date:   Thu Sep 7 16:34:10 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 24531a16ffa917abdddc4b6a721bc56cf20832a4[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Thu Sep 7 16:34:03 2017 +0800
+
+    根据类型获得图书列表完成
+
+[33mcommit f391b4ce2593ecb3dd935d1dd18e82426759d372[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 7 16:31:16 2017 +0800
+
+    Jquery mobile 本地库更新
+    回收页bug
+
+[33mcommit 67ede4935ba82a2599cf21f704aa0560c0c232a1[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 7 16:15:25 2017 +0800
+
+    Jquery mobile 本地库更新
+
+[33mcommit 141bfb2673b07812d55430cf6f2eb255b2540dae[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 7 15:56:30 2017 +0800
+
+    Jquery mobile 本地库更新
+
+[33mcommit 39d8a6a25536a5f89bfdd7f0b48b4a1309e976ac[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 7 15:19:25 2017 +0800
+
+    分页修改
+
+[33mcommit 9fec8cc070bb484a7e36f59c2178db9f13ab01a5[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Thu Sep 7 11:51:01 2017 +0800
+
+    find 页面列表完成 但还没和分页匹配好， 详情页面BUG修改
+
+[33mcommit fe37a3784ec19970ebde161ab9fbe8d62b2946ee[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 7 10:41:07 2017 +0800
+
+    发现页 jquery mobile问题
+
+[33mcommit d94733fb4e1fbf0a8200df979f38f32022a66c76[m
+Merge: 47ddee6 366142b
+Author: li_yun <li_yun@xazz.vip>
+Date:   Thu Sep 7 10:21:57 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       find.html
+
+[33mcommit 47ddee6d036e80a30ea726d2fc1e47828387f4cc[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Thu Sep 7 10:20:24 2017 +0800
+
+    find 页面完成 50%， 分页需修改 先提交一次
+
+[33mcommit 366142ba74f1c0cc45bf773d83d781c809e74c73[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 7 10:16:59 2017 +0800
+
+    用户选择省市
+
+[33mcommit cbff672fbb92918f552ae712b22dd28c54ab186a[m
+Author: guoshuai <2286851>
+Date:   Thu Sep 7 08:55:32 2017 +0800
+
+    发现页自动分页，首页登陆框修改
+
+[33mcommit 6dfd69a22dfaafc33eefc5a67594844ff60c78e8[m
+Author: ““553203705” <your email>
+Date:   Wed Sep 6 19:58:49 2017 +0800
+
+    借阅接口修改
+
+[33mcommit 8380e69a2f18e250fd742c51ad96f3447e8f4e5a[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 6 18:28:25 2017 +0800
+
+    分页
+
+[33mcommit a6b94a32348fae89b9ab1fcbf9daf69ff91d0cb6[m
+Merge: 230d266 0d52048
+Author: guoshuai <2286851>
+Date:   Wed Sep 6 18:27:02 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       hb xiangqing.html
+
+[33mcommit 230d2666d5395530563f59dd52e8d889a61b1a90[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 6 18:22:32 2017 +0800
+
+    分页
+
+[33mcommit 0d52048b7d65bca85bffbd52e79c437cea94186c[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 6 18:09:07 2017 +0800
+
+    首页跳转传值、图书详情页面完成
+
+[33mcommit 528e2c10b1f24b4685663f910fc5426258bca098[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 6 16:41:15 2017 +0800
+
+    find页面参数格式
+
+[33mcommit 56f92f5ee550efd01c2530242d06402a003d3d65[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 6 16:26:56 2017 +0800
+
+    首页类型点击完成
+
+[33mcommit 88c08736cf31fcd7c61644fb1637b58a08de9d1c[m
+Merge: e8400d6 877e93b
+Author: guoshuai <2286851>
+Date:   Wed Sep 6 16:24:09 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit e8400d638b91e6bae2750050544f0466584716b6[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 6 16:24:02 2017 +0800
+
+    index
+
+[33mcommit 877e93b13b0ce06d96787aeacc29d5e9399c2b6a[m
+Author: ““553203705” <your email>
+Date:   Wed Sep 6 16:21:16 2017 +0800
+
+    购物车 添加 删除 接口完成
+
+[33mcommit 09fa43ce2125d15754310b061f8e08ea63f726fd[m
+Merge: 5b3a0f8 1740271
+Author: ““553203705” <your email>
+Date:   Wed Sep 6 16:19:11 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 1740271c2cd66dc47d17d115dd688fac5ff282be[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 6 16:18:38 2017 +0800
+
+    index
+
+[33mcommit a35af6f3c1880c42df0f87a8f12d43373f878e2c[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 6 16:14:05 2017 +0800
+
+    首页完成
+
+[33mcommit 5b3a0f827503e64dc60aa42e34bd6b073ccaeb9d[m
+Merge: de963de 8ff19f3
+Author: ““553203705” <your email>
+Date:   Wed Sep 6 15:24:32 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 8ff19f31e333f7104f31c9e5f53cd3ed71a17972[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 6 15:24:11 2017 +0800
+
+    index bug修改
+
+[33mcommit de963dec382cca2f93c511664073c64e3677cee8[m
+Merge: 8ee9c0f 67846aa
+Author: ““553203705” <your email>
+Date:   Wed Sep 6 15:21:29 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 67846aa20a6fb69ee755d8c6d5aff75c2226d837[m
+Author: li_yun <li_yun@xazz.vip>
+Date:   Wed Sep 6 15:20:08 2017 +0800
+
+    index and address
+
+[33mcommit 073e5c22b2f61fe2096e0a2ebe9b80320211974a[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 6 15:13:01 2017 +0800
+
+    回收
+
+[33mcommit 8ee9c0fb5d63104088f952533e1c5885ee5086e6[m
+Author: ““553203705” <your email>
+Date:   Wed Sep 6 14:16:46 2017 +0800
+
+    地址接口
+
+[33mcommit ace6323fe24f884c87ea05ca27935c628cca43b3[m
+Author: ““553203705” <your email>
+Date:   Wed Sep 6 14:04:35 2017 +0800
+
+    地址接口
+
+[33mcommit bf77e610c80eab5e38c7691da8f58b8ea2dc31bf[m
+Merge: 4236860 dd72a50
+Author: guoshuai <2286851>
+Date:   Wed Sep 6 13:58:18 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 4236860bad24e0ed396adaca74bf6747b336419e[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 6 13:58:10 2017 +0800
+
+    发现分页
+
+[33mcommit dd72a50c9c546d0b449cf12f5a92ec64b560dfb0[m
+Author: ““553203705” <your email>
+Date:   Wed Sep 6 13:57:03 2017 +0800
+
+    地址接口
+
+[33mcommit 381e4d203bad9bc2c66735b64b27bb6bcdb32829[m
+Merge: eaab9f5 505cac9
+Author: ““553203705” <your email>
+Date:   Wed Sep 6 11:46:26 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit eaab9f5ab589de45376155092940b820ae8a2832[m
+Author: ““553203705” <your email>
+Date:   Wed Sep 6 11:46:17 2017 +0800
+
+    地址列表接口
+
+[33mcommit 505cac9b5ee57e76c80139033b8ab30ff10231a6[m
+Merge: 0449909 c6ecae9
+Author: guoshuai <2286851>
+Date:   Wed Sep 6 11:43:13 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 0449909025cce5b8d461298583188cf46b6f588b[m
+Author: guoshuai <2286851>
+Date:   Wed Sep 6 11:43:00 2017 +0800
+
+    添加vip接口
+
+[33mcommit c6ecae9bdfd4e151d3271ca627bc32149cc7ee6d[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 6 08:26:23 2017 +0800
+
+    购物车展示完成
+
+[33mcommit 09cff8174f4c6ac051eaa11d136096726b243787[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Wed Sep 6 07:46:04 2017 +0800
+
+    跳转路径
+
+[33mcommit b130c13065fe922abb78834203aa316da50e66c4[m
+Merge: ec843af 9b766b7
+Author: guoshuai <2286851>
+Date:   Tue Sep 5 20:49:06 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit ec843afb14fc1b15805c4874f9e5576e16b5b481[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 5 20:48:58 2017 +0800
+
+    我的 钱包
+
+[33mcommit 9b766b7336327190abe9d33bc530fb225105d334[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 5 18:35:51 2017 +0800
+
+    shopping car
+
+[33mcommit 77da28a9fd87fc1a28e54d2ec2baf6b99270c05d[m
+Merge: a0dfcbe a754570
+Author: ““553203705” <your email>
+Date:   Tue Sep 5 18:32:08 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit a0dfcbe48a4c8d60b5eaca8c2d0188d0ad8f1816[m
+Author: ““553203705” <your email>
+Date:   Tue Sep 5 18:31:57 2017 +0800
+
+    购物车列表
+
+[33mcommit a754570d31cebc17249aa5b532073ec455242e65[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 5 17:56:41 2017 +0800
+
+    mine
+
+[33mcommit 4075c174982a7d98f1ec2da76107c1673fe8b643[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 5 17:41:09 2017 +0800
+
+    mine
+
+[33mcommit d5a86833a445daded52cfdaa5a2742eabd1ba554[m
+Merge: bca72b5 3f475b1
+Author: guoshuai <2286851>
+Date:   Tue Sep 5 17:24:03 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit bca72b520479b9a01c1cf31f6dee20420cc4d331[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 5 17:23:48 2017 +0800
+
+    car
+
+[33mcommit 3f475b14d80087327698ee00a3b72593469d758a[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 5 17:14:30 2017 +0800
+
+    index
+
+[33mcommit 7dff4747adc286634b38e5900e7627aaa22d3c69[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 5 16:31:08 2017 +0800
+
+    index
+
+[33mcommit 159aa904099f273372c63f4c79f9e648e696ade3[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 5 16:21:25 2017 +0800
+
+    index
+
+[33mcommit 42949cdb363a6d9ee486aae0dcab3f96aacca2d2[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 5 14:54:06 2017 +0800
+
+    margin
+
+[33mcommit 985f17fc3a42ec9bcf142eb7e39f8b1eb2290c52[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 5 13:44:58 2017 +0800
+
+    margin
+
+[33mcommit 389e13c081467783cb92da75c014ee39b9bea540[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 5 13:31:08 2017 +0800
+
+    引入 template
+
+[33mcommit d07a4033026b0859683e2ee3260037672fc96991[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 5 13:17:46 2017 +0800
+
+    引入 template
+
+[33mcommit feb6ab3c8cc0942d96f9dd50360c23addec36f0b[m
+Merge: de7cfaa 8afd6c4
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 5 13:14:41 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit de7cfaa603a7b9ecf5ed290401ebb5d9590e54eb[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 5 13:14:26 2017 +0800
+
+    引入 template
+
+[33mcommit 8afd6c4b3e57df5a8a35bbacbde921d076d8a083[m
+Merge: 740630d eb8f71d
+Author: guoshuai <2286851>
+Date:   Tue Sep 5 10:50:14 2017 +0800
+
+    购物车 详情页修改
+
+[33mcommit 740630ddcd057a830f80999dcc6a5366de5a37c7[m
+Author: guoshuai <2286851>
+Date:   Tue Sep 5 10:47:25 2017 +0800
+
+    购物车 详情页的修改
+
+[33mcommit eb8f71d9359eeee2b7cbe9a24aa034e27adc63ee[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 5 10:37:58 2017 +0800
+
+    fix issue token验证
+
+[33mcommit d2658f9f1ab3ec4d6de0ff4ee837066ec8b950d9[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 5 09:21:52 2017 +0800
+
+    增加token验证
+
+[33mcommit 4974858db133d632c4a5c010068210be4bf9f0d6[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Tue Sep 5 09:02:24 2017 +0800
+
+    增加token验证
+
+[33mcommit c11be56d01ac9d7dc08bb30a4ee15dcbf3065b2a[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 4 20:31:58 2017 +0800
+
+    login弹窗组件化
+    
+    增加登录7天验证
+
+[33mcommit b811538b3d4130a83b954c744f71f1eacbce05b7[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 4 20:01:32 2017 +0800
+
+    增加layui
+
+[33mcommit 733ff0fccf8765b1f766a4f9cbd669da525a9e1e[m
+Author: guoshuai <guoshuai@xazz.vip>
+Date:   Mon Sep 4 19:17:29 2017 +0800
+
+    接入获取验证码
+
+[33mcommit 83ed50d01d4ae60f05a25dd39e5f5d704c4953e2[m
+Merge: fc47b33 31bb97f
+Author: guoshuai <2286851>
+Date:   Mon Sep 4 18:34:41 2017 +0800
+
+    回收 购物车修复
+
+[33mcommit fc47b33c7578d96c1c52e7ed5e7a5b236ebb946a[m
+Author: guoshuai <2286851>
+Date:   Mon Sep 4 18:27:37 2017 +0800
+
+    回收 购物车问题修复
+
+[33mcommit 31bb97f533bd5c226d36e5fe3be9f9a955ba179a[m
+Author: guoshuai <2286851>
+Date:   Sat Sep 2 19:08:18 2017 +0800
+
+    我的订单（买 借 收书 删除 空），押金（交押金 提现  不足），订单详情（借书 买书）
+
+[33mcommit b6c4bc5c15656962e0ea834f38a17aa9ba91cedf[m
+Author: guoshuai <2286851>
+Date:   Sat Sep 2 14:35:36 2017 +0800
+
+    订单一部分
+
+[33mcommit 465d5b497de1665d5454aae3c71c4557fb860cca[m
+Author: guoshuai <2286851>
+Date:   Fri Sep 1 20:18:16 2017 +0800
+
+    消息（空 删 有消息），常见问题（展开 收起），钱包（VIP 押金），地址（空 管理 编辑）
+
+[33mcommit fa35c0a50699030d777e1673d25d252a75dd92e6[m
+Author: guoshuai <2286851>
+Date:   Thu Aug 31 18:53:15 2017 +0800
+
+    绘本详情（展开和未展开），省市，购物车（编辑，借买）
+
+[33mcommit 00899d69ef7e1bcd2a6facc29620f093e96b5f78[m
+Author: guoshuai <2286851>
+Date:   Wed Aug 30 17:29:27 2017 +0800
+
+    发现侧边栏 搜索页 首页绘本页 购物车（空）
+
+[33mcommit 2a4db2ecb2939fdb6bc7452937e86cfa1855072f[m
+Author: guoshuai <2286851>
+Date:   Tue Aug 29 18:47:24 2017 +0800
+
+    首页 发现 我的
+
+[33mcommit 00de3a554c5f70b5996860880f5ca6c50c7cc423[m
+Author: guoshuai <2286851>
+Date:   Tue Aug 29 18:19:29 2017 +0800
+
+    首页 发现 我的
+
+[33mcommit 2119147deb954117b1388ec628b42b293ac7334d[m
+Author: guoshuai <2286851>
+Date:   Tue Aug 29 11:42:36 2017 +0800
+
+    init project
+
+[33mcommit c78ceeeeb9b947e0d31f71486c52ea9b9cf3fc4a[m
+Author: guoshuai <2286851>
+Date:   Mon Aug 28 18:09:13 2017 +0800
+
+    init project
+
+[33mcommit 9e46114406f975aef8aa3f43b96307c44c21f5d0[m
+Author: guoshuai <2286851>
+Date:   Mon Aug 28 17:27:46 2017 +0800
+
+    init project
+
+[33mcommit c0ab081bacf266d4796df8b8ea5be953652d9a64[m
+Author: guoshuai <2286851>
+Date:   Mon Aug 28 17:27:04 2017 +0800
+
+    init project

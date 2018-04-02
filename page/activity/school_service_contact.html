@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/activity/school_service.css"/>
+</head>
+<body ontouchstart>
+    <img src="../../static/img/activity/plain_bg.png" class="bg_img" />
+    <div class="contact_content">
+        <div class="contact_title">填写信息，让我们的工作人员联系您吧!</div>
+        <div class="contact_input_wrapper">
+            <label class="contact_input_label" for="fetchAddress">收书地址</label>
+            <input id="fetchAddress" name="fetchAddress" type="text" placeholder="请输入宿舍楼号即可" class="contact_input" />
+        </div>
+        <div class="contact_input_wrapper">
+            <label class="contact_input_label" for="phone">联系电话</label>
+            <input id="phone" name="phone" type="text" class="contact_input" />
+        </div>
+        <div class="contact_input_wrapper" id="time_wrapper">
+            <label class="contact_input_label">预约时间</label>
+            <div class="contact_input_time" id="fetchTime"></div>
+        </div>
+        <div class="item_wrapper">
+            <button class="submit_btn">提交</button>
+        </div>
+        <div class="item_wrapper link_us_wrapper">
+            <a href="tel:021-54015223" class="tel_link">联系我们</a>
+        </div>
+        <div class="edit_shade"></div>
+    </div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/layer.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+    var dayRange = ['周日', '周一', '周二', '周三', '周四',  '周五', '周六'];
+    var dateShows = [];
+    var avalidDate = '';
+    var avalidDay = '';
+    var channelCode = ocean.getRequestParameter("sac");
+    var today = new Date().getTime();
+    var nowHours = new Date().getHours();
+    if (nowHours > 17) {
+        today += 1000 * 60 * 60 * 24;
+        nowHours = 0;
+    }
+    var tomorrow = today + 1000 * 60 * 60 * 24;
+    var threeDay = tomorrow + 1000 * 60 * 60 * 24;
+    var firstDay = generateTimeTool(today);
+
+
+    function resizeLayout() {
+        var width = $('.bg_img').width();
+        var rootSize = width * 100 / 375;
+       $(document.documentElement).css('font-size', rootSize + 'px');
+    }
+    $('.bg_img').load(function(){
+      resizeLayout();
+    });
+    $(window).resize(function() {
+        resizeLayout();
+    });
+    $(function() {
+        resizeLayout();
+        dateShows.push(firstDay);
+        dateShows.push(generateTimeTool(tomorrow));
+        dateShows.push(generateTimeTool(threeDay));
+
+    });
+    function generateTimeTool(time) {
+        var month = new Date(time).getMonth() + 1;
+        var date = new Date(time).getDate();
+        var day = new Date(time).getDay();
+        var key = month + '月' + date + '日';
+        return {
+            name: dayRange[day] + '（' + key + '）',
+            key: key
+        }
+    }
+    function changeTimeItem() {
+        $('.time_item_normal').removeClass('time_item_active');
+        _.each([avalidDate, avalidDay], function (item) {
+            $("[key='"+ item +"']").addClass('time_item_active');
+        })
+    }
+    $('#time_wrapper').on('click', function () {
+        var timeUI = _.template($('#time_choose_ui').html());
+        var list = [];
+        var timeHtml = timeUI({list: dateShows});
+        $('body').addClass('custom_ui_wrapper');
+        layer.open({
+          type: 1,
+          title: false,
+          closeBtn: 0,
+          shade: 'background-color: rgba(0,0,0,0)',
+          shadeClose: true,
+          skin: 'mytime',
+          offset: 'b', // 无效
+          content: timeHtml,
+          success: function() {
+            if (!avalidDate || !avalidDay) {
+                avalidDate = firstDay.key;
+                if (nowHours < 9) {
+                    avalidDay = '9:00-12:00';
+                } else if (nowHours < 12) {
+                    avalidDay = '12:00-14:00';
+
+                } else if (nowHours < 14) {
+                    avalidDay = '14:00-17:00';
+
+                } else if (nowHours < 17) {
+                    avalidDay = '17:00-21:00';
+                }
+            }
+            changeTimeItem();
+          },
+          end: function () {
+            $('body').removeClass('custom_ui_wrapper');
+          }
+        });
+
+        $('.time_item_normal').on('click', function() {
+            var attrKey = $(this).attr('key');
+            if (attrKey.indexOf('月') > -1) {
+                avalidDate = attrKey;
+            } else {
+                var maxHour = parseInt($(this).attr('maxHour'));
+                if (avalidDate != firstDay.key || maxHour > nowHours) {
+                    avalidDay = attrKey;
+                }
+            }
+            changeTimeItem();
+        })
+        $('.time_confirm_btn').on('click', function() {
+            $('#fetchTime').html(avalidDate + ' ' + avalidDay);
+            layer.closeAll();
+        })
+    });
+    $('.submit_btn').on('click', function () {
+        var phone = $.trim($('#phone').val());
+        var fetchAddress = $('#fetchAddress').val();
+        var fetchTime = $('#fetchTime').text();
+        if (!fetchAddress) {
+            layer.open({type: 0, offset: 't', content: '请输入收书地址', skin: 'msg' ,time: 1});
+            return;
+        }
+        if (!phone || !/(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/.test(phone)) {
+            layer.open({type: 0, offset: 't', content: '请输入正确联系电话', skin: 'msg' ,time: 1});
+            return;
+        }
+        if (!fetchTime) {
+            layer.open({type: 0, offset: 't', content: '请输入收书时间', skin: 'msg' ,time: 1});
+            return;
+        }
+         ocean.post("resources/biz/api/channel/save_update_user", {
+            openId: ocean.getOpenId(),
+            channelCode: channelCode,
+            phone: phone,
+            fetchAddress: fetchAddress,
+            fetchTime: fetchTime
+         }, function (data) {            
+            var orderHTML= _.template($('#order_success').html());
+            layer.open({
+              type: 1, 
+              title: false,
+              closeBtn: 0,
+              skin: 'mytime',
+              shade: 'background-color: rgba(0,0,0,0.7)',
+              shadeClose: false,
+              content: orderHTML()
+            });
+            $('.success_confirm_btn').on('click', function() {
+                layer.closeAll();
+                $('.edit_shade').css({
+                    position: 'absolute',
+                    width: '100%',
+                    height: '100%',
+                    top: 0,
+                    'z-index': 99
+                });
+            });
+        }, function (error) {
+            ocean.tip(error.message || '提交失败');
+        });
+    }); 
+</script>
+
+<script>    
+    var info = {
+        title: '校园旧书回收入口',
+        desc: '传递阅读的温度'
+    };
+    var jssdk = new ocean_jssdk(function () {
+        wx.onMenuShareAppMessage({
+            title: info.title, // 分享标题
+            desc: info.desc, // 分享描述
+            link: window.location.href, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            imgUrl: 'http://static.pandabox.top/static/img/panda_share.png', // 分享图标
+            type: 'link', // 分享类型,music、video或link，不填默认为link
+            success: function () {
+            },
+            cancel: function () {
+            }
+        });
+        wx.onMenuShareTimeline({
+            title: info.title, // 分享标题
+            desc: info.desc, // 分享描述
+            link: window.location.href, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            imgUrl: 'http://static.pandabox.top/static/img/panda_share.png', // 分享图标
+            type: 'link', // 分享类型,music、video或link，不填默认为link
+            success: function () {
+            },
+            cancel: function () {
+            }
+        });
+    });
+    jssdk.init();
+</script>
+
+<script id="time_choose_ui" type="text/template">
+    <div class="time_layer_child">
+        <div class="time_range_wrapper">
+            <div class="time_column_wrapper">
+                <@_.each(list, function (item, index) {@>
+                    <div class="time_item_normal" key="<@=item.key@>"><@=item.name@></div>
+                 <@ }); @>
+            </div>
+            <div class="time_column_wrapper">
+                <div class="time_item_normal" key="9:00-12:00" maxHour="9">&nbsp;&nbsp;9:00 - 12:00</div>
+                <div class="time_item_normal" key="12:00-14:00" maxHour="12">12:00 - 14:00</div> 
+                <div class="time_item_normal" key="14:00-17:00" maxHour="14">14:00 - 17:00</div> 
+                <div class="time_item_normal" key="17:00-21:00" maxHour="17">17:00 - 21:00</div> 
+            </div>
+        </div>
+        <button class="time_confirm_btn">确定</button>
+    </div>
+</script>
+
+
+<script id="order_success" type="text/template">
+    <div class="success_wrapper_ui">
+        <img src="../../static/img/activity/success_img.png" class="success_image">
+        <div>预约成功 保持手机畅通哦~</div>
+        <button class="time_confirm_btn success_confirm_btn">好滴，我知道了~</button>
+    </div>
+</script>
+</html>

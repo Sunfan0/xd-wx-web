@@ -1,0 +1,148 @@
+body {
+    background-color: #370078;
+}
+
+.header_img {
+    width: 100%;
+    height: 240px;
+}
+
+.header_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.item_box {
+    background-color: white;
+    border-radius: 2px;
+    margin: 40px 20px;
+    position: relative;
+    height: 160px;
+}
+
+.item_box .img {
+    width: 110px;
+    height: 175px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    position: absolute;
+    top: -25px;
+    left: 12px;
+}
+
+.item_box .item_info {
+    position: absolute;
+    left: 140px;
+    top: 0;
+    right: 20px;
+    text-align: left;
+}
+
+.item_info p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.item_box .title {
+    color: #7678ff;
+    font-size: 19px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+.item_box .text {
+    color: #898989;
+    font-size: 13px;
+}
+
+.item_box .bookgrad {
+    font-size: 12px;
+    margin-top: 5px;
+    white-space: nowrap;
+}
+
+.item_box .bookgrad .label, .number {
+    color: #c3c3c3;
+}
+
+.item_box .bookgrad .star {
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.item_box .bookgrad .star img {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+}
+
+.item_box .btn {
+    width: 170px;
+    margin-top: 5px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.item_box .have_btn {
+    color: white;
+    background-color: #c3c3c3;
+}
+
+.item_box .active_btn {
+    color: white;
+    background: linear-gradient(30deg, #7578ff, #b125ef);
+    background: -webkit-linear-gradient(30deg, #7578ff, #b125ef);
+}
+
+.item_box .white_btn {
+    color: #7578ff;
+    border: 1px solid #7578ff;
+}
+
+.bottom_btn {
+    width: 30%;
+    margin: 60px auto;
+}
+
+.bottom_btn p {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    background: linear-gradient(10deg, #7578ff, #b125ef);
+    background: -webkit-linear-gradient(10deg, #7578ff, #b125ef);
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 360px) {
+    .item_box{
+        height: 145px;
+        margin: 40px 10px;
+    }
+    .item_box .img{
+        width: 100px;
+        height: 155px;
+    }
+    .item_box .item_info{
+        left: 120px;
+    }
+    .item_box .title{
+        font-size: 17px;
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+    .item_box .btn{
+        width: 155px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .item_box .bookgrad .star{
+        margin: 0;
+    }
+}

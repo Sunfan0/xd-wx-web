@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/book/list/book_list_detail_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/common_0320.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">书单</p>
+</div>
+<div class="bg_div">
+    <div class="headerImg" style="background-image: url('../../../static/img/default.jpg')"></div>
+    <div class="bg"></div>
+    <div class="headerTitle_div">
+        <div class="midden">
+            <p class="headerTitle">--</p>
+            <p class="headerInfo"></p>
+        </div>
+    </div>
+    <!--<p class="headerTitle">&#45;&#45;</p>-->
+    <!--<p class="headerInfo"></p>-->
+</div>
+<div class="content">
+    <div id="new_gallery"></div>
+</div>
+<div class="popup pop_bg" onclick="$('.popup').hide()"></div>
+<div class="popup pop_content">
+    <p class="popContentText"></p>
+    <div class="pop_btn">
+        <p class="btn no_btn" onclick="$('.popup').hide()">再看看</p>
+        <p class="btn yes_btn">去开通</p>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="../../../static/js/dropload.min.js"></script>
+<script>
+    var id = ocean.getRequestParameter("id");
+    var params = {
+        page: 0,
+        limit: 50,
+        id: id
+    };
+    var loader;
+    var leaseShoppingCar = new lease_shopping_car();
+    $(function () {
+        ocean.get('resources/biz/api/list/item', {id: id}, function (res) {
+            if (res.code == 0) {
+                $(".headerImg").css("background-image", "url(" + res.data.cover + ")");
+                $(".headerTitle").html(res.data.name);
+                $(".headerInfo").html(res.data.lead);
+            }
+        });
+        loader = $('.content').dropload({
+            scrollArea: window,
+            domDown: {
+                domClass: 'weui-loadmore ',
+                domRefresh: '<div class="dropload-refresh">↑上拉加载更多</div>',
+                domLoad: '<i class="weui-loading"></i><span class="weui-loadmore__tips">正在加载</span>',
+                domNoData: '<span class="weui-loadmore__bottom">没有更多数据了</span>'
+            },
+            loadDownFn: function () {
+                params.page += 1;
+                loadPageData();
+            }
+        });
+        $(".yes_btn").on("click", function () {
+            location.href = "../vip.html";
+        });
+    });
+
+    function loadPageData() {
+        ocean.get("resources/biz/api/list/details", params, function (res) {
+            if (res.code == 0) {
+                console.log(res);
+                var template = _.template($('#temp_book_item').html());
+                if (res.data.isFirstPage || res.data.pageNum == 0) {
+                    $('#new_gallery').html("");
+                }
+                $('#new_gallery').append(template({list: res.data.list}));
+
+                if (res.data.isLastPage) {
+                    loader.lock();
+                    loader.noData(true);
+                } else {
+                    loader.unlock();
+                    loader.noData(false);
+                }
+                loader.resetload();
+
+                afterLoad();
+            }
+        });
+    }
+
+    function afterLoad() {
+        $(".lazy").lazyload({
+            effect: "fadeIn",
+            threshold: 0,
+            failurelimit: 10
+        });
+
+        $(".book_info").on("click", function () {
+            location.href = "../book_info.html?from=store&id=" + $(this).data("id");
+        });
+
+        $(".add_btn").on("click", function () {
+            var book = $(this).data("obj");
+            if (book.stock == 0) {
+                ocean.tip("该图书暂无库存不可加入购物车!");
+                return false;
+            }
+            buyShoppingCar.push(book, function () {
+                ocean.toast("添加购物车成功");
+            });
+            return false;
+        });
+        score_star();
+    }
+</script>
+<script type="text/template" id="temp_book_item">
+    <@_.each(list, function (item) {@>
+    <@if(null!=item){@>
+    <div class="book_info" data-id="<@=item.id@>">
+        <div class="img lazy" data-original="<@=item.picture@>"
+             style="background-image: url('../../../static/img/book.jpg')">
+            <@if(item.stock<=0){@>
+            <div class="no_img"><p>无货</p></div>
+            <@}@>
+        </div>
+        <div class="text">
+            <p class="name"><@=item.name@></p>
+            <p class="author"><@=item.author@></p>
+            <div class="grade">
+                <span class="label">豆瓣评分</span>
+                <div class="star" data-score="<@=item.score@>">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                </div>
+                <span class="number">(<@=item.score.toFixed(1)@>)</span>
+            </div>
+            <!--<p class="from"><@=item.publishing@></p>-->
+            <p class="money">
+                <span class="used">二手价</span>
+                <!--<span class="num">￥<@=item.price@></span>-->
+                <span class="num">￥<span class="int"><@=item.price.toString().split('.')[0]@></span>.<@=item.price.toString().split('.')[1]@></span>
+                <span class="discount"><@=item.discount@>折</span></p>
+        </div>
+    </div>
+
+    <!--<div class="book_info" data-id="<@=item.id@>">
+        <div class="img lazy" data-original="<@=item.picture@>"
+             style="background-image: url('../../../static/img/book.jpg')"></div>
+        <div class="text">
+            <p class="name"><@=item.name@></p>
+            <p class="author"><@=item.author@></p>
+            <p class="from"><@=item.publishing@></p>
+            <div class="grade">
+                <span class="label">豆瓣评分</span>
+                <div class="star" data-score="<@=item.score@>">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                </div>
+                <span class="number">(<@=item.score.toFixed(1)@>)</span>
+            </div>
+            <p class="add_btn" data-obj='<@=JSON.stringify(item)@>'>加入购物车</p>
+        </div>
+    </div>-->
+    <@ }@>
+    <@ }); @>
+</script>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/order/buy/buy_now.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+    <style>
+        body {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">一键购买</p>
+</div>
+<div class="book_list" id="book_list">
+    <script id="book_item" type="text/template">
+        <@_.each(items.bookName.split('@'), function (book, index) {@>
+        <div class="book_item" data-id="<@=items.bookId.split('@')[index]@>">
+            <div class="img">
+                <img class="img_bg" src="<@=items.picture.split('@')[index]@>"/>
+            </div>
+            <div class="info">
+                <p class="name"><@=book@></p>
+                <p class="author"><@=items.author.split('@')[index]@></p>
+                <p class="price" data-price="<@=items.price.split('@')[index]@>">￥<span><@=items.price.split('@')[index]@></span>
+                </p>
+            </div>
+            <img src="../../../static/img/buttom/payclose.png" class="delete_this"
+                 data-price="<@=items.price.split('@')[index]@>"/>
+        </div>
+        <@ }); @>
+    </script>
+</div>
+
+<!--剩余填满-->
+<div class="bg1">
+
+</div>
+
+<div class="buttom">
+    <p class="money">共<span class="num">2</span>本，合计
+        <c class="mei">¥</c>
+        <span class="tot"></span>
+        <c class="icon">元</c>
+    </p>
+    <p class="button">购买</p>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script>
+
+    $(function () {
+        var id = ocean.getRequestParameter("id");
+        ocean.get("resources/biz/leaseOrder/select_order_details", {
+            userId: ocean.getLoginUserId(),
+            id: id
+        }, function (data) {
+            console.log(data);
+            if (data.code == 0) {
+                var content = data.data;
+                var lease = _.template($("#book_item").html());
+                $("#book_list").html(lease({
+                    items: content,
+                    root: ocean.apiUri
+                }));
+            }
+            afterLoad();
+        }, function (error) {
+            ocean.tip(error);
+        });
+
+        function afterLoad() {
+            var total = 0;
+            $(".num").html($(".book_item").length);
+            $(".price").each(function () {
+                total += parseFloat($(this).data("price"));
+            });
+            var m = total;
+            $(".tot").html(total.toFixed(2));
+            $(".delete_this").on("click", function () {
+                var item = $(this).parent();
+
+                $(".num").html($(".book_item").length - 1);
+                $(item).remove();
+                total = 0;
+                $(".price").each(function () {
+                    total += parseFloat($(this).data("price"));
+                });
+                m = total;
+                $(".tot").html(m.toFixed(2));
+                total = $(".tot").html();
+            });
+
+            $(".button").on("click", function () {
+                var bookArray = [];
+                var priceArray = [];
+                $(".book_item").each(function (index) {
+                    bookArray.push($(this).data("id"));
+                });
+                $(".price").each(function (index) {
+                    priceArray.push($(this).data("price"));
+                });
+                ocean.get("resources/biz/buyOrder/hire_book_purchase", {
+                    userId: ocean.getLoginUserId(),
+                    bookId: bookArray.join(","),
+                    prices: priceArray.join(","),
+                    orderId: id
+                }, function (data) {
+                    console.log(data);
+                    if (data.code == 0) {
+                        var buyId = data.data.id;
+                        var allId = [];
+                        allId.push(ocean.getRequestParameter("id"));
+                        allId.push(buyId);
+                        var id = allId.join(",");
+                        console.log(id);
+                        location.href = "../pay.html?id=" + id + "&type=" + "buy_lease";
+                    }
+                }, function (data) {
+                    if (data.code == 120005) {
+                        ocean.tip(data.message);
+                    }
+                    if (data.code == 130005) {
+                        ocean.tip(data.message);
+                    }
+                }, function (error) {
+                    ocean.tip(error);
+                });
+//                location.href = "../pay.html?m=" + m + "&f=" + 0 + "&type=" + "buy";
+            });
+        }
+
+    });
+</script>
+</html>

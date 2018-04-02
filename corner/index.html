@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>图书漂流角</title>
+    <link rel="stylesheet" type="text/css" href="static/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/join.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="content">
+    <div class="header_img">
+        <img src="static/img/corner_header.png"/>
+    </div>
+    <div class="content_info">
+        <div class="location">
+            <p>活动时间：2018年1月8日至1月20日</p>
+            <p>漂流角地址：桂林路68号上海师范大学创新创业孵化园</p>
+        </div>
+        <div class="text_box">
+            <p class="title"><span>&nbsp;</span>熊猫格子是谁？</p>
+            <p class="introduce">
+                熊猫格子是一个线上闲置书循环平台；<br>
+                我们是一群和图书打了十几年交道的出版人；<br>
+                希望把每一本书的价值通过循环交换最大发挥。
+            </p>
+        </div>
+        <div class="text_box">
+            <p class="title"><span>&nbsp;</span>什么是图书漂流？</p>
+            <p class="introduce">
+                图书漂流就是把大家手中闲置的书籍共享出来，传递给其他素不相识的人，贡献一本书的同时也可以再获取一本别人的书；通过这种方式将一本书的价值发挥到最大，还可以以书会友，结交书友。
+            </p>
+        </div>
+        <div class="text_box">
+            <p class="title"><span>&nbsp;</span>如何捐书到漂流角？</p>
+            <p class="introduce">
+                只需在主页点击“捐书”按钮并扫描图书背面的条形码，系统自动识别书籍，依次扫码完成后点击下单，并将书带到漂流活动场地即可。
+            </p>
+        </div>
+        <div class="text_box">
+            <p class="title"><span>&nbsp;</span>捐书可以获得什么？</p>
+            <p class="introduce">
+                将书籍带到图书漂流角以后，工作人员进行审核，通过后按照图书定价1：1发放熊猫币。使用熊猫币可以兑换漂流角其他书籍，也可以兑换其他文创产品。
+            </p>
+        </div>
+        <div class="text_box">
+            <p class="title"><span>&nbsp;</span>熊猫币如何兑换其他产品？</p>
+            <p class="introduce">
+                在图书漂流角，只需点击“买书”按钮，扫描上架图书背面的条形码点击下单即可。若熊猫币不足，则按照1个熊猫币0.1元支付补差价。
+            </p>
+        </div>
+        <div class="text_box">
+            <p class="title"><span>&nbsp;</span>什么样的书不可以进行漂流？</p>
+            <p class="introduce">
+                宗教类书籍、教材教辅、考试书籍、杂志；<img src="static/img/corner_err.png"/><br>
+                封面污染破损，有影响阅读的污渍、缺页破损、异味；<img src="static/img/corner_err.png"/><br>
+                非卖品和非法出版物。<img src="static/img/corner_err.png"/>
+            </p>
+        </div>
+    </div>
+    <div class="bottom_btn">
+        <p>立即参与</p>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../static/js/core/util.js"></script>
+<script type="text/javascript" src="../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="../static/js/recycle.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+    Window.onload = Load();
+    var corner = ocean.getRequestParameter("corner");
+    sessionStorage.setItem("ocean_corner", corner);
+    function Load() {
+        $(".bottom_btn").click(function () {
+            window.location.href = "join.html";
+        });
+    }
+
+</script>
+</html>

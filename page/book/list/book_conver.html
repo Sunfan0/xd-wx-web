@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/book/list/book_conver.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">熊猫币兑换图书</p>
+</div>
+<div class="content">
+    <div id="book_list"></div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="../../../static/js/dropload.min.js"></script>
+<script>
+    var from = 'store';
+    var params = {
+        page: 0,
+        limit: 12,
+        from: from,
+        exchange: true
+    };
+    var loader = $('.content').dropload({
+        scrollArea: window,
+        domDown: {
+            domClass: 'weui-loadmore ',
+            domRefresh: '<div class="dropload-refresh">↑上拉加载更多</div>',
+            domLoad: '<i class="weui-loading"></i><span class="weui-loadmore__tips">正在加载</span>',
+            domNoData: '<span class="weui-loadmore__bottom">没有更多数据了</span>'
+        },
+        loadDownFn: function () {
+            params.page += 1;
+            loadPageData();
+        }
+    });
+
+    function loadPageData() {
+        var classify = $(".sub_title.active").data("id");
+        params.classify = classify;
+        ocean.get("resources/biz/api/book/list", params, function (res) {
+            if (res.code == 0) {
+                console.log(res.data);
+                var template = _.template($('#temp_book_item').html());
+                if (res.data.isFirstPage || res.data.pageNum == 0) {
+                    $('#book_list').html("");
+                }
+                $('#book_list').append(template({list: res.data.list}));
+
+                if (res.data.isLastPage) {
+                    loader.lock();
+                    loader.noData(true);
+                } else {
+                    loader.unlock();
+                    loader.noData(false);
+                }
+                loader.resetload();
+
+                afterLoad();
+            }
+        });
+    }
+
+    function afterLoad() {
+        $(".lazy").lazyload({
+            effect: "fadeIn",
+            threshold: 0,
+            failurelimit: 10
+        });
+
+        $(".book_info").on("click", function () {
+            location.href = "../book_info.html?from=" + from + "&id=" + $(this).data("id");
+        });
+        score_star();
+    }
+</script>
+<script type="text/template" id="temp_book_item">
+    <@_.each(list, function (item) {@>
+    <div class="book_info" data-id="<@=item.id@>">
+        <div class="img lazy" data-original="<@=item.picture@>"
+             style="background-image: url('../../../static/img/book.jpg')"></div>
+        <div class="text">
+            <p class="name"><@=item.name@></p>
+            <p class="author"><@=item.author@></p>
+            <p class="from"><@=item.publishing@></p>
+            <@if(item.isExchange){@>
+            <p class="score"><img src="../../../static/img/buttom/star.png">熊猫币兑换</p>
+            <@}@>
+            <p class="money">￥<@=item.price@><span>(<@=item.discount@>折)</span></p>
+            <div class="grade">
+                <span class="label">豆瓣评分</span>
+                <div class="star" data-score="<@=item.score@>">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                </div>
+                <span class="number">(<@=item.score.toFixed(1)@>)</span>
+            </div>
+        </div>
+    </div>
+    <@ }); @>
+</script>
+</html>

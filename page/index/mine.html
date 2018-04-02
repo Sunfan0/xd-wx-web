@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0,viewport-fit=cover">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/index/mine_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/common_0320.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="top">
+    <div class="img_bg no_bg"></div>
+    <div class="bg_div">
+        <div class="img_bg have_bg" style="display:none;"></div>
+        <div class="img_bg color_bg"></div>
+    </div>
+    <div class="header">
+        <div class="user" id="user_detail">
+            <div class="avatar"><img id="head" src="../../static/img/buttom/mine/avatar.png"/></div>
+            <!--登录-->
+            <div class="info" id="is_login">
+                <p class="tel" id="username">
+                </p>
+            </div>
+            <!--未登录-->
+            <div class="no-login">立即登录</div>
+        </div>
+    </div>
+    <!--
+        <div class="order">
+            <div class="order_list payment" id="buy">
+                <img src="../../static/img/buttom/mine/maishu_1.png" width="37px" height="45px"/>
+                <p>买过的书</p>
+                &lt;!&ndash;<span class="num usernum" id="buyNum" style="display: none"></span>&ndash;&gt;
+            </div>
+            <div class="order_list payment" id="sell">
+                <img src="../../static/img/buttom/mine/maiguo_1.png" width="37px" height="45px"/>
+
+                <p>卖过的书</p>
+                &lt;!&ndash;<span class="num usernum" id="sellNum" style="display: none"></span>&ndash;&gt;
+            </div>
+            <div class="order_list payment" id="rent">
+                <img src="../../static/img/buttom/mine/zushu_1.png" width="37px" height="45px"/>
+                <p>租过的书</p>
+                &lt;!&ndash;<span class="num usernum" id="rentNum" style="display: none"></span>&ndash;&gt;
+            </div>
+        </div>-->
+
+    <div class="myvip" style="margin: 37px 0 10px;">
+        <div class="money">
+            <div class="avatar">
+                <img src="../../static/img/buttom/mine/mine2.png" class="qianbao" style="height: 25px;width:25px"/>
+            </div>
+            <div class="text" id="wallet">我的钱包</div>
+        </div>
+        <div id="buy">
+            <div class="avatar">
+                <img src="../../static/img/buttom/mine/maishu_1.png" style="height: 25px;width:25px"/>
+            </div>
+            <div class="text">买过的书</div>
+        </div>
+        <div id="sell">
+            <div class="avatar">
+                <img src="../../static/img/buttom/mine/maiguo_1.png" style="height: 25px;width:25px"/>
+            </div>
+            <div class="text">卖过的书</div>
+        </div>
+
+        <!--<div class="time">
+            <div class="avatar">
+                <img src="../../static/img/buttom/mine/mine1.png" id="is"
+                     style="height:18px;width: 23px;margin-top: 5px"/>
+                &lt;!&ndash;<img src="../../static/img/mine/no%20vip1.png" id="no" style="height:19px;width: 23px"/>&ndash;&gt;
+            </div>
+            &lt;!&ndash;是会员&ndash;&gt;
+            <div class="text" id="isvip">
+                <c>借书卡</c>
+                <span id="vip" style="color: rgb(195, 195, 195);"></span>
+            </div>
+            &lt;!&ndash;不是会员&ndash;&gt;
+            <div class="text" id="notvip">
+                <a class="vip">借书卡</a>
+            </div>
+        </div>
+        <div class="integral">
+            <div class="avatar">
+                <img src="../../static/img/buttom/mine/mine3.png" style="height: 24px;width: 24px"/>
+            </div>
+            <div class="text">熊猫币<span id="grade"></span></div>
+        </div>-->
+    </div>
+    <div class="myvip">
+        <div class="discounts">
+            <div class="avatar">
+                <img src="../../static/img/buttom/mine/mine5.png" style="height: 25px;width: 25px;"/>
+            </div>
+            <div class="text">我的优惠</div>
+        </div>
+        <div class="address">
+            <div class="avatar">
+                <img src="../../static/img/buttom/mine/mine4.png" style="height: 25px;width: 25px"/>
+            </div>
+            <div class="text">地址管理</div>
+        </div>
+        <!--<div class="school_serve">
+            <div class="avatar">
+                <img src="../../static/img/buttom/mine/mine8.png" style="height: 25px;width: 25px"/>
+            </div>
+            <div class="text">校园服务</div>
+        </div>-->
+        <div class="question">
+            <div class="avatar">
+                <img src="../../static/img/buttom/mine/mine6.png" style="height: 25px;width: 25px"/>
+            </div>
+            <div class="text">常见问题</div>
+        </div>
+    </div>
+    <div class="bottombox"></div>
+</div>
+<div class="bottom">
+    <div class="home">
+        <img src="../../static/img/buttom/home_2.png"/>
+        <span class="btnname">首页</span>
+    </div>
+    <div class="buybook">
+        <img src="../../static/img/buttom/sell_2.png"/>
+        <span class="btnname">卖书</span>
+    </div>
+    <!--<div class="buybook">
+        <div class="circlebg">
+            <img src="../../static/img/buttom/buybook.png"/>
+        </div>
+        &lt;!&ndash;<span class="btnname">卖书</span>&ndash;&gt;
+    </div>-->
+    <div class="car">
+        <img src="../../static/img/buttom/car_2.png"/>
+        <span class="num" id="shopping" style="display: none"></span>
+        <span class="btnname">购物车</span>
+
+    </div>
+    <div class="mine">
+        <img src="../../static/img/buttom/mine_1.png"/>
+        <span class="btnname on">我的</span>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    var temp = localStorage.getItem("ocean-xd-user");
+    if (null != temp) {
+        var member = JSON.parse(temp);
+        initPageData(member);
+    }
+    $(function () {
+        if (ocean.getLoginUserId()) {
+            $("#is_login").show();
+            fetchPageData();
+        } else {
+            $(".no-login").show();
+            $(".no-login").on("click", function () {
+                ocean.showLogin(function () {
+                    window.location.reload();
+                });
+            });
+            $(".usernum").hide();
+        }
+
+        $(".time").on("click", function () {
+            if (ocean.getLoginUserId()) {
+                location.href = "../book/vip.html";
+            } else {
+                ocean.showLogin();
+            }
+        });
+
+
+        $(".money").on("click", function () {
+            if (!ocean.getLoginUserId()) {
+                ocean.showLogin();
+            } else {
+                location.href = "../my/cash.html";
+            }
+        });
+
+        $(".address").on("click", function () {
+            if (!ocean.getLoginUserId()) {
+                ocean.showLogin();
+            } else {
+                location.href = "../my/address/user_address.html";
+            }
+        });
+
+        //全部订单
+        $("#allgoods").on("click", function () {
+            if (!ocean.getLoginUserId()) {
+                ocean.showLogin();
+            } else {
+                location.href = "order_form/order_list.html";
+            }
+        });
+
+        $("#rent").on("click", function () {
+            if (!ocean.getLoginUserId()) {
+                ocean.showLogin();
+            } else {
+                location.href = "../my/order/lease.html";
+            }
+        });
+        $("#buy").on("click", function () {
+            if (!ocean.getLoginUserId()) {
+                ocean.showLogin();
+            } else {
+                location.href = "../my/order/buy.html";
+            }
+        });
+        $("#sell").on("click", function () {
+            if (!ocean.getLoginUserId()) {
+                ocean.showLogin();
+            } else {
+                location.href = "../my/order/sell.html";
+            }
+        });
+
+
+        $(".home").on("click", function () {
+            location.href = "../../index.html";
+        });
+        $(".find").on("click", function () {
+            location.href = "book_store.html";
+        });
+        $(".car").on("click", function () {
+            location.href = "shopping_car.html";
+        });
+        $(".mine").on("click", function () {
+            location.href = "mine.html";
+        });
+        $(".buybook").on("click", function () {
+            location.href = "book_recycle.html";
+        });
+        $(".question").on("click", function () {
+            location.href = "../my/question.html";
+        });
+        $(".school_serve").on("click", function () {
+            location.href = "../my/school_serve.html";
+        });
+        $(".discounts").on("click", function () {
+            location.href = "../my/discount.html";
+        });
+    });
+
+    function fetchPageData() {
+        ocean.get("resources/biz/api/mine", {id: ocean.getLoginUserId()}, function (res) {
+            if (res.code == 0) {
+                var member = res.data.user;
+                localStorage.setItem("ocean-xd-user", JSON.stringify(member));
+                initPageData(member);
+
+                if (res.data.lease > 0) {
+                    $("#rentNum").show();
+                    $("#rentNum").html(res.data.lease);
+                } else {
+                    $("#rentNum").hide();
+                }
+
+                if (res.data.buy > 0) {
+                    $("#buyNum").show();
+                    $("#buyNum").html(res.data.buy);
+                } else {
+                    $("#buyNum").hide();
+                }
+
+                if (res.data.recycle > 0) {
+                    $("#sellNum").show();
+                    $("#sellNum").html(res.data.recycle);
+                } else {
+                    $("#sellNum").hide();
+                }
+            }
+        }, function (error) {
+            ocean.tip(error);
+        });
+    }
+
+    function initPageData(member) {
+        $("#username").html(member.nickname);
+        $("#grade").html(member.grade);
+        if (member.vipType == "MONTH" || member.vipType == "YEAR") {
+            $("#isvip").show();
+            $("#notvip").hide();
+            if (member.vipEndTime == null) {
+                $("#vip").html();
+            } else {
+                $("#vip").html(member.vipEndTime.substring(0, 10) + "到期");
+            }
+        } else {
+            $("#notvip").show();
+            $("#isvip").hide();
+        }
+        var head = member.head;
+        $("#head").attr("src", head);
+        $(".have_bg").css("background-image", "url(" + head + ")");
+        $(".no_bg").hide();
+        $(".have_bg").show();
+    }
+</script>
+</html>

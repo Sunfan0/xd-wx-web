@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/my/message.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">消息中心</p>
+</div>
+<div class="content">
+    <div class="body">
+        <!--没有消息-->
+        <div class="img" style="display: none">
+            <img src="../../static/img/mess/mess1.png" width="186px" height="158px"/>
+            <p>暂时没有新消息！</p>
+        </div>
+
+        <!--有消息-->
+        <div class="mess">
+            <div class="item">
+                <div class="cir">
+                    <!--是否为新消息-->
+                    <span class="new"></span>
+                    <img src="../../static/img/mess/icon_03.png"/>
+                </div>
+                <div class="info">
+                    <p class="name">小哆会员<span class="time"></span></p>
+                    <p class="thing">七夕浪漫回礼·0元免费领</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!--长按删除-->
+        <div class="delete">
+            <div class="button">
+                <div class="del">删除</div>
+                <div class="cancel">取消</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    /*
+    $(function() {
+        ocean.template();
+        ocean.get("resources/biz/activity/select_new_activity",{userId:ocean.getUser()}, function (data) {
+            console.log(data.data);
+            if (data.code == 0) {
+                var title = data.data.title;
+                var time = data.data.createdDate;
+                $(".thing").html(title);
+                $(".time").html(time.substring(11,16));
+            }
+        }, function (error) {
+            ocean.tip(error);
+        });
+
+//        消息时间
+//        var time = new Date();
+//        var hour = time.getHours();
+//        var min = time.getMinutes();
+//
+//        hour = hour < 10 ? "0" + hour : hour;
+//        min = min < 10 ? "0" + min : min;
+//        $(".time").html(hour + " : " + min);
+
+
+//        长按删除
+        $.fn.longPress = function(fn) {
+            var timeout = undefined;
+            var $this = this;
+            for(var i = 0;i<$this.length;i++){
+                $this[i].addEventListener('touchstart', function(event) {
+                    timeout = setTimeout(fn, 800);  //长按时间超过800ms，则执行传入的方法
+                }, false);
+                $this[i].addEventListener('touchend', function(event) {
+                    clearTimeout(timeout);  //长按时间少于800ms，不会执行传入的方法
+                }, false);
+            }
+        };
+        $(".item").each(function(index){
+            $(".item").eq(index).longPress(function(){
+                $(".delete").show();
+                $(".cancel").on("tap",function(){
+                    $(".delete").hide();
+                })
+                $(".del").on("tap",function(){
+                    $(".item").eq(index).remove();
+                    $(".delete").hide();
+                    $(".img").show();
+                    $(".mess").hide();
+                })
+            });
+        });
+
+
+
+//        消息详情
+        $(".mess").on("tap",function(){
+            location.href="activity.html";
+        })
+    })
+    */
+</script>
+</html>

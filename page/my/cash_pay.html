@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/my/cash_pay.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">押金支付</p>
+</div>
+<div class="content">
+    <p class="buy_way">选择押金额度</p>
+    <div class="limit">
+        <span class="money_number">¥39.00</span>
+        <span class="label_text">可借阅5本绘本</span>
+    </div>
+    <p class="buy_way">选择支付方式</p>
+    <div style="background-color: white">
+        <div class="forminfo">
+            <div class="formbar">
+                <span class="label">
+                    <img src="../../static/img/buy/wxbuy.png" width="17px" height="15px">
+                    微信支付
+                </span>
+                <div class="label_val">
+                    <img class="buy_select1" src="../../static/img/buy/select1.png" width="25px" height="25px">
+                </div>
+            </div>
+        </div>
+        <div class="forminfo">
+            <div class="formbar">
+                <span class="label">
+                    <img src="../../static/img/buy/cardbuy.png" width="17px" height="11px">
+                    银行卡快捷支付
+                </span>
+                <div class="label_val">
+                    <img class="buy_select2" src="../../static/img/buy/select0.png" width="25px" height="25px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom">
+    <div class="submit_btn">确认支付</div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    var buy_select = 1;//微信支付1,银行卡快捷支付2
+
+    $(".buy_select1").on("click", function () {
+        var strsrc = $(this).attr("src");
+        var current = strsrc.substring(strsrc.length - 4, strsrc.length - 5);
+        if (current == 0) {
+            buy_select = 1;
+            $(this).attr("src", "../../static/img/buy/select1.png");
+            $(".buy_select2").attr("src", "../../static/img/buy/select0.png");
+        }
+    });
+    $(".buy_select2").on("click", function () {
+        var strsrc = $(this).attr("src");
+        var current = strsrc.substring(strsrc.length - 4, strsrc.length - 5);
+        if (current == 0) {
+            buy_select = 2;
+            $(this).attr("src", "../../static/img/buy/select1.png");
+            $(".buy_select1").attr("src", "../../static/img/buy/select0.png");
+        }
+    });
+    $(function () {
+        countDown();
+    });
+</script>
+</html>

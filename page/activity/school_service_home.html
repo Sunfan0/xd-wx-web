@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/activity/school_service.css"/>
+</head>
+<body ontouchstart>
+    <img src="../../static/img/activity/rule.png" class="bg_img" />
+    <img src="../../static/img/activity/join.png" class="join_btn"/>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+    function getRequestParameter(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null)
+            return decodeURI(r[2]);
+        return null;
+    };
+    var sac = getRequestParameter("sac");
+    function resizeLayout() {
+        var width = $('.bg_img').width();
+        var rootSize = width * 100 / 375;
+       $(document.documentElement).css('font-size', rootSize + 'px');
+    }
+    $('.bg_img').load(function(){
+        resizeLayout();
+    });
+    $('.join_btn').on('click', function(){
+        window.location.replace('./school_service_contact.html?sac=' + sac);
+    });
+    $(window).resize(function() {
+        resizeLayout();
+    });
+    $(function() {
+        resizeLayout();
+    });
+</script>
+
+<script>    
+    var info = {
+        title: '校园旧书回收入口',
+        desc: '传递阅读的温度'
+    };
+    var jssdk = new ocean_jssdk(function () {
+        wx.onMenuShareAppMessage({
+            title: info.title, // 分享标题
+            desc: info.desc, // 分享描述
+            link: window.location.href, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            imgUrl: 'http://static.pandabox.top/static/img/panda_share.png', // 分享图标
+            type: 'link', // 分享类型,music、video或link，不填默认为link
+            success: function () {
+            },
+            cancel: function () {
+            }
+        });
+        wx.onMenuShareTimeline({
+            title: info.title, // 分享标题
+            desc: info.desc, // 分享描述
+            link: window.location.href, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            imgUrl: 'http://static.pandabox.top/static/img/panda_share.png', // 分享图标
+            type: 'link', // 分享类型,music、video或link，不填默认为link
+            success: function () {
+            },
+            cancel: function () {
+            }
+        });
+    });
+    jssdk.init();
+</script>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0,viewport-fit=cover">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/index/shoppingcar_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/common_0320.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<!--<div class="top">
+    <p class="title">购物车</p>
+    <div class="subtitle">
+        <div class="wantbuy on">想买的书<span></span></div>
+        <div class="wantrent">想租的书<span></span></div>
+    </div>
+</div>-->
+<div class="content">
+
+</div>
+<div class="empty_car" style="display: none;">
+    <div class="img">
+        <img src="../../static/img/car/none.png" width="89px" height="79px">
+        <p>您的购物车空空如也！赶紧去采购吧！</p>
+    </div>
+</div>
+<div class="subtottom buy_bottom" style="display: none;">
+    <span style="color: #898989;">共</span>
+    <span style="color: #3b3b3b;" id="buy_car_count"></span>
+    <span style="color: #898989;">本</span>
+    <a class="btn buy_btn">买书</a>
+</div>
+<div class="subtottom lease_bottom" style="display: none;">
+    <span style="color: #898989;">共</span>
+    <span style="color: #3b3b3b;" id="lease_car_count">2</span>
+    <span style="color: #898989;">本</span>
+    <a class="btn lease_btn">租书</a>
+</div>
+<div class="bottom">
+    <div class="home">
+        <img src="../../static/img/buttom/home_2.png"/>
+        <span class="btnname">首页</span>
+    </div>
+    <div class="buybook">
+        <img src="../../static/img/buttom/sell_2.png"/>
+        <span class="btnname">卖书</span>
+    </div>
+    <!--<div class="buybook">
+        <div class="circlebg">
+            <img src="../../static/img/buttom/buybook.png"/>
+        </div>
+        &lt;!&ndash;<span class="btnname">卖书</span>&ndash;&gt;
+    </div>-->
+    <div class="car">
+        <img src="../../static/img/buttom/car_1.png"/>
+        <span class="num" id="shopping" style="display: none"></span>
+        <span class="btnname on">购物车</span>
+
+    </div>
+    <div class="mine">
+        <img src="../../static/img/buttom/mine_2.png"/>
+        <span class="btnname">我的</span>
+    </div>
+</div>
+<div class="pop_box" style="display: none;">
+    <div class="border_box">
+        <p class="title">您的租书卡已经到期，是否续期以享受优惠？</p>
+        <div class="btn_box">
+            <span class="no_btn">不用了</span>
+            <span class="go_btn">去续期</span>
+        </div>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    var bookIdArr = [];
+    var loading = weui.loading('loading');
+    var currentFrom = "store";
+    $(function () {
+        loadBuyPage();
+        //想买的书
+        $(".wantbuy").click(function () {
+            currentFrom = "store";
+            if ($(".wantrent").hasClass("on")) {
+                $(".wantrent").removeClass("on");
+                $(this).addClass("on");
+                loading = weui.loading('loading');
+                loadBuyPage();
+            }
+        });
+
+        //想租的书
+        $(".wantrent").click(function () {
+            currentFrom = "library";
+            if ($(".wantbuy").hasClass("on")) {
+                $(".wantbuy").removeClass("on");
+                $(this).addClass("on");
+                loading = weui.loading('loading');
+                loadLeasePage();
+            }
+        });
+
+        $(".buy_btn").on("click", function () {
+            bookIdArr = [];
+            $.each($(".bookinfo"), function () {
+                bookIdArr.push($(this).data("id"));
+            });
+            buy_judge(function () {
+                location.href = "../order/buy/buy_confirm.html"
+            });
+        });
+
+        $(".lease_btn").on("click", function () {
+            bookIdArr = [];
+            $.each($(".bookinfo"), function () {
+                bookIdArr.push($(this).data("id"));
+            });
+            lease_judge(function () {
+                location.href = "../order/lease/lease_confirm.html"
+            });
+        });
+
+        $(".no_btn").on("click", function () {
+            $(".pop_box").hide();
+        });
+
+        $(".go_btn").on("click", function () {
+            location.href = "../book/vip.html";
+        });
+    });
+
+
+    function loadLeasePage() {
+        leaseShoppingCar.list(function (list) {
+            console.log(list)
+            loading.hide();
+            if (null == list || list.length == 0) {
+                $('body').css('background-color','#fff');
+                $(".empty_car").show();
+                $(".subtottom").hide();
+                $(".content").hide();
+                return;
+            }
+            $('body').css('background-color','#f8f8f8');
+            $(".content").show();
+            $(".empty_car").hide();
+
+            $(".buy_bottom").hide();
+            $(".lease_bottom").show();
+            var template = _.template($('#tmpl_car_item').html());
+            $(".content").html(template({
+                list: list,
+                showPrice: false
+            }));
+            $("#lease_car_count").html(list.length);
+            afterLoad();
+        });
+    }
+
+    function loadBuyPage() {
+        buyShoppingCar.list(function (list) {
+            console.log(list)
+            loading.hide();
+            if (null == list || list.length == 0) {
+                $('body').css('background-color','#fff');
+                $(".empty_car").show();
+                $(".subtottom").hide();
+                $(".content").hide();
+                return;
+            }
+            $('body').css('background-color','#f8f8f8');
+            $(".content").show();
+            $(".empty_car").hide();
+
+            $(".buy_bottom").show();
+            $(".lease_bottom").hide();
+            var template = _.template($('#tmpl_car_item').html());
+            $(".content").html(template({
+                list: list,
+                showPrice: true
+            }));
+            $("#buy_car_count").html(list.length);
+            afterLoad();
+        });
+    }
+
+    function afterLoad() {
+        $(".lazy").lazyload({
+            effect: "fadeIn",
+            threshold: 0,
+            failurelimit: 10
+        });
+
+        $(".pop_book").on("click", function () {
+            dropBook($(this).data("id"), $(this).data("type"));
+            return false;
+        });
+
+        $(".bookinfo").on("click", function () {
+            location.href = "../book/book_info.html?from="+currentFrom+"&id=" + $(this).data("id");
+        });
+    }
+
+    function dropBook(id, type) {
+        weui.confirm('删除所选图书？', function () {
+            if (type == "buy") {
+                buyShoppingCar.pop(id, function () {
+                    loadBuyPage();
+                });
+            } else if (type == "lease") {
+                leaseShoppingCar.pop(id, function () {
+                    loadLeasePage();
+                });
+            }
+        }, null, {});
+    }
+
+    function lease_judge(yes) {
+        if (ocean.getLoginUserId()) {
+            loading = weui.loading('loading');
+            ocean.get("resources/biz/api/lease/judge", {
+                userId: ocean.getLoginUserId(),
+                bookIds: bookIdArr.join(",")
+            }, function (res) {
+                loading.hide();
+                if (res.code == 0) {
+                    yes();
+                }
+            }, function (err) {
+                loading.hide();
+                if (err.code == 110125) {
+                    ocean.tip(err.message + " 将跳转至充值界面!", function () {
+                        location.href = "../my/cash.html";
+                    });
+                } else if (err.code == 110126) {
+                    $(".pop_box").show();
+                } else {
+                    ocean.tip(err.message);
+                }
+            });
+        } else {
+            ocean.showLogin();
+        }
+    }
+
+    function buy_judge(yes) {
+        if (ocean.getLoginUserId()) {
+            loading = weui.loading('loading');
+            ocean.get("resources/biz/api/buy/judge", {
+                userId: ocean.getLoginUserId(),
+                bookIds: bookIdArr.join(",")
+            }, function (data) {
+                loading.hide();
+                if (data.code == 0) {
+                    yes();
+                }
+            }, function (err) {
+                loading.hide();
+                if (err.code == "120004") {
+                    ocean.tip(err.message, function () {
+                        location.href = "../my/address/user_address.html";
+                    });
+                } else {
+                    ocean.tip(err.message);
+                }
+            });
+        } else {
+            ocean.showLogin();
+        }
+    }
+
+    $(".home").on("click", function () {
+        location.href = "../../index.html";
+    });
+    $(".find").on("click", function () {
+        location.href = "book_store.html";
+    });
+    $(".car").on("click", function () {
+        location.href = "shopping_car.html";
+    });
+    $(".mine").on("click", function () {
+        location.href = "mine.html";
+    });
+    $(".buybook").on("click", function () {
+        location.href = "book_recycle.html";
+    });
+</script>
+
+<script type="text/template" id="tmpl_car_item">
+    <@_.each(list, function (item) {@>
+    <div class="bookinfo" data-id="<@=item.id@>">
+        <div class="imginfo">
+            <div class="img lazy" data-original="<@=item.picture@>"
+                 style="background-image: url('../../static/img/book.jpg')"></div>
+        </div>
+        <div class="textinfo">
+            <p class="title"><@=item.name@></p>
+            <p class="author"><@=item.author@></p>
+            <p class="grade">豆瓣评分 <@=item.score.toFixed(1)@></p>
+            <div class="bottom_info">
+                <@if(showPrice){@>
+                <span class="used">二手价</span>
+                <span class="money">￥<@=item.price@></span>
+                <span class="discount"><@=item.discount@>折</span></p>
+                <@}@>
+                <!--<span class="integral"><@=(item.price*10).toFixed(2)@>熊猫币</span>-->
+            </div>
+            <span class="close pop_book" data-id="<@=item.id@>" data-type="<@=showPrice?'buy':'lease'@>">×</span>
+        </div>
+    </div>
+    <@ }); @>
+</script>
+</html>

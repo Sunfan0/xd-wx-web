@@ -1,0 +1,80 @@
+body {
+    background-color: #f8f8f8;
+}
+
+.content {
+    background-color: white;
+    margin-top: 15px;
+    padding: 0 15px;
+}
+
+.content .book_info {
+    height: 55px;
+    line-height: 55px;
+    text-align: right;
+    border-bottom: 1px solid rgba(241, 241, 241, 0.6);
+}
+
+.content .book_info .name {
+    float: left;
+    text-align: left;
+}
+
+.content .book_info .integral {
+    font-size: 14px;
+    color: #3d3d3d;
+}
+
+.content .sum_info {
+    height: 55px;
+    line-height: 55px;
+    text-align: right;
+    font-weight: 600;
+    font-size: 16px;
+    color: #3b3b3b;
+}
+
+.content .sum_info span {
+    color: #b59768;
+}
+.content .need_info{
+    height: 55px;
+    line-height: 55px;
+    text-align: right;
+    font-size: 16px;
+    border-top: 1px solid rgba(241, 241, 241, 0.6);
+}
+.content .need_info .need_hint{
+    color: #c3c3c3;
+}
+.content .need_info .need_text{
+    font-weight: 600;
+    color: #3b3b3b;
+}
+.content .need_info .need_money{
+    font-weight: 600;
+    color: #b59768;
+}
+
+.bottom_btn {
+    width: 100%;
+    position: fixed;
+    bottom: 150px;
+    text-align: center;
+}
+
+.bottom_btn span {
+    background-color: #3b3b3b;
+    box-shadow: 0 0 10px #3b3b3b;
+    border-radius: 30px;
+    padding: 15px 45px;
+    color: white;
+}
+
+.no_btn span {
+    background-color: #c3c3c3;
+    box-shadow: 0 0 10px #c3c3c3;
+    border-radius: 30px;
+    padding: 15px 45px;
+    color: white;
+}

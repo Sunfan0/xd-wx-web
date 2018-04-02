@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/index/share_success.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/common_0320.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="top">
+    <p class="close close_page"><img src="../../static/img/close.png" width="15" height="15"/></p>
+    <p class="title">优惠到账</p>
+</div>
+<div class="content">
+    <div class="content_header">
+        <div class="chatBox">
+            <div class="header">
+                <img src="../../static/img/discount/success_header.png"/>
+            </div>
+            <div class="wordBox">
+                恭喜您获得换书券和借书月卡，一大波好书等着你，快点开看看吧！
+            </div>
+        </div>
+    </div>
+    <div class="info_box exchange_book">
+        <div class="text">
+            <p class="discount_title">换书劵</p>
+            <p class="discount_time" id="endTime"></p>
+        </div>
+        <div class="img">
+            <img src="../../static/img/discount/success_book.png"/>
+        </div>
+        <div class="use exchange_use">
+            <img src="../../static/img/discount/use.png"/>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <div class="info_box month_free">
+        <div class="text">
+            <p class="discount_title">借阅月卡</p>
+            <p class="discount_time">海量图书免费借阅</p>
+        </div>
+        <div class="use month_use">
+            <img src="../../static/img/discount/use.png"/>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <div class="panda_code">
+        <img class="panda_img" src="../../static/img/discount/panda_code.png"/>
+    </div>
+    <p class="panda_footer">更多好书尽在熊猫格子</p>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    $(function () {
+        ocean.get('resources/biz/api/coupon/self', {userId: ocean.getLoginUserId()}, function (res) {
+            if (res.code == 0) {
+                console.log(res.data);
+
+                var time = res.data[0].endTime.substring(0, 10);
+                $("#endTime").text("有效期至：" + time);
+            }
+        });
+
+        $(".close_page").on("click", function () {
+            location.href = "../../index.html";
+        });
+        $(".exchange_book").on("click", function () {
+            location.href = "../../page/my/conversion.html";
+        });
+        $(".month_free").on("click", function () {
+            location.href = "../../page/book/vip.html";
+        });
+    });
+</script>
+</html>

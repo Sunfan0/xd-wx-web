@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>买书订单</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/buy_order.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="top_title">
+    <div onclick="history.back()"><img class="back" src="../static/img/back_btn.png"/><span>返回</span></div>
+    <div><span>买书订单</span>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div><img class="other" src="../static/img/other_btn.png"/></div>
+</div>
+<div class="top_place"></div>
+<div class="content">
+    <div id="buy_list"></div>
+    <div class="sum_info">
+        共<span class="buy_number"></span>本&nbsp;&nbsp;总熊猫币<span class="buy_integral"></span>
+    </div>
+    <div class="need_info hidden">
+        <span class="need_hint">(您的熊猫币不足)</span>
+        <span class="need_text">还需支付</span>
+        <span class="need_money">2元</span>
+    </div>
+</div>
+<div class="bottom_btn">
+    <span>确定</span>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    var user_grade = sessionStorage.getItem("user_grade");
+    var buy_number = 0;
+    var buy_integral = 0;
+    var buy_idstr = '';
+    var buy_score = '';
+    Window.onload = Load();
+
+    function Load() {
+        OrderList();
+        $(".bottom_btn").click(function () {
+            var corner = sessionStorage.getItem("ocean_corner");
+            var loading = weui.loading('loading');
+            $(".bottom_btn").addClass("no_btn");
+            $(".bottom_btn").unbind();
+            ocean.get("resources/biz/bc/api/set_buy_order", {
+                userId: ocean.getLoginUserId(),
+                isbns: buy_idstr,
+                score: buy_score,
+                corner: corner
+            }, function (res) {
+                loading.hide();
+                console.log(res);
+                if (res.code == 0) {
+                    sessionStorage.setItem("buy-book-list", "");
+                    if (res.data.status == "FINISHED") {
+                        window.location.href = "buy_success.html"
+                    } else {
+                        window.location.href = "pay.html?type=corner&orderId=" + res.data.id;
+                    }
+                }
+            }, function (error) {
+                ocean.tip(error.message);
+                loading.hide();
+            })
+        })
+    }
+
+    function OrderList() {
+        var bookArrStr = sessionStorage.getItem("buy-book-list");
+        if (bookArrStr) {
+            var bookArr = JSON.parse(bookArrStr);
+            for (var key in bookArr) {
+                var book = bookArr[key];
+                console.log(book)
+                var str_list = '<div class="book_info">';
+                str_list += '<span class="name">' + book.bookName + '</span>';
+                str_list += '<span class="integral">熊猫币&nbsp;' + book.integral + '</span>';
+                str_list += '</div>';
+                $("#buy_list").append(str_list);
+
+                buy_number++;
+                buy_integral += book.integral;
+                buy_idstr += book.isbn + ',';
+                buy_score += book.integral + ',';
+            }
+            $(".buy_number").text(buy_number);
+            $(".buy_integral").text(buy_integral);
+            if (buy_integral > user_grade) {
+                var money = (buy_integral - user_grade) * 0.1;
+                $(".need_info").show();
+                $(".need_money").text(money.toFixed(2) + "元");
+            }
+
+        } else {
+            window.location.href = "buy_book.html";
+        }
+    }
+</script>
+</html>

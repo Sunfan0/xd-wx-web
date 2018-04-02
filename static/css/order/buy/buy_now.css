@@ -1,0 +1,123 @@
+.bg1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    background: #f1f1f1;
+    z-index: -5;
+}
+
+.book_list {
+    padding: 60px 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.book_item {
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background: #ffffff;
+    display: flex;
+    position: relative;
+}
+
+.book_item .img {
+    width: 90px;
+    height: 134px;
+    overflow: hidden;
+    margin-right: 10px;
+    position: relative;
+}
+
+.book_item .img_bg {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -65% 0 0 -50%;
+}
+
+.book_item .info {
+    flex: 1;
+    position: relative;
+    margin-top: 8px;
+}
+
+.book_item .info .name {
+    font-size: 15px;
+    color: #3b3b3b;
+}
+
+.book_item .author {
+    font-size: 10px;
+    color: #898989;
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+.book_item .price {
+    font-size: 15px;
+    color: #b59768;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.delete_this {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    right: 10px;
+}
+
+.buttom {
+    width: 100%;
+    height: 64px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #ffffff;
+    z-index: 56;
+    line-height: 64px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #c3c3c3;
+}
+
+.money {
+    float: left;
+}
+
+.buttom .button {
+    width: 30%;
+    height: 44px;
+    background: #3b3b3b;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+    float: right;
+    margin-top: 3%;
+    line-height: 44px;
+}
+
+.money .num {
+    color: #3b3b3b;
+}
+
+.money .tot, .money .mei {
+    font-size: 18px;
+    color: #b59768;
+}
+
+.money .mei {
+    margin-left: 10px;
+}
+
+.money .icon {
+    color: #b59768;
+}

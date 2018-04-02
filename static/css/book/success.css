@@ -1,0 +1,38 @@
+.content .header_img {
+    text-align: center;
+}
+
+.content .header_img img {
+    margin: 30px auto;
+    width: 230px;
+    height: 120px;
+}
+
+.content .header_img .text {
+    font-size: 21px;
+    color: #3d3d3d;
+}
+
+.content .header_img .message{
+    margin-top: 6px;
+    font-size: 15px;
+    color: rgba(137, 137, 137, 0.76);
+}
+
+.content .go_btn {
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.content .go_btn p {
+    background-color: #3b3b3b;
+    box-shadow: 0 0 4px rgba(59, 59, 59, 0.5);
+    border-radius: 3px;
+    width: 90%;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #d7d6dc;
+}

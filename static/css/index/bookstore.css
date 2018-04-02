@@ -1,0 +1,185 @@
+.top {
+    width: -webkit-fill-available;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #ffffff;
+    line-height: 44px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.hrbox {
+    width: 100%;
+    height: 5px;
+    background-color: #f4f4f4;
+    border: 0;
+}
+
+.allclassbox {
+    padding: 10px 0 5px 0;
+    margin-left: 15px;
+    margin-bottom: 5.3%;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.allclassbox .allclassify {
+    width: 35px;
+    height: 34px;
+}
+
+.allclassbox .arrow {
+    width: 11px;
+    height: 20px;
+    vertical-align: super;
+}
+
+.allclassbox .textinfo {
+    width: 78%;
+    display: inline-block;
+    margin-left: 12px;
+}
+
+.allclassbox .toptext {
+    font-size: 1em;
+    font-weight: 600;
+    color: #c18108;
+}
+
+.allclassbox .subtext {
+    color: #c7c7c7;
+    font-size: 0.6em;
+}
+
+.top .title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.top .classbtn {
+    font-size: 14px;
+    position: fixed;
+    right: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.content .headimg {
+    display: block;
+    width: -webkit-fill-available;
+    height: 150px;
+    border-radius: 2px;
+}
+
+.content .labelname {
+    margin-left: 5px;
+    font-weight: 600;
+    font-size: 19px;
+    font-weight: 600;
+    color: #3d3d3d;
+}
+
+.content .aboutall {
+    float: right;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #c18108;
+}
+
+.bookclass {
+    padding: 0 4% 12%;
+}
+
+.bookclass .sharbar {
+    display: flex;
+    -webkit-display: flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.bookclass .sharbox {
+    margin-bottom: 5.3%;
+    position: relative;
+    width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.bookclass .sharbox .img {
+    width: 110px;
+    height: 157px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.bookclass .sharbox .name {
+    font-size: 14px;
+    line-height: 25px;
+    color: #3d3d3d;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bookclass .sharbox span {
+    width: 100%;
+    font-size: 14px;
+    color: #635f5f;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.bookclass .sharbox .grade {
+    background-image: url(../../../static/img/index/grade_bg.png);
+    background-position: center;
+    background-size: 100% 100%;
+    text-align: center;
+    width: 19px;
+    height: 26px;
+    font-size: 12px;
+    color: white;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    padding-top: 2px;
+    padding-left: 4px;
+    overflow: hidden;
+}
+
+.bookclass .sharbox .price {
+    font-size: 14px;
+    color: #ff6052;
+}
+
+@media screen and (max-width: 360px) {
+    .bookclass .sharbox {
+        width: 90px;
+    }
+
+    .bookclass .sharbox .img {
+        width: 90px;
+        height: 132px;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .bookclass .sharbox {
+        width: 150px;
+    }
+
+    .bookclass .sharbox .img {
+        width: 150px;
+        height: 231px;
+    }
+}
+

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/order/recover/code_0308.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/common_0320.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="main">
+    <div class="scan">
+        <div id="book_list">
+            <div id="add_flag"></div>
+        </div>
+        <div class="book_bg"></div>
+    </div>
+</div>
+<div class="bg">
+
+</div>
+<div class="button bgg">
+    <span class="code">扫码卖书</span>
+    <span class="write">手动输入</span>
+</div>
+<div class="choice">
+    <div class="left">
+        <p>
+            <span class="number">共<a id="count" href="#">0</a>本，</span>
+            <span class="tot_1">总金额<a id="total" href="#">0.00</a></span>
+        </p>
+    </div>
+    <div class="right">
+        <span class="deliver_btn">送货</span>
+        <span class="buy">下单</span>
+    </div>
+</div>
+<p class="enough" style="display: none">继续扫描其他书，满8本即可下单</p>
+<div class="bottom">
+    <div class="home">
+        <img src="../../../static/img/buttom/home_2.png"/>
+        <span class="btnname">书店</span>
+    </div>
+    <div class="buybook">
+        <img src="../../../static/img/buttom/sell_1.png"/>
+        <span class="btnname on">卖书</span>
+    </div>
+    <!--<div class="buybook">
+        <div class="circlebg">
+            <img src="../../../static/img/buttom/buybook.png"/>
+        </div>
+        <span class="btnname on">卖书</span>
+    </div>-->
+    <div class="car">
+        <img src="../../../static/img/buttom/car_2.png"/>
+        <span class="num" id="shopping" style="display: none"></span>
+        <span class="btnname">购物车</span>
+
+    </div>
+    <div class="mine">
+        <img src="../../../static/img/buttom/mine_2.png"/>
+        <span class="btnname">我的</span>
+    </div>
+</div>
+<div class="fail_popup">
+    <div class="fail_bg"></div>
+    <div class="fail_content">
+        <img class="content_img" src="../../../static/img/panda.png">
+        <p class="text">抱歉！熊猫格子</p>
+        <p class="text">暂时不收这本书</p>
+        <p class="fail_btn">换本试试</p>
+        <img class="fail_close" src="../../../static/img/close.png">
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+    var jssdk = new ocean_jssdk().init();
+    var isbn_box = new isbnBox(addBook);
+    var isMember = false;
+
+    $(function () {
+        ocean.get("resources/biz/api/mine", {id: ocean.getLoginUserId()}, function (res) {
+            if (res.code == 0) {
+                var member = res.data.user;
+                if (!(member.schoolIdentity == '' || member.schoolIdentity == null)) {
+                    isMember = true;
+                }
+                loadBookList();
+            }
+        }, function (error) {
+            ocean.tip(error);
+        });
+
+        $(".area").on("click", function () {
+            history.back();
+        });
+
+        $(".code").on("click", function () {
+            jssdk.scanIsbn(isbn_box.checkBookIsbn);
+        });
+
+        $(".write").on("click", function () {
+            isbn_box.show();
+        });
+
+        $(".home").on("click", function () {
+            location.href = "../../../index.html";
+        });
+        $(".find").on("click", function () {
+            location.href = "../../../page/index/book_store.html";
+        });
+        $(".car").on("click", function () {
+            location.href = "../../../page/index/shopping_car.html";
+        });
+        $(".mine").on("click", function () {
+            location.href = "../../../page/index/mine.html";
+        });
+        $(".buybook").on("click", function () {
+            location.href = "../../../page/index/book_recycle.html";
+        });
+    });
+
+    function loadBookList() {
+        if (isbn_box.isEmpty()) {
+            location.href = "../../index/book_recycle.html";
+        } else {
+            isbn_box.each(addBook);
+        }
+
+        if ($(".book").length >= 1 && isMember) {
+            $(".deliver_btn").show();
+        } else {
+            $(".deliver_btn").hide();
+        }
+
+        if ($(".book").length >= 8) {
+            $(".enough").hide();
+            $(".main").css("padding-bottom", "110px");
+            $(".button").css("bottom", "100px");
+            $(".buy").css("background", "#3b3b3b");
+        } else {
+            $(".enough").show();
+            $(".main").css("padding-bottom", "130px");
+            $(".button").css("bottom", "130px");
+            $(".buy").css("background", "#c3c3c3");
+        }
+        count();
+    }
+
+    function addBook(key, book) {
+        var discount;
+        if (null == book.discount || undefined == book.discount) {
+            if (book.score > 8.5) {
+                book.discount = 0.2 * 10;
+                book.money = (book.price * 0.2).toFixed(2)
+            } else {
+                book.discount = 0.1 * 10;
+                book.money = (book.price * 0.1).toFixed(2)
+            }
+        } else {
+            book.money = (book.price * book.discount * 0.1).toFixed(2)
+        }
+        console.log("****", book.name, book.discount);
+        $("#add_flag").after(
+            '   <div class="book" data-index="' + key + '">\n' +
+            '        <div class="book_border">\n' +
+            '            <div class="book_item">\n' +
+            '                <div class="book_pic">\n' +
+            '                    <img class="img1" src="' + book.picture + '" />\n' +
+            '                </div>\n' +
+            '                <div class="book_info">\n' +
+            '                    <p class="name">' + book.name + '</p>\n' +
+            '                    <p class="author">' + book.author + '</p>\n' +
+            '                    <p class="price">￥<a href="#">' + book.money + '</a><span class="discount">' + book.discount + '折</span></p>\n' +
+            '                </div>\n' +
+            '                <div class="close_div">\n' +
+            '                   <img src="../../../static/img/car/payclose.png" class="close delete_this"/>\n' +
+            '                </div>\n' +
+            '            </div>\n' +
+            '        </div>\n' +
+            '    </div>');
+        $(".close_div").on('click', removeBook);
+        count();
+    }
+
+    function removeBook() {
+        var book = $(this).closest('.book');
+        var key = $(book).data("index");
+        isbn_box.remove(key);
+        $(book).remove();
+        count();
+    }
+
+    function count() {
+        var num = 0;
+        var tot = 0;
+        $(".book").each(function (index) {
+            num += 1;
+            tot += parseFloat($(this).find("a").html());
+        });
+        $("#count").html(num);
+        $("#total").html(tot.toFixed(2));
+
+        if ($(".book").length >= 8) {
+            $(".enough").hide();
+            $(".main").css("padding-bottom", "110px");
+            $(".button").css("bottom", "100px");
+            $(".buy").css("background", "#3b3b3b");
+        } else {
+            $(".enough").show();
+            $(".main").css("padding-bottom", "130px");
+            $(".button").css("bottom", "130px");
+            $(".buy").css("background", "#c3c3c3");
+        }
+    }
+
+    $(".buy").on("click", function () {
+        if ($(".book").length >= 8) {
+            location.href = "recover_order.html";
+        } else {
+            ocean.tip("继续扫描其他书，满8本即可下单");
+        }
+    });
+
+    $(".deliver_btn").on("click", function () {
+        if ($(".book").length >= 1) {
+            location.href = "recover_order.html?isDeliver=true";
+        }
+    });
+
+    $(".fail_btn").on("click", function () {
+        $('.fail_popup').hide()
+    });
+    $(".fail_close").on("click", function () {
+        $('.fail_popup').hide()
+    });
+</script>
+</html>

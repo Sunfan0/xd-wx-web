@@ -1,0 +1,370 @@
+.header {
+    display: block !important;
+}
+
+.content {
+    margin-top: 44px;
+}
+
+.header .find {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 20px;
+    width: 18px;
+}
+
+.classify {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-around;
+    padding: 0 15px;
+    position: fixed;
+    background: #ffffff;
+    top: 44px;
+    left: 0;
+    z-index: 54;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.classify .sub_title {
+    position: relative;
+    color: #3b3b3b;
+}
+
+.classify .sub_title .line {
+    width: 100%;
+    height: 1px;
+    background: #b59768;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.classify .active {
+    color: #b59768 !important;
+}
+
+.classify .active .line {
+    display: block !important;
+}
+
+.content {
+    padding: 45px 10px 50px;
+}
+
+.content .book_info {
+    width: 100%;
+    height: 116px;
+    overflow: hidden;
+    padding: 15px 0;
+    border-bottom: 1px solid #f1f1f1;
+    box-shadow: 8px 8px 14px -5px #edeef0;
+    border-radius: 5px;
+}
+
+.content .book_info .img {
+    width: 24%;
+    height: 100%;
+    margin-left: 3%;
+    float: left;
+    background-position: center;
+    background-size: cover;
+    /*border-radius: 8px;*/
+    position: relative;
+}
+
+.content .no_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    /*border-radius: 8px;*/
+}
+
+.content .no_img p {
+    margin: 50% auto;
+    text-align: center;
+}
+
+.content .book_info .text {
+    width: 65%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.content .book_info .text p {
+    padding-left: 20px;
+}
+
+.content .book_info .text .name {
+    font-size: 16px;
+    margin-bottom: 3px;
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.content .book_info .text .author, .from {
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #898989;
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.content .book_info .text .money {
+    left: 0;
+    font-size: 15px;
+    position: absolute;
+    bottom: 0;
+}
+
+.content .book_info .text .money .used {
+    font-size: 12px;
+    color: #898989;
+}
+
+.content .book_info .text .money .num {
+    color: #b59768;
+}
+
+.content .book_info .text .money .num .int {
+    font-size: 1.3em;
+}
+
+.content .book_info .text .money .discount {
+    color: #b59768;
+    border: 1px solid #b59768;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 1px 2px;
+    margin-left: 10px;
+}
+
+.content .book_info .text .score {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    color: #c3c3c3;
+}
+
+.content .book_info .text .score img {
+    width: 14px;
+    height: 13px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.content .book_info .text .grade {
+    left: 10px;
+    font-size: 13px;
+    padding-left: 20px;
+    white-space: nowrap;
+}
+
+.content .book_info .text .grade .label {
+    color: #b59768;
+    vertical-align: sub;
+}
+
+.content .book_info .text .grade .star {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: sub;
+}
+
+.content .book_info .text .grade .star img {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+}
+
+.content .book_info .text .grade .number {
+    color: #6f6f6f;
+    font-size: 0.7em;
+    transform: scale(0.2);
+}
+
+.screen_body {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.back_body {
+    width: 28%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.user_self {
+    width: 72%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #FFFFFF;
+}
+
+.user_self .paixu {
+    width: 100%;
+    height: 25px;
+    background: rgb(241, 241, 241);
+    font-size: 12px;
+    line-height: 25px;
+    color: rgb(195, 195, 195);
+    text-indent: 10px;
+}
+
+.user_self .price {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.user_self .price p {
+    font-size: 14px;
+    color: #898989;
+    text-indent: 12px;
+}
+
+.user_self .choice {
+    margin-top: 9px;
+}
+
+.user_self .price input {
+    width: 38%;
+    height: 30px;
+    border-radius: 3px;
+    background: rgb(241, 241, 241);
+    border: 1px solid #cccccc;
+    text-align: center;
+    outline: none;
+}
+
+.user_self .price input::-webkit-input-placeholder {
+    color: #c3c3c3 !important;
+}
+
+.user_self .hr {
+    display: inline-block;
+    height: 2px;
+    width: 18px;
+    background: #898989;
+    margin: 0 11px;
+}
+
+.user_self .booktype {
+    width: 100%;
+    height: 104px;
+    margin-top: 25px;
+    padding: 0 13px;
+    box-sizing: border-box;
+}
+
+.user_self .booktype p {
+    font-size: 14px;
+    color: #898989;
+}
+
+.user_self .booktype button {
+    width: 31%;
+    height: 33px;
+    background: rgb(241, 241, 241);
+    margin: 10px 0 10px 0;
+    border: 0;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    outline: none;
+}
+
+.user_self .word {
+    width: 100%;
+    height: 104px;
+    margin-top: 25px;
+    padding: 0 13px;
+    box-sizing: border-box;
+}
+
+.user_self .word p {
+    font-size: 14px;
+    color: #898989;
+}
+
+.user_self .word button {
+    width: 31%;
+    height: 33px;
+    background: rgb(241, 241, 241);
+    margin: 10px 0 10px 0;
+    border: 0;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    outline: none;
+}
+
+.user_self .button {
+    width: 72%;
+    height: 44px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.user_self .button button {
+    width: 50%;
+    height: 100%;
+    float: left;
+    border: 0;
+    letter-spacing: 2px;
+    outline: none;
+}
+
+.user_self .booktype .active {
+    background: rgb(59, 59, 59) !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+.user_self .word .active {
+    background: rgb(59, 59, 59) !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+.user_self .false {
+    background: rgb(241, 241, 241);
+    color: rgb(137, 137, 137);
+    font-size: 15px;
+}
+
+.user_self .true {
+    background: #3b3b3b;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 360px) {
+    .user_self .price input {
+        width: 30%;
+    }
+}

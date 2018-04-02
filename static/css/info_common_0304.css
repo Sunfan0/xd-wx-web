@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif !important;
+}
+
+.header {
+    display: none;
+    height: 44px;
+    width: 100%;
+    /*box-shadow: 0 4px 30px rgb(251, 251, 251);*/
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    background: #ffffff;
+}
+
+.header .back {
+    position: fixed;
+    top: 0px;
+    left: 5px;
+}
+
+.header .back div {
+    width: 12px;
+    height: 20px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    margin-left: 10px;
+    background-image: url("../img/back.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.header .title {
+    width: 100%;
+    line-height: 44px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.content {
+    /*margin-top: 44px;*/
+    overflow-x: hidden;
+}
+
+.content .bottombox {
+    color: transparent;
+    width: 100%;
+    height: 90px;
+    background-image: url("../img/panda_box.png");
+    /*background-color: #f1f1f1;*/
+    background-position: center;
+    background-size: cover;
+}
+
+.content .bottombox hr {
+    border: none;
+    color: transparent;
+}
+
+/*弹出框样式*/
+.popup {
+    display: none;
+}
+
+.pop_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 600;
+}
+
+.pop_content {
+    position: fixed;
+    top: 260px !important;
+    left: 15% !important;
+    width: 70% !important;
+    background-color: white;
+    border-radius: 3px;
+    z-index: 900;
+}
+
+.pop_content .popContentText {
+    padding: 20px 30px;
+    color: #3b3b3b;
+    text-align: center;
+}
+
+.pop_content .pop_btn {
+    border-top: 1px solid #ececec;
+}
+
+.pop_content .pop_btn .btn {
+    color: #00AAEE;
+    text-align: center;
+    width: 48%;
+    padding: 15px 0;
+    display: inline-block;
+}
+
+.pop_content .pop_btn .no_btn {
+    border-right: 1px solid #ececec;
+    color: #c3c3c3;
+}
+
+.pop_content .pop_btn .yes_btn {
+    color: #b59768;
+}
+
+/*分享页样式*/
+.share_body .share_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+}
+
+.share_body img {
+    width: 100%;
+    height: 190px;
+    z-index: 1300;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.weui-loadmore__bottom {
+    color: transparent;
+    width: 100%;
+    height: 90px;
+    background-image: url("../img/panda_box.png");
+    /*background-color: #f1f1f1;*/
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    margin-top: 10px;
+}
+
+/*服务器异常页面*/
+.exception_Page {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.exception_Page .exception_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1100;
+}
+
+.exception_Page .exception_content {
+    width: 260px;
+    height: 243px;
+    margin: 200px auto 55px;
+    position: relative;
+    z-index: 9999;
+    border-radius: 3px;
+    background-color: white;
+    padding-top: 47px;
+}
+
+.exception_Page .exception_content .content_img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 20px;
+    background-image: url("../../static/img/panda_exception.png");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.exception_Page .exception_content .text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3b3b3b;
+    text-align: center;
+}
+
+.exception_Page .exception_content .exception_btn {
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #b59768;
+    color: white;
+    border-radius: 30px;
+    margin: 20px auto;
+    font-size: 14px;
+}
+
+/*图书列表样式统一修改*/
+#new_gallery {
+    padding: 0 10px 10px;
+}
+
+#new_gallery .book_info {
+    width: 100%;
+    height: 116px;
+    overflow: hidden;
+    padding: 15px 0;
+    border-bottom: 1px solid #f1f1f1;
+    box-shadow: 8px 8px 14px -5px #edeef0;
+    border-radius: 5px;
+}
+
+#new_gallery .img {
+    width: 24%;
+    height: 100%;
+    margin-left: 3%;
+    float: left;
+    background-position: center;
+    background-size: cover;
+    /*border-radius: 8px;*/
+    position: relative;
+}
+
+#new_gallery .no_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    /*border-radius: 8px;*/
+}
+
+#new_gallery .no_img p {
+    margin: 50% auto;
+    text-align: center;
+}
+
+#new_gallery .text {
+    width: 65%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+#new_gallery .text p {
+    padding-left: 20px;
+}
+
+#new_gallery .text .name {
+    font-size: 16px;
+    margin-bottom: 3px;
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#new_gallery .text .author, .from {
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #898989;
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#new_gallery .text .money {
+    left: 0;
+    font-size: 15px;
+    position: absolute;
+    bottom: 0;
+}
+
+#new_gallery .text .money .used {
+    font-size: 12px;
+    color: #898989;
+}
+
+#new_gallery .text .money .num {
+    color: #b59768;
+}
+
+#new_gallery .text .money .num .int {
+    font-size: 1.3em;
+}
+
+#new_gallery .text .money .discount {
+    color: #b59768;
+    border: 1px solid #b59768;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 1px 2px;
+    margin-left: 10px;
+}
+
+#new_gallery .text .score {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    color: #c3c3c3;
+}
+
+#new_gallery .text .score img {
+    width: 14px;
+    height: 13px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+#new_gallery .text .grade {
+    left: 10px;
+    font-size: 13px;
+    padding-left: 20px;
+    white-space: nowrap;
+}
+
+#new_gallery .text .grade .label {
+    color: #b59768;
+    vertical-align: sub;
+}
+
+#new_gallery .text .grade .star {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: sub;
+}
+
+#new_gallery .text .grade .star img {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+}
+
+#new_gallery .text .grade .number {
+    color: #6f6f6f;
+    font-size: 0.7em;
+    transform: scale(0.2);
+}
+
+@media screen and (max-width: 350px) {
+    #new_gallery .text .grade .star {
+        margin: 0 3px;
+    }
+}

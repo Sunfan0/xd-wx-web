@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/my/wallet.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">我的钱包</p>
+</div>
+<div class="content">
+    <div class="money">
+        <img src="../../static/img/wallet/money.png" class="com_user img"/>
+        <img src="../../static/img/wallet/vip.png" class="vip_user img" style="display: none"/>
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    //为普通用户时
+    //$(".com_user").css("display","");
+    //$(".vip_user").css("display","none");
+
+    //用户为vip时
+    //$(".com_user").css("display","none");
+    //$(".vip_user").css("display","");
+
+    $(function () {
+        $(".com_user").click(function () {
+            location.href = "cash.html";
+        });
+        $(".vip_user").click(function () {
+            location.href = "../book/vip.html";
+        })
+    })
+</script>
+</html>

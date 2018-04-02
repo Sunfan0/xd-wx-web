@@ -1,0 +1,275 @@
+.content {
+    padding-bottom: 80px;
+}
+
+.vip_header {
+    color: white;
+    width: 100%;
+    padding: 10px 0 20px;
+}
+
+.vip_header .card {
+    position: relative;
+    width: 300px;
+    height: 170px;
+    border-radius: 20px;
+    margin: 20px auto;
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide-shadow-left, .swiper-slide-shadow-right {
+    border-radius: 20px;
+}
+
+.vip_header .month_card {
+    /*background-color: #b59768;*/
+    background-image: url("../../img/book/vip_month.png");
+    box-shadow: 0 0 10px #b59768;
+}
+
+.vip_header .year_card {
+    /*background-color: #3b3b3b;*/
+    background-image: url("../../img/book/vip_year.png");
+    box-shadow: 0 0 10px #3b3b3b;
+}
+
+.vip_header .type {
+    position: absolute;
+    font-size: 19px;
+    bottom: 45px;
+    left: 20px;
+}
+
+.vip_header .money {
+    position: absolute;
+    font-size: 13px;
+    bottom: 20px;
+    left: 20px;
+}
+
+.vip_header img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+}
+
+.vip_body {
+    padding: 0px 10px;
+}
+
+.vip_body .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #3d3d3d;
+    margin-top: 8px;
+}
+
+.vip_body .details {
+    font-size: 14px;
+    line-height: 23px;
+    color: rgba(137, 137, 137, 0.8);
+}
+
+.vip_body .other_about {
+    font-size: 15px;
+    color: #b59768;
+}
+
+.swiper-pagination-bullet {
+    width: 5px !important;
+    height: 5px !important;
+    display: inline-block;
+    border-radius: 100%;
+    background: #b3b3b3 !important;
+    opacity: .2;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: white !important;
+    border: 1px solid #3b3b3b !important;
+}
+
+.bottom {
+    /*width: 100%;
+    height: 44px;
+    position: fixed;
+    right: 0;
+    bottom: 20px;
+    text-align: center;*/
+}
+
+.bottom .btn {
+    /*width: 50%;
+    float: left;
+    font-size: 15px;
+    color: #FFFFFF;
+    line-height: 44px;*/
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+}
+
+.bottom .open_btn {
+    /* background-image: url("../../img/buttom/vip1.png");
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+     padding: 13px 40px;*/
+    display: block;
+    background-color: #3b3b3b;
+}
+
+.bottom .have_btn {
+    /* background-color: #c3c3c3;
+     border-radius: 30px;
+     padding: 13px 40px;*/
+    display: block;
+    background-color: #c3c3c3;
+}
+
+.bottom .convert_btn {
+    /*background-color: #3b3b3b;
+    border-radius: 30px;
+    padding: 13px 40px;*/
+    display: block;
+    background-color: #3b3b3b;
+}
+
+.pop_box {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    text-align: center;
+}
+
+.pop_box .border_box {
+    background-color: white;
+    margin: 240px auto;
+    width: 70%;
+    border-radius: 3px;
+}
+
+.pop_box .border_box .btn_box {
+    line-height: 50px;
+}
+
+.pop_box .border_box .title {
+    border-bottom: 1px solid rgba(236, 236, 236, 0.52);
+    color: #3b3b3b;
+    padding: 15px;
+}
+
+.pop_box .border_box .btn_box .no_btn {
+    border-right: 1px solid rgba(236, 236, 236, 0.52);
+    width: 50%;
+    float: left;
+    color: #b3b3b3;
+}
+
+.pop_box .border_box .btn_box .go_btn {
+    color: #3b3b3b;
+}
+
+.pay_page .pay_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pay_body {
+    width: 100%;
+    position: fixed;
+    bottom: -100%;
+    background-color: white;
+    padding-bottom: 25px;
+    z-index: 600;
+}
+
+.pay_body .title {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(155, 155, 155, 0.12);
+}
+
+.pay_body .title .close_pay {
+    float: left;
+    margin-left: 10px;
+    width: 20px;
+    height: 15px;
+    margin-top: 15px;
+}
+
+.pay_body .details {
+    margin: 0 10px;
+}
+
+.pay_body .details .to_name {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pay_body .details .to_money {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.pay_body .details .pay_info {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid rgba(155, 155, 155, 0.12);
+}
+
+.pay_body .details .pay_info .sign {
+    width: 23px;
+    height: 20px;
+    float: left;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.pay_body .details .pay_info .pay_deduction {
+    color: #b59768;
+}
+
+.pay_body .details .pay_info .pay_radio {
+    width: 25px;
+    height: 25px;
+    float: right;
+    margin-top: 12px;
+}
+
+.pay_body .details .pay_info .need {
+    margin-left: 33px;
+}
+
+.pay_body .details .pay_btn {
+    margin-top: 40px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgba(59, 59, 59, 0.95);
+    border-radius: 3px;
+    color: white;
+    text-align: center;
+}

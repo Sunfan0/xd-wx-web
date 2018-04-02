@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/order/buy/buy_confirm.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div id="page" style="background-color: white;">
+    <div class="header">
+        <span class="back" onclick="history.back()"><div></div></span>
+        <p class="title">确认订单</p>
+    </div>
+    <div class="content">
+        <p class="order_hint">订单金额满96元免运费包邮</p>
+        <div class="default-address no-default" style="display: none">
+            <p class="state">
+                <img src="../../../static/img/mine/add2.png" height="21px" width="17px" class="add2">
+                <span class="text">请选择送货地址</span>
+                <img src="../../../static/img/mine/go.jpg" class="go" width="8px" height="13px">
+            </p>
+        </div>
+        <div class="default-address have-default">
+            <div class="info">
+                <p class="name" id="a-name"></p>
+                <p class="mobile" id="a-mobile"></p>
+                <p class="address" id="a-address"></p>
+            </div>
+            <div class="sign">
+                <img src="../../../static/img/mine/go.jpg" class="go" width="8px" height="13px">
+            </div>
+        </div>
+        <hr class="hr">
+        <div id="content" style="background-color: white">
+            <script type="text/template" id="temp_book_item">
+                <@_.each(list, function (item) {@>
+                <div class="bookinfo" data-id="<@=item.id@>">
+                    <div class="imginfo">
+                        <div class="img" style="background-image: url('<@=item.picture@>')"></div>
+                    </div>
+                    <div class="textinfo">
+                        <p class="title"><@=item.name@></p>
+                        <p class="author"><@=item.author@></p>
+                        <div>
+                            <span class="money">￥<@=item.price@>元</span>
+                            <span class="time"><@=time@></span>
+                        </div>
+                    </div>
+                </div>
+                <@ }); @>
+            </script>
+        </div>
+        <hr class="hr">
+        <div style="background-color: white">
+            <div class="forminfo">
+                <div class="formbar">
+                    <span class="label">留言:</span>
+                    <div class="remark" contenteditable=""></div>
+                </div>
+                <div class="formbar">
+                    <span class="label">运费</span>
+                    <div id="freight" class="label_val"></div>
+                </div>
+                <div class="formbar">
+                    <span class="label">商品金额</span>
+                    <div id="order_total" class="label_val" style="color: #b59768;"></div>
+                </div>
+                <div class="formbar">
+                    <span class="label">可用余额</span>
+                    <div class="label_val" style="color: #b59768;"><span class="order_discount"></span></div>
+                </div>
+            </div>
+        </div>
+        <hr class="hr" style="height: 100px">
+    </div>
+    <div class="bottom_">
+        <div class="discounts">已抵扣:<span class="used_discount"></span></div>
+        <div class="need_pay">还需付:<span id="order_pay" style="color: #b59768;"></span></div>
+        <div class="order_submit"><span>提交订单</span></div>
+    </div>
+</div>
+<div id="address_page" style="display: none;"></div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script>
+    var loading = weui.loading('loading');
+    var from = ocean.getRequestParameter("from");
+    var bookId = ocean.getRequestParameter("bookId");
+    var addressId;
+    var grade;
+    $(function () {
+        loadBuyPageData();
+        fetchDefaultAddress();
+        $(".order_submit").on("click", function () {
+            if (addressId == "" || addressId == undefined) {
+                ocean.toast("您无默认地址，请先去设置！");
+                return;
+            }
+            submitOrder();
+        });
+    });
+
+    function loadBuyPageData() {
+        var money;
+        ocean.get("resources/biz/api/mine/cash", {id: ocean.getLoginUserId()}, function (res) {
+            if (res.code == 0) {
+                money = res.data;
+                console.log(money)
+            }
+        });
+        if (from == "buyNow") {
+            ocean.get("resources/biz/api/mine", {id: ocean.getLoginUserId()}, function (res) {
+                if (res.code == 0) {
+                    var member = res.data.user;
+                    console.log(member)
+                    ocean.get("resources/biz/api/book", {id: bookId}, function (res) {
+                        if (res.code == 0) {
+                            var array = [];
+                            array.push(res.data);
+                            console.log(array);
+                            var temp = _.template($('#temp_book_item').html());
+                            $("#content").html(temp({
+                                list: array,
+                                time: new Date().format("yyyy-MM-dd")
+                            }));
+
+                            var freight = 8;
+                            if (res.data.price > 96) {
+                                freight = 0;
+                            }
+                            $("#freight").html("￥" + freight);
+                            $("#order_total").html("￥" + res.data.price.toFixed(2));
+                            $(".order_discount").html("￥" + money);
+                            if (money > (res.data.price + freight)) {
+                                $(".used_discount").html("￥" + (res.data.price + freight));
+                                $("#order_pay").html("￥" + 0);
+                            } else {
+                                $(".used_discount").html("￥" + money);
+                                $("#order_pay").html("￥" + ((res.data.price - money + freight).toFixed(2)));
+                            }
+
+                            loading.hide();
+                        }
+                    });
+                }
+            }, function (error) {
+                ocean.tip(error);
+            });
+        } else {
+            ocean.get("resources/biz/api/buy/pro", {userId: ocean.getLoginUserId()}, function (res) {
+                if (res.code == 0) {
+                    var temp = _.template($('#temp_book_item').html());
+                    $("#content").html(temp({
+                        list: res.data.books,
+                        time: new Date().format("yyyy-MM-dd")
+                    }));
+                    var freight = 8;
+                    if (res.data.total > 96) {
+                        freight = 0;
+                    }
+                    $("#freight").html("￥" + freight);
+                    $("#order_total").html("￥" + res.data.total.toFixed(2));
+                    $(".order_discount").html("￥" + money);
+                    if (money > (res.data.total + res.data.freight)) {
+                        $(".used_discount").html("￥" + (res.data.total + freight).toFixed(2));
+                        $("#order_pay").html("￥" + 0.00);
+                    } else {
+                        $(".used_discount").html("￥" + money);
+                        $("#order_pay").html("￥" + ((res.data.total - money + freight).toFixed(2)));
+                    }
+                    loading.hide();
+                }
+            });
+        }
+    }
+
+    function fetchDefaultAddress() {
+        ocean.get("resources/biz/api/address/default", {userId: ocean.getLoginUserId()}, function (res) {
+            if (res.code == 0) {
+                setSelectedAddress(res.data);
+            } else {
+                $(".no-default").show();
+                $(".have-default").hide();
+            }
+        });
+    }
+
+    function submitOrder() {
+        loading = weui.loading('loading');
+        if (from == "buyNow") {
+
+            var money = $("#order_pay").html().split('￥')[1];
+            var expressCost = $("#freight").html().split('￥')[1];
+            var score = $(".used_discount").html().split('￥')[1];
+
+            ocean.post("resources/biz/api/buy/now", {
+                userId: ocean.getLoginUserId(),
+                cityId: ocean.currentCityId(),
+                addressId: addressId,
+                userWord: $(".remark").html(),
+                bookId: bookId,
+                money: money,
+                score: score,
+                expressCost: expressCost
+            }, function (res) {
+                if (res.code == 0) {
+                    var order = res.data;
+                    console.log("**********", order);
+                    if (order.money > 0) {
+                        location.href = "../../order/pay.html?type=buy&id=" + order.id;
+                    } else {
+                        ocean.tip("提交成功");
+                        setTimeout(30000, location.href = "../../my/order/buy.html");
+                    }
+                }
+                loading.hide();
+            });
+            return false;
+        } else {
+            ocean.post("resources/biz/api/buy/submit", {
+                userId: ocean.getLoginUserId(),
+                cityId: ocean.currentCityId(),
+                addressId: addressId,
+                userWord: $(".remark").html()
+            }, function (res) {
+                if (res.code == 0) {
+                    var order = res.data;
+                    if (order.money == 0 || order.status == 'PAID') {
+                        location.href = "../success.html?type=buy&id=" + order.id;
+                    } else {
+                        location.href = "../../order/pay.html?type=buy&id=" + order.id;
+                    }
+                }
+                loading.hide();
+            });
+            return false;
+        }
+    }
+
+    function onAddressSelected(address) {
+        if (null != address) {
+            setSelectedAddress(address);
+        }
+        $("#page").show();
+        $("#address_page").hide();
+    }
+
+    function setSelectedAddress(item) {
+        addressId = item.id;
+        $("#a-name").html(item.name);
+        $("#a-mobile").html(item.phone);
+        $("#a-address").html(item.provinceName + item.cityName + item.districtName + item.otherAddr);
+
+        $(".no-default").hide();
+        $(".have-default").show();
+    }
+
+    $(".default-address").on("click", function () {
+        $("#page").hide();
+        $("#address_page").show();
+    });
+
+    $("#address_page").load(ctxPath + "page/my/address/user_address.html?from=buy");
+</script>
+</html>

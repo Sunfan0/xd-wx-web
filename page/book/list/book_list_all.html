@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/book/list/book_list_all.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">全部书单</p>
+</div>
+<div class="content">
+    <div class="book_row" id="book_list"></div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="../../../static/js/dropload.min.js"></script>
+<script>
+    var params = {
+        page: 0,
+        limit: 12
+    };
+    var loader;
+
+    $(function () {
+        loader = $('.content').dropload({
+            scrollArea: window,
+            domDown: {
+                domClass: 'weui-loadmore ',
+                domRefresh: '<div class="dropload-refresh">↑上拉加载更多</div>',
+                domLoad: '<i class="weui-loading"></i><span class="weui-loadmore__tips">正在加载</span>',
+                domNoData: '<span class="weui-loadmore__bottom">没有更多数据了</span>'
+            },
+            loadDownFn: function () {
+                params.page += 1;
+                loadPageData();
+            }
+        });
+    });
+
+    function loadPageData() {
+        ocean.get("resources/biz/api/list", params, function (res) {
+            if (res.code == 0) {
+                var template = _.template($('#temp_item').html());
+                $('#book_list').append(template({list: res.data.list}));
+
+                $(".info_box.item").on("click", function () {
+                    location.href = "book_list_detail.html?id=" + $(this).data("id");
+                });
+
+                if (res.data.isLastPage) {
+                    loader.lock();
+                    loader.noData(true);
+                } else {
+                    loader.unlock();
+                    loader.noData(false);
+                }
+                loader.resetload();
+            }
+        });
+    }
+</script>
+<script type="text/template" id="temp_item">
+    <@_.each(list, function (item) {@>
+    <div class="info_box item" style="background-image: url('<@=item.cover@>')" data-id="<@=item.id@>">
+        <div class="bg"></div>
+        <div class="name_div">
+            <div class="name"><@=item.name@></div>
+        </div>
+    </div>
+    <@ }); @>
+</script>
+</html>

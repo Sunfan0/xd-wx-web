@@ -1,0 +1,27 @@
+body {
+    background: white;
+}
+.content{
+    padding: 30px 20px;
+}
+.content .promisebox{
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+.content .promisebox .img{
+    float: left;
+    width: 22%;
+}
+.content .promisebox .title{
+    font-size: 18px;
+    font-weight: 600;
+    float: left;
+    width: 78%;
+    margin-top: 6px;
+}
+.content .promisebox .info{
+    font-size: 15px;
+    float: left;
+    width: 78%;
+    color: #3b3b3b;
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/order/buy/buy_details.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">订单详情</p>
+</div>
+<div class="content">
+    <div class="order_detail">
+        <p>订单状态：<span class="state" id="state"></span></p>
+        <p class="number">订单号：<span id="orderNum"></span></p>
+        <p class="time">下单时间：<span id="createdDate"></span></p>
+    </div>
+    <hr class="hr">
+    <div class="express_detail" style="display: none;">
+        <div class="car">
+            <img src="../../../static/img/order/car.png" width="34px" height="21px">
+        </div>
+        <div class="info">
+            <p class="state" id="express_state"></p>
+            <p class="time" id="express_time"></p>
+        </div>
+        <div class="sign">
+            <img src="../../../static/img/mine/go.jpg" width="8px" height="13px">
+        </div>
+    </div>
+    <hr class="hr">
+    <div class="noaddress" style="display: none">
+        <p class="state1">
+            <img src="../../../static/img/mine/add2.png" height="21px" width="17px" class="add2">
+            <span class="tijiao">请选择送货地址</span>
+            <img src="../../../static/img/mine/go.jpg" width="8px" height="13px">
+        </p>
+    </div>
+    <div class="haveaddress">
+        <div class="info">
+            <p class="toname">收货人：<span id="name"></span></p>
+            <p class="mobile"></p>
+            <p class="address"></p>
+        </div>
+    </div>
+    <hr class="hr">
+    <div style="background-color: white">
+        <div id="book_list"></div>
+    </div>
+    <hr class="hr">
+    <div style="background-color: white">
+        <div class="forminfo">
+            <div class="formbar">
+                <span class="label">留言</span>
+                <div class="label_val" id="user_word"></div>
+            </div>
+            <div class="formbar">
+                <span class="label">运费</span>
+                <div class="label_val">￥<span id="expressCost"></span></div>
+            </div>
+            <div class="formbar">
+                <span class="label">商品金额</span>
+                <div class="label_val" style="color: #b59768;">￥<span id="totalPrice"></span></div>
+            </div>
+            <!--<div class="formbar grade" style="display: none;">-->
+            <!--<span class="label">使用熊猫币</span>-->
+            <!--<div class="label_val" style="color: #b59768;"><span id="score"></span></div>-->
+            <!--</div>-->
+            <div class="formbar coupon" style="display: none;">
+                <span class="label">优惠券</span>
+                <div class="label_val" style="color: #b59768;"><span id="coupon"></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="buttom">
+    <button class="can">取消订单</button>
+    <button class="sure">立即付款</button>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script>
+    $(function () {
+        var money = 0;
+        var total = 0;
+        var id = ocean.getRequestParameter("id");
+        var status = "";
+        var userId, score, orderId, sendOffCode, expressCompany, extendedField;
+        ocean.get("resources/biz/api/order/item", {
+            id: id,
+            type: "buy"
+        }, function (data) {
+            if (data.code == 0) {
+                console.log("====", data.data)
+                userId = data.data.userId;
+                score = data.data.score;
+                orderId = data.data.id;
+                var content = data.data;
+                var orderNumber = content.orderNumber;
+                var createdDate = content.createdDate;
+                money = content.expressCost;
+                var totalPrice = content.money;
+                total = totalPrice + money;
+                var name = content.userName;
+                var phone = content.phone;
+                var address = content.address;
+                status = content.status;
+                sendOffCode = content.sendOffCode;
+                expressCompany = content.expressCompany;
+                extendedField = content.extendedField
+
+                $("#name").html(name);
+                $(".mobile").html(phone);
+                $(".address").html(address);
+                $("#orderNum").html(orderNumber);
+                $("#createdDate").html(createdDate.slice(0, 16));
+                $("#totalPrice").html(totalPrice);
+                $("#expressCost").html(money.toFixed(2));
+                $(".price_3").html(totalPrice);
+                $("#user_word").html(content.userWord);
+                $("#score").html(score);
+
+                var buy = _.template($('#book_item').html());
+                $("#book_list").html(buy({
+                    list: content.details,
+                    time: content.createdDate
+                }));
+
+                if (null != content.couponId) {
+                    $(".coupon").show();
+                    $("#coupon").html(content.details.length + "张");
+                } else {
+                    $(".grade").show();
+                }
+
+                if (content.status === "CREATED" || content.status === "FromLease") {
+                    $("#state").html("待付款");
+                    $(".no").show();
+                } else if (content.status === "PAID") {
+                    $("#state").html("待发货");
+                } else if (content.status === "EXPIRED") {
+                    $("#state").html("已失效")
+                } else if (content.status === "CANCELED") {
+                    $("#state").html("已取消")
+                } else if (content.status === "PAID") {
+                    $("#state").html("已支付")
+                } else if (content.status === "SENDED") {
+                    $("#state").html("已发货");
+                    fetchTraceData(content.expressCompany, content.sendOffCode);
+                } else if (content.status === "FINISHED") {
+                    $("#state").html("已完成");
+                    fetchTraceData(content.expressCompany, content.sendOffCode);
+                }
+                if (status === "CREATED" || content.status === "FromLease") {
+                    $(".buttom").show();
+                } else {
+                    $(".buttom").hide();
+                }
+                $('.lazy').lazyload({
+                    threshold: 20
+                });
+
+            }
+        }, function () {
+            exceptionBox();
+        });
+
+        $(".express_detail").on("click", function () {
+            var id = ocean.getRequestParameter("id");
+            location.href = "../express.html?orderId=" + id;
+
+        });
+
+        function fetchTraceData(shipper, logistic) {
+            ocean.get("resources/biz/order/select_traces", {
+                orderType: "buy",
+                orderId: id,
+                logisticCode: logistic,
+                shipperCode: shipper
+            }, function (data) {
+                sessionStorage.setItem("WL-" + id, JSON.stringify(data.data.traces));
+                sessionStorage.setItem("orderDetail-" + id, JSON.stringify(data.data.orderDetail));
+                var traces = data.data.traces.Traces;
+                console.log(traces);
+                if (traces.length > 0) {
+                    $("#express_state").html(traces[traces.length - 1].AcceptStation);
+                    $("#express_time").html(traces[traces.length - 1].AcceptTime);
+                }
+                $(".express_detail").show();
+            }, function (error) {
+                ocean.tip(error);
+            });
+        }
+
+
+        var bookArray = [];
+        $(".can").on("click", function () {
+            $(".bookinfo").each(function (index) {
+                bookArray.push($(this).data("id"));
+            });
+            ocean.get("resources/biz/buyOrder/cancel_buy_order", {
+                id: id,
+                userId: ocean.getLoginUserId(),
+                bookIds: bookArray.join(","),
+                cityId: ocean.currentCityId()
+            }, function (data) {
+                if (data.code == 0) {
+                    location.href = "../../my/order/buy.html";
+                }
+            }, function (data) {
+                ocean.tip(data.message);
+            });
+        });
+        $(".sure").on("click", function () {
+            ocean.get("resources/biz/userMoney/verify_money", {
+                userId: ocean.getLoginUserId(),
+                money: score
+            }, function (data) {
+                console.log(data);
+                if (data.code == 0) {
+                    if (status == "CREATED") {
+                        location.href = "../../order/pay.html?id=" + id + "&type=" + "buy";
+                    } else if (status == "FromLease") {
+                        orderId = extendedField + "," + id;
+                        location.href = "../../order/pay.html?id=" + orderId + "&type=" + "buy_lease";
+                    }
+                } else {
+                    ocean.tip("当前用户余额不足订单所需金额,请重新确认订单!");
+                }
+            }, function (data) {
+                ocean.tip(data.message);
+            });
+        })
+    })
+</script>
+<script id="book_item" type="text/template">
+    <@_.each(list, function (item) {@>
+    <div class="bookinfo" data-id="<@=item.bookId@>">
+        <div class="imginfo">
+            <img class="img" style="background-image: url(<@=item.bookPic@>)"/>
+        </div>
+        <div class="textinfo">
+            <p class="title"><@=item.bookName@></p>
+            <p class="author"><@=item.bookAuthor@></p>
+            <div>
+                <span class="money">￥<@=item.bookPrice@>元</span>
+                <span class="time"><@=time@></span>
+            </div>
+        </div>
+    </div>
+    <@ }); @>
+</script>
+</html>

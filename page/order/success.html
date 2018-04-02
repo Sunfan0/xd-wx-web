@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/order/success.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="content">
+    <div class="success">
+        <img src="../../static/img/mygoods/success.png"/>
+    </div>
+    <p class="success_word">支付成功</p>
+    <p class="book_info"></p>
+</div>
+
+<p class="button">
+    <button>完成</button>
+</p>
+
+<p class="check">您可以查看订单详情，完成配送信息设定</p>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    $(function () {
+        var id = ocean.getRequestParameter("id");
+        var type = ocean.getRequestParameter("type");
+
+        $(".button").on("click", function () {
+            if ('buy' === type) {
+                location.href = "../my/order/buy.html";
+            } else if ('lease' === type) {
+                location.href = "../my/order/buy.html";
+            } else if ('buy_lease' === type) {
+                var ids = [];
+                ids = id.split(",");
+                location.href = "buy/buy_details.html?id=" + ids[1];
+            } else if ('month' === type) {
+                $(".check").hide();
+                location.href = "../book/vip.html";
+            } else if ('year' === type) {
+                $(".check").hide();
+                location.href = "../book/vip.html";
+            }
+        });
+        $(".check").on("click", function () {
+            if ('buy' === type) {
+                location.href = "buy/buy_details.html?id=" + id;
+            } else if ('lease' === type) {
+                location.href = "lease/lease_details.html?id=" + id;
+            } else if ('buy_lease' === type) {
+                var ids = [];
+                ids = id.split(",");
+                location.href = "buy/buy_details.html?id=" + ids[1];
+            }
+        });
+    })
+</script>
+</html>

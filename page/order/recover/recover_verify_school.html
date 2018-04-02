@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/order/recover/recover_success_0308.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/order/recover/recover_verify_school.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <div class="header">
+        <span class="back" onclick="back()"><div></div></span>
+        <p class="title">下单成功</p>
+    </div>
+</div>
+<div class="state">
+    <div class="state_div">
+        <div class="step">
+            <div class="first bgp"></div>
+            <p class="p1 bgp"></p>
+            <p class="p2 bgp"></p>
+            <div class="second bgp"></div>
+            <p class="p2"></p>
+            <p class="p3"></p>
+            <div class="third"></div>
+            <p class="p3"></p>
+            <p class="p4"></p>
+            <div class="fourth"></div>
+        </div>
+        <p class="text">
+            <span>下单成功</span>
+            <span>人工取件</span>
+            <span>&nbsp;&nbsp;人工审核</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;打款</span>
+        </p>
+    </div>
+</div>
+<div class="mess">
+    <div class="number">
+        订单编号：<span class="orderNo"></span>
+    </div>
+</div>
+<div class="book_list" id="book_list"></div>
+<div class="bg1"></div>
+<div class="verify_school_bottom" style="display: none;">
+    <input type="text" id="verify_code_input" name="verify_code_input" class="verify_code_hide_input" maxlength="6" />
+    <div class="verify_school_input">
+        <div class="code_item" id="code_item_1"></div>
+        <div class="code_item" id="code_item_2"></div>
+        <div class="code_item" id="code_item_3"></div>
+        <div class="code_item" id="code_item_4"></div>
+        <div class="code_item" id="code_item_5"></div>
+        <div class="code_item" id="code_item_6"></div>
+    </div>
+    <button class="verify_school_button">获取打款验证码</button>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script>
+    var orderNo = '';
+    var isFechingCode = false;
+    var waitInterval = null;
+    var counting = 0;
+    var channelCode = sessionStorage.getItem("sac");
+    if (!channelCode) {
+        channelCode = ocean.getRequestParameter("sac");
+    }
+    $(function () {
+        var id = ocean.getRequestParameter("id");
+        ocean.get("resources/biz/recycleOrder/select_order_details", {id: id}, function (data) {
+            if (data.code == 0) {
+                var item = data.data;
+                orderNo = item.orderNo;
+                $(".orderNo").html(item.orderNo);
+                var recycle = _.template($('#recycle_item').html());
+                $("#book_list").append(recycle({item: item}));
+                if (item.state == "FINISHED") {
+                    $(".fourth").addClass("bgp");
+                    $(".third").addClass("bgp");
+                    $(".second").addClass("bgp");
+                    $(".first").addClass("bgp");
+                    $(".p1").addClass("bgp");
+                    $(".p2").addClass("bgp");
+                    $(".p3").addClass("bgp");
+                    $(".p4").addClass("bgp");
+                } else {
+                    $('.verify_school_bottom').css('display', 'block');
+                }
+                $(".contact_us").on("click", function () {
+                    $(".contact").show();
+                    $(".quxiao").on("click", function () {
+                        $(".contact").hide();
+                    });
+                });
+            }
+        }, function (error) {
+            ocean.tip(error);
+        });
+        var inputWidth = $(document).width() - 40;
+        var letterSpace = (inputWidth - 12) / 6;
+        $("#verify_code_input").css("width", inputWidth + 'px');
+        $("#verify_code_input").css("letter-spacing", letterSpace + 'px');
+
+    });
+    // 获取屏幕宽度，动态设置letterspace
+    $(".verify_school_input").on("click", function () {
+        if (!isFechingCode) {
+            ocean.tip('请先获取验证码');
+            return;
+        }
+        $('#verify_code_input').focus();
+    });
+    function mappingValue(inputVal) {
+        $('#verify_code_input').val(inputVal);
+        var arr = inputVal.split('');
+        for (var i = 1; i <= 6; i++) {
+            var tempSelector = '#code_item_' + i;
+            $(tempSelector).html(arr[i-1] || '');
+        }
+    }
+    $('#verify_code_input').on('input', function (e) {
+        var inputVal = $(this).val().replace(/[^\d]+/g, '');
+        mappingValue(inputVal);
+        if (inputVal.length >= 6) {
+            $(this).blur();
+            ocean.post("resources/biz/api/recycle/verify_code_school", {
+                orderNo: orderNo,
+                channelCode: channelCode,
+                code: inputVal
+            }, function (data) {
+                if (data.data) {
+                    ocean.tip("打款成功", function () {
+                        sessionStorage.removeItem("recycle-book-list-school"); // 流程走完 清掉
+                        location.replace('../../index/book_recycle_school.html?sac='+sessionStorage.getItem("sac"));
+                    });
+                } else {
+                    ocean.tip('验证错误，请重新输入');
+                    mappingValue('');
+                }
+            }, function (err) {
+                ocean.tip(err.message || '验证错误，请重新输入');
+                mappingValue('');
+            });
+        }
+    });
+    function changeStatus() {
+        var message = '获取打款验证码';
+        var color = '#AD8C52';
+        if (counting > 0) {
+            color = '#c3c3c3';
+            message += '('+ counting + 's)'
+        } else {
+            window.clearInterval(waitInterval);
+        }
+        $('.verify_school_button').css('background-color', color);
+        $('.verify_school_button').html(message);
+    }
+    function waitForSend() {
+        counting = 60;
+        window.clearInterval(waitInterval);
+        changeStatus();
+        waitInterval = window.setInterval(function () {
+            counting -= 1;
+            changeStatus();
+        }, 1000);
+    }
+    $('.verify_school_button').on('click', function () {
+        if (!channelCode || !orderNo) {
+            ocean.tip('参数缺失');
+            return;
+        }
+        if (counting > 0) {
+            ocean.toast('短信已发送');
+            return;
+        }
+
+        ocean.post("resources/biz/api/recycle/send_smscode_school", { orderNo: orderNo, channelCode: channelCode }, function (data) {
+            isFechingCode = true;
+            waitForSend();
+            $('#verify_code_input').focus(); // 异步会失效
+        }, function (err) {
+            ocean.tip(err.message || '短信获取失败');
+        }, true);
+    })
+
+
+    function back() {
+        location.href = "../../my/order/sell.html";
+    }
+</script>
+<script id="recycle_item" type="text/template">
+    <@_.each(item.bookName.split('@'), function (book, index) {@>
+    <div class="book">
+        <div class="book_img">
+            <div style="background-image: url(<@=item.picture.split('@')[index]@>)" class="img1"></div>
+        </div>
+        <div class="info">
+            <p class="name"><@=item.bookName.split('@')[index]@></p>
+            <p class="author"><@=item.author.split('@')[index]@></p>
+            <p class="score">￥<span><@=parseFloat(item.integral.split('@')[index]).toFixed(2)@></span></p>
+        </div>
+    </div>
+    <@ }); @>
+    <div class="tot">共<span><@=item.totalNum@></span>本 总金额 <span class="grade"><@=parseFloat(item.grade).toFixed(2)@></span></div>
+</script>
+</html>

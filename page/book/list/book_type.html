@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title class="title">熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/book/list/book_type_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart onbeforeunload="SetBrowseRecord();">
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title"></p>
+</div>
+<div class="classify">
+
+</div>
+<div class="content">
+    <div id="new_gallery"></div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="../../../static/js/dropload.min.js"></script>
+<script>
+    var pid = ocean.getRequestParameter("pid");
+    var from = ocean.getRequestParameter("from");
+    var params = {
+        page: 0,
+        limit: 12,
+        from: from,
+        classify: '',
+        order: 'new'
+    };
+    var loader;
+    $(function () {
+        ocean.get("resources/biz/api/book/classify_", {pid: pid}, function (res) {
+            if (res.code == 0) {
+                $(".title").html(res.data.item.name);
+                console.log(res.data.array);
+                if (res.data.array.length == 0) {
+                    $(".classify").css("display", "none");
+                    $(".content").css("padding-top", "0");
+                }
+                $.each(res.data.array, function (index, item) {
+                    var clz = "sub_title" + (index == 0 ? " active" : "");
+                    $(".classify").append("<span class='" + clz + "' data-id='" + item.id + "'>" + item.name + "<span class='line'></span></span>");
+                });
+                $(".sub_title").click(function () {
+                    if (!$(this).hasClass("active")) {
+                        $(this).siblings().removeClass("active");
+                        $(this).addClass("active");
+                        params.page = 1;
+                        loadPageData();
+                    }
+                });
+                loader = $('.content').dropload({
+                    scrollArea: window,
+                    domDown: {
+                        domClass: 'weui-loadmore ',
+                        domRefresh: '<div class="dropload-refresh">↑上拉加载更多</div>',
+                        domLoad: '<i class="weui-loading"></i><span class="weui-loadmore__tips">正在加载</span>',
+                        domNoData: '<span class="weui-loadmore__bottom">没有更多数据了</span>'
+                    },
+                    loadDownFn: function () {
+                        params.page += 1;
+                        loadPageData();
+                    }
+                });
+                GetBrowseRecord();
+            }
+        });
+    });
+
+    //获取浏览记录
+    function GetBrowseRecord() {
+        if (sessionStorage.getItem('browseRecord') != "" && sessionStorage.getItem('browseRecord') != null) {
+            var browseRecord = JSON.parse(sessionStorage.getItem('browseRecord'));
+            console.log("---", browseRecord);
+            if (window.location.href.indexOf(browseRecord.page) > -1) {
+                $(".sub_title").each(function () {
+                    if ($(this).data("id") == browseRecord.classify) {
+                        $(this).siblings().removeClass("active");
+                        $(this).addClass("active");
+                    }
+                });
+                params.classify = browseRecord.classify;
+                loadPageData();
+                // loadPageData(function () {
+                // setTimeout(function () {
+                //     $("body").scrollTop(browseRecord.height);
+                // }, 100)
+                // });
+            }
+        }
+    }
+
+    //保存浏览记录
+    function SetBrowseRecord() {
+        var array = window.location.href.split('/');
+        var browseRecord = {}
+        browseRecord.page = array[array.length - 1];
+        browseRecord.classify = params.classify;
+        // browseRecord.height = $("body").scrollTop();
+        sessionStorage.setItem('browseRecord', JSON.stringify(browseRecord))
+    }
+
+
+    function loadPageData() {
+        var classify = $(".sub_title.active").data("id");
+        params.classify = classify;
+        ocean.get("resources/biz/api/book/list", params, function (res) {
+            if (res.code == 0) {
+                console.log(res.data);
+                var template = _.template($('#temp_book_item').html());
+                if (res.data.isFirstPage || res.data.pageNum == 0) {
+                    $('#new_gallery').html("");
+                }
+                $('#new_gallery').append(template({list: res.data.list, showPrice: from != "library"}));
+
+                if (res.data.isLastPage) {
+                    loader.lock();
+                    loader.noData(true);
+                } else {
+                    loader.unlock();
+                    loader.noData(false);
+                }
+                loader.resetload();
+
+                afterLoad();
+            }
+        });
+    }
+
+    function afterLoad() {
+        $(".lazy").lazyload({
+            effect: "fadeIn",
+            threshold: 0,
+            failurelimit: 10
+        });
+
+        $(".book_info").on("click", function () {
+            location.href = "../book_info.html?from=" + from + "&id=" + $(this).data("id");
+        });
+        score_star();
+    }
+</script>
+<script type="text/template" id="temp_book_item">
+    <@_.each(list, function (item) {@>
+    <div class="book_info" data-id="<@=item.id@>">
+        <div class="img lazy" data-original="<@=item.picture@>"
+             style="background-image: url('../../../static/img/book.jpg')">
+            <@if(item.stock<=0){@>
+            <div class="no_img"><p>无货</p></div>
+            <@}@>
+        </div>
+        <div class="text">
+            <p class="name"><@=item.name@></p>
+            <p class="author"><@=item.author@></p>
+            <div class="grade">
+                <span class="label">豆瓣评分</span>
+                <div class="star" data-score="<@=item.score@>">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                    <img src="../../../static/img/bookinfo/star0.png">
+                </div>
+                <span class="number">(<@=item.score.toFixed(1)@>)</span>
+            </div>
+            <!--<p class="from"><@=item.publishing@></p>-->
+            <p class="money">
+                <span class="used">二手价</span>
+                <!--<span class="num">￥<@=item.price@></span>-->
+                <span class="num">￥<span class="int"><@=item.price.toString().split('.')[0]@></span>.<@=item.price.toString().split('.')[1]@></span>
+                <span class="discount"><@=item.discount@>折</span></p>
+        </div>
+    </div>
+    <@ }); @>
+</script>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/order/express.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">物流详情</p>
+</div>
+<div class="content" id="item_body">
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    $(function () {
+        var orderId = ocean.getRequestParameter("orderId");
+        var data = JSON.parse(sessionStorage.getItem("WL-" + orderId));
+        var orderDetail = JSON.parse(sessionStorage.getItem("orderDetail-" + orderId));
+        var trace = data.Traces;
+        var list = [];
+        for (var i = trace.length - 1; i >= 0; i--) {
+            list.push(trace[i]);
+        }
+        var tmpl = _.template($('#temp_detail').html());
+        $('#item_body').html(tmpl({
+            order: orderDetail,
+            traces: list,
+            data: data
+        }));
+    });
+</script>
+<script id="temp_detail" type="text/template">
+    <hr class="hr">
+    <div class="express_box">
+        <div class="express_header">
+            <div class="exp_img">
+                <div class="img" style="background-image: url(<@=order.picture.split('@')[0]@>);"></div>
+            </div>
+            <div class="exp_info">
+                <p class="state">物流状态
+                    <@ if(data.State == '0') { @>
+                    <span>无轨迹</span>
+                    <@ } else if(data.State == '2') { @>
+                    <span>运输中</span>
+                    <@ } else if(data.State == '3') { @>
+                    <span>签收</span>
+                    <@ } else if(data.State == '4') { @>
+                    <span>问题件</span>
+                    <@ } @>
+                </p>
+                <@ if(data.ShipperCode == 'YTO') { @>
+                <p class="info">承运公司：<span>圆通快递</span></p>
+                <p class="info">运单编号：<span><@=data.LogisticCode@></span></p>
+                <p class="info">官方电话：<span>95554</span></p>
+                <@ } else if(data.ShipperCode == 'STO') { @>
+                <p class="info">承运公司：<span>申通快递</span></p>
+                <p class="info">运单编号：<span><@=data.LogisticCode@></span></p>
+                <p class="info">官方电话：<span>95543</span></p>
+                <@ } else if(data.ShipperCode == 'YD') { @>
+                <p class="info">承运公司：<span>韵达快递</span></p>
+                <p class="info">运单编号：<span><@=data.LogisticCode@></span></p>
+                <p class="info">官方电话：<span>95546</span></p>
+                <@ } else if(data.ShipperCode == 'SF') { @>
+                <p class="info">承运公司：<span>顺丰快递</span></p>
+                <p class="info">运单编号：<span><@=data.LogisticCode@></span></p>
+                <p class="info">官方电话：<span>95338</span></p>
+                <@ } else if(data.ShipperCode == 'EMS') { @>
+                <p class="info">承运公司：<span>EMS快递</span></p>
+                <p class="info">运单编号：<span><@=data.LogisticCode@></span></p>
+                <p class="info">官方电话：<span>11183</span></p>
+                <@ } else if(data.ShipperCode == 'ZTO') { @>
+                <p class="info">承运公司：<span>中通快递</span></p>
+                <p class="info">运单编号：<span><@=data.LogisticCode@></span></p>
+                <p class="info">官方电话：<span>95311</span></p>
+                <@ } else if(data.ShipperCode == 'HHTT') { @>
+                <p class="info">承运公司：<span>天天快递</span></p>
+                <p class="info">运单编号：<span><@=data.LogisticCode@></span></p>
+                <p class="info">官方电话：<span>4001-888-888</span></p>
+                <@ } else if(data.ShipperCode == 'FAST') { @>
+                <p class="info">承运公司：<span>快捷快递</span></p>
+                <p class="info">运单编号：<span><@=data.LogisticCode@></span></p>
+                <p class="info">官方电话：<span>4008-333-666</span></p>
+                <@ } else if(data.ShipperCode == 'HTKY') { @>
+                <p class="info">承运公司：<span>百世快递</span></p>
+                <p class="info">运单编号：<span><@=data.LogisticCode@></span></p>
+                <p class="info">官方电话：<span>95320</span></p>
+                <@ } @>
+            </div>
+        </div>
+        <hr class="hr">
+        <div class="express_body">
+            <p>物流跟踪</p>
+            <div class="exp_border">
+                <@ if(traces.length == 0) { @>
+                <@=traces.Reason@>
+                <@ } else { @>
+                <@_.each(traces, function (item, index) {@>
+                <div class="state <@=index>0?'':'on'@>">
+                    <p><@=item.AcceptStation@></p>
+                    <p style="font-size: 12px"><@=item.AcceptTime@></p>
+                    <div class="sign"><span></span></div>
+                </div>
+                <@ }) @>
+                <@ } @>
+            </div>
+        </div>
+    </div>
+</script>
+</html>

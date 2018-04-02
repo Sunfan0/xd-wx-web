@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/my/share_code.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">分享码</div>
+<div class="content">
+    <div class="header_img">
+        <img src="../../static/img/mine/share_header.png"/>
+    </div>
+    <div id="login_page" style="display: none">
+        <div class="dialog_img">
+            <img src="../../static/img/mine/dialog.png"/>
+        </div>
+        <div class="text_content">
+            <div class="text_img">
+                <span>新书免费送！海量好书免费读！</span>
+                <img src="../../static/img/mine/line.png"/>
+            </div>
+            <p class="text_info">
+                我们精心挑选了品牌出版社的20种好书，注册即送，同时还可得到免费借书月卡，海量好书无限借阅!让你的2018年从书香开始！
+            </p>
+            <p class="text_info">
+                只需填写手机号码注册,即可获得一张换书券，凭借换书券可在熊猫格子平台的专区内兑换一本名社新书，同时免费的借书月卡也会自动发放到你的账户内。
+            </p>
+            <div class="dialog2_img">
+                <img src="../../static/img/mine/dialog2.png"/>
+            </div>
+            <div class="book_box">
+                <div class="book_item" style="background-image: url('../../static/img/share/share_book1.png')"></div>
+                <div class="book_item" style="background-image: url('../../static/img/share/share_book2.png')"></div>
+                <div class="book_item" style="background-image: url('../../static/img/share/share_book3.png')"></div>
+            </div>
+            <p class="text_info">
+                熊猫格子是一个线上图书借阅、回收、购买平台，在这里你可以随意借阅喜欢的图书，或者把自己不想收藏的闲置书零成本的卖给我们，同时结识你喜欢的书友~快来加入我们吧~
+            <div class="login_box">
+                <div class="header_code">
+                    <span>&nbsp;&nbsp;</span>
+                    <span>&nbsp;&nbsp;</span>
+                    <span>&nbsp;&nbsp;</span>
+                    <span>&nbsp;&nbsp;</span>
+                    <span>&nbsp;&nbsp;</span>
+                </div>
+                <div class="input_info">
+                    <div class="input">
+                        <input id="phone" placeholder="输入手机号"/>
+                    </div>
+                    <div class="input">
+                        <input id="code" placeholder="短信验证码"/>
+                        <span class="get_code" id="fetch_code">获取验证码</span>
+                    </div>
+                </div>
+                <div class="bottom_box">
+                    <p class="btn login_btn">登录</p>
+                </div>
+            </div>
+            <p class="explain_title">活动说明</p>
+            <p class="text_info">
+                成功注册并登陆平台即激活好友的分享码；您可获得一张借书月卡，享受海量好书免费读，还可获得换书券一张，可在换书区随意挑选一本好书，免费赠送！
+            </p>
+        </div>
+    </div>
+    <div id="share_page" style="display: none">
+        <div class="text_content">
+            <div class="header_code" style="margin: 50px 10px 30px">
+                <span>&nbsp;&nbsp;</span>
+                <span>&nbsp;&nbsp;</span>
+                <span>&nbsp;&nbsp;</span>
+                <span>&nbsp;&nbsp;</span>
+                <span>&nbsp;&nbsp;</span>
+            </div>
+            <div class="book_box">
+                <div class="book_item" style="background-image: url('../../static/img/share/share_book1.png')"></div>
+                <div class="book_item" style="background-image: url('../../static/img/share/share_book2.png')"></div>
+                <div class="book_item" style="background-image: url('../../static/img/share/share_book3.png')"></div>
+            </div>
+            <div class="active_text" style="line-height: 30px">
+                <p style="font-size: 16px;margin-bottom: 3px">活动说明：</p>
+                <p>将分享码发送给好友，注册成功后双方即可获得换书券，新用户还可免费获得借书月卡。</p>
+                <div style="margin-top: 15px;text-indent: -55px;margin-left: 55px;">
+                    <p>第一步：点击“分享”按钮，发送给微信好友</p>
+                    <p>第二步：好友只需填写手机号码注册，双方即可获得借书月卡和1张换书券</p>
+                    <p>第三步：换书券可免费兑换活动区中任意一本精选名社图书，挑选好填写地址我们会免费快递上门</p>
+                </div>
+                <p style="font-size:12px;margin-top: 30px">
+                    1、老用户在未开通月卡或年卡的情况下才能获得借书月卡<br>
+                    2、换书券使用有效期为自得到之日起3个月<br>
+                    3、本活动目前仅限江浙沪地区
+                </p>
+            </div>
+            <div class="bottom_box" style="margin-top: 40px">
+                <p class="btn share_btn">分享</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="share_body" style="display: none">
+    <div class="share_bg"></div>
+    <img src="../../static/img/mine/share_hint.png"/>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+    var share_code = ocean.getRequestParameter("share_code");
+    var jssdk = new ocean_jssdk(onWxReady);
+    var user_name;
+    if (null == share_code) {
+        $("#login_page").hide();
+        $("#share_page").show();
+        var member = JSON.parse(localStorage.getItem("ocean-xd-user"));
+        user_name = member.nickname;
+        share_code = member.shareCode;
+        jssdk.init();
+    } else {
+        $("#login_page").show();
+        $("#share_page").hide();
+    }
+
+    $(".header_code").each(function () {
+        $(this).children().eq(0).text(share_code.charAt(0));
+        $(this).children().eq(1).text(share_code.charAt(1));
+        $(this).children().eq(2).text(share_code.charAt(2));
+        $(this).children().eq(3).text(share_code.charAt(3));
+        $(this).children().eq(4).text(share_code.charAt(4));
+    })
+
+    var countDownNum = 60;
+    var clock;
+
+    $(function () {
+        $(".share_btn").click(function () {
+            $('.share_body').show()
+        });
+        $(".share_body").click(function () {
+            $('.share_body').hide()
+        });
+
+        $(".login_btn").on("click", function () {
+            doLogin();
+        });
+        $("#fetch_code").click(function () {
+            if ($(this).hasClass("disabled")) {
+                return;
+            }
+            fetchCode();
+        });
+    });
+
+    function fetchCode() {
+        var phone = $("#phone").val();
+        var pattern = /^1[34578]\d{9}$/;
+        if (!pattern.test(phone)) {
+            ocean.tip("手机号码不正确");
+            $(".error").html("手机号码有误，请重新输入");
+            return;
+        } else {
+            $(".error").html("");
+        }
+        var loading = weui.loading('loading');
+        ocean.post('resources/biz/api/verify_code', {phone: phone}, function (res) {
+            loading.hide();
+            if (res.code == 0) {
+                doLoop();
+                clock = setInterval(doLoop, 1000);
+            }
+        });
+    }
+
+    function doLoop() {
+        countDownNum--;
+        if (countDownNum > 0) {
+            $("#fetch_code").addClass("disabled");
+            $("#fetch_code").html(countDownNum + "s");
+        } else {
+            clearInterval(clock);
+            countDownNum = 60;
+            $("#fetch_code").removeClass("disabled");
+            $("#fetch_code").html("获取验证码");
+        }
+    }
+
+    function doLogin() {
+        if ($(this).hasClass("disabled")) {
+            return;
+        }
+        var phone = $("#phone").val();
+        var pattern = /^1[34578]\d{9}$/;
+        if (!pattern.test(phone)) {
+            ocean.tip("手机号码不正确");
+            return;
+        }
+        var code = $("#code").val();
+        var corner = sessionStorage.getItem("ocean_corner") || 'pandabox';
+        var wxUser = JSON.parse(localStorage.getItem("wxUserDetail"));
+        ocean.post('resources/biz/api/login', {
+            label: corner,
+            phone: phone,
+            nickname: debug ? '' : wxUser.nickname.replace(/\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g, ""),
+            openId: debug ? '' : ocean.getOpenId(),
+            head: debug ? '' : wxUser.headimgurl,
+            code: code,
+            share: share_code
+        }, function (data) {
+            if (data.code == 0) {
+                localStorage.setItem("ocean-xd-user", JSON.stringify(data.data));
+                cookie.setCookie(login_user_cookie_key, data.data.id);
+                // ocean.toast("登录成功");
+                location.href = "../index/share_success.html";
+            } else {
+                ocean.tip(data.data);
+                $(".error").html("验证码错误，请重新获取验证码");
+            }
+        }, function (error) {
+            ocean.tip(error.message);
+        });
+    }
+
+    function onWxReady() {
+        wx.onMenuShareAppMessage({
+            title: user_name + '给你送了一本名社新书，快点开看看吧',
+            desc: '2018从涨知识开始',
+            link: ctxPath + 'page/my/share_code.html?share_code=' + share_code,
+            imgUrl: 'http://p1ak152d9.bkt.clouddn.com/pandanbox_head_img',
+            trigger: function (res) {
+                //alert('用户点击发送给朋友');
+            },
+            success: function (res) {
+                //alert('已分享');
+                $('.share_body').hide();
+                ocean.toast("分享成功");
+            },
+            cancel: function (res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+                //alert(JSON.stringify(res));
+            }
+        });
+        wx.onMenuShareTimeline({
+            title: user_name + '给你送了一本名社新书，快点开看看吧',
+            link: ctxPath + 'page/my/share_code.html?share_code=' + share_code,
+            imgUrl: 'http://p1ak152d9.bkt.clouddn.com/pandanbox_head_img',
+            trigger: function (res) {
+                //alert('用户点击分享到朋友圈');
+            },
+            success: function (res) {
+                //alert('已分享');
+                $('.share_body').hide();
+                ocean.toast("分享成功");
+            },
+            cancel: function (res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+                //alert(JSON.stringify(res));
+            }
+        });
+    }
+</script>
+</html>

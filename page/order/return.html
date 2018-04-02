@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/order/return.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">立即还书</p>
+</div>
+<div class="content">
+    <div style="background-color: white;padding: 0 10px;">
+        <div class="info_box">
+            <div class="label">快递单号：</div>
+            <input class="express_num" placeholder="请输入快递单号"/>
+        </div>
+        <div class="info_box">
+            <div class="label">快递公司：</div>
+            <div class="company_name">&nbsp;</div>
+        </div>
+    </div>
+    <div style="background-color: white;padding: 0 10px;margin-top: 10px">
+        <div id="lease_list"></div>
+        <div class="hint_time">
+            共<span id="totalNum">1</span>本图书&nbsp;&nbsp;借阅天数<span id="leaseDays">12</span>天&nbsp;&nbsp;实际借阅天数<span
+                id="actualDays">5</span>天
+        </div>
+    </div>
+</div>
+<div class="bottom">
+    <div class="submit_btn">还书</div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    $(function () {
+        var id = ocean.getRequestParameter("id");
+        var company;
+        ocean.get("resources/biz/leaseOrder/select_order_details", {
+            userId: ocean.getLoginUserId,
+            id: id
+        }, function (data) {
+            console.log(data);
+            if (data.code == 0) {
+                var content = data.data;
+                var lease = _.template($("#lease_item").html());
+                $("#lease_list").html(lease({
+                    items: content,
+                    root: ocean.apiUri
+                }));
+                var totalNum = content.totalNum;
+                $("#totalNum").html(totalNum);
+                var leaseDays = content.leaseDays;
+                $("#leaseDays").html(leaseDays);
+                var actualDays = content.actualDays;
+                $("#actualDays").html(actualDays);
+
+            }
+        }, function (error) {
+            ocean.tip(error);
+        });
+
+        $(".submit_btn").on("click", function () {
+            var number = $(".express_num").val();
+            if (number.isEmpty() && company == null) {
+                ocean.tip("请输入快递单号及快递公司");
+            } else {
+                ocean.get("resources/biz/leaseOrder/return_book", {
+                    userId: ocean.getLoginUserId(),
+                    orderId: id,
+                    sendBackCode: number,
+                    expressCompany: company
+                }, function (data) {
+                    console.log(data);
+                    if (data.code == 0) {
+                        ocean.tip("还书成功！");
+                        setTimeout("location.href = '../index/mine.html';", 1000);
+
+                    }
+                }, function (error) {
+                    ocean.tip(error);
+                });
+            }
+
+        });
+
+        $(".company_name").on("click", function () {
+            weui.picker([{
+                label: '顺丰',
+                value: 'SF'
+            }, {
+                label: '圆通',
+                value: 'YTO'
+            }, {
+                label: '申通',
+                value: 'STO'
+            }, {
+                label: '韵达',
+                value: 'YD'
+            }, {
+                label: 'EMS',
+                value: 'EMS'
+            }, {
+                label: '中通',
+                value: 'ZTO'
+            }, {
+                label: '天天',
+                value: 'HHTT'
+            }, {
+                label: '快捷',
+                value: 'FAST'
+            }, {
+                label: '百世',
+                value: 'HTKY'
+            }], {
+                defaultValue: ['SF'],
+                className: 'custom-classname',
+                onChange: function (result) {
+                },
+                onConfirm: function (result) {
+                    $(".company_name").html(result[0].label);
+                    company = result[0].value;
+                },
+                id: 'picker'
+            });
+        });
+    })
+
+</script>
+<script id="lease_item" type="text/template">
+    <@_.each(items.bookName.split('@'), function (book,index) {@>
+    <div class="info_box">
+        <span class="book_name"><@=book@></span>
+        <span class="return_time">请在<span><@=items.returnDate.substring(5,10).replace("-","月")@></span>日之前寄出</span>
+    </div>
+    <@ }); @>
+</script>
+</html>

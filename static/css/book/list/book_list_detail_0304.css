@@ -1,0 +1,102 @@
+.header{
+    z-index: 300;
+}
+.classify {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-around;
+    padding: 0 15px;
+    position: fixed;
+    background: #ffffff;
+    top: 44px;
+    left: 0;
+    z-index: 54;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.classify .sub_title {
+    position: relative;
+    color: #3b3b3b;
+}
+
+.classify .sub_title .line {
+    width: 100%;
+    height: 1px;
+    background: #b59768;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.classify .active {
+    color: #b59768 !important;
+}
+
+.classify .active .line {
+    display: block !important;
+}
+
+.content {
+    margin-top: 0 !important;
+    padding: 0 0 50px;
+}
+
+.bg_div{
+    width: 100%;
+    height: 180px;
+    /*margin-top: 44px;*/
+    overflow: hidden;
+    position: relative;
+}
+
+.headerImg {
+    width: 100%;
+    height: 190px;
+    background-position: center;
+    background-size: cover;
+    filter: blur(7px);
+    -webkit-filter: blur(7px);
+    z-index: -1;
+}
+
+.bg_div .bg {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.bg_div .headerTitle_div {
+    position: absolute;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    margin: 0 10%;
+    text-align: center;
+    display: table;
+    color: white;
+    z-index: 100;
+}
+
+.bg_div .midden {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+}
+
+.bg_div .headerTitle {
+    font-size: 18px;
+}
+
+.bg_div .headerInfo {
+    font-size: 15px;
+    margin-top: 15px;
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/order/recover/recover_order_0308.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="page-item_rent" id="order_submit_div">
+    <div class="header">
+        <span class="back" onclick="history.back()"><div></div></span>
+        <p class="title">提交订单</p>
+    </div>
+    <p class="recover_add">平台预约顺丰快 递上门，请准确填写取件地址</p>
+    <div class="content" style="margin-top: 25px !important">
+        <div class="server_address"></div>
+        <div class="recover_address">
+            <div class="default-address no-default">
+                <p class="state">
+                    <img src="../../../static/img/mine/add2.png" height="21px" width="17px" class="add2">
+                    <span class="text">请选择送货地址</span>
+                    <img src="../../../static/img/mine/go.jpg" class="go" width="8px" height="13px">
+                </p>
+            </div>
+            <div class="default-address have-default" style="display: none">
+                <div class="info">
+                    <p class="name" id="a-name"></p>
+                    <p class="mobile" id="a-mobile"></p>
+                    <p class="address" id="a-address"></p>
+                </div>
+                <div class="sign">
+                    <img src="../../../static/img/mine/go.jpg" class="go" width="8px" height="13px">
+                </div>
+            </div>
+        </div>
+        <div class="hr time_hr" style="display: none;"></div>
+        <div class="time">
+            <span>时间</span><img src="../../../static/img/recover/go.jpg" class="past"/><span
+                class="time_confirm"></span>
+        </div>
+        <div class="hr"></div>
+        <div class="info">
+            <div id="book_list"></div>
+            <div class="item tot_score">
+                <span class="tot">获得总金额 <c id="grade"></c></span>
+            </div>
+        </div>
+        <div class="bg"></div>
+    </div>
+    <div class="button">
+        <div class="return" id="submitOrder">
+            <p class="add_1">
+                提交订单
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="page-item_add" id="add_address_div" style="display: none"></div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../../static/js/core/ocean.js"></script>
+<script>
+    var bookIds = [];
+    var grade = 0;
+    var address, fetch_date, fetch_time;
+    var isDeliver = ocean.getRequestParameter('isDeliver');
+
+    $(function () {
+        if (isDeliver) {
+            ocean.get("resources/biz/api/mine", {id: ocean.getLoginUserId()}, function (res) {
+                if (res.code == 0) {
+                    var member = res.data.user;
+                    if (member.schoolIdentity == 'JIAODA') {
+                        $(".server_address").html("上海交通大学(闵行校区)-爱心屋");
+                        $(".time").hide();
+                        $(".time_hr").hide();
+                        $(".recover_add").hide();
+                        $(".recover_address").hide();
+                        $(".server_address").show();
+                        $('body').css('margin-top', '-25px');
+                    }
+                }
+            }, function (error) {
+                ocean.tip(error);
+            });
+
+        } else {
+            $(".time").show();
+            $(".time_hr").show();
+            $(".recover_add").show();
+            $(".recover_address").show();
+            $(".server_address").hide();
+            $(".server_address").hide();
+            fetchDefaultAddress();
+        }
+        initDateAndTime();
+        initPageData();
+
+        $(".time").on("click", function () {
+            showDateAndTimePicker();
+        });
+
+        $("#add_address_div").load(ctxPath + "page/my/address/user_address.html?from=recycle");
+
+        $(".recover_address").on("click", function () {
+            $("#order_submit_div").hide();
+            $("#add_address_div").show();
+        });
+
+        $("#submitOrder").on("click", function () {
+            if (isDeliver) {
+                deliverOrder();
+            } else {
+                if (address == "" || address == undefined) {
+                    ocean.toast("您无默认地址，请先去设置！");
+                    return;
+                }
+                submitOrder();
+            }
+        });
+    });
+
+    function initPageData() {
+        var bookArrStr = sessionStorage.getItem("recycle-book-list");
+        if (bookArrStr) {
+            var bookArr = JSON.parse(bookArrStr);
+            console.log(bookArr);
+            for (var key in bookArr) {
+                var book = bookArr[key];
+                bookIds.push(book.isbn);
+                console.log(book);
+                if (null == book.discount) {
+                    if (book.score > 8.5) {
+                        book.discount = 0.2* 10;
+                        book.money = (book.price * 0.2).toFixed(2)
+                    } else {
+                        book.discount = 0.1* 10;
+                        book.money = (book.price * 0.1).toFixed(2)
+                    }
+                } else {
+                    book.money = (book.price * book.discount * 0.1).toFixed(2)
+                }
+                $("#book_list").append(
+                    '<div class="book_item">\n' +
+                    '   <span class="name">' + book.name + '</span><span class="scroe">实际金额 ' + book.money + '</span>\n' +
+                    '</div>');
+                grade += parseFloat(book.money);
+            }
+            $("#grade").html(grade.toFixed(2));
+        } else {
+            location.href = "../../index/book_recycle.html";
+        }
+    }
+
+
+    function deliverOrder() {
+        var address = $('.server_address').html();
+        var totalNum = $(".book_item").length;
+        ocean.post('resources/biz/api/recycle/submit', {
+            address: address,
+            time: '送货',
+            userId: ocean.getLoginUserId(),
+            grade: grade,
+            totalNum: totalNum,
+            isbns: bookIds.join(",")
+        }, function (res) {
+            if (res.code == 0) {
+                sessionStorage.removeItem("recycle-book-list");
+                location.href = "recover_success.html?id=" + res.data.id;
+            } else {
+                ocean.tip("订单提交失败");
+            }
+        });
+    }
+
+    function submitOrder() {
+        if (null == address || address.isEmpty()) {
+            ocean.tip("请选择取件地址");
+            return false;
+        }
+        if (null == fetch_date || fetch_date.isEmpty()) {
+            ocean.tip("请选择取件时间");
+            return false;
+        }
+        var times = fetch_time.split("-");
+        times[0] = fetch_date + " " + times[0] + ":00";
+        times[1] = fetch_date + " " + times[1] + ":00";
+
+        var totalNum = $(".book_item").length;
+
+        ocean.post('resources/biz/api/recycle/submit', {
+            address: address,
+            time: times.join(","),
+            userId: ocean.getLoginUserId(),
+            grade: grade,
+            totalNum: totalNum,
+            isbns: bookIds.join(",")
+        }, function (res) {
+            if (res.code == 0) {
+                sessionStorage.removeItem("recycle-book-list");
+                location.href = "recover_success.html?id=" + res.data.id;
+            } else {
+                ocean.tip("订单提交失败");
+            }
+        });
+    }
+
+    function fetchDefaultAddress() {
+        ocean.get("resources/biz/api/address/default", {userId: ocean.getLoginUserId()}, function (res) {
+            if (res.code == 0) {
+                setSelectedAddress(res.data);
+            } else {
+                $(".no-default").show();
+                $(".have-default").hide();
+            }
+        });
+    }
+
+    function setSelectedAddress(item) {
+        var add = item.provinceName + "," + item.cityName + "," + item.districtName + "," + item.otherAddr;
+        address = item.name + "," + item.phone + "," + add;
+        $("#a-name").html(item.name);
+        $("#a-mobile").html(item.phone);
+        $("#a-address").html(add);
+
+        $(".no-default").hide();
+        $(".have-default").show();
+    }
+
+    function onAddressSelected(address) {
+        if (null != address) {
+            setSelectedAddress(address);
+        }
+        $("#order_submit_div").show();
+        $("#add_address_div").hide();
+    }
+
+    function showDateAndTimePicker() {
+        weui.picker(dateArr, timeArr, {
+            onChange: function (result) {
+                console.log(result);
+            },
+            onConfirm: function (result) {
+                console.log(result);
+                $(".time_confirm").html(result[0].label + result[1].label);
+                fetch_date = result[0].value;
+                fetch_time = result[1].label;
+            },
+            id: 'multiPickerBtn'
+        });
+    }
+
+    var dateArr = [], timeArr;
+
+    function initDateAndTime() {
+        var date = new Date();
+        var hour = date.getHours();
+        var i = 0;
+        if (hour >= 16) {
+            i = 1;
+        }
+        for (var i = 1; i < 8; i++) {
+            var d = addDate(date, i);
+            dateArr.push({
+                label: formatDate(d),
+                value: d.format("yyyy-MM-dd")
+            });
+        }
+        timeArr = [{
+            label: '09:00-10:00'
+        }, {
+            label: '10.00-11.00'
+        }, {
+            label: '11:00-12:00'
+        }, {
+            label: '12:00-13:00'
+        }, {
+            label: '13:00-14:00'
+        }, {
+            label: '14:00-15:00'
+        }, {
+            label: '15:00-16:00'
+        }, {
+            label: '16:00-17:00'
+        }, {
+            label: '17:00-18:00'
+        }];
+    }
+
+    var formatDate = function (date) {
+        var month = (parseInt(date.getMonth()) + 1) + '月';
+        var day = date.getDate() + '日';
+        var week = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'][date.getDay()];
+        return week + "(" + month + day + ")";
+    };
+
+    var addDate = function (date, n) {
+        var d = new Date();
+        d.setDate(date.getDate() + n);
+        return d;
+    };
+
+
+</script>
+</html>

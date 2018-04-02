@@ -1,0 +1,306 @@
+.bg {
+    width: 100%;
+    height: 93%;
+    position: absolute;
+    top: 50px;
+    background: #f1f1f1;
+    z-index: -3;
+}
+
+.recover_add {
+    display: none;
+    height: 25px;
+    width: 100%;
+    background: #ffe7e7;
+    color: #fea0a0;
+    font-size: 12px;
+    text-indent: 15px;
+    line-height: 25px;
+    position: fixed;
+    top: 0;
+}
+
+.server_address {
+    display: none;
+    height: 70px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #ffffff;
+    overflow: hidden;
+    font-size: 14px;
+    color: #c3c3c3;
+    padding: 20px 10px;
+}
+
+.recover_address {
+    display: none;
+    height: 90px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.add1 {
+    width: 18px;
+    height: 18px;
+    vertical-align: sub;
+}
+
+.past {
+    width: 7px;
+    height: 13px;
+    float: right;
+    vertical-align: sub;
+}
+
+.time_confirm {
+    float: right;
+    margin-right: 10px;
+    line-height: 14px;
+    font-size: 12px;
+    color: #c3c3c3;
+    letter-spacing: 1px;
+}
+
+.hr {
+    width: 100%;
+    height: 10px;
+    background-color: rgb(241, 241, 241);
+}
+
+.time {
+    display: none;
+    width: 100%;
+    height: 44px;
+    padding: 15px;
+    box-sizing: border-box;
+    background: #ffffff;
+    color: #3b3b3b;
+    font-size: 14px;
+}
+
+.info {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    background: #ffffff;
+    font-size: 14px;
+    color: #3b3b3b;
+}
+
+.info .item {
+    width: 100%;
+    height: 44px;
+    padding: 15px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.info .tot_score {
+    border-bottom: 0;
+}
+
+.info .scroe {
+    float: right;
+}
+
+.info .tot {
+    float: right;
+}
+
+.info .tot c {
+    color: #ff7342;
+}
+
+.return {
+    position: fixed;
+    width: 91%;
+    height: 44px;
+    bottom: 27px;
+    left: 4.5%;
+    background: #3b3b3b;
+    border-radius: 5px;
+}
+
+.return .add_1 {
+    height: 12.5px;
+    margin-top: 16.5px;
+    color: #FFFFFF;
+    font-size: 13px;
+    text-align: center;
+    line-height: 12.5px;
+}
+
+.appointment {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 545;
+}
+
+.appointment .definite {
+    width: 100%;
+    height: 79%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #ffffff;
+}
+
+.affirm {
+    position: fixed;
+    bottom: 27px;
+    left: 37%;
+    width: 94px;
+    height: 30px;
+    border: 0;
+    background: #3b3b3b;
+    border-radius: 15px;
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 30px;
+}
+
+.affirm_time {
+    width: 76%;
+    height: 74%;
+    margin: 0 auto;
+    margin-top: 30px;
+    overflow: scroll;
+
+}
+
+.affirm_time::-webkit-scrollbar {
+    display: none;
+}
+
+.affirm_time .left {
+    height: 77%;
+    width: 44%;
+    margin-top: 90px;
+    float: left;
+}
+
+.left button, .right button {
+    width: 100%;
+    height: 30px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #3b3b3b;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.affirm_time .right {
+    height: 100%;
+    width: 44%;
+    float: right;
+}
+
+.affirm_time .active {
+    background: #77a9fd;
+    color: #ffffff;
+    border: 0;
+}
+
+.affirm_time button:focus {
+    outline: none;
+}
+
+.affirm:focus {
+    outline: none;
+}
+
+.page-item {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.button {
+    position: fixed;
+    height: 71px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 45;
+}
+
+default-address {
+    width: 100%;
+    padding: 20px 15px 15px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.default-address .state {
+    width: 100%;
+    height: 21px;
+    font-size: 14px;
+    color: #c3c3c3;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.default-address .state .add2 {
+    vertical-align: top;
+}
+
+.default-address .state .text {
+    margin-left: 11px;
+    vertical-align: top;
+}
+
+.default-address .go {
+    vertical-align: middle;
+}
+
+.default-address {
+    width: 100%;
+    padding: 20px 15px 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: white;
+}
+
+.default-address .name {
+    float: left;
+}
+
+.default-address .mobile {
+    float: right;
+}
+
+.default-address .address {
+    clear: both;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    color: #c3c3c3;
+    padding-top: 5px;
+}
+
+.default-address .info {
+    width: 90%;
+    float: left;
+}
+
+.default-address .sign {
+    width: 10%;
+    float: left;
+    text-align: right;
+    line-height: 60px;
+}

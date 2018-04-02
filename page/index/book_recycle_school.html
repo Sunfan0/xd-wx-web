@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/index/book_recycle.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/common_0320.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+    <style type="text/css">
+        .info1 {
+            width: 230px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+    </style>
+</head>
+<body ontouchstart>
+<div class="body" id="body">
+    <div class="info">
+        <div class="info1">
+            <span class="icon">1</span>
+            <span>扫描图书背后ISBN条码<span>
+        </div>
+        <div class="info1 info2">
+            <span class="icon">2</span>
+            <span>识别回收价格</span>
+        </div>
+        <div class="info1 info3">
+            <span class="icon">3</span>
+            <span>确认下单，现金到账</span>
+        </div>
+    </div>
+</div>
+
+<div class="bg"></div>
+
+<div class="code_bg">
+    <!--<img src="../../static/img/buttom/mai3.png" class="icon_img pop_isbn_box">
+    <img src="../../static/img/buttom/mai2.png" class="icon_img question" style="width: 26px">-->
+    <div class="isbn_scan" style="display: none;">
+        <img src="../../static/img/buttom/maishu.png"/>
+        <p class="text1">扫码卖书</p>
+    </div>
+</div>
+
+<div class="bottom">
+    <h3>同学，你在做一件非常有意义的事哦</h3>
+</div>
+
+<!--<div class="welcome_popup pop_bg"></div>
+<div class="welcome_popup pop_content">
+    <div class="img_content">
+        <img src="../../static/img/active/index_welcome.png" style="width: 100%;height: 100%"/>
+        <p class="go_btn welcomeGo_btn">新手指南</p>
+        <img class="close_btn welcomeClose_btn" src="../../static/img/active/close.png" width="35" height="35"/>
+    </div>
+</div>-->
+<!--<div class="share_popup pop_bg"></div>
+<div class="share_popup share_content">
+    <div class="img_content">
+        <img src="../../static/img/active/share_bg.png" style="width: 100%;height: 100%"/>
+    </div>
+    <div class="info_box">
+        <div class="text">
+            <p class="discount_title">换书劵</p>
+            <p class="discount_time">有效期至：xxxx年xx月xx日</p>
+        </div>
+        <div class="img">
+            <img src="../../static/img/discount/book_exchange.png"/>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <div class="info_box month_free" style="display: none">
+        <div class="text">
+            <p class="discount_title">借阅月卡</p>
+            <p class="discount_time">海量图书免费借阅</p>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <img class="close_btn shareClose_btn" src="../../static/img/active/close.png" width="35" height="35"/>
+</div>-->
+<div class="fail_popup">
+    <div class="fail_bg"></div>
+    <div class="fail_content">
+        <img class="content_img" src="../../static/img/panda.png">
+        <p class="text">抱歉！熊猫格子</p>
+        <p class="text">暂时不收这本书</p>
+        <p class="fail_btn">换本试试</p>
+        <img class="fail_close" src="../../static/img/close.png">
+    </div>
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script type="text/javascript" src="../../static/js/recycle_school.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+    var initLoading = weui.loading('loading');
+    var jssdk = new ocean_jssdk(function() {
+        initLoading.hide();
+        $('.isbn_scan').css('display', 'block');
+    });
+
+    var isbn_box = new isbnBox_school(isbn_box_callback);
+    var sac = ocean.getRequestParameter("sac");
+    sessionStorage.setItem("sac", sac);
+    sessionStorage.removeItem("recycle-book-list-school"); // 流程重新开始
+
+    $(function () {
+
+        if (isbn_box.isEmpty()) {
+            jssdk.init();
+        } else {
+            location.href = "../order/recover/code_school.html";
+        }
+
+        $(".isbn_scan").on("click", function () {
+            if (!ocean.getLoginUserId()) {
+                ocean.showLogin();
+            } else {
+                jssdk.scanIsbn(isbn_box.checkBookIsbn);
+            }
+        });
+
+        $(".pop_isbn_box").on("click", function () {
+            if (!ocean.getLoginUserId()) {
+                ocean.showLogin();
+            } else {
+                isbn_box.show();
+            }
+        });
+    });
+
+    function isbn_box_callback(isbn, book) {
+        location.href = "../order/recover/code_school.html";
+    }
+
+    /*$(".home").on("click", function () {
+        location.href = "../../index.html";
+    });
+    $(".find").on("click", function () {
+        location.href = "book_store.html";
+    });
+    $(".car").on("click", function () {
+        location.href = "shopping_car.html";
+    });
+    $(".mine").on("click", function () {
+        location.href = "mine.html";
+    });
+    $(".buybook").on("click", function () {
+        location.href = "book_recycle.html";
+    });*/
+
+    $(".question").on("click", function () {
+        location.href = "../my/question.html";
+    });
+
+    $(".fail_btn").on("click", function () {
+        $('.fail_popup').hide()
+    });
+    $(".fail_close").on("click", function () {
+        $('.fail_popup').hide()
+    });
+</script>
+</html>

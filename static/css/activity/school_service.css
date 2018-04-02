@@ -1,0 +1,253 @@
+body {
+	background: -webkit-linear-gradient(top, #FAF3E1, #DBC8AE);
+	font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif;
+	line-height: 16px;
+	-webkit-text-size-adjust: 100%;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+	font-size: 100px;
+  background-image: url(../../img/activity/bg_cover.png);
+  background-repeat: repeat;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input::-webkit-input-placeholder { /* WebKit browsers*/ 
+  color:#c5c5c5;
+}
+input:-moz-placeholder {  /* Mozilla Firefox 4 to 18*/ 
+  color:#c5c5c5;
+}
+input::-moz-placeholder {  /* Mozilla Firefox 19+*/ 
+  color:#c5c5c5;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+*/ 
+  color:#c5c5c5;
+}
+
+.bg_img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.join_btn {
+  position: absolute;
+  width: 1.34rem;
+  top: 4.6rem;
+  left: 50%;
+  margin-left: -0.67rem;
+}
+
+.contact_content {
+	position: absolute;
+  width: 100%;
+	top: 1.6rem;
+	min-width: 375px;
+	max-width: 750px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.contact_title {
+  font-size: 0.14rem;
+  margin: 0 auto;
+  width: 2.51rem;
+  background-color: #181C5C;
+  color: #fff;
+  text-align: center;
+  line-height: 0.29rem;
+  margin-bottom: 0.27rem;
+  letter-spacing: 0;
+}
+
+.contact_input_wrapper {
+  margin: 0 auto;
+  display: flex;
+  border: 1px solid #181e5c;
+  width: 2.34rem;
+  height: 0.41rem;
+  border-radius: 0.05rem;
+  background-color: #fff;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 0.21rem;
+}
+
+.contact_input_label {
+  color: #252525;
+  text-align: center;
+  width: 0.86rem;
+  font-size: 0.17rem;
+  height: 0.17rem;
+  line-height: 0.17rem;
+}
+.contact_input {
+  height: 100%;
+  flex: 1;
+  outline: none;
+  border: none;
+  min-width: 20px;
+  font-size: 0.15rem;
+  background-color: #fff;
+  color: #181e5c;
+  padding-left: 0.05rem;
+}
+.contact_input_time {
+  flex: 1;
+  font-size: 0.15rem;
+  line-height: 0.15rem;
+  color: #181e5c;
+  padding-left: 0.05rem;
+  white-space: nowrap;
+}
+
+.item_wrapper {
+  margin: 0.28rem auto 0;
+  font-size: 0;
+  width: 2.34rem;
+}
+
+.submit_btn {
+  width: 100%;
+  background-color: #181C5C;
+  border-radius: 0.05rem;
+  height: 0.45rem;
+  outline: none;
+  color: #fff;
+  letter-spacing: 10px;
+  font-size: 0.18rem;
+  border: none;
+}
+
+.submit_btn_valid {
+  background-color: #181C5D;
+}
+
+.link_us_wrapper {
+  text-align: right;
+  position: relative;
+  z-index: 999;
+  margin-top: 0.27rem;
+}
+
+.tel_link {
+  color: #fff;
+  background-color: #B29A6D;
+  letter-spacing: 1px;
+  padding: 0.1rem;
+  border-radius: 5px;
+  font-size: 0.16rem;
+}
+
+/*// 参数无效 重新*/
+/*.layui-m-layersection {
+  vertical-align: bottom !important;
+}*/
+.layui-m-layer-mytime {
+  display: block !important;
+  background-color: transparent !important;
+}
+
+.custom_ui_wrapper .layui-m-layersection {
+  vertical-align: bottom !important;
+}
+
+.time_layer_child {
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 0 2px #cccccc;
+  background-color: #fff;
+  padding: 0.15rem 3% 0.1rem;
+}
+
+.time_range_wrapper {
+  font-size: 0.18rem;
+  color: #252525;
+  display: flex;
+  flex-direction: row;
+  height: 2.1rem;
+}
+.time_column_wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.time_item_normal {
+  border: 1px solid #b0986e;
+  background-color: #fff;
+  border-radius: 0.18rem;
+  width: 1.6rem;
+  text-align: center;
+  height: 0.35rem;
+  line-height: 0.35rem;
+}
+.time_item_active {
+  background-color: #b0986e;
+  color: #fff;
+}
+
+.time_confirm_btn {
+  background-color: #181C5C;
+  color: #fff;
+  font-size: 0.18rem;
+  border: none;
+  outline: none;
+  border-radius: 0.18rem;
+  display: block;
+  margin: 0.2rem auto 0.1rem;
+  width: 1.15rem;
+  height: 0.35rem;
+  line-height: 0.35rem;
+}
+
+.success_confirm_btn {    
+  margin: 0.29rem auto 0;
+  background-color: #B29A6D;
+  font-size: 0.15rem;
+  padding: 0;
+  width: 1.45rem;
+  height: 0.32rem;
+  line-height: 0.32rem;
+}
+
+.success_wrapper_ui {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0.1rem;
+  box-shadow: 0 0 5px #ccc;
+  font-size: 0.18rem;
+  position: relative;
+  width: 2.95rem;
+  color: #525252;
+  padding-top: 0.65rem;
+  padding-bottom: 0.27rem;
+}
+
+.success_image {
+  position: absolute;
+  width: 1.62rem;
+  top: -0.65rem;
+  left: 50%;
+  margin-left: -0.81rem;
+}

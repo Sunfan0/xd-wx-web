@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>熊猫格子</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/my/cash_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/info_common_0304.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/weui.min.css"/>
+</head>
+<body ontouchstart>
+<div class="header">
+    <span class="back" onclick="history.back()"><div></div></span>
+    <p class="title">余额</p>
+</div>
+<div class="content">
+    <div class="cash_img">
+        <img src="../../static/img/wallet/bg.png"/>
+        <p class="money" id="money">0.00</p>
+        <p class="yuan">余额(元)</p>
+        <span class="extract_btn">提现</span>
+    </div>
+    <!--<div class="bottom">
+        <span class="recharge_btn">充值</span>
+    </div>-->
+</div>
+<div style="display: none">
+    <script src="https://s22.cnzz.com/z_stat.php?id=1267301812&web_id=1267301812" language="JavaScript"></script>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/weui.min.js"></script>
+<script type="text/javascript" src="../../static/js/core/underscore.js"></script>
+<script type="text/javascript" src="../../static/js/core/util.js"></script>
+<script type="text/javascript" src="../../static/js/core/ocean.js"></script>
+<script>
+    var nowMoney = 0;
+    ocean.get("resources/biz/api/mine/cash", {id: ocean.getLoginUserId()}, function (res) {
+        if (res.code == 0) {
+            nowMoney = res.data;
+            $("#money").html(nowMoney.toFixed(2));
+        }
+    }, function (error) {
+        ocean.tip(error);
+    });
+
+    $(".recharge_btn").on("click", function () {
+        ocean.get("resources/biz/rechargeOrder/submit", {userId: ocean.getLoginUserId()}, function (res) {
+            if (res.code == 0) {
+                var order = res.data;
+                ocean.post("resources/biz/wx/pay", {
+                    order: order.id,
+                    type: 'recharge',
+                    tradeType: 'JSAPI',
+                    openId: ocean.getOpenId()
+                }, function (res) {
+                    ocean.pay(res.data, order.id, 'recharge', function () {
+                        ocean.tip("充值成功");
+                        location.href = "../book/success.html?type=money";
+                    });
+                });
+            }
+        }, function (error) {
+            ocean.tip(error.message);
+        });
+    });
+    $(".extract_btn").on("click", function () {
+        if (nowMoney > 0) {
+            weui.confirm('确认要提现吗？', function () {
+                ocean.get("resources/biz/api/extract_cash", {
+                    userId: ocean.getLoginUserId()
+                }, function (res) {
+                    if (res.code == 0) {
+                        ocean.tip("已成功提现到您的微信零钱包", function () {
+                            location.reload();
+                        });
+                    }else{
+                        ocean.tip("提现失败！");
+                    }
+                })
+            }, null, {});
+        } else {
+            ocean.tip("您的余额少于1元，目前无法提现");
+        }
+    })
+
+</script>
+</html>
